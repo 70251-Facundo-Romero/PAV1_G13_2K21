@@ -39,11 +39,13 @@ namespace TP.P.A.V.I
             
         }
 
+        //Cierra el cliente y la app
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        //Maximiza el cliente
         private void btnMaximizar_Click(object sender, EventArgs e)
         {
             MaximizeWindow();
@@ -51,6 +53,7 @@ namespace TP.P.A.V.I
             btnMaximizar.Visible = false;
         }
 
+        //Devuelve el cliente al tamaño inicial
         private void btnRestaurar_Click(object sender, EventArgs e)
         {
             this.Size = new Size(1000, 500);
@@ -59,11 +62,13 @@ namespace TP.P.A.V.I
             btnMaximizar.Visible = true;
         }
 
+        //Minimiza el cliente
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
+        //Este bloque de codigo permite arrastrar el cliente por la pantalla
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -76,6 +81,7 @@ namespace TP.P.A.V.I
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+        //Metodo para maximizar el ciente sin tapar la barra de tareas
         private void MaximizeWindow()
         {
             var rectangle = Screen.FromControl(this).Bounds;
@@ -84,12 +90,6 @@ namespace TP.P.A.V.I
             Location = new Point(0, 0);
             Rectangle workingRectangle = Screen.PrimaryScreen.WorkingArea;
             this.Size = new Size(workingRectangle.Width, workingRectangle.Height);
-        }
-
-        private void ResizableWindow()
-        {
-            this.ControlBox = false;
-            this.FormBorderStyle = FormBorderStyle.SizableToolWindow;
         }
     }
 }
