@@ -20,7 +20,7 @@ namespace TP.P.A.V.I
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            TxtUserName.Focus();
         }
 
         private void BtnLogin_Click(object sender, EventArgs e)
@@ -36,6 +36,30 @@ namespace TP.P.A.V.I
                 MessageBox.Show("Error al ingresar");
             }
             
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            btnRestaurar.Visible = true;
+            btnMaximizar.Visible = false;
+        }
+
+        private void btnRestaurar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            btnRestaurar.Visible = false;
+            btnMaximizar.Visible = true;
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
