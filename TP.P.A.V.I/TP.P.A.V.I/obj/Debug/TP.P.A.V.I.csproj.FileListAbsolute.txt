@@ -12,9 +12,9 @@ C:\Users\facun\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\TP.P.A.V.I.
 C:\Users\facun\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\TP.P.A.V.I.exe
 C:\Users\facun\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\TP.P.A.V.I.pdb
 C:\Users\facun\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csprojAssemblyReference.cache
-C:\Users\facun\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Form1.resources
 C:\Users\facun\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Properties.Resources.resources
 C:\Users\facun\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csproj.GenerateResource.cache
 C:\Users\facun\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csproj.CoreCompileInputs.cache
 C:\Users\facun\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.exe
 C:\Users\facun\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.pdb
+C:\Users\facun\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Login.resources

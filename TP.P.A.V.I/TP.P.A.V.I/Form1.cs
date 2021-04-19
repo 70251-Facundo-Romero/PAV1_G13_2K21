@@ -12,9 +12,9 @@ using System.Runtime.InteropServices;
 
 namespace TP.P.A.V.I
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
@@ -46,14 +46,15 @@ namespace TP.P.A.V.I
 
         private void btnMaximizar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            MaximizeWindow();
             btnRestaurar.Visible = true;
             btnMaximizar.Visible = false;
         }
 
         private void btnRestaurar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
+            this.Size = new Size(1000, 500);
+            Location = new Point(180, 115);
             btnRestaurar.Visible = false;
             btnMaximizar.Visible = true;
         }
@@ -73,6 +74,22 @@ namespace TP.P.A.V.I
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void MaximizeWindow()
+        {
+            var rectangle = Screen.FromControl(this).Bounds;
+            this.FormBorderStyle = FormBorderStyle.None;
+            Size = new Size(rectangle.Width, rectangle.Height);
+            Location = new Point(0, 0);
+            Rectangle workingRectangle = Screen.PrimaryScreen.WorkingArea;
+            this.Size = new Size(workingRectangle.Width, workingRectangle.Height);
+        }
+
+        private void ResizableWindow()
+        {
+            this.ControlBox = false;
+            this.FormBorderStyle = FormBorderStyle.SizableToolWindow;
         }
     }
 }
