@@ -139,5 +139,17 @@
   <ItemGroup>
     <None Include="Resources\hotel.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuadrado16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menos16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuadricula16px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
