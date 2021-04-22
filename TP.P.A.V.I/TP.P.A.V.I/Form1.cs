@@ -22,6 +22,10 @@ namespace TP.P.A.V.I
         private void Form1_Load(object sender, EventArgs e)
         {
             TxtUserName.Focus();
+            if (true)
+            {
+                MessageBox.Show("holamundo");
+            }
         }
 
         private void BtnLogin_Click(object sender, EventArgs e)
