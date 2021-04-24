@@ -20,3 +20,18 @@ C:\Users\facun\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.
 C:\Users\facun\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Menu.resources
 C:\Users\nata\Desktop\TPPAVI\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Login.resources
 C:\Users\nata\Desktop\TPPAVI\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Menu.resources
+E:\Facultad\3° año\PAV 1\TPI\Zona de trabajo\Repositorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\TP.P.A.V.I.exe.config
+E:\Facultad\3° año\PAV 1\TPI\Zona de trabajo\Repositorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\TP.P.A.V.I.exe
+E:\Facultad\3° año\PAV 1\TPI\Zona de trabajo\Repositorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\TP.P.A.V.I.pdb
+E:\Facultad\3° año\PAV 1\TPI\Zona de trabajo\Repositorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csprojAssemblyReference.cache
+E:\Facultad\3° año\PAV 1\TPI\Zona de trabajo\Repositorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Empleados.resources
+E:\Facultad\3° año\PAV 1\TPI\Zona de trabajo\Repositorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Login.resources
+E:\Facultad\3° año\PAV 1\TPI\Zona de trabajo\Repositorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Hoteles.resources
+E:\Facultad\3° año\PAV 1\TPI\Zona de trabajo\Repositorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Huespedes.resources
+E:\Facultad\3° año\PAV 1\TPI\Zona de trabajo\Repositorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Menu.resources
+E:\Facultad\3° año\PAV 1\TPI\Zona de trabajo\Repositorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Properties.Resources.resources
+E:\Facultad\3° año\PAV 1\TPI\Zona de trabajo\Repositorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Servicios.resources
+E:\Facultad\3° año\PAV 1\TPI\Zona de trabajo\Repositorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csproj.GenerateResource.cache
+E:\Facultad\3° año\PAV 1\TPI\Zona de trabajo\Repositorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csproj.CoreCompileInputs.cache
+E:\Facultad\3° año\PAV 1\TPI\Zona de trabajo\Repositorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.exe
+E:\Facultad\3° año\PAV 1\TPI\Zona de trabajo\Repositorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.pdb

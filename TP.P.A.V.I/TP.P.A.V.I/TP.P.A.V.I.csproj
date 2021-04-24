@@ -50,12 +50,30 @@
     <Compile Include="BLL\UsuarioBLL.cs" />
     <Compile Include="DAL\EntidadDAL.cs" />
     <Compile Include="DAL\UsuarioDAL.cs" />
+    <Compile Include="Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleados.Designer.cs">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hoteles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hoteles.Designer.cs">
+      <DependentUpon>Hoteles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Huespedes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Huespedes.Designer.cs">
+      <DependentUpon>Huespedes.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -65,8 +83,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servicios.Designer.cs">
+      <DependentUpon>Servicios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Empleados.resx">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hoteles.resx">
+      <DependentUpon>Hoteles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Huespedes.resx">
+      <DependentUpon>Huespedes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -81,6 +114,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Servicios.resx">
+      <DependentUpon>Servicios.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

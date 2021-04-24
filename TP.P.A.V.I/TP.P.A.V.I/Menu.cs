@@ -69,5 +69,48 @@ namespace TP.P.A.V.I
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void MenuLogin_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BtnHoteles_Click(object sender, EventArgs e)
+        {
+            Hoteles hoteles = new Hoteles();
+            hoteles.Show();
+            this.Hide();
+        }
+
+        private void BtnHuespedes_Click(object sender, EventArgs e)
+        {
+            Huespedes huesped = new Huespedes();
+            huesped.Show();
+            this.Hide();
+        }
+
+        private void BtnEmpleados_Click(object sender, EventArgs e)
+        {
+            Empleados empleados = new Empleados();
+            empleados.Show();
+            this.Hide();
+        }
+
+        private void BtnServicios_Click(object sender, EventArgs e)
+        {
+            Servicios servicios = new Servicios();
+            servicios.Show();
+            this.Hide();
+        }
     }
 }

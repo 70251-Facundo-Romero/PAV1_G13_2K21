@@ -91,5 +91,10 @@ namespace TP.P.A.V.I
             Rectangle workingRectangle = Screen.PrimaryScreen.WorkingArea;
             this.Size = new Size(workingRectangle.Width, workingRectangle.Height);
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
