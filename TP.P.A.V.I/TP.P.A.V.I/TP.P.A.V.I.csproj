@@ -151,5 +151,35 @@
   <ItemGroup>
     <None Include="Resources\cuadricula16px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lista-de-invitados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\huespedes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empleado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toalla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marcador-de-posicion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marcador-de-posicion1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marcador-de-posicion2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ubicacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marcador-de-posicion3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factura.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
