@@ -47,9 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\PaisBLL.cs" />
     <Compile Include="BLL\UsuarioBLL.cs" />
     <Compile Include="DAL\EntidadDAL.cs" />
+    <Compile Include="DAL\PaisDAL.cs" />
     <Compile Include="DAL\UsuarioDAL.cs" />
+    <Compile Include="Entities\Pais.cs" />
     <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -63,6 +66,12 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="PaisABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaisABM.Designer.cs">
+      <DependentUpon>PaisABM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -70,6 +79,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaisABM.resx">
+      <DependentUpon>PaisABM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
