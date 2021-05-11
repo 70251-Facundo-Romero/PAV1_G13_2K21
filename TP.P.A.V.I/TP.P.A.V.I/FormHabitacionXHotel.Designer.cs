@@ -35,11 +35,11 @@ namespace TP.P.A.V.I
             this.LblHabitacion = new System.Windows.Forms.Label();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.LblPrecio = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.Hotel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Habitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LblPrecio = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,6 +98,21 @@ namespace TP.P.A.V.I
             this.dataGridView1.Size = new System.Drawing.Size(343, 384);
             this.dataGridView1.TabIndex = 5;
             // 
+            // Hotel
+            // 
+            this.Hotel.HeaderText = "Hotel";
+            this.Hotel.Name = "Hotel";
+            // 
+            // Habitacion
+            // 
+            this.Habitacion.HeaderText = "Habitacion";
+            this.Habitacion.Name = "Habitacion";
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            // 
             // LblPrecio
             // 
             this.LblPrecio.AutoSize = true;
@@ -114,21 +129,6 @@ namespace TP.P.A.V.I
             this.textBox1.Size = new System.Drawing.Size(143, 20);
             this.textBox1.TabIndex = 7;
             // 
-            // Hotel
-            // 
-            this.Hotel.HeaderText = "Hotel";
-            this.Hotel.Name = "Hotel";
-            // 
-            // Habitacion
-            // 
-            this.Habitacion.HeaderText = "Habitacion";
-            this.Habitacion.Name = "Habitacion";
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            // 
             // FormHabitacionXHotel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -144,6 +144,7 @@ namespace TP.P.A.V.I
             this.Controls.Add(this.LblHotel);
             this.Name = "FormHabitacionXHotel";
             this.Text = "FormHabitacionXHotel";
+            this.Load += new System.EventHandler(this.FormHabitacionXHotel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

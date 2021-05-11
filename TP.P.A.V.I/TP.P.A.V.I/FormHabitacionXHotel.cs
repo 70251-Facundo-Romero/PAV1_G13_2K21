@@ -18,9 +18,14 @@ namespace TP.P.A.V.I
             InitializeComponent();
         }
 
+        private void FormHabitacionXHotel_Load(object sender, EventArgs e)
+        {
+            CargarHotele();
+        }
+
         private void CargarHotele()
         {
-            CmbHotel.DataSource = HabitacionesBLL.CargarGrilla() ;
+            CmbHotel.DataSource = HabitacionesBLL.CargarGrilla();
             CmbHotel.DisplayMember = "Nombre";
             CmbHotel.ValueMember = "Id";
             CmbHotel.SelectedIndex = -1;
