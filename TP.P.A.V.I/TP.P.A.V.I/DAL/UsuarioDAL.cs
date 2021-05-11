@@ -17,7 +17,7 @@ namespace TP.P.A.V.I.DAL
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
-                con.Open();
+                 con.Open();
                 try
                 {
                     using (SqlCommand cmd = new SqlCommand(@"SELECT * FROM usuario WHERE Nombre = @NombreUsuario and Password = @Password", con))
