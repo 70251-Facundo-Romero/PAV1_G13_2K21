@@ -47,15 +47,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\HabitacionesBLL.cs" />
+    <Compile Include="BLL\InstalacionesBLL.cs" />
     <Compile Include="BLL\UsuarioBLL.cs" />
     <Compile Include="DAL\EntidadDAL.cs" />
+    <Compile Include="DAL\HabitacionesDAL.cs" />
+    <Compile Include="DAL\InstalacionesDAL.cs" />
     <Compile Include="DAL\UsuarioDAL.cs" />
+    <Compile Include="Entities\Habitaciones.cs" />
+    <Compile Include="Entities\Instalaciones.cs" />
     <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestionar_Habitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestionar_Habitaciones.Designer.cs">
+      <DependentUpon>Gestionar_Habitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestionar_Instalaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestionar_Instalaciones.Designer.cs">
+      <DependentUpon>Gestionar_Instalaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -67,6 +85,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestionar_Habitaciones.resx">
+      <DependentUpon>Gestionar_Habitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestionar_Instalaciones.resx">
+      <DependentUpon>Gestionar_Instalaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
