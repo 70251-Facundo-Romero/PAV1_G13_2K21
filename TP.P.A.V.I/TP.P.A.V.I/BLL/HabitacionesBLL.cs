@@ -9,7 +9,7 @@ using TP.P.A.V.I.Entities;
 
 namespace TP.P.A.V.I.BLL
 {
-    class HabitacionesBLL
+    public class HabitacionesBLL
     {
        public static bool Validar_Habitacion(string habitacion, string descripcion)
         {
@@ -43,19 +43,17 @@ namespace TP.P.A.V.I.BLL
         public static System.Data.DataTable CargarGrilla()
         {
             return HabitacionesDAL.cargarGrilla();
-            
         }
         public static Habitaciones Obtenerhabitaciones(string ID)
         {
             Dictionary<string, string> dic = HabitacionesDAL.ObtenerHabitaciones(ID);
-            
+
             Habitaciones hab = new Habitaciones();
             hab.id = dic["Id"];
             hab.Nombre = dic["Nombre"];
             hab.Descripcion = dic["Descripcion"];
 
             return hab;
-           
         }
         public static bool ActualizarHabitaciones(Habitaciones habitaciones)
         {

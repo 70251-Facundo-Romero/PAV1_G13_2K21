@@ -20,3 +20,17 @@ C:\Users\facun\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.
 C:\Users\facun\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Menu.resources
 C:\Users\nata\Desktop\TPPAVI\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Login.resources
 C:\Users\nata\Desktop\TPPAVI\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Menu.resources
+C:\Users\nata\Desktop\Tp PV 1\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\TP.P.A.V.I.exe.config
+C:\Users\nata\Desktop\Tp PV 1\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\TP.P.A.V.I.exe
+C:\Users\nata\Desktop\Tp PV 1\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\TP.P.A.V.I.pdb
+C:\Users\nata\Desktop\Tp PV 1\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csprojAssemblyReference.cache
+C:\Users\nata\Desktop\Tp PV 1\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Login.resources
+C:\Users\nata\Desktop\Tp PV 1\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Gestionar_Habitaciones.resources
+C:\Users\nata\Desktop\Tp PV 1\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Gestionar_Instalaciones.resources
+C:\Users\nata\Desktop\Tp PV 1\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Menu.resources
+C:\Users\nata\Desktop\Tp PV 1\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Properties.Resources.resources
+C:\Users\nata\Desktop\Tp PV 1\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csproj.GenerateResource.cache
+C:\Users\nata\Desktop\Tp PV 1\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csproj.CoreCompileInputs.cache
+C:\Users\nata\Desktop\Tp PV 1\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.exe
+C:\Users\nata\Desktop\Tp PV 1\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.pdb
+C:\Users\nata\Desktop\Tp PV 1\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.FormHabitacionXHotel.resources

@@ -63,6 +63,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHabitacionXHotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHabitacionXHotel.Designer.cs">
+      <DependentUpon>FormHabitacionXHotel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gestionar_Habitaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHabitacionXHotel.resx">
+      <DependentUpon>FormHabitacionXHotel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gestionar_Habitaciones.resx">
       <DependentUpon>Gestionar_Habitaciones.cs</DependentUpon>
