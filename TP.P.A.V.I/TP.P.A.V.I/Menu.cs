@@ -69,5 +69,60 @@ namespace TP.P.A.V.I
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+<<<<<<< Updated upstream
+=======
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            showSubMenu(subMenuHoteles);
+        }
+
+        private void btnHuespedes_Click(object sender, EventArgs e)
+        {
+            showSubMenu(subMenuHuespedes);
+        }
+
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            showSubMenu(subMenuEmpleados);
+        }
+
+        private Form activeForm = null;
+        private void openChildForm(Form formHijo)
+        {
+            if (activeForm != null) 
+                activeForm.Close();
+            activeForm = formHijo;
+            formHijo.TopLevel = false;
+            formHijo.FormBorderStyle = FormBorderStyle.None;
+            formHijo.Dock = DockStyle.Fill;
+            panelFormulariosHijos.Controls.Add(formHijo);
+            panelFormulariosHijos.Tag = formHijo;
+            formHijo.BringToFront();
+            formHijo.Show();
+        }
+
+        private void btnUbicaciones_Click(object sender, EventArgs e)
+        {
+            showSubMenu(subMenuUbicaciones);
+        }
+
+        private void btnServIns_Click(object sender, EventArgs e)
+        {
+            showSubMenu(subMenuServIns);
+        }
+
+        private void btnFacturacion_Click(object sender, EventArgs e)
+        {
+            showSubMenu(subMenuFacturacion);
+        }
+
+        private void btnTipoDoc_Click(object sender, EventArgs e)
+        {
+            TipoDocForm form = new TipoDocForm();
+            form.Show();
+            this.Hide();
+        }
+>>>>>>> Stashed changes
     }
 }

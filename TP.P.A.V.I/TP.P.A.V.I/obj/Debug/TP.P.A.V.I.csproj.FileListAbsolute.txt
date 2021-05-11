@@ -20,3 +20,15 @@ C:\Users\facun\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.
 C:\Users\facun\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Menu.resources
 C:\Users\nata\Desktop\TPPAVI\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Login.resources
 C:\Users\nata\Desktop\TPPAVI\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Menu.resources
+C:\Users\mirko.MIRKO\Documents\GitHub\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\TP.P.A.V.I.exe.config
+C:\Users\mirko.MIRKO\Documents\GitHub\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\TP.P.A.V.I.exe
+C:\Users\mirko.MIRKO\Documents\GitHub\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\TP.P.A.V.I.pdb
+C:\Users\mirko.MIRKO\Documents\GitHub\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csprojAssemblyReference.cache
+C:\Users\mirko.MIRKO\Documents\GitHub\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Login.resources
+C:\Users\mirko.MIRKO\Documents\GitHub\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Menu.resources
+C:\Users\mirko.MIRKO\Documents\GitHub\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Properties.Resources.resources
+C:\Users\mirko.MIRKO\Documents\GitHub\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csproj.GenerateResource.cache
+C:\Users\mirko.MIRKO\Documents\GitHub\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csproj.CoreCompileInputs.cache
+C:\Users\mirko.MIRKO\Documents\GitHub\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.exe
+C:\Users\mirko.MIRKO\Documents\GitHub\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.pdb
+C:\Users\mirko.MIRKO\Documents\GitHub\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.TipoDocForm.resources
