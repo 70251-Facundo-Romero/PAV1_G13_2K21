@@ -150,9 +150,9 @@ namespace TP.P.A.V.I
             
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            TipoDocumentoABM form = new TipoDocumentoABM();
+            HuespedABM form = new HuespedABM();
             form.Show();
         }
     }

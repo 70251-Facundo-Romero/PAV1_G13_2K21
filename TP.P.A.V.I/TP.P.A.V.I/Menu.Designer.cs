@@ -73,7 +73,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelFormulariosHijos = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -786,22 +785,11 @@
             // 
             this.panelFormulariosHijos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.panelFormulariosHijos.Controls.Add(this.button4);
-            this.panelFormulariosHijos.Controls.Add(this.button3);
             this.panelFormulariosHijos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFormulariosHijos.Location = new System.Drawing.Point(251, 35);
             this.panelFormulariosHijos.Name = "panelFormulariosHijos";
             this.panelFormulariosHijos.Size = new System.Drawing.Size(749, 465);
             this.panelFormulariosHijos.TabIndex = 8;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(157, 131);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -811,6 +799,7 @@
             this.button4.TabIndex = 1;
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Menu
             // 
@@ -894,6 +883,5 @@
         private System.Windows.Forms.Button btnPaises;
         private System.Windows.Forms.Button btnUbicaciones;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
     }
 }

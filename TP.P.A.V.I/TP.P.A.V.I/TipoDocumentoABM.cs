@@ -99,7 +99,7 @@ namespace TP.P.A.V.I
             }
             else
             {
-                MessageBox.Show("Hubo un error al actualizar el pais");
+                MessageBox.Show("Hubo un error al actualizar el Tipo");
             }
         }
 

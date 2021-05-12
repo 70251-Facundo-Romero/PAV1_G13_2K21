@@ -57,3 +57,4 @@ C:\Users\mirko.MIRKO\Desktop\tp pav\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csproj.Gener
 C:\Users\mirko.MIRKO\Desktop\tp pav\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csproj.CoreCompileInputs.cache
 C:\Users\mirko.MIRKO\Desktop\tp pav\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.exe
 C:\Users\mirko.MIRKO\Desktop\tp pav\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.pdb
+C:\Users\mirko.MIRKO\Desktop\tp pav\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.HuespedABM.resources
