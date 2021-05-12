@@ -331,7 +331,6 @@
             this.btnPaises.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPaises.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPaises.UseVisualStyleBackColor = true;
-            this.btnPaises.Click += new System.EventHandler(this.btnPaises_Click);
             // 
             // btnUbicaciones
             // 

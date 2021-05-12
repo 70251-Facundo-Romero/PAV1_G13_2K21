@@ -144,12 +144,5 @@ namespace TP.P.A.V.I
         {
             showSubMenu(subMenuFacturacion);
         }
-
-        private void btnPaises_Click(object sender, EventArgs e)
-        {
-            PaisABM p = new PaisABM();
-            openChildForm(p);
-            hideSubMenu();
-        }
     }
 }

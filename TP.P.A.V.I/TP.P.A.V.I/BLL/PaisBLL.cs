@@ -13,63 +13,27 @@ namespace TP.P.A.V.I.BLL
     {
         public static DataTable ObtenerListadoPaises()
         {
-            try
-            {
-                return PaisDAL.ObtenerListadoPaises();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            
+            return PaisDAL.ObtenerListadoPaises();
         }
 
         public static bool AgregarPaisABD(Pais p)
         {
-            try
-            {
-                return PaisDAL.AgregarPaisABD(p);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            return PaisDAL.AgregarPaisABD(p);
         }
 
         public static Pais ObtenerPais(int id)
         {
-            try
-            {
-                return PaisDAL.ObtenerPais(id);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            return PaisDAL.ObtenerPais(id);
         }
 
         public static bool ActualizarPaisABD(Pais p)
         {
-            try
-            {
-                return PaisDAL.ActualizarPaisABD(p);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            return PaisDAL.ActualizarPaisABD(p);
         }
 
         public static bool BorrarPaisABD(Pais p)
         {
-            try
-            {
-                return PaisDAL.BorrarPaisABD(p);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            return PaisDAL.BorrarPaisABD(p);
         }
     }
 }

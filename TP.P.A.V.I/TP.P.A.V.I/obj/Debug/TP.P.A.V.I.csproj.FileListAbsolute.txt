@@ -21,3 +21,5 @@ C:\Users\facun\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.
 C:\Users\nata\Desktop\TPPAVI\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Login.resources
 C:\Users\nata\Desktop\TPPAVI\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Menu.resources
 C:\Users\facun\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.PaisABM.resources
+C:\Users\facun\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.CiudadABM.resources
+C:\Users\facun\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.BarrioABM.resources

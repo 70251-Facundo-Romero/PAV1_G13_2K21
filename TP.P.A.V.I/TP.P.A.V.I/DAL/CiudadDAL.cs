@@ -10,9 +10,9 @@ using TP.P.A.V.I.Entities;
 
 namespace TP.P.A.V.I.DAL
 {
-    class PaisDAL : EntidadDAL
+    class CiudadDAL
     {
-        public static DataTable ObtenerListadoPaises()
+        public static DataTable ObtenerListadoCiudades()
         {
             string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
             SqlCommand cmd = new SqlCommand();
@@ -20,7 +20,7 @@ namespace TP.P.A.V.I.DAL
 
             try
             {
-                string consulta = "SELECT * FROM Paises";
+                string consulta = "SELECT * FROM Ciudades";
 
                 cmd.Parameters.Clear();
                 cmd.CommandType = CommandType.Text;
@@ -45,7 +45,7 @@ namespace TP.P.A.V.I.DAL
             }
         }
 
-        public static bool AgregarPaisABD(Pais p)
+        public static bool AgregarCiudadABD(Ciudad c)
         {
             string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
             bool resultado = false;
@@ -54,11 +54,12 @@ namespace TP.P.A.V.I.DAL
 
             try
             {
-                string consulta = "INSERT INTO Paises (Nombre, Descripcion) VALUES (@nombre, @desc)";
+                string consulta = "INSERT INTO Ciudades (Nombre, Descripcion, Id_pais) VALUES (@nombre, @desc, @idPais)";
 
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@nombre", p.NombrePais);
-                cmd.Parameters.AddWithValue("@desc", p.DescPais);
+                cmd.Parameters.AddWithValue("@nombre", c.NombreCiudad);
+                cmd.Parameters.AddWithValue("@desc", c.DescCiudad);
+                cmd.Parameters.AddWithValue("@idPais", c.IdPaisCiudad);
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = consulta;
 
@@ -79,16 +80,16 @@ namespace TP.P.A.V.I.DAL
             return resultado;
         }
 
-        public static Pais ObtenerPais(int id)
+        public static Ciudad ObtenerCiudad(int id)
         {
             string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
-            Pais p = new Pais();
+            Ciudad c = new Ciudad();
             SqlCommand cmd = new SqlCommand();
             SqlConnection cn = new SqlConnection(cadenaConexion);
 
             try
             {
-                string consulta = "SELECT * FROM Paises WHERE Id LIKE @id";
+                string consulta = "SELECT * FROM Ciudades WHERE Id LIKE @id";
 
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@id", id);
@@ -102,9 +103,10 @@ namespace TP.P.A.V.I.DAL
 
                 if (dr != null && dr.Read())
                 {
-                    p.IdPais = int.Parse(dr["Id"].ToString());
-                    p.NombrePais = dr["Nombre"].ToString();
-                    p.DescPais = dr["Descripcion"].ToString();
+                    c.IdCiudad = int.Parse(dr["Id"].ToString());
+                    c.NombreCiudad = dr["Nombre"].ToString();
+                    c.DescCiudad = dr["Descripcion"].ToString();
+                    c.IdPaisCiudad = int.Parse(dr["Id_pais"].ToString());
                 }
             }
             catch (Exception)
@@ -116,10 +118,10 @@ namespace TP.P.A.V.I.DAL
                 cn.Close();
             }
 
-            return p;
+            return c;
         }
 
-        public static bool ActualizarPaisABD(Pais p)
+        public static bool ActualizarCiudadABD(Ciudad c)
         {
             string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
             bool resultado = false;
@@ -128,12 +130,13 @@ namespace TP.P.A.V.I.DAL
 
             try
             {
-                string consulta = "UPDATE Paises SET Nombre = @nombre, Descripcion = @desc WHERE Id LIKE @id";
+                string consulta = "UPDATE Ciudades SET Nombre = @nombre, Descripcion = @desc, Id_pais = @idPais WHERE Id LIKE @id";
 
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id", p.IdPais);
-                cmd.Parameters.AddWithValue("@nombre", p.NombrePais);
-                cmd.Parameters.AddWithValue("@desc", p.DescPais);
+                cmd.Parameters.AddWithValue("@id", c.IdCiudad);
+                cmd.Parameters.AddWithValue("@nombre", c.NombreCiudad);
+                cmd.Parameters.AddWithValue("@desc", c.DescCiudad);
+                cmd.Parameters.AddWithValue("@idPais", c.IdPaisCiudad);
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = consulta;
 
@@ -154,7 +157,7 @@ namespace TP.P.A.V.I.DAL
             return resultado;
         }
 
-        public static bool BorrarPaisABD(Pais p)
+        public static bool BorrarCiudadABD(Ciudad c)
         {
             string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
             bool resultado = false;
@@ -163,10 +166,10 @@ namespace TP.P.A.V.I.DAL
 
             try
             {
-                string consulta = "DELETE FROM Paises WHERE Id LIKE @id";
+                string consulta = "DELETE FROM Ciudades WHERE Id LIKE @id";
 
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id", p.IdPais);
+                cmd.Parameters.AddWithValue("@id", c.IdCiudad);
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = consulta;
 

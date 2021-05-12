@@ -47,11 +47,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BarrioABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BarrioABM.Designer.cs">
+      <DependentUpon>BarrioABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\BarrioBLL.cs" />
+    <Compile Include="BLL\CiudadBLL.cs" />
     <Compile Include="BLL\PaisBLL.cs" />
     <Compile Include="BLL\UsuarioBLL.cs" />
+    <Compile Include="CiudadABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CiudadABM.Designer.cs">
+      <DependentUpon>CiudadABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\BarrioDAL.cs" />
+    <Compile Include="DAL\CiudadDAL.cs" />
     <Compile Include="DAL\EntidadDAL.cs" />
     <Compile Include="DAL\PaisDAL.cs" />
     <Compile Include="DAL\UsuarioDAL.cs" />
+    <Compile Include="Entities\Barrio.cs" />
+    <Compile Include="Entities\Ciudad.cs" />
     <Compile Include="Entities\Pais.cs" />
     <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Form1.cs">
@@ -74,6 +92,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BarrioABM.resx">
+      <DependentUpon>BarrioABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CiudadABM.resx">
+      <DependentUpon>CiudadABM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -10,9 +10,9 @@ using TP.P.A.V.I.Entities;
 
 namespace TP.P.A.V.I.DAL
 {
-    class PaisDAL : EntidadDAL
+    class BarrioDAL
     {
-        public static DataTable ObtenerListadoPaises()
+        public static DataTable ObtenerListadoBarrios()
         {
             string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
             SqlCommand cmd = new SqlCommand();
@@ -20,7 +20,7 @@ namespace TP.P.A.V.I.DAL
 
             try
             {
-                string consulta = "SELECT * FROM Paises";
+                string consulta = "SELECT * FROM Barrios";
 
                 cmd.Parameters.Clear();
                 cmd.CommandType = CommandType.Text;
@@ -45,50 +45,16 @@ namespace TP.P.A.V.I.DAL
             }
         }
 
-        public static bool AgregarPaisABD(Pais p)
+        public static Barrio ObtenerBarrio(int id)
         {
             string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
-            bool resultado = false;
+            Barrio b = new Barrio();
             SqlCommand cmd = new SqlCommand();
             SqlConnection cn = new SqlConnection(cadenaConexion);
 
             try
             {
-                string consulta = "INSERT INTO Paises (Nombre, Descripcion) VALUES (@nombre, @desc)";
-
-                cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@nombre", p.NombrePais);
-                cmd.Parameters.AddWithValue("@desc", p.DescPais);
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = consulta;
-
-                cn.Open();
-                cmd.Connection = cn;
-                cmd.ExecuteNonQuery();
-                resultado = true;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                cn.Close();
-            }
-
-            return resultado;
-        }
-
-        public static Pais ObtenerPais(int id)
-        {
-            string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
-            Pais p = new Pais();
-            SqlCommand cmd = new SqlCommand();
-            SqlConnection cn = new SqlConnection(cadenaConexion);
-
-            try
-            {
-                string consulta = "SELECT * FROM Paises WHERE Id LIKE @id";
+                string consulta = "SELECT * FROM Barrios WHERE Id LIKE @id";
 
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@id", id);
@@ -102,9 +68,10 @@ namespace TP.P.A.V.I.DAL
 
                 if (dr != null && dr.Read())
                 {
-                    p.IdPais = int.Parse(dr["Id"].ToString());
-                    p.NombrePais = dr["Nombre"].ToString();
-                    p.DescPais = dr["Descripcion"].ToString();
+                    b.IdBarrio = int.Parse(dr["Id"].ToString());
+                    b.NombreBarrio = dr["Nombre"].ToString();
+                    b.DescBarrio = dr["Descripcion"].ToString();
+                    b.IdCiudadBarrio = int.Parse(dr["IdCiudad"].ToString());
                 }
             }
             catch (Exception)
@@ -116,10 +83,10 @@ namespace TP.P.A.V.I.DAL
                 cn.Close();
             }
 
-            return p;
+            return b;
         }
 
-        public static bool ActualizarPaisABD(Pais p)
+        public static bool AgregarBarrioABD(Barrio b)
         {
             string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
             bool resultado = false;
@@ -128,12 +95,12 @@ namespace TP.P.A.V.I.DAL
 
             try
             {
-                string consulta = "UPDATE Paises SET Nombre = @nombre, Descripcion = @desc WHERE Id LIKE @id";
+                string consulta = "INSERT INTO Barrios (Nombre, Descripcion, IdCiudad) VALUES (@nombre, @desc, @idCiudad)";
 
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id", p.IdPais);
-                cmd.Parameters.AddWithValue("@nombre", p.NombrePais);
-                cmd.Parameters.AddWithValue("@desc", p.DescPais);
+                cmd.Parameters.AddWithValue("@nombre", b.NombreBarrio);
+                cmd.Parameters.AddWithValue("@desc", b.DescBarrio);
+                cmd.Parameters.AddWithValue("@idCiudad", b.IdCiudadBarrio);
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = consulta;
 
@@ -154,7 +121,7 @@ namespace TP.P.A.V.I.DAL
             return resultado;
         }
 
-        public static bool BorrarPaisABD(Pais p)
+        public static bool ActualizarBarrioABD(Barrio b)
         {
             string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
             bool resultado = false;
@@ -163,10 +130,45 @@ namespace TP.P.A.V.I.DAL
 
             try
             {
-                string consulta = "DELETE FROM Paises WHERE Id LIKE @id";
+                string consulta = "UPDATE Barrios SET Nombre = @nombre, Descripcion = @desc, IdCiudad = @idCiudad WHERE Id LIKE @id";
 
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id", p.IdPais);
+                cmd.Parameters.AddWithValue("@id", b.IdBarrio);
+                cmd.Parameters.AddWithValue("@nombre", b.NombreBarrio);
+                cmd.Parameters.AddWithValue("@desc", b.DescBarrio);
+                cmd.Parameters.AddWithValue("@idCiudad", b.IdCiudadBarrio);
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+                cmd.ExecuteNonQuery();
+                resultado = true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+            return resultado;
+        }
+        public static bool BorrarBarrioABD(Barrio b)
+        {
+            string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
+            bool resultado = false;
+            SqlCommand cmd = new SqlCommand();
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+
+            try
+            {
+                string consulta = "DELETE FROM Barrios WHERE Id LIKE @id";
+
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", b.IdBarrio);
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = consulta;
 
