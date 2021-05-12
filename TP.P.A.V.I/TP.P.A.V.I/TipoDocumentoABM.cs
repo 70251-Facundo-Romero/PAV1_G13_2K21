@@ -93,7 +93,7 @@ namespace TP.P.A.V.I
 
             if (resultado)
             {
-                MessageBox.Show("Pais actualizado con exito!");
+                MessageBox.Show("El Tipo de Documento ha sido actualizado con exito!");
                 LimpiarCampos();
                 CargarGrilla();
             }
@@ -122,7 +122,7 @@ namespace TP.P.A.V.I
             }
         }
 
-        private void grillaTipoDoc_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void grillaTipoDoc_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
             btnActualizar.Enabled = true;
@@ -131,7 +131,7 @@ namespace TP.P.A.V.I
             int indice = e.RowIndex;
             DataGridViewRow filaSeleccionada = grillaTipoDoc.Rows[indice];
             int id = (int)filaSeleccionada.Cells["Id"].Value;
-            MessageBox.Show("" + id);
+            //MessageBox.Show("" + id);
             TipoDocumento td = TipoDocumentoBLL.GetById(id);
             LimpiarCampos();
             CargarCampos(td);

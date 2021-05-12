@@ -34,7 +34,7 @@ namespace TP.P.A.V.I.DAL
 
                 return table;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw;
             }
@@ -116,13 +116,68 @@ namespace TP.P.A.V.I.DAL
 
         public static bool ActualizarTipo(TipoDocumento model)
         {
+            string connection = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
             bool result = false;
+            SqlCommand cmd = new SqlCommand();
+            SqlConnection cn = new SqlConnection(connection);
+
+            try
+            {
+                string consulta = "UPDATE [Tipos_Documentos] SET NombreTipoDocumento = @nombre WHERE Id_TipoDocumento LIKE @id";
+
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", model.Id);
+                cmd.Parameters.AddWithValue("@nombre", model.NombreTipoDocumento);
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+                cmd.ExecuteNonQuery();
+                result = true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+
             return result;
         }
 
         public static bool BorrarTipoDoc(TipoDocumento model)
         {
+            string connection = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
             bool result = false;
+            SqlCommand cmd = new SqlCommand();
+            SqlConnection cn = new SqlConnection(connection);
+
+            try
+            {
+                string consulta = "DELETE FROM [Tipos_Documentos] WHERE Id_TipoDocumento LIKE @id";
+
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", model.Id);
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+                cmd.ExecuteNonQuery();
+                result = true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+
             return result;
         }
     }

@@ -83,7 +83,7 @@ namespace TP.P.A.V.I
             this.grillaTipoDoc.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.grillaTipoDoc.Size = new System.Drawing.Size(725, 182);
             this.grillaTipoDoc.TabIndex = 0;
-            this.grillaTipoDoc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaTipoDoc_CellContentClick);
+            this.grillaTipoDoc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaTipoDoc_CellClick);
             // 
             // Id
             // 
