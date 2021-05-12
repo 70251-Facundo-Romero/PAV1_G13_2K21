@@ -118,7 +118,7 @@ namespace TP.P.A.V.I
         private Form activeForm = null;
         private void openChildForm(Form formHijo)
         {
-            if (activeForm != null) 
+            if (activeForm != null)
                 activeForm.Close();
             activeForm = formHijo;
             formHijo.TopLevel = false;
@@ -144,5 +144,15 @@ namespace TP.P.A.V.I
         {
             showSubMenu(subMenuFacturacion);
         }
-    }
+
+        private void btnGestionHoteles_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGestEmpleados_Click(object sender, EventArgs e)
+        {
+
+        }
+    }   
 }
