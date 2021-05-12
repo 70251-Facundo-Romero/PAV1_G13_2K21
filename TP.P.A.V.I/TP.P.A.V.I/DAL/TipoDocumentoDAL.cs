@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using TP.P.A.V.I.Entities;
@@ -9,14 +10,15 @@ namespace TP.P.A.V.I.DAL
     {
         public static DataTable GetListadoTipoDoc()
         {
-            string connection = System.Configuration.ConfigurationManager.AppSettings["ConnectionString"];
+            string connection = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
             SqlConnection cn = new SqlConnection(connection);
+
+            SqlCommand cmd = new SqlCommand();
+            
             try
             {
 
-                SqlCommand cmd = new SqlCommand();
-
-                string query = "SELECT * FROM [Tipos_Documentos] ";
+                string query = "SELECT * FROM [Tipos_Documentos]";
 
                 cmd.Parameters.Clear();
                 cmd.CommandType = CommandType.Text;
@@ -69,6 +71,58 @@ namespace TP.P.A.V.I.DAL
                         con.Close();
                 }
             }
+            return result;
+        }
+
+        public static TipoDocumento ObtenerTipoPorId(int id)
+        {
+            string connection = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
+            TipoDocumento td = new TipoDocumento();
+            SqlCommand cmd = new SqlCommand();
+            SqlConnection cn = new SqlConnection(connection);
+
+            try
+            {
+                string consulta = "SELECT * FROM [Tipos_Documentos] WHERE Id_TipoDocumento LIKE @id";
+
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr != null && dr.Read())
+                {
+                   td.Id = int.Parse(dr["Id_TipoDocumento"].ToString());
+                   td.NombreTipoDocumento = dr["NombreTipoDocumento"].ToString();
+                    
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+            return td;
+        }
+
+        public static bool ActualizarTipo(TipoDocumento model)
+        {
+            bool result = false;
+            return result;
+        }
+
+        public static bool BorrarTipoDoc(TipoDocumento model)
+        {
+            bool result = false;
             return result;
         }
     }

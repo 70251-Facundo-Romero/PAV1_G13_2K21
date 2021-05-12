@@ -66,19 +66,22 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TipoDocForm.cs">
+    <Compile Include="TipoDocumentoABM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TipoDocForm.Designer.cs">
-      <DependentUpon>TipoDocForm.cs</DependentUpon>
+    <Compile Include="TipoDocumentoABM.Designer.cs">
+      <DependentUpon>TipoDocumentoABM.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipoDocumentoABM.resx">
+      <DependentUpon>TipoDocumentoABM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -90,9 +93,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TipoDocForm.resx">
-      <DependentUpon>TipoDocForm.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -163,8 +163,6 @@
   <ItemGroup>
     <None Include="Resources\cuadricula16px.png" />
   </ItemGroup>
-<<<<<<< Updated upstream
-=======
   <ItemGroup>
     <None Include="Resources\lista-de-invitados.png" />
   </ItemGroup>
@@ -195,9 +193,5 @@
   <ItemGroup>
     <None Include="Resources\factura.png" />
   </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
->>>>>>> Stashed changes
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

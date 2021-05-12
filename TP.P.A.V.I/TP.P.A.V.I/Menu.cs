@@ -16,6 +16,36 @@ namespace TP.P.A.V.I
         public Menu()
         {
             InitializeComponent();
+            customizeDesing();
+        }
+
+        private void customizeDesing()
+        {
+            subMenuHoteles.Visible = false;
+            subMenuHuespedes.Visible = false;
+        }
+
+        private void hideSubMenu()
+        {
+            if (subMenuHoteles.Visible == true) subMenuHoteles.Visible = false;
+            if (subMenuHuespedes.Visible == true) subMenuHuespedes.Visible = false;
+            if (subMenuUbicaciones.Visible == true) subMenuUbicaciones.Visible = false;
+            if (subMenuServIns.Visible == true) subMenuServIns.Visible = false;
+            if (subMenuFacturacion.Visible == true) subMenuFacturacion.Visible = false;
+            if (subMenuEmpleados.Visible == true) subMenuEmpleados.Visible = false;
+        }
+
+        private void showSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                hideSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+            {
+                subMenu.Visible = false;
+            }
         }
 
         private void Menu_Load(object sender, EventArgs e)
@@ -69,8 +99,6 @@ namespace TP.P.A.V.I
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-<<<<<<< Updated upstream
-=======
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -117,12 +145,15 @@ namespace TP.P.A.V.I
             showSubMenu(subMenuFacturacion);
         }
 
-        private void btnTipoDoc_Click(object sender, EventArgs e)
+        private void btnPaises_Click(object sender, EventArgs e)
         {
-            TipoDocForm form = new TipoDocForm();
-            form.Show();
-            this.Hide();
+            
         }
->>>>>>> Stashed changes
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            TipoDocumentoABM form = new TipoDocumentoABM();
+            form.Show();
+        }
     }
 }
