@@ -21,6 +21,9 @@ namespace TP.P.A.V.I
             btnBorrar.Enabled = false;
 
             CargarGrilla();
+
+            LoadComboPais();
+            LoadComboTarjeta();
         }
 
         private void CargarGrilla()
@@ -33,6 +36,46 @@ namespace TP.P.A.V.I
             {
                 MessageBox.Show("Ocurrio un error al listar los Huéspedes" + e.Message);
             }
+        }
+
+        /// <summary>
+        /// descomentar linea nro 48 al agregar el modulo 
+        /// de gestion de paises
+        /// </summary>
+        private void LoadComboPais()
+        {
+            try
+            {
+                //cmbPais.DataSource = PaisBLL.ObtenerListadoPaises();
+                cmbPais.DisplayMember = "NombrePais";
+                cmbPais.ValueMember = "IdPais";
+                cmbPais.SelectedIndex = -1;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Ocurrio un error al listar Países" + e.Message);
+            }
+           
+        }
+
+        /// <summary>
+        /// descomentar linea nro 68 al agregar el modulo
+        /// de gestion de tarjetas
+        /// </summary>
+        private void LoadComboTarjeta()
+        {
+            try
+            {
+                //cmbTarjeta.DataSource = TarjetaBLL.ObtenerListadoPaises();
+                cmbTarjeta.DisplayMember = "NombrePais";
+                cmbTarjeta.ValueMember = "IdPais";
+                cmbTarjeta.SelectedIndex = -1;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Ocurrio un error al listar Tarjetas" + e.Message);
+            }
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -156,20 +199,6 @@ namespace TP.P.A.V.I
             CargarCampos(h);
         }
 
-        //private void grillaTipoDoc_CellClick(object sender, DataGridViewCellEventArgs e)
-        //{
-
-        //    btnActualizar.Enabled = true;
-        //    btnBorrar.Enabled = true;
-
-        //    int indice = e.RowIndex;
-        //    DataGridViewRow filaSeleccionada = grillaHuesped.Rows[indice];
-        //    int id = (int)filaSeleccionada.Cells["Id"].Value;
-        //    //MessageBox.Show("" + id);
-        //    TipoDocumento td = TipoDocumentoBLL.GetById(id);
-        //    LimpiarCampos();
-        //    CargarCampos(td);
-        //    }
     }
     }
 
