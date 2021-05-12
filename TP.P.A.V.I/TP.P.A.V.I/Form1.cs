@@ -24,7 +24,7 @@ namespace TP.P.A.V.I
             TxtUserName.Focus();
             if (true)
             {
-                MessageBox.Show("holamundo");
+                MessageBox.Show("Hello World");
             }
         }
 

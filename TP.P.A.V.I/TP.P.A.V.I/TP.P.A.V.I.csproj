@@ -47,15 +47,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BD3K7G13_2021DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD3K7G13_2021DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BD3K7G13_2021DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD3K7G13_2021DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BD3K7G13_2021DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD3K7G13_2021DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\EmpleadosBLL.cs" />
+    <Compile Include="BLL\HotelBLL.cs" />
     <Compile Include="BLL\UsuarioBLL.cs" />
+    <Compile Include="DAL\EmpleadosDAL.cs" />
     <Compile Include="DAL\EntidadDAL.cs" />
+    <Compile Include="DAL\HotelesDAL.cs" />
     <Compile Include="DAL\UsuarioDAL.cs" />
+    <Compile Include="Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleados.Designer.cs">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Empleado.cs" />
+    <Compile Include="Entities\Hotel.cs" />
     <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hoteles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hoteles.Designer.cs">
+      <DependentUpon>Hoteles.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -65,8 +98,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Empleados.resx">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hoteles.resx">
+      <DependentUpon>Hoteles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -81,6 +120,39 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="BD3K7G13_2021DataSet.xsc">
+      <DependentUpon>BD3K7G13_2021DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K7G13_2021DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD3K7G13_2021DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD3K7G13_2021DataSet.xss">
+      <DependentUpon>BD3K7G13_2021DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K7G13_2021DataSet1.xsc">
+      <DependentUpon>BD3K7G13_2021DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K7G13_2021DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD3K7G13_2021DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD3K7G13_2021DataSet1.xss">
+      <DependentUpon>BD3K7G13_2021DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K7G13_2021DataSet2.xsc">
+      <DependentUpon>BD3K7G13_2021DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K7G13_2021DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD3K7G13_2021DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD3K7G13_2021DataSet2.xss">
+      <DependentUpon>BD3K7G13_2021DataSet2.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -150,6 +222,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cuadricula16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lista-de-invitados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\huespedes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empleado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toalla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marcador-de-posicion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marcador-de-posicion1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marcador-de-posicion2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ubicacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marcador-de-posicion3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factura.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

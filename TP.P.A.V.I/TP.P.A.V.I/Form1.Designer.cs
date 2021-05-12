@@ -73,14 +73,14 @@
             this.TxtPassword.Location = new System.Drawing.Point(38, 194);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.PasswordChar = '*';
-            this.TxtPassword.Size = new System.Drawing.Size(165, 20);
+            this.TxtPassword.Size = new System.Drawing.Size(207, 20);
             this.TxtPassword.TabIndex = 2;
             // 
             // TxtUserName
             // 
             this.TxtUserName.Location = new System.Drawing.Point(37, 146);
             this.TxtUserName.Name = "TxtUserName";
-            this.TxtUserName.Size = new System.Drawing.Size(165, 20);
+            this.TxtUserName.Size = new System.Drawing.Size(208, 20);
             this.TxtUserName.TabIndex = 1;
             // 
             // label2
@@ -100,7 +100,7 @@
             this.BtnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
             this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLogin.ForeColor = System.Drawing.Color.White;
-            this.BtnLogin.Location = new System.Drawing.Point(128, 220);
+            this.BtnLogin.Location = new System.Drawing.Point(170, 220);
             this.BtnLogin.Name = "BtnLogin";
             this.BtnLogin.Size = new System.Drawing.Size(75, 23);
             this.BtnLogin.TabIndex = 3;
@@ -123,7 +123,7 @@
             this.MenuLogin.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuLogin.Location = new System.Drawing.Point(0, 35);
             this.MenuLogin.Name = "MenuLogin";
-            this.MenuLogin.Size = new System.Drawing.Size(225, 465);
+            this.MenuLogin.Size = new System.Drawing.Size(251, 465);
             this.MenuLogin.TabIndex = 6;
             // 
             // pictureBox3
@@ -151,7 +151,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.SkyBlue;
-            this.label3.Location = new System.Drawing.Point(76, 109);
+            this.label3.Location = new System.Drawing.Point(94, 113);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 16);
             this.label3.TabIndex = 6;
@@ -160,7 +160,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::TP.P.A.V.I.Properties.Resources.q;
-            this.pictureBox1.Location = new System.Drawing.Point(65, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(81, 10);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -172,9 +172,9 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(225, 35);
+            this.panel2.Location = new System.Drawing.Point(251, 35);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(775, 465);
+            this.panel2.Size = new System.Drawing.Size(749, 465);
             this.panel2.TabIndex = 7;
             // 
             // pictureBox5
@@ -185,7 +185,7 @@
             this.pictureBox5.Image = global::TP.P.A.V.I.Properties.Resources.hoteles_w_920x515;
             this.pictureBox5.Location = new System.Drawing.Point(0, 0);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(775, 465);
+            this.pictureBox5.Size = new System.Drawing.Size(749, 465);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 1;
             this.pictureBox5.TabStop = false;
