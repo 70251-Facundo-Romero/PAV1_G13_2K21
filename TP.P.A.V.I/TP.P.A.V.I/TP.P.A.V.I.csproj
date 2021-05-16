@@ -63,11 +63,19 @@
       <DependentUpon>BD3K7G13_2021DataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="BLL\EmpleadosBLL.cs" />
+    <Compile Include="BLL\HabitacionesBLL.cs" />
+    <Compile Include="BLL\HabitacionXHotelBLL.cs" />
     <Compile Include="BLL\HotelBLL.cs" />
+    <Compile Include="BLL\InstalacionesBLL.cs" />
+    <Compile Include="BLL\InstalacionXHotelBLL.cs" />
     <Compile Include="BLL\UsuarioBLL.cs" />
     <Compile Include="DAL\EmpleadosDAL.cs" />
     <Compile Include="DAL\EntidadDAL.cs" />
+    <Compile Include="DAL\HabitacionesDAL.cs" />
+    <Compile Include="DAL\HabitacionXHotelDAL.cs" />
     <Compile Include="DAL\HotelesDAL.cs" />
+    <Compile Include="DAL\InstalacionesDAL.cs" />
+    <Compile Include="DAL\InstalacionXHotelDAL.cs" />
     <Compile Include="DAL\UsuarioDAL.cs" />
     <Compile Include="Empleados.cs">
       <SubType>Form</SubType>
@@ -76,7 +84,11 @@
       <DependentUpon>Empleados.cs</DependentUpon>
     </Compile>
     <Compile Include="Entities\Empleado.cs" />
+    <Compile Include="Entities\Habitaciones.cs" />
+    <Compile Include="Entities\HabitacionXHotel.cs" />
     <Compile Include="Entities\Hotel.cs" />
+    <Compile Include="Entities\Instalaciones.cs" />
+    <Compile Include="Entities\InstalacionXHotel.cs" />
     <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -84,11 +96,35 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHabitacionXHotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHabitacionXHotel.Designer.cs">
+      <DependentUpon>FormHabitacionXHotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestionar_Habitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestionar_Habitaciones.Designer.cs">
+      <DependentUpon>Gestionar_Habitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestionar_Instalaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestionar_Instalaciones.Designer.cs">
+      <DependentUpon>Gestionar_Instalaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hoteles.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Hoteles.Designer.cs">
       <DependentUpon>Hoteles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstalacionesXhotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstalacionesXhotel.Designer.cs">
+      <DependentUpon>InstalacionesXhotel.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -104,8 +140,20 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormHabitacionXHotel.resx">
+      <DependentUpon>FormHabitacionXHotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestionar_Habitaciones.resx">
+      <DependentUpon>Gestionar_Habitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestionar_Instalaciones.resx">
+      <DependentUpon>Gestionar_Instalaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Hoteles.resx">
       <DependentUpon>Hoteles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstalacionesXhotel.resx">
+      <DependentUpon>InstalacionesXhotel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
