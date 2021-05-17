@@ -115,21 +115,6 @@ namespace TP.P.A.V.I
             showSubMenu(subMenuEmpleados);
         }
 
-        private Form activeForm = null;
-        private void openChildForm(Form formHijo)
-        {
-            if (activeForm != null) 
-                activeForm.Close();
-            activeForm = formHijo;
-            formHijo.TopLevel = false;
-            formHijo.FormBorderStyle = FormBorderStyle.None;
-            formHijo.Dock = DockStyle.Fill;
-            panelFormulariosHijos.Controls.Add(formHijo);
-            panelFormulariosHijos.Tag = formHijo;
-            formHijo.BringToFront();
-            formHijo.Show();
-        }
-
         private void btnUbicaciones_Click(object sender, EventArgs e)
         {
             showSubMenu(subMenuUbicaciones);
@@ -144,5 +129,20 @@ namespace TP.P.A.V.I
         {
             showSubMenu(subMenuFacturacion);
         }
-    }
+
+        private Form activeForm = null;
+        private void openChildForm(Form formHijo)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = formHijo;
+            formHijo.TopLevel = false;
+            formHijo.FormBorderStyle = FormBorderStyle.None;
+            formHijo.Dock = DockStyle.Fill;
+            panelFormulariosHijos.Controls.Add(formHijo);
+            panelFormulariosHijos.Tag = formHijo;
+            formHijo.BringToFront();
+            formHijo.Show();
+        }
+    }   
 }

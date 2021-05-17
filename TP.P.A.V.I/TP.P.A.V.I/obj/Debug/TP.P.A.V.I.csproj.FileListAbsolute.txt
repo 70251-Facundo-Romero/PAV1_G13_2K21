@@ -20,16 +20,28 @@ C:\Users\facun\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.
 C:\Users\facun\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Menu.resources
 C:\Users\nata\Desktop\TPPAVI\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Login.resources
 C:\Users\nata\Desktop\TPPAVI\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Menu.resources
-C:\Users\Usuario\Desktop\TP PAV I\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\TP.P.A.V.I.exe.config
-C:\Users\Usuario\Desktop\TP PAV I\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\TP.P.A.V.I.exe
-C:\Users\Usuario\Desktop\TP PAV I\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\TP.P.A.V.I.pdb
-C:\Users\Usuario\Desktop\TP PAV I\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csprojAssemblyReference.cache
-C:\Users\Usuario\Desktop\TP PAV I\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Login.resources
-C:\Users\Usuario\Desktop\TP PAV I\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Menu.resources
-C:\Users\Usuario\Desktop\TP PAV I\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Properties.Resources.resources
-C:\Users\Usuario\Desktop\TP PAV I\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csproj.GenerateResource.cache
-C:\Users\Usuario\Desktop\TP PAV I\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csproj.CoreCompileInputs.cache
-C:\Users\Usuario\Desktop\TP PAV I\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.exe
-C:\Users\Usuario\Desktop\TP PAV I\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.pdb
-C:\Users\Usuario\Desktop\TP PAV I\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.PuestosDeTrabajoABM.resources
-C:\Users\Usuario\Desktop\TP PAV I\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Servicios.resources
+C:\Users\Lutyc\OneDrive\Escritorio\TP PAV\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\TP.P.A.V.I.exe.config
+C:\Users\Lutyc\OneDrive\Escritorio\TP PAV\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\TP.P.A.V.I.exe
+C:\Users\Lutyc\OneDrive\Escritorio\TP PAV\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\TP.P.A.V.I.pdb
+C:\Users\Lutyc\OneDrive\Escritorio\TP PAV\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csprojAssemblyReference.cache
+C:\Users\Lutyc\OneDrive\Escritorio\TP PAV\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Login.resources
+C:\Users\Lutyc\OneDrive\Escritorio\TP PAV\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Menu.resources
+C:\Users\Lutyc\OneDrive\Escritorio\TP PAV\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Properties.Resources.resources
+C:\Users\Lutyc\OneDrive\Escritorio\TP PAV\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csproj.GenerateResource.cache
+C:\Users\Lutyc\OneDrive\Escritorio\TP PAV\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csproj.CoreCompileInputs.cache
+C:\Users\Lutyc\OneDrive\Escritorio\TP PAV\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.exe
+C:\Users\Lutyc\OneDrive\Escritorio\TP PAV\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.pdb
+C:\Users\Lutyc\OneDrive\Escritorio\TP PAV\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Hoteles.resources
+C:\Users\Lutyc\OneDrive\Escritorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\TP.P.A.V.I.exe.config
+C:\Users\Lutyc\OneDrive\Escritorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\TP.P.A.V.I.exe
+C:\Users\Lutyc\OneDrive\Escritorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\TP.P.A.V.I.pdb
+C:\Users\Lutyc\OneDrive\Escritorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csprojAssemblyReference.cache
+C:\Users\Lutyc\OneDrive\Escritorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Login.resources
+C:\Users\Lutyc\OneDrive\Escritorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Hoteles.resources
+C:\Users\Lutyc\OneDrive\Escritorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Menu.resources
+C:\Users\Lutyc\OneDrive\Escritorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Properties.Resources.resources
+C:\Users\Lutyc\OneDrive\Escritorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csproj.GenerateResource.cache
+C:\Users\Lutyc\OneDrive\Escritorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csproj.CoreCompileInputs.cache
+C:\Users\Lutyc\OneDrive\Escritorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.exe
+C:\Users\Lutyc\OneDrive\Escritorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.pdb
+C:\Users\Lutyc\OneDrive\Escritorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Empleados.resources
