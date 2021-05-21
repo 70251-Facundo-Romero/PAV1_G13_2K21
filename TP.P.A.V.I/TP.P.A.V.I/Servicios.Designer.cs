@@ -30,6 +30,7 @@ namespace TP.P.A.V.I
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Servicios));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@ namespace TP.P.A.V.I
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnAgregarServ = new System.Windows.Forms.Button();
             this.btnActualizarServ = new System.Windows.Forms.Button();
             this.btnEliminarServ = new System.Windows.Forms.Button();
@@ -54,7 +54,7 @@ namespace TP.P.A.V.I
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::TP.P.A.V.I.Properties.Resources.q;
-            this.pictureBox2.Location = new System.Drawing.Point(681, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(614, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(59, 71);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -67,7 +67,7 @@ namespace TP.P.A.V.I
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.SkyBlue;
-            this.label4.Location = new System.Drawing.Point(678, 86);
+            this.label4.Location = new System.Drawing.Point(611, 86);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 16);
             this.label4.TabIndex = 19;
@@ -75,12 +75,14 @@ namespace TP.P.A.V.I
             // 
             // txtNomServ
             // 
+            this.txtNomServ.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNomServ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.txtNomServ.ForeColor = System.Drawing.Color.White;
             this.txtNomServ.Location = new System.Drawing.Point(81, 51);
             this.txtNomServ.Multiline = true;
             this.txtNomServ.Name = "txtNomServ";
-            this.txtNomServ.Size = new System.Drawing.Size(330, 32);
+            this.txtNomServ.Size = new System.Drawing.Size(369, 32);
             this.txtNomServ.TabIndex = 21;
             // 
             // lblNombrePuesto
@@ -98,6 +100,9 @@ namespace TP.P.A.V.I
             // 
             this.grillaServicios.AllowUserToAddRows = false;
             this.grillaServicios.AllowUserToDeleteRows = false;
+            this.grillaServicios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grillaServicios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.grillaServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grillaServicios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -116,10 +121,13 @@ namespace TP.P.A.V.I
             this.grillaServicios.Name = "grillaServicios";
             this.grillaServicios.ReadOnly = true;
             this.grillaServicios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.grillaServicios.Size = new System.Drawing.Size(463, 266);
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            this.grillaServicios.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.grillaServicios.Size = new System.Drawing.Size(396, 262);
             this.grillaServicios.TabIndex = 23;
             this.grillaServicios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaServicios_CellClick);
-          
             // 
             // Id
             // 
@@ -131,40 +139,32 @@ namespace TP.P.A.V.I
             // 
             // Nombre
             // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Nombre.DataPropertyName = "Nombre";
             this.Nombre.HeaderText = "Nombre del Servicio";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 350;
             // 
             // txtId
             // 
             this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.txtId.ForeColor = System.Drawing.Color.White;
-            this.txtId.Location = new System.Drawing.Point(437, 51);
+            this.txtId.Location = new System.Drawing.Point(81, 99);
             this.txtId.Multiline = true;
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(36, 32);
             this.txtId.TabIndex = 24;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(444, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 17);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "ID";
+            this.txtId.Visible = false;
             // 
             // btnAgregarServ
             // 
+            this.btnAgregarServ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregarServ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnAgregarServ.FlatAppearance.BorderSize = 0;
             this.btnAgregarServ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarServ.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarServ.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarServ.Location = new System.Drawing.Point(539, 137);
+            this.btnAgregarServ.Location = new System.Drawing.Point(472, 137);
             this.btnAgregarServ.Name = "btnAgregarServ";
             this.btnAgregarServ.Size = new System.Drawing.Size(138, 30);
             this.btnAgregarServ.TabIndex = 26;
@@ -174,11 +174,13 @@ namespace TP.P.A.V.I
             // 
             // btnActualizarServ
             // 
+            this.btnActualizarServ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnActualizarServ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnActualizarServ.FlatAppearance.BorderSize = 0;
             this.btnActualizarServ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizarServ.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarServ.ForeColor = System.Drawing.Color.White;
-            this.btnActualizarServ.Location = new System.Drawing.Point(539, 186);
+            this.btnActualizarServ.Location = new System.Drawing.Point(472, 186);
             this.btnActualizarServ.Name = "btnActualizarServ";
             this.btnActualizarServ.Size = new System.Drawing.Size(138, 30);
             this.btnActualizarServ.TabIndex = 28;
@@ -188,11 +190,13 @@ namespace TP.P.A.V.I
             // 
             // btnEliminarServ
             // 
+            this.btnEliminarServ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminarServ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnEliminarServ.FlatAppearance.BorderSize = 0;
             this.btnEliminarServ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarServ.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarServ.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarServ.Location = new System.Drawing.Point(539, 236);
+            this.btnEliminarServ.Location = new System.Drawing.Point(472, 236);
             this.btnEliminarServ.Name = "btnEliminarServ";
             this.btnEliminarServ.Size = new System.Drawing.Size(138, 30);
             this.btnEliminarServ.TabIndex = 30;
@@ -202,11 +206,13 @@ namespace TP.P.A.V.I
             // 
             // btnLimpiarCampos
             // 
+            this.btnLimpiarCampos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLimpiarCampos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnLimpiarCampos.FlatAppearance.BorderSize = 0;
             this.btnLimpiarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiarCampos.Font = new System.Drawing.Font("Century Gothic", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiarCampos.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiarCampos.Location = new System.Drawing.Point(509, 51);
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(472, 51);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
             this.btnLimpiarCampos.Size = new System.Drawing.Size(110, 37);
             this.btnLimpiarCampos.TabIndex = 31;
@@ -229,13 +235,12 @@ namespace TP.P.A.V.I
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(733, 426);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnLimpiarCampos);
             this.Controls.Add(this.btnEliminarServ);
             this.Controls.Add(this.btnActualizarServ);
             this.Controls.Add(this.btnAgregarServ);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.grillaServicios);
             this.Controls.Add(this.lblNombrePuesto);
@@ -261,14 +266,13 @@ namespace TP.P.A.V.I
         private System.Windows.Forms.TextBox txtNomServ;
         private System.Windows.Forms.Label lblNombrePuesto;
         private System.Windows.Forms.DataGridView grillaServicios;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAgregarServ;
         private System.Windows.Forms.Button btnActualizarServ;
         private System.Windows.Forms.Button btnEliminarServ;
         private System.Windows.Forms.Button btnLimpiarCampos;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
     }
 }

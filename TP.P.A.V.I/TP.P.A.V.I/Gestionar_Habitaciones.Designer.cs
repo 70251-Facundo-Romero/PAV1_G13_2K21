@@ -45,12 +45,17 @@ namespace TP.P.A.V.I
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Habitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.GestionarHabitaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Viewer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // GestionarHabitaciones
             // 
+            this.GestionarHabitaciones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GestionarHabitaciones.Controls.Add(this.str_Id);
             this.GestionarHabitaciones.Controls.Add(this.Clear);
             this.GestionarHabitaciones.Controls.Add(this.Str_Descripcion_Hab);
@@ -64,10 +69,10 @@ namespace TP.P.A.V.I
             this.GestionarHabitaciones.ForeColor = System.Drawing.Color.White;
             this.GestionarHabitaciones.Location = new System.Drawing.Point(12, 12);
             this.GestionarHabitaciones.Name = "GestionarHabitaciones";
-            this.GestionarHabitaciones.Size = new System.Drawing.Size(618, 232);
+            this.GestionarHabitaciones.Size = new System.Drawing.Size(591, 232);
             this.GestionarHabitaciones.TabIndex = 1;
             this.GestionarHabitaciones.TabStop = false;
-            this.GestionarHabitaciones.Text = "GestionarHabitaciones";
+            this.GestionarHabitaciones.Text = "Gestionar Habitaciones";
             // 
             // str_Id
             // 
@@ -81,7 +86,10 @@ namespace TP.P.A.V.I
             // 
             // Clear
             // 
-            this.Clear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.Clear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Clear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.Clear.FlatAppearance.BorderSize = 0;
+            this.Clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Clear.Location = new System.Drawing.Point(501, 162);
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(83, 35);
@@ -92,9 +100,13 @@ namespace TP.P.A.V.I
             // 
             // Str_Descripcion_Hab
             // 
+            this.Str_Descripcion_Hab.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Str_Descripcion_Hab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.Str_Descripcion_Hab.ForeColor = System.Drawing.Color.White;
             this.Str_Descripcion_Hab.Location = new System.Drawing.Point(139, 96);
             this.Str_Descripcion_Hab.Name = "Str_Descripcion_Hab";
-            this.Str_Descripcion_Hab.Size = new System.Drawing.Size(231, 110);
+            this.Str_Descripcion_Hab.Size = new System.Drawing.Size(318, 110);
             this.Str_Descripcion_Hab.TabIndex = 6;
             this.Str_Descripcion_Hab.Text = "";
             // 
@@ -111,7 +123,10 @@ namespace TP.P.A.V.I
             // 
             // EnviarHabilitaciones
             // 
-            this.EnviarHabilitaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.EnviarHabilitaciones.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.EnviarHabilitaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.EnviarHabilitaciones.FlatAppearance.BorderSize = 0;
+            this.EnviarHabilitaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EnviarHabilitaciones.Location = new System.Drawing.Point(501, 121);
             this.EnviarHabilitaciones.Name = "EnviarHabilitaciones";
             this.EnviarHabilitaciones.Size = new System.Drawing.Size(83, 35);
@@ -122,6 +137,9 @@ namespace TP.P.A.V.I
             // 
             // Cb_Options_hab
             // 
+            this.Cb_Options_hab.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Cb_Options_hab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.Cb_Options_hab.ForeColor = System.Drawing.Color.White;
             this.Cb_Options_hab.FormattingEnabled = true;
             this.Cb_Options_hab.Location = new System.Drawing.Point(463, 39);
             this.Cb_Options_hab.Name = "Cb_Options_hab";
@@ -141,6 +159,7 @@ namespace TP.P.A.V.I
             // 
             // Optinons
             // 
+            this.Optinons.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Optinons.AutoSize = true;
             this.Optinons.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Optinons.ForeColor = System.Drawing.Color.White;
@@ -152,6 +171,10 @@ namespace TP.P.A.V.I
             // 
             // Str_Nombre_hab
             // 
+            this.Str_Nombre_hab.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Str_Nombre_hab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.Str_Nombre_hab.ForeColor = System.Drawing.Color.White;
             this.Str_Nombre_hab.Location = new System.Drawing.Point(227, 41);
             this.Str_Nombre_hab.Name = "Str_Nombre_hab";
             this.Str_Nombre_hab.Size = new System.Drawing.Size(143, 27);
@@ -159,7 +182,10 @@ namespace TP.P.A.V.I
             // 
             // Viewer
             // 
-            this.Viewer.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(63)))), ((int)(((byte)(82)))));
+            this.Viewer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Viewer.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.Viewer.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Viewer.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -177,11 +203,11 @@ namespace TP.P.A.V.I
             this.Viewer.GridColor = System.Drawing.Color.White;
             this.Viewer.Location = new System.Drawing.Point(12, 264);
             this.Viewer.Name = "Viewer";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(63)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkSlateGray;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             this.Viewer.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.Viewer.Size = new System.Drawing.Size(618, 150);
+            this.Viewer.Size = new System.Drawing.Size(709, 150);
             this.Viewer.TabIndex = 0;
             this.Viewer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Viewer_CellContentClick);
             // 
@@ -190,30 +216,56 @@ namespace TP.P.A.V.I
             this.id.DataPropertyName = "Id";
             this.id.HeaderText = "Id _Habitacion";
             this.id.Name = "id";
-            this.id.Width = 175;
+            this.id.Width = 50;
             // 
             // Habitacion
             // 
             this.Habitacion.DataPropertyName = "Nombre";
             this.Habitacion.HeaderText = "Nombre Habitacion";
             this.Habitacion.Name = "Habitacion";
-            this.Habitacion.Width = 200;
+            this.Habitacion.Width = 250;
             // 
             // Descripcion
             // 
+            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Descripcion.DataPropertyName = "Descripcion ";
-            this.Descripcion.HeaderText = "Nombre Descripcion";
+            this.Descripcion.HeaderText = "Descripcion";
             this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Width = 200;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.SkyBlue;
+            this.label9.Location = new System.Drawing.Point(634, 106);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(75, 16);
+            this.label9.TabIndex = 62;
+            this.label9.Text = "Hoteleria";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = global::TP.P.A.V.I.Properties.Resources.q;
+            this.pictureBox2.Location = new System.Drawing.Point(632, 25);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(77, 78);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 61;
+            this.pictureBox2.TabStop = false;
             // 
             // Gestionar_Habitaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(63)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(865, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ClientSize = new System.Drawing.Size(733, 426);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.Viewer);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.GestionarHabitaciones);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Gestionar_Habitaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestionar_Habitaciones";
@@ -221,7 +273,9 @@ namespace TP.P.A.V.I
             this.GestionarHabitaciones.ResumeLayout(false);
             this.GestionarHabitaciones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Viewer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -237,9 +291,11 @@ namespace TP.P.A.V.I
         private System.Windows.Forms.Label Descripcion_hab;
         private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.DataGridView Viewer;
+        private System.Windows.Forms.TextBox str_Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Habitacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.TextBox str_Id;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

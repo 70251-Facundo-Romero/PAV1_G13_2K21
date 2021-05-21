@@ -30,6 +30,7 @@ namespace TP.P.A.V.I
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PuestosDeTrabajoABM));
             this.grillaPuestosTrabajo = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,7 +49,6 @@ namespace TP.P.A.V.I
             this.label2 = new System.Windows.Forms.Label();
             this.txtMatricula = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grillaPuestosTrabajo)).BeginInit();
@@ -83,7 +83,11 @@ namespace TP.P.A.V.I
             this.grillaPuestosTrabajo.Name = "grillaPuestosTrabajo";
             this.grillaPuestosTrabajo.ReadOnly = true;
             this.grillaPuestosTrabajo.RowHeadersVisible = false;
-            this.grillaPuestosTrabajo.Size = new System.Drawing.Size(692, 165);
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            this.grillaPuestosTrabajo.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.grillaPuestosTrabajo.Size = new System.Drawing.Size(625, 141);
             this.grillaPuestosTrabajo.TabIndex = 0;
             this.grillaPuestosTrabajo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaPuestosTrabajo_CellClick);
             // 
@@ -113,11 +117,11 @@ namespace TP.P.A.V.I
             // 
             // DescripcionPuesto
             // 
+            this.DescripcionPuesto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.DescripcionPuesto.DataPropertyName = "Descripcion";
             this.DescripcionPuesto.HeaderText = "Descripcion Puesto";
             this.DescripcionPuesto.Name = "DescripcionPuesto";
             this.DescripcionPuesto.ReadOnly = true;
-            this.DescripcionPuesto.Width = 300;
             // 
             // lblNombrePuesto
             // 
@@ -132,12 +136,15 @@ namespace TP.P.A.V.I
             // 
             // txtNomPuesto
             // 
+            this.txtNomPuesto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNomPuesto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.txtNomPuesto.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomPuesto.ForeColor = System.Drawing.Color.White;
             this.txtNomPuesto.Location = new System.Drawing.Point(57, 29);
             this.txtNomPuesto.Multiline = true;
             this.txtNomPuesto.Name = "txtNomPuesto";
-            this.txtNomPuesto.Size = new System.Drawing.Size(398, 32);
+            this.txtNomPuesto.Size = new System.Drawing.Size(414, 32);
             this.txtNomPuesto.TabIndex = 2;
             // 
             // label1
@@ -153,23 +160,27 @@ namespace TP.P.A.V.I
             // 
             // txtDescripcionPdt
             // 
+            this.txtDescripcionPdt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescripcionPdt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.txtDescripcionPdt.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcionPdt.ForeColor = System.Drawing.Color.White;
             this.txtDescripcionPdt.Location = new System.Drawing.Point(57, 85);
             this.txtDescripcionPdt.Multiline = true;
             this.txtDescripcionPdt.Name = "txtDescripcionPdt";
-            this.txtDescripcionPdt.Size = new System.Drawing.Size(481, 39);
+            this.txtDescripcionPdt.Size = new System.Drawing.Size(414, 39);
             this.txtDescripcionPdt.TabIndex = 4;
             // 
             // btnAgregarPdt
             // 
             this.btnAgregarPdt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnAgregarPdt.FlatAppearance.BorderSize = 0;
             this.btnAgregarPdt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarPdt.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarPdt.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarPdt.Location = new System.Drawing.Point(57, 202);
+            this.btnAgregarPdt.Location = new System.Drawing.Point(57, 214);
             this.btnAgregarPdt.Name = "btnAgregarPdt";
-            this.btnAgregarPdt.Size = new System.Drawing.Size(193, 30);
+            this.btnAgregarPdt.Size = new System.Drawing.Size(189, 30);
             this.btnAgregarPdt.TabIndex = 5;
             this.btnAgregarPdt.Text = "Agregar Puesto de Trabajo";
             this.btnAgregarPdt.UseVisualStyleBackColor = false;
@@ -178,12 +189,13 @@ namespace TP.P.A.V.I
             // btnActualizarPdt
             // 
             this.btnActualizarPdt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnActualizarPdt.FlatAppearance.BorderSize = 0;
             this.btnActualizarPdt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizarPdt.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarPdt.ForeColor = System.Drawing.Color.White;
-            this.btnActualizarPdt.Location = new System.Drawing.Point(269, 202);
+            this.btnActualizarPdt.Location = new System.Drawing.Point(269, 214);
             this.btnActualizarPdt.Name = "btnActualizarPdt";
-            this.btnActualizarPdt.Size = new System.Drawing.Size(207, 30);
+            this.btnActualizarPdt.Size = new System.Drawing.Size(203, 30);
             this.btnActualizarPdt.TabIndex = 9;
             this.btnActualizarPdt.Text = "Actualizar Puesto de Trabajo";
             this.btnActualizarPdt.UseVisualStyleBackColor = false;
@@ -192,12 +204,13 @@ namespace TP.P.A.V.I
             // btnEliminarPdt
             // 
             this.btnEliminarPdt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnEliminarPdt.FlatAppearance.BorderSize = 0;
             this.btnEliminarPdt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarPdt.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarPdt.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarPdt.Location = new System.Drawing.Point(492, 202);
+            this.btnEliminarPdt.Location = new System.Drawing.Point(492, 214);
             this.btnEliminarPdt.Name = "btnEliminarPdt";
-            this.btnEliminarPdt.Size = new System.Drawing.Size(208, 30);
+            this.btnEliminarPdt.Size = new System.Drawing.Size(204, 30);
             this.btnEliminarPdt.TabIndex = 10;
             this.btnEliminarPdt.Text = "Eliminar Puesto de Trabajo";
             this.btnEliminarPdt.UseVisualStyleBackColor = false;
@@ -205,13 +218,15 @@ namespace TP.P.A.V.I
             // 
             // btnLimpiarCampos
             // 
+            this.btnLimpiarCampos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLimpiarCampos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnLimpiarCampos.FlatAppearance.BorderSize = 0;
             this.btnLimpiarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiarCampos.Font = new System.Drawing.Font("Century Gothic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiarCampos.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiarCampos.Location = new System.Drawing.Point(531, 147);
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(514, 148);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
-            this.btnLimpiarCampos.Size = new System.Drawing.Size(136, 31);
+            this.btnLimpiarCampos.Size = new System.Drawing.Size(168, 31);
             this.btnLimpiarCampos.TabIndex = 11;
             this.btnLimpiarCampos.Text = "Limpiar Campos";
             this.btnLimpiarCampos.UseVisualStyleBackColor = false;
@@ -242,40 +257,33 @@ namespace TP.P.A.V.I
             // 
             // txtMatricula
             // 
+            this.txtMatricula.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMatricula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.txtMatricula.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatricula.ForeColor = System.Drawing.Color.White;
             this.txtMatricula.Location = new System.Drawing.Point(57, 147);
             this.txtMatricula.Multiline = true;
             this.txtMatricula.Name = "txtMatricula";
-            this.txtMatricula.Size = new System.Drawing.Size(409, 32);
+            this.txtMatricula.Size = new System.Drawing.Size(342, 32);
             this.txtMatricula.TabIndex = 14;
             // 
             // txtId
             // 
             this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.txtId.ForeColor = System.Drawing.Color.White;
-            this.txtId.Location = new System.Drawing.Point(516, 29);
+            this.txtId.Location = new System.Drawing.Point(10, 172);
             this.txtId.Multiline = true;
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(41, 32);
             this.txtId.TabIndex = 15;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(528, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(20, 17);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Id";
+            this.txtId.Visible = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::TP.P.A.V.I.Properties.Resources.q;
-            this.pictureBox2.Location = new System.Drawing.Point(668, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(601, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(59, 71);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -288,7 +296,7 @@ namespace TP.P.A.V.I
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.SkyBlue;
-            this.label4.Location = new System.Drawing.Point(627, 85);
+            this.label4.Location = new System.Drawing.Point(560, 85);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(146, 16);
             this.label4.TabIndex = 18;
@@ -299,10 +307,9 @@ namespace TP.P.A.V.I
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(733, 426);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.txtMatricula);
             this.Controls.Add(this.label2);
@@ -340,15 +347,14 @@ namespace TP.P.A.V.I
         private System.Windows.Forms.Button btnEliminarPdt;
         private System.Windows.Forms.Button btnLimpiarCampos;
         private System.Windows.Forms.PictureBox salir;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtMatricula;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Puesto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Matricula;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionPuesto;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtMatricula;
-        private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label4;
     }
 }

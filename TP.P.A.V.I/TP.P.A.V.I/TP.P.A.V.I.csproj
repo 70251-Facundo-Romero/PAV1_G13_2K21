@@ -47,15 +47,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alojamiento por huesped.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alojamiento por huesped.Designer.cs">
+      <DependentUpon>Alojamiento por huesped.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltaServicioXHotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaServicioXHotel.Designer.cs">
+      <DependentUpon>AltaServicioXHotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltaTarjeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaTarjeta.Designer.cs">
+      <DependentUpon>AltaTarjeta.cs</DependentUpon>
+    </Compile>
     <Compile Include="BarrioABM.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BarrioABM.Designer.cs">
       <DependentUpon>BarrioABM.cs</DependentUpon>
     </Compile>
+    <Compile Include="BLL\AlojamientoXHuespedBLL.cs" />
     <Compile Include="BLL\BarrioBLL.cs" />
     <Compile Include="BLL\CiudadBLL.cs" />
+    <Compile Include="BLL\EmpleadosBLL.cs" />
+    <Compile Include="BLL\HabitacionesBLL.cs" />
+    <Compile Include="BLL\HabitacionXHotelBLL.cs" />
+    <Compile Include="BLL\HotelBLL.cs" />
+    <Compile Include="BLL\InstalacionesBLL.cs" />
+    <Compile Include="BLL\InstalacionXHotelBLL.cs" />
+    <Compile Include="BLL\InstalacionXHuespedBLL.cs" />
     <Compile Include="BLL\PaisBLL.cs" />
+    <Compile Include="BLL\PuestoDeTrabajoBLL.cs" />
+    <Compile Include="BLL\ServiciosBLL.cs" />
     <Compile Include="BLL\UsuarioBLL.cs" />
     <Compile Include="CiudadABM.cs">
       <SubType>Form</SubType>
@@ -63,14 +91,42 @@
     <Compile Include="CiudadABM.Designer.cs">
       <DependentUpon>CiudadABM.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAL\AlojamientoXHuespedDAL.cs" />
     <Compile Include="DAL\BarrioDAL.cs" />
     <Compile Include="DAL\CiudadDAL.cs" />
+    <Compile Include="DAL\EmpleadosDAL.cs" />
     <Compile Include="DAL\EntidadDAL.cs" />
+    <Compile Include="DAL\HabitacionesDAL.cs" />
+    <Compile Include="DAL\HabitacionXHotelDAL.cs" />
+    <Compile Include="DAL\HotelesDAL.cs" />
+    <Compile Include="DAL\InstalacionesDAL.cs" />
+    <Compile Include="DAL\InstalacionXHotelDAL.cs" />
+    <Compile Include="DAL\InstalacionXHuespedDAL.cs" />
     <Compile Include="DAL\PaisDAL.cs" />
+    <Compile Include="DAL\PuestoDeTrabajoDAL.cs" />
+    <Compile Include="DAL\ServiciosDAL.cs" />
+    <Compile Include="DAL\ServicioXHotelDAL.cs" />
+    <Compile Include="DAL\TarjetaDAL.cs" />
     <Compile Include="DAL\UsuarioDAL.cs" />
+    <Compile Include="Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleados.Designer.cs">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AlojamientoXHuespedes.cs" />
     <Compile Include="Entities\Barrio.cs" />
     <Compile Include="Entities\Ciudad.cs" />
+    <Compile Include="Entities\Empleado.cs" />
+    <Compile Include="Entities\Habitaciones.cs" />
+    <Compile Include="Entities\HabitacionXHotel.cs" />
+    <Compile Include="Entities\Hotel.cs" />
+    <Compile Include="Entities\Instalaciones.cs" />
+    <Compile Include="Entities\InstalacionXHotel.cs" />
+    <Compile Include="Entities\InstalacionXHuespedes.cs" />
     <Compile Include="Entities\Pais.cs" />
+    <Compile Include="Entities\PuestoTrabajo.cs" />
+    <Compile Include="Entities\Servicio.cs" />
     <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -78,12 +134,49 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHabitacionXHotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHabitacionXHotel.Designer.cs">
+      <DependentUpon>FormHabitacionXHotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestionar_Habitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestionar_Habitaciones.Designer.cs">
+      <DependentUpon>Gestionar_Habitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestionar_Instalaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestionar_Instalaciones.Designer.cs">
+      <DependentUpon>Gestionar_Instalaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hoteles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hoteles.Designer.cs">
+      <DependentUpon>Hoteles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instalacion por huesped.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instalacion por huesped.Designer.cs">
+      <DependentUpon>Instalacion por huesped.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstalacionesXhotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstalacionesXhotel.Designer.cs">
+      <DependentUpon>InstalacionesXhotel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="PaisABM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,14 +185,56 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PuestosDeTrabajoABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PuestosDeTrabajoABM.Designer.cs">
+      <DependentUpon>PuestosDeTrabajoABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servicios.Designer.cs">
+      <DependentUpon>Servicios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Alojamiento por huesped.resx">
+      <DependentUpon>Alojamiento por huesped.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltaServicioXHotel.resx">
+      <DependentUpon>AltaServicioXHotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltaTarjeta.resx">
+      <DependentUpon>AltaTarjeta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BarrioABM.resx">
       <DependentUpon>BarrioABM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CiudadABM.resx">
       <DependentUpon>CiudadABM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Empleados.resx">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHabitacionXHotel.resx">
+      <DependentUpon>FormHabitacionXHotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestionar_Habitaciones.resx">
+      <DependentUpon>Gestionar_Habitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestionar_Instalaciones.resx">
+      <DependentUpon>Gestionar_Instalaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hoteles.resx">
+      <DependentUpon>Hoteles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instalacion por huesped.resx">
+      <DependentUpon>Instalacion por huesped.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstalacionesXhotel.resx">
+      <DependentUpon>InstalacionesXhotel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -117,6 +252,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="PuestosDeTrabajoABM.resx">
+      <DependentUpon>PuestosDeTrabajoABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servicios.resx">
+      <DependentUpon>Servicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\Debug\TP.P.A.V.I.exe.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -216,6 +358,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\factura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\TP.P.A.V.I.exe" />
+    <Content Include="bin\Debug\TP.P.A.V.I.pdb" />
+    <Content Include="Resources\q.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
