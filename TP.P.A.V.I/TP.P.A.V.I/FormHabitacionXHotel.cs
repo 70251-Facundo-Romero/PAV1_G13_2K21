@@ -23,6 +23,7 @@ namespace TP.P.A.V.I
         {
             CargarHotele();
             CargarHabitacion();
+            CargarGrilla();
         }
 
         private void CargarHotele()

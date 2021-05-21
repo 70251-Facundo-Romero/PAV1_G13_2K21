@@ -144,5 +144,110 @@ namespace TP.P.A.V.I
             formHijo.BringToFront();
             formHijo.Show();
         }
+
+        private void btnGestionHoteles_Click(object sender, EventArgs e)
+        {
+            Hoteles ventana = new Hoteles();
+            openChildForm(ventana);
+            hideSubMenu();
+        }
+
+        private void btnGestionHabitaciones_Click(object sender, EventArgs e)
+        {
+            AltaServicioXHotel ventana = new AltaServicioXHotel();
+            openChildForm(ventana);
+            hideSubMenu();
+        }
+
+        private void btnGestionUbicaciones_Click(object sender, EventArgs e)
+        {
+            InstalacionesXhotel ventana = new InstalacionesXhotel();
+            openChildForm(ventana);
+            hideSubMenu();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            FormHabitacionXHotel ventana = new FormHabitacionXHotel();
+            openChildForm(ventana);
+            hideSubMenu();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Gestionar_Habitaciones ventana = new Gestionar_Habitaciones();
+            openChildForm(ventana);
+            hideSubMenu();
+        }
+
+        private void btnAlojXHuesped_Click(object sender, EventArgs e)
+        {
+            AlojamientoXHuesped ventana = new AlojamientoXHuesped();
+            openChildForm(ventana);
+            hideSubMenu();
+        }
+
+        private void btnInsXHuesped_Click(object sender, EventArgs e)
+        {
+            Instalacion_por_huesped ventana = new Instalacion_por_huesped();
+            openChildForm(ventana);
+            hideSubMenu();
+        }
+
+        private void btnTarjetas_Click(object sender, EventArgs e)
+        {
+            AltaTarjeta ventana = new AltaTarjeta();
+            openChildForm(ventana);
+            hideSubMenu();
+        }
+
+        private void btnGestEmpleados_Click(object sender, EventArgs e)
+        {
+            Empleados ventana = new Empleados();
+            openChildForm(ventana);
+            hideSubMenu();
+        }
+
+        private void btnPuestosDeTrabajo_Click(object sender, EventArgs e)
+        {
+            PuestosDeTrabajoABM ventana = new PuestosDeTrabajoABM();
+            openChildForm(ventana);
+            hideSubMenu();
+        }
+
+        private void btnPaises_Click(object sender, EventArgs e)
+        {
+            PaisABM ventana = new PaisABM();
+            openChildForm(ventana);
+            hideSubMenu();
+        }
+
+        private void btnCiudades_Click(object sender, EventArgs e)
+        {
+            CiudadABM ventana = new CiudadABM();
+            openChildForm(ventana);
+            hideSubMenu();
+        }
+
+        private void btnBarrios_Click(object sender, EventArgs e)
+        {
+            BarrioABM ventana = new BarrioABM();
+            openChildForm(ventana);
+            hideSubMenu();
+        }
+
+        private void btnServicios_Click(object sender, EventArgs e)
+        {
+            Servicios ventana = new Servicios();
+            openChildForm(ventana);
+            hideSubMenu();
+        }
+
+        private void btnInstalaciones_Click(object sender, EventArgs e)
+        {
+            Gestionar_Instalaciones ventana = new Gestionar_Instalaciones();
+            openChildForm(ventana);
+            hideSubMenu();
+        }
     }   
 }

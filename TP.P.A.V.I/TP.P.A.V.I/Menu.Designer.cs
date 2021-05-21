@@ -51,7 +51,6 @@
             this.btnGestFacturacion = new System.Windows.Forms.Button();
             this.btnFacturacion = new System.Windows.Forms.Button();
             this.subMenuEmpleados = new System.Windows.Forms.Panel();
-            this.btnTipoDeDoc = new System.Windows.Forms.Button();
             this.btnPuestosDeTrabajo = new System.Windows.Forms.Button();
             this.btnGestEmpleados = new System.Windows.Forms.Button();
             this.btnEmpleados = new System.Windows.Forms.Button();
@@ -207,7 +206,7 @@
             this.subMenuServIns.Controls.Add(this.btnInstalaciones);
             this.subMenuServIns.Controls.Add(this.btnServicios);
             this.subMenuServIns.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuServIns.Location = new System.Drawing.Point(0, 1023);
+            this.subMenuServIns.Location = new System.Drawing.Point(0, 988);
             this.subMenuServIns.Name = "subMenuServIns";
             this.subMenuServIns.Size = new System.Drawing.Size(234, 74);
             this.subMenuServIns.TabIndex = 18;
@@ -229,6 +228,7 @@
             this.btnInstalaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInstalaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInstalaciones.UseVisualStyleBackColor = true;
+            this.btnInstalaciones.Click += new System.EventHandler(this.btnInstalaciones_Click);
             // 
             // btnServicios
             // 
@@ -246,6 +246,7 @@
             this.btnServicios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnServicios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnServicios.UseVisualStyleBackColor = true;
+            this.btnServicios.Click += new System.EventHandler(this.btnServicios_Click);
             // 
             // btnServIns
             // 
@@ -258,7 +259,7 @@
             this.btnServIns.ForeColor = System.Drawing.Color.White;
             this.btnServIns.Image = global::TP.P.A.V.I.Properties.Resources.toalla;
             this.btnServIns.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnServIns.Location = new System.Drawing.Point(0, 983);
+            this.btnServIns.Location = new System.Drawing.Point(0, 948);
             this.btnServIns.Name = "btnServIns";
             this.btnServIns.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnServIns.Size = new System.Drawing.Size(234, 40);
@@ -275,7 +276,7 @@
             this.subMenuUbicaciones.Controls.Add(this.btnCiudades);
             this.subMenuUbicaciones.Controls.Add(this.btnPaises);
             this.subMenuUbicaciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuUbicaciones.Location = new System.Drawing.Point(0, 874);
+            this.subMenuUbicaciones.Location = new System.Drawing.Point(0, 839);
             this.subMenuUbicaciones.Name = "subMenuUbicaciones";
             this.subMenuUbicaciones.Size = new System.Drawing.Size(234, 109);
             this.subMenuUbicaciones.TabIndex = 16;
@@ -297,6 +298,7 @@
             this.btnBarrios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBarrios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBarrios.UseVisualStyleBackColor = true;
+            this.btnBarrios.Click += new System.EventHandler(this.btnBarrios_Click);
             // 
             // btnCiudades
             // 
@@ -314,6 +316,7 @@
             this.btnCiudades.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCiudades.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCiudades.UseVisualStyleBackColor = true;
+            this.btnCiudades.Click += new System.EventHandler(this.btnCiudades_Click);
             // 
             // btnPaises
             // 
@@ -331,6 +334,7 @@
             this.btnPaises.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPaises.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPaises.UseVisualStyleBackColor = true;
+            this.btnPaises.Click += new System.EventHandler(this.btnPaises_Click);
             // 
             // btnUbicaciones
             // 
@@ -343,7 +347,7 @@
             this.btnUbicaciones.ForeColor = System.Drawing.Color.White;
             this.btnUbicaciones.Image = global::TP.P.A.V.I.Properties.Resources.marcador_de_posicion3;
             this.btnUbicaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUbicaciones.Location = new System.Drawing.Point(0, 834);
+            this.btnUbicaciones.Location = new System.Drawing.Point(0, 799);
             this.btnUbicaciones.Name = "btnUbicaciones";
             this.btnUbicaciones.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnUbicaciones.Size = new System.Drawing.Size(234, 40);
@@ -359,7 +363,7 @@
             this.subMenuFacturacion.Controls.Add(this.btnDetalleFactura);
             this.subMenuFacturacion.Controls.Add(this.btnGestFacturacion);
             this.subMenuFacturacion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuFacturacion.Location = new System.Drawing.Point(0, 765);
+            this.subMenuFacturacion.Location = new System.Drawing.Point(0, 730);
             this.subMenuFacturacion.Name = "subMenuFacturacion";
             this.subMenuFacturacion.Size = new System.Drawing.Size(234, 69);
             this.subMenuFacturacion.TabIndex = 14;
@@ -410,7 +414,7 @@
             this.btnFacturacion.ForeColor = System.Drawing.Color.White;
             this.btnFacturacion.Image = global::TP.P.A.V.I.Properties.Resources.factura;
             this.btnFacturacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFacturacion.Location = new System.Drawing.Point(0, 725);
+            this.btnFacturacion.Location = new System.Drawing.Point(0, 690);
             this.btnFacturacion.Name = "btnFacturacion";
             this.btnFacturacion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnFacturacion.Size = new System.Drawing.Size(234, 40);
@@ -423,32 +427,14 @@
             // subMenuEmpleados
             // 
             this.subMenuEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(35)))));
-            this.subMenuEmpleados.Controls.Add(this.btnTipoDeDoc);
             this.subMenuEmpleados.Controls.Add(this.btnPuestosDeTrabajo);
             this.subMenuEmpleados.Controls.Add(this.btnGestEmpleados);
             this.subMenuEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
             this.subMenuEmpleados.Location = new System.Drawing.Point(0, 616);
             this.subMenuEmpleados.Name = "subMenuEmpleados";
-            this.subMenuEmpleados.Size = new System.Drawing.Size(234, 109);
+            this.subMenuEmpleados.Size = new System.Drawing.Size(234, 74);
             this.subMenuEmpleados.TabIndex = 12;
             this.subMenuEmpleados.Visible = false;
-            // 
-            // btnTipoDeDoc
-            // 
-            this.btnTipoDeDoc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTipoDeDoc.FlatAppearance.BorderSize = 0;
-            this.btnTipoDeDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTipoDeDoc.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTipoDeDoc.ForeColor = System.Drawing.Color.White;
-            this.btnTipoDeDoc.Location = new System.Drawing.Point(0, 70);
-            this.btnTipoDeDoc.Name = "btnTipoDeDoc";
-            this.btnTipoDeDoc.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnTipoDeDoc.Size = new System.Drawing.Size(234, 35);
-            this.btnTipoDeDoc.TabIndex = 2;
-            this.btnTipoDeDoc.Text = "Gestionar Tipo De Documento";
-            this.btnTipoDeDoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTipoDeDoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTipoDeDoc.UseVisualStyleBackColor = true;
             // 
             // btnPuestosDeTrabajo
             // 
@@ -460,12 +446,13 @@
             this.btnPuestosDeTrabajo.Location = new System.Drawing.Point(0, 35);
             this.btnPuestosDeTrabajo.Name = "btnPuestosDeTrabajo";
             this.btnPuestosDeTrabajo.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnPuestosDeTrabajo.Size = new System.Drawing.Size(234, 35);
+            this.btnPuestosDeTrabajo.Size = new System.Drawing.Size(234, 39);
             this.btnPuestosDeTrabajo.TabIndex = 1;
             this.btnPuestosDeTrabajo.Text = "Gestionar Puestos De Trabajo";
             this.btnPuestosDeTrabajo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPuestosDeTrabajo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPuestosDeTrabajo.UseVisualStyleBackColor = true;
+            this.btnPuestosDeTrabajo.Click += new System.EventHandler(this.btnPuestosDeTrabajo_Click);
             // 
             // btnGestEmpleados
             // 
@@ -483,6 +470,7 @@
             this.btnGestEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGestEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGestEmpleados.UseVisualStyleBackColor = true;
+            this.btnGestEmpleados.Click += new System.EventHandler(this.btnGestEmpleados_Click);
             // 
             // btnEmpleados
             // 
@@ -536,6 +524,7 @@
             this.btnTarjetas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTarjetas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTarjetas.UseVisualStyleBackColor = true;
+            this.btnTarjetas.Click += new System.EventHandler(this.btnTarjetas_Click);
             // 
             // btnAlojXHuesped
             // 
@@ -553,6 +542,7 @@
             this.btnAlojXHuesped.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlojXHuesped.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAlojXHuesped.UseVisualStyleBackColor = true;
+            this.btnAlojXHuesped.Click += new System.EventHandler(this.btnAlojXHuesped_Click);
             // 
             // btnInsXHuesped
             // 
@@ -570,6 +560,7 @@
             this.btnInsXHuesped.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInsXHuesped.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInsXHuesped.UseVisualStyleBackColor = true;
+            this.btnInsXHuesped.Click += new System.EventHandler(this.btnInsXHuesped_Click);
             // 
             // btnServXHuesped
             // 
@@ -657,6 +648,7 @@
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -674,6 +666,7 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnGestionUbicaciones
             // 
@@ -691,6 +684,7 @@
             this.btnGestionUbicaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGestionUbicaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGestionUbicaciones.UseVisualStyleBackColor = true;
+            this.btnGestionUbicaciones.Click += new System.EventHandler(this.btnGestionUbicaciones_Click);
             // 
             // btnGestionHabitaciones
             // 
@@ -708,6 +702,7 @@
             this.btnGestionHabitaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGestionHabitaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGestionHabitaciones.UseVisualStyleBackColor = true;
+            this.btnGestionHabitaciones.Click += new System.EventHandler(this.btnGestionHabitaciones_Click);
             // 
             // btnGestionHoteles
             // 
@@ -725,6 +720,7 @@
             this.btnGestionHoteles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGestionHoteles.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGestionHoteles.UseVisualStyleBackColor = true;
+            this.btnGestionHoteles.Click += new System.EventHandler(this.btnGestionHoteles_Click);
             // 
             // btnHoteles
             // 
@@ -851,7 +847,6 @@
         private System.Windows.Forms.Button btnGestFacturacion;
         private System.Windows.Forms.Button btnFacturacion;
         private System.Windows.Forms.Panel subMenuEmpleados;
-        private System.Windows.Forms.Button btnTipoDeDoc;
         private System.Windows.Forms.Button btnPuestosDeTrabajo;
         private System.Windows.Forms.Button btnGestEmpleados;
         private System.Windows.Forms.Button button2;
