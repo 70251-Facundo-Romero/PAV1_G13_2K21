@@ -140,6 +140,9 @@ namespace TP.P.A.V.I
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             this.DgvInstalacionXHotel.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DgvInstalacionXHotel.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.DgvInstalacionXHotel.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.DgvInstalacionXHotel.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
             this.DgvInstalacionXHotel.Size = new System.Drawing.Size(659, 157);
             this.DgvInstalacionXHotel.TabIndex = 7;
             this.DgvInstalacionXHotel.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvInstalacionXHotel_CellClick);

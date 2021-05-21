@@ -30,6 +30,7 @@ namespace TP.P.A.V.I
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LblHotel = new System.Windows.Forms.Label();
             this.CmbHotel = new System.Windows.Forms.ComboBox();
             this.CmbHabitacion = new System.Windows.Forms.ComboBox();
@@ -138,6 +139,10 @@ namespace TP.P.A.V.I
             this.DgvHabitacionXHotel.Location = new System.Drawing.Point(45, 233);
             this.DgvHabitacionXHotel.Name = "DgvHabitacionXHotel";
             this.DgvHabitacionXHotel.ReadOnly = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.DgvHabitacionXHotel.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvHabitacionXHotel.Size = new System.Drawing.Size(647, 181);
             this.DgvHabitacionXHotel.TabIndex = 5;
             this.DgvHabitacionXHotel.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvHabitacionXHotel_CellClick);
