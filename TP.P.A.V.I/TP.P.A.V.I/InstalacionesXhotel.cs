@@ -28,10 +28,11 @@ namespace TP.P.A.V.I
 
         private void CargarHotele()
         {
-            CmbHotel.DataSource = HotelBLL.ObtenerListadoHoteles();
             CmbHotel.DisplayMember = "Nombre";
             CmbHotel.ValueMember = "Id";
             CmbHotel.SelectedIndex = -1;
+            CmbHotel.DataSource = HotelBLL.ObtenerListadoHoteles();
+
         }
         private void CargarInstalacion()
         {
@@ -90,13 +91,13 @@ namespace TP.P.A.V.I
 
         private void CmbHotel_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (CmbHotel.Text != "")
+            if (CmbHotel.Text != "" && CmbHotel.Text != "System.Data.DataRowView")
             {
                 try
                 {
                     DgvInstalacionXHotel.DataSource = CargarGrilla();
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
                     return;
                 }

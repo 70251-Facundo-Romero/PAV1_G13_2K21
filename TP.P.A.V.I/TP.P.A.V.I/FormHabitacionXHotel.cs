@@ -28,10 +28,10 @@ namespace TP.P.A.V.I
 
         private void CargarHotele()
         {
-            CmbHotel.DataSource = HotelBLL.ObtenerListadoHoteles();
             CmbHotel.DisplayMember = "Nombre";
             CmbHotel.ValueMember = "Id";
             CmbHotel.SelectedIndex = -1;
+            CmbHotel.DataSource = HotelBLL.ObtenerListadoHoteles();
         }
 
         private void CargarHabitacion()
