@@ -133,21 +133,6 @@ namespace TP.P.A.V.I
             Viewer.DataSource = InstalacionesBLL.CargarGrilla();
         }
 
-        private void Viewer_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int index = e.RowIndex;
-            DataGridViewRow pointer = Viewer.Rows[index];
-            string id = pointer.Cells["Id"].Value.ToString();
-            Instalaciones hab = ObtenerInstalacion(id);
-            limpiarInpunts();
-
-            Cb_Options_inst.Items.Add("Modificar");
-            cargarInpunt(hab);
-
-
-        }
-
-
         private void cargarInpunt(Instalaciones instalaciones)
 
         {
@@ -161,10 +146,16 @@ namespace TP.P.A.V.I
             return InstalacionesBLL.Obtenerinstalaciones(ID);
         }
 
-        private void GestionarInstalaciones_Enter(object sender, EventArgs e)
+        private void Viewer_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            int index = e.RowIndex;
+            DataGridViewRow pointer = Viewer.Rows[index];
+            string id = pointer.Cells["Id"].Value.ToString();
+            Instalaciones hab = ObtenerInstalacion(id);
+            limpiarInpunts();
 
+            Cb_Options_inst.Items.Add("Modificar");
+            cargarInpunt(hab);
         }
-
     }
     }

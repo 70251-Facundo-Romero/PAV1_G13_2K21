@@ -152,9 +152,9 @@ namespace TP.P.A.V.I
             this.NombreHabitaciones.ForeColor = System.Drawing.Color.White;
             this.NombreHabitaciones.Location = new System.Drawing.Point(15, 42);
             this.NombreHabitaciones.Name = "NombreHabitaciones";
-            this.NombreHabitaciones.Size = new System.Drawing.Size(206, 19);
+            this.NombreHabitaciones.Size = new System.Drawing.Size(208, 19);
             this.NombreHabitaciones.TabIndex = 0;
-            this.NombreHabitaciones.Text = "Nombre de Instalaciones:";
+            this.NombreHabitaciones.Text = "Nombre de Habitaciones:";
             // 
             // Optinons
             // 
