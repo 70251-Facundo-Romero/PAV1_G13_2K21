@@ -42,16 +42,16 @@ namespace TP.P.A.V.I
             this.txtCalleHotel = new System.Windows.Forms.TextBox();
             this.txtNumeroCalle = new System.Windows.Forms.TextBox();
             this.grillaHoteles = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdBarrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.cmbBarrio = new System.Windows.Forms.ComboBox();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdBarrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grillaHoteles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -223,6 +223,7 @@ namespace TP.P.A.V.I
             this.grillaHoteles.Margin = new System.Windows.Forms.Padding(2);
             this.grillaHoteles.Name = "grillaHoteles";
             this.grillaHoteles.ReadOnly = true;
+            this.grillaHoteles.RowHeadersVisible = false;
             this.grillaHoteles.RowHeadersWidth = 51;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateGray;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -232,51 +233,6 @@ namespace TP.P.A.V.I
             this.grillaHoteles.Size = new System.Drawing.Size(712, 154);
             this.grillaHoteles.TabIndex = 12;
             this.grillaHoteles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaHoteles_CellClick);
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.MinimumWidth = 6;
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Width = 125;
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre del Hotel";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 200;
-            // 
-            // Calle
-            // 
-            this.Calle.DataPropertyName = "Calle";
-            this.Calle.HeaderText = "Calle";
-            this.Calle.MinimumWidth = 6;
-            this.Calle.Name = "Calle";
-            this.Calle.ReadOnly = true;
-            this.Calle.Width = 200;
-            // 
-            // Numero
-            // 
-            this.Numero.DataPropertyName = "NumeroCalle";
-            this.Numero.HeaderText = "Numero de calle";
-            this.Numero.MinimumWidth = 6;
-            this.Numero.Name = "Numero";
-            this.Numero.ReadOnly = true;
-            this.Numero.Width = 125;
-            // 
-            // IdBarrio
-            // 
-            this.IdBarrio.DataPropertyName = "Id_Barrio";
-            this.IdBarrio.HeaderText = "Barrio";
-            this.IdBarrio.MinimumWidth = 6;
-            this.IdBarrio.Name = "IdBarrio";
-            this.IdBarrio.ReadOnly = true;
-            this.IdBarrio.Width = 200;
             // 
             // pictureBox2
             // 
@@ -344,6 +300,50 @@ namespace TP.P.A.V.I
             this.txtId.TabIndex = 25;
             this.txtId.Visible = false;
             // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Width = 50;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre del Hotel";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 170;
+            // 
+            // Calle
+            // 
+            this.Calle.DataPropertyName = "Calle";
+            this.Calle.HeaderText = "Calle";
+            this.Calle.MinimumWidth = 6;
+            this.Calle.Name = "Calle";
+            this.Calle.ReadOnly = true;
+            this.Calle.Width = 170;
+            // 
+            // Numero
+            // 
+            this.Numero.DataPropertyName = "NumeroCalle";
+            this.Numero.HeaderText = "Numero de calle";
+            this.Numero.MinimumWidth = 6;
+            this.Numero.Name = "Numero";
+            this.Numero.ReadOnly = true;
+            // 
+            // IdBarrio
+            // 
+            this.IdBarrio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.IdBarrio.DataPropertyName = "NombreBarrio";
+            this.IdBarrio.HeaderText = "Barrio";
+            this.IdBarrio.MinimumWidth = 6;
+            this.IdBarrio.Name = "IdBarrio";
+            this.IdBarrio.ReadOnly = true;
+            // 
             // Hoteles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -393,11 +393,6 @@ namespace TP.P.A.V.I
         private System.Windows.Forms.TextBox txtCalleHotel;
         private System.Windows.Forms.TextBox txtNumeroCalle;
         private System.Windows.Forms.DataGridView grillaHoteles;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Calle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdBarrio;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnLimpiar;
@@ -411,5 +406,10 @@ namespace TP.P.A.V.I
         //private System.Windows.Forms.BindingSource hotelesBindingSource;
         //private BD3K7G13_2021DataSet2TableAdapters.HotelesTableAdapter hotelesTableAdapter;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Calle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdBarrio;
     }
 }
