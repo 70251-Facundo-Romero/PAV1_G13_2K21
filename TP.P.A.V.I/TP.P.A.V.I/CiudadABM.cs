@@ -27,7 +27,7 @@ namespace TP.P.A.V.I
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (txtDesc.Text.Equals("") || txtNombre.Text.Equals("") || cmbPaises.SelectedItem.Equals(null))
+            if (txtDesc.Text.Equals("") || txtNombre.Text.Equals("") || cmbPaises.SelectedIndex == -1)
             {
                 MessageBox.Show("Ingrese un nombre, una descripción y seleccione un pais");
             }

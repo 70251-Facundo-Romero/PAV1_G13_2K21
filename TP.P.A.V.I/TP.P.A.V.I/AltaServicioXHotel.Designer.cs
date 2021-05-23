@@ -29,7 +29,9 @@ namespace TP.P.A.V.I
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelFormulariosHijos = new System.Windows.Forms.Panel();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -43,8 +45,11 @@ namespace TP.P.A.V.I
             this.BtnModificarSerXHot = new System.Windows.Forms.Button();
             this.BtnLimpiarCampos = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.IdServXHotel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Id_Hotel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hotel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Id_Servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.panelFormulariosHijos.SuspendLayout();
@@ -55,6 +60,7 @@ namespace TP.P.A.V.I
             // panelFormulariosHijos
             // 
             this.panelFormulariosHijos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.panelFormulariosHijos.Controls.Add(this.txtId);
             this.panelFormulariosHijos.Controls.Add(this.label9);
             this.panelFormulariosHijos.Controls.Add(this.BtnEliminar);
             this.panelFormulariosHijos.Controls.Add(this.pictureBox2);
@@ -73,6 +79,15 @@ namespace TP.P.A.V.I
             this.panelFormulariosHijos.Name = "panelFormulariosHijos";
             this.panelFormulariosHijos.Size = new System.Drawing.Size(749, 465);
             this.panelFormulariosHijos.TabIndex = 9;
+            // 
+            // txtId
+            // 
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(389, 148);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 0;
+            this.txtId.Visible = false;
             // 
             // label9
             // 
@@ -245,15 +260,31 @@ namespace TP.P.A.V.I
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdServXHotel,
             this.Id_Hotel,
+            this.Hotel,
             this.Id_Servicio,
+            this.Servicio,
             this.Precio});
             this.dataGridView1.Location = new System.Drawing.Point(60, 250);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.Size = new System.Drawing.Size(611, 189);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // IdServXHotel
+            // 
+            this.IdServXHotel.DataPropertyName = "Id";
+            this.IdServXHotel.HeaderText = "IdSxH";
+            this.IdServXHotel.Name = "IdServXHotel";
+            this.IdServXHotel.ReadOnly = true;
+            this.IdServXHotel.Width = 50;
             // 
             // Id_Hotel
             // 
@@ -261,23 +292,42 @@ namespace TP.P.A.V.I
             this.Id_Hotel.HeaderText = "Id Hotel";
             this.Id_Hotel.Name = "Id_Hotel";
             this.Id_Hotel.ReadOnly = true;
-            this.Id_Hotel.Width = 150;
+            this.Id_Hotel.Width = 55;
+            // 
+            // Hotel
+            // 
+            this.Hotel.DataPropertyName = "NombreHotel";
+            this.Hotel.HeaderText = "Hotel";
+            this.Hotel.MinimumWidth = 175;
+            this.Hotel.Name = "Hotel";
+            this.Hotel.ReadOnly = true;
+            this.Hotel.Width = 200;
             // 
             // Id_Servicio
             // 
             this.Id_Servicio.DataPropertyName = "Id_Servicio";
-            this.Id_Servicio.HeaderText = "Servicio";
+            this.Id_Servicio.HeaderText = "Id Servicio";
             this.Id_Servicio.Name = "Id_Servicio";
             this.Id_Servicio.ReadOnly = true;
-            this.Id_Servicio.Width = 200;
+            this.Id_Servicio.Width = 60;
+            // 
+            // Servicio
+            // 
+            this.Servicio.DataPropertyName = "NombreServicio";
+            this.Servicio.HeaderText = "Servicio";
+            this.Servicio.MinimumWidth = 175;
+            this.Servicio.Name = "Servicio";
+            this.Servicio.ReadOnly = true;
+            this.Servicio.Width = 200;
             // 
             // Precio
             // 
+            this.Precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Precio.DataPropertyName = "PrecioServicio";
             this.Precio.HeaderText = "Precio";
+            this.Precio.MinimumWidth = 150;
             this.Precio.Name = "Precio";
             this.Precio.ReadOnly = true;
-            this.Precio.Width = 200;
             // 
             // AltaServicioXHotel
             // 
@@ -309,12 +359,16 @@ namespace TP.P.A.V.I
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Hotel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Servicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdServXHotel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Hotel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Hotel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Servicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Servicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

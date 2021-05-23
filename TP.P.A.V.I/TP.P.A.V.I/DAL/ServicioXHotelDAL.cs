@@ -1,292 +1,268 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TP.P.A.V.I.Entities;
 
 namespace TP.P.A.V.I.DAL
 {
     public class ServicioXHotelDAL : EntidadDAL
     {
-        public static bool ActualizarGrillaSerXHot(DataGridView grilla)
+        internal static DataTable ObtenerListadoHoteles()
         {
-            bool resultado = false;
+            string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
+            SqlCommand cmd = new SqlCommand();
+            SqlConnection cn = new SqlConnection(cadenaConexion);
 
-            using (SqlConnection con = new SqlConnection(ConnectionString))
+            try
             {
+                string consulta = @"SELECT * FROM Hoteles";
 
-                con.Open();
-                try
-                {
-                    using (SqlCommand cmd = new SqlCommand(@"SELECT * FROM ServiciosXHoteles", con))
-                    {
-                        cmd.Parameters.Clear();
-                        cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Clear();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
 
-                        DataTable tabla = new DataTable();
+                cn.Open();
+                cmd.Connection = cn;
 
-                        SqlDataAdapter da = new SqlDataAdapter(cmd);
-                        da.Fill(tabla);
+                DataTable tabla = new DataTable();
 
-                        grilla.DataSource = tabla;
-
-
-                        resultado = true;
-
-
-                    }
-                }
-                catch (Exception ex)
-                {
-                    throw;
-                }
-                finally
-                {
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+                return tabla;
             }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        internal static bool BorrarServXHotel(ServXHotel s)
+        {
+            string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
+            bool resultado = false;
+            SqlCommand cmd = new SqlCommand();
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+
+            try
+            {
+                string consulta = @"DELETE FROM ServiciosXHoteles WHERE Id = @id";
+
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", s.Id);
+                cmd.Parameters.AddWithValue("@idHotel", s.Id_Hotel);
+                cmd.Parameters.AddWithValue("@idServicio", s.Id_Servicio);
+                cmd.Parameters.AddWithValue("@precio", s.PrecioServicio);
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+                cmd.ExecuteNonQuery();
+                resultado = true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+
             return resultado;
         }
 
-
-        public static bool AgregarServicioXHotel(int Id_Hotel, int Id_Servicio, string Precio)
+        internal static bool ActualizarServXHotel(ServXHotel s)
         {
+            string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
             bool resultado = false;
+            SqlCommand cmd = new SqlCommand();
+            SqlConnection cn = new SqlConnection(cadenaConexion);
 
-            using (SqlConnection con = new SqlConnection(ConnectionString))
+            try
             {
+                string consulta = @"UPDATE ServiciosXHoteles 
+                            SET PrecioServicio = @precio, Id_Hotel = @idHotel, Id_Servicio = @idServicio 
+                            WHERE Id LIKE @id";
 
-                con.Open();
-                try
-                {
-                    using (SqlCommand cmd = new SqlCommand(@"INSERT INTO ServiciosXHoteles (Id_Hotel, Id_Servicio, PrecioServicio) VALUES(@idHotel, @idServicio, @precio)", con))
-                    {
-                        cmd.CommandType = CommandType.Text;
-                        cmd.Parameters.Clear();
-                        cmd.Parameters.AddWithValue("@idHotel", Id_Hotel);
-                        cmd.Parameters.AddWithValue("@idServicio", Id_Servicio);
-                        cmd.Parameters.AddWithValue("@precio", Precio);
-                        cmd.ExecuteNonQuery();
-                        resultado = true;
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", s.Id);
+                cmd.Parameters.AddWithValue("@idHotel", s.Id_Hotel);
+                cmd.Parameters.AddWithValue("@idServicio", s.Id_Servicio);
+                cmd.Parameters.AddWithValue("@precio", s.PrecioServicio);
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
 
-                    }
-                }
-                catch (Exception ex)
-                {
-                    throw;
-                }
-                finally
-                {
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
+                cn.Open();
+                cmd.Connection = cn;
+                cmd.ExecuteNonQuery();
+                resultado = true;
             }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+
             return resultado;
-
         }
 
-        public static void CargarCombosServicios(ComboBox cmbser)
-
+        internal static bool AgregarServXHotel(ServXHotel s)
         {
-
-
-            using (SqlConnection con = new SqlConnection(ConnectionString))
-            {
-
-                con.Open();
-                try
-                {
-                    using (SqlCommand cmd = new SqlCommand(@"SELECT * FROM Servicios", con))
-                    {
-                        cmd.Parameters.Clear();
-                        cmd.CommandType = CommandType.Text;
-
-                        DataTable tabla = new DataTable();
-
-                        SqlDataAdapter da = new SqlDataAdapter(cmd);
-                        da.Fill(tabla);
-
-                        cmbser.DataSource = tabla;
-                        cmbser.DisplayMember = "Nombre";
-                        cmbser.ValueMember = "Id";
-
-                    }
-                }
-                catch (Exception ex)
-                {
-                    throw;
-                }
-                finally
-                {
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
-            }
-
-        }
-
-        public static void CargarCombosHotel(ComboBox cmbhot)
-
-        {
-
-
-            using (SqlConnection con = new SqlConnection(ConnectionString))
-            {
-
-                con.Open();
-                try
-                {
-                    using (SqlCommand cmd = new SqlCommand(@"SELECT * FROM Hoteles", con))
-                    {
-                        cmd.Parameters.Clear();
-                        cmd.CommandType = CommandType.Text;
-
-                        DataTable tabla = new DataTable();
-
-                        SqlDataAdapter da = new SqlDataAdapter(cmd);
-                        da.Fill(tabla);
-
-                        cmbhot.DataSource = tabla;
-                        cmbhot.DisplayMember = "Nombre";
-                        cmbhot.ValueMember = "Id";
-
-                    }
-                }
-                catch (Exception ex)
-                {
-                    throw;
-                }
-                finally
-                {
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
-            }
-
-        }
-
-        public static (int, int, string) ObtenerSerxHot((int, int) t1)
-        {
-
-            int idSer = 0;
-            int idHot = 0;
-            string precio = "";
-
-            using (SqlConnection con = new SqlConnection(ConnectionString))
-            {
-
-                con.Open();
-                try
-                {
-                    using (SqlCommand cmd = new SqlCommand(@"SELECT * FROM ServiciosXHoteles WHERE Id_Hotel like @idHot AND Id_Servicio like @idSer", con))
-                    {
-                        cmd.Parameters.Clear();
-                        cmd.Parameters.AddWithValue("@idSer", t1.Item1);
-                        cmd.Parameters.AddWithValue("@idHot", t1.Item2);
-                        cmd.CommandType = CommandType.Text;
-
-                        SqlDataReader dr = cmd.ExecuteReader();
-
-                        if (dr != null && dr.Read())
-                        {
-                            idSer = int.Parse(dr["Id_Servicio"].ToString());
-                            idHot = int.Parse(dr["Id_Hotel"].ToString());
-                            precio = dr["PrecioServicio"].ToString();
-
-
-                        }
-
-
-                    }
-                }
-                catch (Exception ex)
-                {
-                    throw;
-                }
-                finally
-                {
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
-
-                return (idSer, idHot, precio);
-            }
-        }
-
-        public static bool ModificarServicioXHotel(int Id_Hotel, int Id_Servicio, string Precio)
-        {
+            string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
             bool resultado = false;
+            SqlCommand cmd = new SqlCommand();
+            SqlConnection cn = new SqlConnection(cadenaConexion);
 
-            using (SqlConnection con = new SqlConnection(ConnectionString))
+            try
             {
+                string consulta = "INSERT INTO ServiciosXHoteles (Id_Hotel, Id_Servicio, PrecioServicio) VALUES (@IdHot, @IdServ, @Precio)";
 
-                con.Open();
-                try
-                {
-                    using (SqlCommand cmd = new SqlCommand(@"UPDATE ServiciosXHoteles SET Id_Hotel = @idHotel, Id_Servicio = @idServicio, PrecioServicio = @precio WHERE Id_Hotel like @idHotel AND Id_Servicio like @idServicio", con))
-                    {
-                        cmd.CommandType = CommandType.Text;
-                        cmd.Parameters.Clear();
-                        cmd.Parameters.AddWithValue("@idHotel", Id_Hotel);
-                        cmd.Parameters.AddWithValue("@idServicio", Id_Servicio);
-                        cmd.Parameters.AddWithValue("@precio", Precio);
-                        cmd.ExecuteNonQuery();
-                        resultado = true;
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@IdHot", s.Id_Hotel);
+                cmd.Parameters.AddWithValue("@IdServ", s.Id_Servicio);
+                cmd.Parameters.AddWithValue("@Precio", s.PrecioServicio);
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
 
-                    }
-                }
-                catch (Exception ex)
-                {
-                    throw;
-                }
-                finally
-                {
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
+                cn.Open();
+                cmd.Connection = cn;
+                cmd.ExecuteNonQuery();
+                resultado = true;
             }
-            return resultado;
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
 
+            return resultado;
         }
 
-        public static bool EliminarServicioXHotel(int Id_Hotel, int Id_Servicio, string Precio)
+        internal static ServXHotel ObtenerServXHotel(int id)
         {
-            bool resultado = false;
+            string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
+            ServXHotel s = new ServXHotel();
+            SqlCommand cmd = new SqlCommand();
+            SqlConnection cn = new SqlConnection(cadenaConexion);
 
-            using (SqlConnection con = new SqlConnection(ConnectionString))
+            try
             {
+                string consulta = "SELECT * FROM ServiciosXHoteles WHERE Id LIKE @id";
 
-                con.Open();
-                try
-                {
-                    using (SqlCommand cmd = new SqlCommand(@"DELETE ServiciosXHoteles WHERE Id_Hotel like @idHotel AND Id_Servicio like @idServicio", con))
-                    {
-                        cmd.CommandType = CommandType.Text;
-                        cmd.Parameters.Clear();
-                        cmd.Parameters.AddWithValue("@idHotel", Id_Hotel);
-                        cmd.Parameters.AddWithValue("@idServicio", Id_Servicio);
-                       
-                        cmd.ExecuteNonQuery();
-                        resultado = true;
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
 
-                    }
-                }
-                catch (Exception ex)
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr != null && dr.Read())
                 {
-                    throw;
-                }
-                finally
-                {
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
+                    s.Id = int.Parse(dr["Id"].ToString());
+                    s.Id_Hotel = int.Parse(dr["Id_Hotel"].ToString());
+                    s.Id_Servicio = int.Parse(dr["Id_Servicio"].ToString());
+                    s.PrecioServicio = dr["PrecioServicio"].ToString();
                 }
             }
-            return resultado;
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
 
+            return s;
+        }
+
+        internal static DataTable ObtenerListadoServxHoteles()
+        {
+            string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
+            SqlCommand cmd = new SqlCommand();
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+
+            try
+            {
+                string consulta = @"SELECT SxH.*, H.Nombre as NombreHotel, S.Nombre as NombreServicio
+                            FROM ServiciosXHoteles SxH
+                            JOIN Hoteles H ON SxH.Id_Hotel = H.Id
+                            JOIN Servicios S ON SxH.Id_Servicio = S.Id";
+
+                cmd.Parameters.Clear();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+                return tabla;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        internal static DataTable ObtenerListadoServicios()
+        {
+            string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
+            SqlCommand cmd = new SqlCommand();
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+
+            try
+            {
+                string consulta = @"SELECT * FROM Servicios";
+
+                cmd.Parameters.Clear();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+                return tabla;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
     }
 }

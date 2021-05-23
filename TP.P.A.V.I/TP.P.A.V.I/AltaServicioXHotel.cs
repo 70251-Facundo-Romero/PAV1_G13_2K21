@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TP.P.A.V.I.BLL;
+using TP.P.A.V.I.Entities;
 
 namespace TP.P.A.V.I
 {
@@ -15,82 +17,161 @@ namespace TP.P.A.V.I
         public AltaServicioXHotel()
         {
             InitializeComponent();
-            DAL.ServicioXHotelDAL.ActualizarGrillaSerXHot(dataGridView1);
-            DAL.ServicioXHotelDAL.CargarCombosHotel(cmbHotel);
-            DAL.ServicioXHotelDAL.CargarCombosServicios(cmbServicio);
-            BtnModificarSerXHot.Enabled = false;
-            BtnEliminar.Enabled = false;
-
-        }
-
-        private void BtnLimpiarCampos_Click(object sender, EventArgs e)
-        {
+            CargarComboHotel();
+            CargarComboServicio();
+            CargarGrilla();
             LimpiarCampos();
-            BtnEliminar.Enabled = false;
-            BtnModificarSerXHot.Enabled = false;
         }
 
-        private void BtnAgregarSerXHot_Click(object sender, EventArgs e)
+        private void CargarGrilla()
         {
-            string precio = txtPrecio.Text;
-            int hotel = (int)cmbHotel.SelectedValue;
-            int servicio = (int)cmbServicio.SelectedValue;
-
-            DAL.ServicioXHotelDAL.AgregarServicioXHotel(hotel, servicio, precio);
-            DAL.ServicioXHotelDAL.ActualizarGrillaSerXHot(dataGridView1);
-
-        }
-
-        private void BtnModificarSerXHot_Click(object sender, EventArgs e)
-        {
-            int idH = (int)cmbHotel.SelectedValue;
-            int idS = (int)cmbServicio.SelectedValue;
-            string precio = txtPrecio.Text;
-            DAL.ServicioXHotelDAL.ModificarServicioXHotel(idH, idS, precio);
-            DAL.ServicioXHotelDAL.ActualizarGrillaSerXHot(dataGridView1);
-            BtnModificarSerXHot.Enabled = false;
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-            BtnModificarSerXHot.Enabled = true;
-            BtnEliminar.Enabled = true;
-            int indice = e.RowIndex;
-            DataGridViewRow filaSeleccionada = dataGridView1.Rows[indice];
-            int IdHot = int.Parse(filaSeleccionada.Cells["Id_Hotel"].Value.ToString());
-            int IdSer = int.Parse(filaSeleccionada.Cells["Id_Servicio"].Value.ToString());
-            (int,int)t1 = (IdSer, IdHot);
-            (int, int, string)tupla = DAL.ServicioXHotelDAL.ObtenerSerxHot(t1);
-            LimpiarCampos();       
-            CargarCampos(tupla);
-
-
-        }
-
-        private void CargarCampos((int,int,string)tupla)
-        {
-            cmbHotel.SelectedValue = tupla.Item2;
-            cmbServicio.SelectedValue = tupla.Item1;
-            txtPrecio.Text = tupla.Item3;
+            dataGridView1.DataSource = ServicioXHotelBLL.ObtenerListadoServXHoteles();
         }
 
         private void LimpiarCampos()
         {
-            cmbHotel.SelectedValue = 0;
-            cmbServicio.SelectedValue = 0;
             txtPrecio.Text = "";
+        }
+
+        private void CargarComboHotel()
+        {
+            try
+            {
+                cmbHotel.DataSource = ServicioXHotelBLL.ObtenerListadoHoteles();
+                cmbHotel.DisplayMember = "Nombre";
+                cmbHotel.ValueMember = "Id";
+                cmbHotel.SelectedIndex = -1;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrio un problema al cargar el combo de hoteles");
+            }
+        }
+        private void CargarComboServicio()
+        {
+            try
+            {
+                cmbServicio.DataSource = ServicioXHotelBLL.ObtenerListadoServicios();
+                cmbServicio.DisplayMember = "Nombre";
+                cmbServicio.ValueMember = "Id";
+                cmbServicio.SelectedIndex = -1;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrio un problema al cargar el combo de servicios");
+            }
+        }
+
+        private void BtnLimpiarCampos_Click(object sender, EventArgs e)
+        {
+            CargarComboHotel();
+            CargarComboServicio();
+            LimpiarCampos();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int indice = e.RowIndex;
+            BtnEliminar.Enabled = true;
+            BtnModificarSerXHot.Enabled = true;
+            DataGridViewRow filaSeleccionada = dataGridView1.Rows[indice];
+            int id = (int)filaSeleccionada.Cells["IdServXHotel"].Value;
+            ServXHotel s = ServicioXHotelBLL.ObtenerServXHotel(id);
+            LimpiarCampos();
+            CargarCampos(s);
+        }
+
+        private void CargarCampos(ServXHotel s)
+        {
+            cmbHotel.SelectedValue = s.Id_Hotel;
+            cmbServicio.SelectedValue = s.Id_Servicio;
+            txtPrecio.Text = s.PrecioServicio;
+            txtId.Text = s.Id.ToString();
+        }
+
+        private void BtnAgregarSerXHot_Click(object sender, EventArgs e)
+        {
+            if (txtPrecio.Text.Equals("") || cmbHotel.SelectedIndex == -1 || cmbServicio.SelectedIndex == -1)
+            {
+                MessageBox.Show("Complete los campos");
+            }
+            else
+            {
+                ServXHotel s = new ServXHotel();
+                s.PrecioServicio = txtPrecio.Text;
+                s.Id_Hotel = (int)cmbHotel.SelectedValue;
+                s.Id_Servicio = (int)cmbServicio.SelectedValue;
+                try
+                {
+                    bool resultado = ServicioXHotelBLL.AgregarServXHotel(s);
+
+                    if (resultado)
+                    {
+                        LimpiarCampos();
+                        CargarGrilla();
+                        CargarComboHotel();
+                        CargarComboServicio();
+                        MessageBox.Show("Fila agregada con exito!");
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hubo un error al agregar la Fila");
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Hubo un error al agregar la ciudad");
+                }
+            }
+        }
+
+        private void BtnModificarSerXHot_Click(object sender, EventArgs e)
+        {
+            ServXHotel s = new ServXHotel();
+            s.PrecioServicio = txtPrecio.Text;
+            s.Id = int.Parse(txtId.Text);
+            s.Id_Servicio = (int)cmbServicio.SelectedValue;
+            s.Id_Hotel = (int)cmbHotel.SelectedValue;
+            bool resultado = ServicioXHotelBLL.ActualizarServXHotel(s);
+
+            if (resultado)
+            {
+                LimpiarCampos();
+                CargarGrilla();
+                CargarComboHotel();
+                CargarComboServicio();
+                MessageBox.Show("Servicio por hotel actualizado con exito!");
+
+            }
+            else
+            {
+                MessageBox.Show("Hubo un error al actualizar la fila");
+            }
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
+            ServXHotel s = new ServXHotel();
+            s.PrecioServicio = txtPrecio.Text;
+            s.Id = int.Parse(txtId.Text);
+            s.Id_Servicio = (int)cmbServicio.SelectedValue;
+            s.Id_Hotel = (int)cmbHotel.SelectedValue;
+            bool resultado = ServicioXHotelBLL.BorrarServXHotel(s);
 
-            int idH = (int)cmbHotel.SelectedValue;
-            int idS = (int)cmbServicio.SelectedValue;
-            string precio = txtPrecio.Text;
-            DAL.ServicioXHotelDAL.EliminarServicioXHotel(idH, idS, precio);
-            DAL.ServicioXHotelDAL.ActualizarGrillaSerXHot(dataGridView1);
-            BtnEliminar.Enabled = false;
+            if (resultado)
+            {
+                LimpiarCampos();
+                CargarGrilla();
+                CargarComboHotel();
+                CargarComboServicio();
+                MessageBox.Show("Servicio por hotel eliminado con exito!");
+
+            }
+            else
+            {
+                MessageBox.Show("Hubo un error al eliminar la fila");
+            }
         }
     }
 }
