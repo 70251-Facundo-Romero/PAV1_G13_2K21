@@ -41,7 +41,7 @@ namespace TP.P.A.V.I
         private void CargarComboHabitaciones()
         {
             cmb_Habitacion.DataSource = InstalacionXHuespedBLL.ObtenerListadoHabitaciones();
-            cmb_Habitacion.DisplayMember = "Nombre";
+            cmb_Habitacion.DisplayMember = "Id";
             cmb_Habitacion.ValueMember = "Id";
             cmb_Habitacion.SelectedIndex = -1;
         }
@@ -121,17 +121,17 @@ namespace TP.P.A.V.I
             string hora = "";
             string minuto = "";
             hora = fechaS.Date.Hour.ToString();
-            if (hora.Length == 1)
+            if (hora.Length==1)
             {
                 hora = "0" + hora;
             }
             minuto = fechaS.Date.Minute.ToString();
-            if (minuto.Length == 1)
+            if (minuto.Length==1)
             {
                 minuto = "0" + minuto;
             }
 
-            msk_FechaUso.Text = dia + mes + año + hora + minuto;
+            msk_FechaUso.Text = dia + mes + año+ hora+ minuto;
 
 
         }
@@ -160,46 +160,36 @@ namespace TP.P.A.V.I
         private void btnAgregarIXH_Click(object sender, EventArgs e)
         {
             {
-                if (cmb_Hotel.Text.Equals("") || cmb_Habitacion.Text.Equals("") || cmb_Instalacion.Text.Equals("") || msk_FechaAlojamiento.Text.Equals("") || msk_FechaUso.Text.Equals(""))
+                if (cmb_Hotel.Text.Equals("") || cmb_Habitacion.Text.Equals("") || cmb_Instalacion.Text.Equals("") || msk_FechaAlojamiento.Text.Equals("") || msk_FechaUso.Text.Equals("") )
                 {
                     MessageBox.Show("Ingrese los datos faltantes");
-                    return;
-                }
-
-                int id = InstalacionXHuespedBLL.BuscarIdHabitacionXHotel((int)cmb_Habitacion.SelectedValue, (int)cmb_Hotel.SelectedValue);
-
-                if (!InstalacionXHuespedBLL.ValiadarFecha(DateTime.Parse(msk_FechaAlojamiento.Text)));
-                {
-                    if (!InstalacionXHuespedBLL.ValiadarHabitacionXHotel(id))
-                    {
-                        MessageBox.Show("El alojamiento no existe");
-                        return;
-                    }
-                    return;
-                }
-
-                InstalacionXHuespedes ih = new InstalacionXHuespedes();
-                ih.Id_IXH = int.Parse(txt_Id.Text);
-                ih.IdInstXHotel = InstalacionXHuespedBLL.BuscarIdInstalacionXHotel((int)cmb_Instalacion.SelectedValue, (int)cmb_Hotel.SelectedValue);
-                ih.IdAlojamiento = InstalacionXHuespedBLL.BuscarAlojamiento((int)cmb_Hotel.SelectedValue, DateTime.Parse(msk_FechaAlojamiento.Text));
-                ih.FechaUso = DateTime.Parse(msk_FechaUso.Text);
-
-                bool resultado = InstalacionXHuespedBLL.AgregarInstalacionXHuesped(ih);
-
-                if (resultado)
-                {
-                    MessageBox.Show("Agregación realizada con exito!!");
-                    LimpiarCampos();
-                    CargarGrilla();
-                    CargarComboHoteles();
-                    CargarComboInstalaciones();
-                    CargarComboHabitaciones();
                 }
                 else
                 {
-                    MessageBox.Show("Hubo un error...");
-                }
+                    InstalacionXHuespedes ih = new InstalacionXHuespedes();
+                    ih.Id_Hotel = (int)cmb_Hotel.SelectedValue;
+                    ih.Id_Habitacion = (int)cmb_Habitacion.SelectedValue;
+                    ih.Id_Instalacion = (int)cmb_Instalacion.SelectedValue;
+                    ih.FechaAlojamiento = DateTime.Parse(msk_FechaAlojamiento.Text);
+                    ih.FechaUso = DateTime.Parse(msk_FechaUso.Text);
 
+                    bool resultado = InstalacionXHuespedBLL.AgregarInstalacionXHuesped(ih);
+
+                    if (resultado)
+                    {
+                        MessageBox.Show("Agregación realizada con exito!!");
+                        LimpiarCampos();
+                        CargarGrilla();
+                        CargarComboHoteles();
+                        CargarComboInstalaciones();
+                        CargarComboHabitaciones();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hubo un error...");
+                    }
+                }
             }
         }
 
@@ -217,12 +207,12 @@ namespace TP.P.A.V.I
 
             if (resultado)
             {
+                MessageBox.Show("Eliminacion realizada con exito!");
                 LimpiarCampos();
                 CargarGrilla();
                 CargarComboHoteles();
                 CargarComboHabitaciones();
                 CargarComboInstalaciones();
-                MessageBox.Show("Eliminacion realizada con exito!");
 
             }
             else
@@ -234,22 +224,6 @@ namespace TP.P.A.V.I
 
         private void btnModificarIXH_Click(object sender, EventArgs e)
         {
-            if (InstalacionXHuespedBLL.ValiadarHabitacionXHotel((int)cmb_Habitacion.SelectedValue, (int)cmb_Hotel.SelectedValue))
-            {
-                int idHabXHot = InstalacionXHuespedBLL.BuscarIdHabitacionXHotel((int)cmb_Habitacion.SelectedValue, (int)cmb_Hotel.SelectedValue);
-            }
-            else
-            {
-                MessageBox.Show("No existe esa combinacion hotel - habitacion");
-                return;
-            }
-
-            if (!InstalacionXHuespedBLL.ValiadarFecha(DateTime.Parse(msk_FechaAlojamiento.Text)))
-            {
-                MessageBox.Show("Fecha de alojamiento no encontrada");
-                return;
-            }
-
             InstalacionXHuespedes ih = new InstalacionXHuespedes();
             ih.Id_IXH = int.Parse(txt_Id.Text);
             ih.Id_Hotel = (int)cmb_Hotel.SelectedValue;
@@ -262,12 +236,12 @@ namespace TP.P.A.V.I
 
             if (resultado)
             {
+                MessageBox.Show("Modificacion realizada con exito!");
                 LimpiarCampos();
                 CargarGrilla();
                 CargarComboHoteles();
                 CargarComboHabitaciones();
                 CargarComboInstalaciones();
-                MessageBox.Show("Modificacion realizada con exito!");
             }
             else
             {

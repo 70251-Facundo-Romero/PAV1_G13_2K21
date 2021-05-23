@@ -9,7 +9,7 @@ namespace TP.P.A.V.I.Entities
 {
     public class Habitaciones
     {
-        public int id { get; set; }
+        public string id { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
 

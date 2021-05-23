@@ -29,7 +29,6 @@ namespace TP.P.A.V.I
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelFormulariosHijos = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.BtnEliminar = new System.Windows.Forms.Button();
@@ -252,11 +251,6 @@ namespace TP.P.A.V.I
             this.dataGridView1.Location = new System.Drawing.Point(60, 250);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.5F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Size = new System.Drawing.Size(611, 189);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -279,11 +273,11 @@ namespace TP.P.A.V.I
             // 
             // Precio
             // 
-            this.Precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Precio.DataPropertyName = "PrecioServicio";
             this.Precio.HeaderText = "Precio";
             this.Precio.Name = "Precio";
             this.Precio.ReadOnly = true;
+            this.Precio.Width = 200;
             // 
             // AltaServicioXHotel
             // 
@@ -315,12 +309,12 @@ namespace TP.P.A.V.I
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Hotel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Servicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Hotel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Servicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
     }
 }

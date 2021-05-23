@@ -49,6 +49,21 @@ namespace TP.P.A.V.I
             DAL.TarjetaDAL.ActualizarGrillaTarjeta(GrillaTarjeta);
         }
 
+        private void GrillaTarjeta_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            BtnModificarTarjeta.Enabled = true;
+            btnEliminarTarjeta.Enabled = true;
+            int indice = e.RowIndex;
+            DataGridViewRow filaSeleccionada = GrillaTarjeta.Rows[indice];
+            int Id = int.Parse(filaSeleccionada.Cells["Id_Tarjeta"].Value.ToString());
+            (int, string) tupla = DAL.TarjetaDAL.ObtenerTarjeta(Id);
+            txtNombre.Text = "";
+            txtid.Text = "";
+            CargarCampo(tupla);
+
+            
+        }
+
         private void CargarCampo((int, string)tupla)
         {
             txtid.Text = tupla.Item1.ToString();
@@ -61,19 +76,6 @@ namespace TP.P.A.V.I
             int id = int.Parse(txtid.Text);
             DAL.TarjetaDAL.EliminarTarjeta(nombretarjeta, id);
             DAL.TarjetaDAL.ActualizarGrillaTarjeta(GrillaTarjeta);
-        }
-
-        private void GrillaTarjeta_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            BtnModificarTarjeta.Enabled = true;
-            btnEliminarTarjeta.Enabled = true;
-            int indice = e.RowIndex;
-            DataGridViewRow filaSeleccionada = GrillaTarjeta.Rows[indice];
-            int Id = int.Parse(filaSeleccionada.Cells["Id_Tarjeta"].Value.ToString());
-            (int, string) tupla = DAL.TarjetaDAL.ObtenerTarjeta(Id);
-            txtNombre.Text = "";
-            txtid.Text = "";
-            CargarCampo(tupla);
         }
     }
     

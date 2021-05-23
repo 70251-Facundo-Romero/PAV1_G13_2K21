@@ -14,7 +14,6 @@ namespace TP.P.A.V.I
 {
     public partial class AlojamientoXHuesped : Form
     {
-        int IdSelectGrilla;
         public AlojamientoXHuesped()
         {
             InitializeComponent();
@@ -47,7 +46,7 @@ namespace TP.P.A.V.I
         private void CargarComboHabitaciones()
         {
             cmb_Habitacion.DataSource = AlojamientoXHuespedBLL.ObtenerListadoHabitaciones();
-            cmb_Habitacion.DisplayMember = "Nombre";
+            cmb_Habitacion.DisplayMember = "Id";
             cmb_Habitacion.ValueMember = "Id";
             cmb_Habitacion.SelectedIndex = -1;
         }
@@ -74,7 +73,7 @@ namespace TP.P.A.V.I
             }
             catch (Exception)
             {
-                throw;
+                MessageBox.Show("Ocurrio un error...");
             }
         }
         private void CargarCampos(AlojamientoXHuespedes al)
@@ -128,8 +127,8 @@ namespace TP.P.A.V.I
                 btnModificarAXH.Enabled = true;
                 btnEliminarAXH.Enabled = true;
                 DataGridViewRow filaSeleccionada = grillaAlojamiento.Rows[indice];
-                IdSelectGrilla = (int)filaSeleccionada.Cells["Id_AXH"].Value;
-                AlojamientoXHuespedes al = AlojamientoXHuespedBLL.BuscarAlojamiento(IdSelectGrilla);
+                int id = (int)filaSeleccionada.Cells["Id_AXH"].Value;
+                AlojamientoXHuespedes al = AlojamientoXHuespedBLL.ObtenerAlojamientoXHuesped(id);
                 LimpiarCampos();
                 CargarCampos(al);
             }
@@ -148,19 +147,13 @@ namespace TP.P.A.V.I
             }
             else
             {
-                if (!AlojamientoXHuespedBLL.ValiadarPasaporte(int.Parse(msk_numPasaporte.Text)))
-                {
-                    MessageBox.Show("Pasaporte no encontrado;");
-                    return;
-                }
                 AlojamientoXHuespedes al = new AlojamientoXHuespedes();
-                //al.Id_Hotel = (int)cmb_Hotel.SelectedValue;
-                //al.Id_Habitacion = (int)cmb_Habitacion.SelectedValue;
-                al.Id_HabXHot = AlojamientoXHuespedBLL.BuscarIdHabitacionXHotel((int)cmb_Habitacion.SelectedValue, (int)cmb_Hotel.SelectedValue);
+                al.Id_Hotel = (int)cmb_Hotel.SelectedValue;
+                al.Id_Habitacion = (int)cmb_Habitacion.SelectedValue;
                 al.Id_Pais = (int)cmb_Pais.SelectedValue;
                 al.FechaAlojamiento = DateTime.Parse(msk_FechaAlojamiento.Text);
                 al.FechaSalida = DateTime.Parse(msk_FechaSalida.Text);
-                al.NroPasaporte = AlojamientoXHuespedBLL.BuscarIdHuesped(int.Parse(msk_numPasaporte.Text));
+                al.NroPasaporte = int.Parse(msk_numPasaporte.Text);
 
                 bool resultado = AlojamientoXHuespedBLL.AgregarAlojamientoXHuespedABD(al);
 
@@ -213,30 +206,25 @@ namespace TP.P.A.V.I
 
         private void btnModificarAXH_Click(object sender, EventArgs e)
         {
-            if (!AlojamientoXHuespedBLL.ValiadarPasaporte(int.Parse(msk_numPasaporte.Text)))
-            {
-                MessageBox.Show("Pasaporte no encontrado;");
-                return;
-            }
-
             AlojamientoXHuespedes al = new AlojamientoXHuespedes();
-            al.Id_HabXHot = AlojamientoXHuespedBLL.BuscarIdHabitacionXHotel((int)cmb_Habitacion.SelectedValue, (int)cmb_Hotel.SelectedValue);
-            al.Id_AXH = IdSelectGrilla;
+            al.Id_AXH = int.Parse(txt_Id.Text);
+            al.Id_Hotel = (int)cmb_Hotel.SelectedValue;
+            al.Id_Habitacion = (int)cmb_Habitacion.SelectedValue;
+            al.Id_Pais = (int)cmb_Pais.SelectedValue;
             al.FechaAlojamiento = DateTime.Parse(msk_FechaAlojamiento.Text);
             al.FechaSalida = DateTime.Parse(msk_FechaSalida.Text);
-            al.NroPasaporte = AlojamientoXHuespedBLL.BuscarIdHuesped(int.Parse(msk_numPasaporte.Text));
+            al.NroPasaporte = int.Parse(msk_numPasaporte.Text);
 
             bool resultado = AlojamientoXHuespedBLL.ActualizarAlojamientoXHuespedABD(al);
 
             if (resultado)
             {
+                MessageBox.Show("Alojamiento eliminado con exito!");
                 LimpiarCampos();
                 CargarGrilla();
                 CargarComboHoteles();
                 CargarComboPaises();
                 CargarComboHabitaciones();
-                IdSelectGrilla = 0;
-                MessageBox.Show("Alojamiento Modificado con exito!");
             }
             else
             {

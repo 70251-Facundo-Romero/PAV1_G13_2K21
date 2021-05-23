@@ -31,7 +31,7 @@ namespace TP.P.A.V.I.BLL
         {
             try
             {
-                return HabitacionesDAL.DeleteHabitaciones(habitaciones.id);
+                return HabitacionesDAL.DeleteHabitaciones(habitaciones.Nombre);
             }
             catch (Exception)
             {
@@ -46,7 +46,14 @@ namespace TP.P.A.V.I.BLL
         }
         public static Habitaciones Obtenerhabitaciones(string ID)
         {
-            return HabitacionesDAL.ObtenerHabitaciones(ID);
+            Dictionary<string, string> dic = HabitacionesDAL.ObtenerHabitaciones(ID);
+
+            Habitaciones hab = new Habitaciones();
+            hab.id = dic["Id"];
+            hab.Nombre = dic["Nombre"];
+            hab.Descripcion = dic["Descripcion"];
+
+            return hab;
         }
         public static bool ActualizarHabitaciones(Habitaciones habitaciones)
         {

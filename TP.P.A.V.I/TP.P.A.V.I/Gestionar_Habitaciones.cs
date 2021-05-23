@@ -28,10 +28,7 @@ namespace TP.P.A.V.I
         private Habitaciones ObtenerDatosHabitacion()
         {
             Habitaciones habitaciones = new Habitaciones();
-            if (!str_Id.Text.Equals(""))
-            {
-                habitaciones.id = int.Parse(str_Id.Text);
-            }
+            habitaciones.id = str_Id.Text;
             habitaciones.Nombre = Str_Nombre_hab.Text;
             habitaciones.Descripcion = Str_Descripcion_Hab.Text;
             return habitaciones;
@@ -136,7 +133,19 @@ namespace TP.P.A.V.I
             Viewer.DataSource = HabitacionesBLL.CargarGrilla();
         }
 
-        
+        private void Viewer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow pointer = Viewer.Rows[index];
+            string id = pointer.Cells["Id"].Value.ToString();
+            Habitaciones hab = ObtenerHabitacion(id);
+            limpiarInpunts();
+
+            Cb_Options_hab.Items.Add("Modificar");
+            cargarInpunt(hab);
+           
+
+        }
 
   
         private void cargarInpunt(Habitaciones habitaciones)
@@ -155,18 +164,6 @@ namespace TP.P.A.V.I
         private void GestionarHabitaciones_Enter(object sender, EventArgs e)
         {
 
-        }
-
-        private void Viewer_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int index = e.RowIndex;
-            DataGridViewRow pointer = Viewer.Rows[index];
-            string id = pointer.Cells["Id"].Value.ToString();
-            Habitaciones hab = ObtenerHabitacion(id);
-            limpiarInpunts();
-
-            Cb_Options_hab.Items.Add("Modificar");
-            cargarInpunt(hab);
         }
     }
 }

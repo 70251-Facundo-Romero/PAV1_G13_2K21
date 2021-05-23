@@ -29,10 +29,8 @@ namespace TP.P.A.V.I
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelFormulariosHijos = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnEliminarTarjeta = new System.Windows.Forms.Button();
             this.txtid = new System.Windows.Forms.TextBox();
             this.Tarjeta = new System.Windows.Forms.Label();
@@ -43,9 +41,11 @@ namespace TP.P.A.V.I
             this.GrillaTarjeta = new System.Windows.Forms.DataGridView();
             this.Id_Tarjeta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreTarjeta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelFormulariosHijos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaTarjeta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelFormulariosHijos
@@ -68,29 +68,6 @@ namespace TP.P.A.V.I
             this.panelFormulariosHijos.Size = new System.Drawing.Size(733, 426);
             this.panelFormulariosHijos.TabIndex = 9;
             this.panelFormulariosHijos.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFormulariosHijos_Paint);
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.SkyBlue;
-            this.label9.Location = new System.Drawing.Point(620, 131);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 16);
-            this.label9.TabIndex = 62;
-            this.label9.Text = "Hoteleria";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::TP.P.A.V.I.Properties.Resources.q;
-            this.pictureBox2.Location = new System.Drawing.Point(503, 41);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(111, 106);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 61;
-            this.pictureBox2.TabStop = false;
             // 
             // btnEliminarTarjeta
             // 
@@ -193,7 +170,6 @@ namespace TP.P.A.V.I
             // 
             // GrillaTarjeta
             // 
-            this.GrillaTarjeta.AllowUserToAddRows = false;
             this.GrillaTarjeta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -204,14 +180,13 @@ namespace TP.P.A.V.I
             this.NombreTarjeta});
             this.GrillaTarjeta.Location = new System.Drawing.Point(42, 236);
             this.GrillaTarjeta.Name = "GrillaTarjeta";
-            this.GrillaTarjeta.RowHeadersVisible = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.GrillaTarjeta.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            this.GrillaTarjeta.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.GrillaTarjeta.Size = new System.Drawing.Size(643, 150);
             this.GrillaTarjeta.TabIndex = 1;
-            this.GrillaTarjeta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrillaTarjeta_CellClick);
+            this.GrillaTarjeta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrillaTarjeta_CellContentClick);
             // 
             // Id_Tarjeta
             // 
@@ -221,10 +196,33 @@ namespace TP.P.A.V.I
             // 
             // NombreTarjeta
             // 
-            this.NombreTarjeta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.NombreTarjeta.DataPropertyName = "Nombre";
             this.NombreTarjeta.HeaderText = "Nombre de la Tarjeta";
             this.NombreTarjeta.Name = "NombreTarjeta";
+            this.NombreTarjeta.Width = 500;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.SkyBlue;
+            this.label9.Location = new System.Drawing.Point(620, 131);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(75, 16);
+            this.label9.TabIndex = 62;
+            this.label9.Text = "Hoteleria";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = global::TP.P.A.V.I.Properties.Resources.q;
+            this.pictureBox2.Location = new System.Drawing.Point(503, 41);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(111, 106);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 61;
+            this.pictureBox2.TabStop = false;
             // 
             // AltaTarjeta
             // 
@@ -237,8 +235,8 @@ namespace TP.P.A.V.I
             this.Text = "AltaTarjeta";
             this.panelFormulariosHijos.ResumeLayout(false);
             this.panelFormulariosHijos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaTarjeta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -252,11 +250,11 @@ namespace TP.P.A.V.I
         private System.Windows.Forms.Button BtnModificarTarjeta;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label Tarjeta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Tarjeta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreTarjeta;
         private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.Button btnEliminarTarjeta;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Tarjeta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreTarjeta;
     }
 }

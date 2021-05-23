@@ -18,7 +18,7 @@ namespace TP.P.A.V.I.DAL
                 con.Open();
                 try
                 {
-                    SqlCommand cmd = new SqlCommand("DELETE FROM [dbo].[HabitacionXHotel]" +
+                    SqlCommand cmd = new SqlCommand("DELETE FROM [dbo].[Habitacion_Hotel]" +
                                                     " WHERE IdHabitacionXHotel = @Id ", con);
                     cmd.CommandType = CommandType.Text;
 
@@ -45,7 +45,7 @@ namespace TP.P.A.V.I.DAL
                 con.Open();
                 try
                 {
-                    using (SqlCommand cmd = new SqlCommand(@"select HxH.IdHabitacionXHotel as Id, H.Nombre as NombreHot, Hab.Nombre as NombreHab, HxH.Precio as Precio from HabitacionXHotel HxH
+                    using (SqlCommand cmd = new SqlCommand(@"select HxH.IdHabitacionXHotel as Id, H.Nombre as NombreHot, Hab.Nombre as NombreHab, HxH.Precio as Precio from Habitacion_Hotel HxH
                                                             join Hoteles H on H.Id = HxH.IdHotel
                                                             join Habitaciones Hab on Hab.Id = HxH.IdHabitacion 
                                                             where HxH.IdHotel = @Id", con))
@@ -83,7 +83,7 @@ namespace TP.P.A.V.I.DAL
                     //Abrimos la conexion
                     con.Open();
 
-                    using (SqlCommand cmd = new SqlCommand(@"select HxH.* from HabitacionXHotel HxH
+                    using (SqlCommand cmd = new SqlCommand(@"select HxH.* from Habitacion_Hotel HxH
                                                             where HxH.IdHabitacionXHotel = @Id", con))
                     {
                         cmd.CommandType = CommandType.Text;
@@ -122,7 +122,7 @@ namespace TP.P.A.V.I.DAL
                 con.Open();
                 try
                 {
-                    SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[HabitacionXHotel]" +
+                    SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[Habitacion_Hotel]" +
                         "           ([IdHotel]" +
                         "           ,[IdHabitacion]" +
                         "           ,[Precio])" +
@@ -159,7 +159,7 @@ namespace TP.P.A.V.I.DAL
                 con.Open();
                 try
                 {
-                    SqlCommand cmd = new SqlCommand("UPDATE [dbo].[HabitacionXHotel]" +
+                    SqlCommand cmd = new SqlCommand("UPDATE [dbo].[Habitacion_Hotel]" +
                         "   SET[IdHotel] = @Hotel" +
                         "      ,[IdHabitacion] = @Habitacion" +
                         "      ,[Precio] = @Precio" +

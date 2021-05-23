@@ -24,32 +24,7 @@ namespace TP.P.A.V.I.BLL
 
         }
 
-        public static int BuscarIdHabitacionXHotel(int IdHab, int IdHot)
-        {
-            return InstalacionXHuespedDAL.BuscarIdHabitacionXHotel(IdHab, IdHot);
-        }
-
-        public static bool ValiadarHabitacionXHotel(int IdHabXHot)
-        {
-            return InstalacionXHuespedDAL.ValiadarHabitacionXHotel(IdHabXHot);
-        }
-
-        public static int BuscarAlojamiento(int IdHabXHot, DateTime fecha)
-        {
-            return InstalacionXHuespedDAL.BuscarAlojamiento(IdHabXHot, fecha);
-        }
-
-            public static bool ValiadarFecha(DateTime fecha)
-        {
-            return InstalacionXHuespedDAL.ValiadarFecha(fecha);
-        }
-
-        public static bool ValiadarAlojamiento(int Id, DateTime fecha)
-        {
-            return InstalacionXHuespedDAL.ValiadarAlojamiento(Id, fecha);
-        }
-
-            public static bool ActualizarInstalacionXHuesped(InstalacionXHuespedes ih)
+        public static bool ActualizarInstalacionXHuesped(InstalacionXHuespedes ih)
         {
             try
             {
@@ -61,15 +36,7 @@ namespace TP.P.A.V.I.BLL
             }
 
         }
-
-
-        public static int BuscarIdInstalacionXHotel(int IdIns, int IdHot)
-        {
-            return InstalacionXHuespedDAL.BuscarIdInstalacionXHotel(IdIns, IdHot);
-        }
-
-
-            public static bool BorrarInstalacionXHuesped(InstalacionXHuespedes ih)
+        public static bool BorrarInstalacionXHuesped(InstalacionXHuespedes ih)
         {
             try
             {

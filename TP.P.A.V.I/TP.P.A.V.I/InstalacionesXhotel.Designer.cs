@@ -136,7 +136,6 @@ namespace TP.P.A.V.I
             this.DgvInstalacionXHotel.Location = new System.Drawing.Point(35, 257);
             this.DgvInstalacionXHotel.Name = "DgvInstalacionXHotel";
             this.DgvInstalacionXHotel.ReadOnly = true;
-            this.DgvInstalacionXHotel.RowHeadersVisible = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateGray;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
@@ -178,12 +177,11 @@ namespace TP.P.A.V.I
             this.CmbHotel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CmbHotel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.CmbHotel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbHotel.ForeColor = System.Drawing.Color.White;
             this.CmbHotel.FormattingEnabled = true;
             this.CmbHotel.Location = new System.Drawing.Point(139, 78);
             this.CmbHotel.Name = "CmbHotel";
-            this.CmbHotel.Size = new System.Drawing.Size(350, 25);
+            this.CmbHotel.Size = new System.Drawing.Size(350, 21);
             this.CmbHotel.TabIndex = 8;
             this.CmbHotel.SelectedIndexChanged += new System.EventHandler(this.CmbHotel_SelectedIndexChanged);
             // 
@@ -192,12 +190,10 @@ namespace TP.P.A.V.I
             this.CmbInstalacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CmbInstalacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.CmbInstalacion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CmbInstalacion.ForeColor = System.Drawing.Color.White;
             this.CmbInstalacion.FormattingEnabled = true;
             this.CmbInstalacion.Location = new System.Drawing.Point(139, 140);
             this.CmbInstalacion.Name = "CmbInstalacion";
-            this.CmbInstalacion.Size = new System.Drawing.Size(350, 25);
+            this.CmbInstalacion.Size = new System.Drawing.Size(350, 21);
             this.CmbInstalacion.TabIndex = 9;
             // 
             // label1

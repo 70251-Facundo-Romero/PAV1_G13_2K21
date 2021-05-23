@@ -34,6 +34,10 @@ namespace TP.P.A.V.I
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.grillaCiudades = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreCiudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdPais = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescCiudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -45,10 +49,6 @@ namespace TP.P.A.V.I
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCiudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdPais = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DescCiudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grillaCiudades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -124,6 +124,38 @@ namespace TP.P.A.V.I
             this.grillaCiudades.Size = new System.Drawing.Size(709, 158);
             this.grillaCiudades.TabIndex = 1;
             this.grillaCiudades.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaCiudades_CellClick);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Width = 50;
+            // 
+            // NombreCiudad
+            // 
+            this.NombreCiudad.DataPropertyName = "Nombre";
+            this.NombreCiudad.HeaderText = "Ciudad";
+            this.NombreCiudad.Name = "NombreCiudad";
+            this.NombreCiudad.ReadOnly = true;
+            this.NombreCiudad.Width = 200;
+            // 
+            // IdPais
+            // 
+            this.IdPais.DataPropertyName = "Id_pais";
+            this.IdPais.HeaderText = "IdPais";
+            this.IdPais.Name = "IdPais";
+            this.IdPais.ReadOnly = true;
+            this.IdPais.Width = 80;
+            // 
+            // DescCiudad
+            // 
+            this.DescCiudad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DescCiudad.DataPropertyName = "Descripcion";
+            this.DescCiudad.HeaderText = "Descripción";
+            this.DescCiudad.Name = "DescCiudad";
+            this.DescCiudad.ReadOnly = true;
             // 
             // btnLimpiar
             // 
@@ -273,38 +305,6 @@ namespace TP.P.A.V.I
             this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtId.Visible = false;
             // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Width = 50;
-            // 
-            // NombreCiudad
-            // 
-            this.NombreCiudad.DataPropertyName = "Nombre";
-            this.NombreCiudad.HeaderText = "Ciudad";
-            this.NombreCiudad.Name = "NombreCiudad";
-            this.NombreCiudad.ReadOnly = true;
-            this.NombreCiudad.Width = 150;
-            // 
-            // IdPais
-            // 
-            this.IdPais.DataPropertyName = "NombrePais";
-            this.IdPais.HeaderText = "Pais";
-            this.IdPais.Name = "IdPais";
-            this.IdPais.ReadOnly = true;
-            this.IdPais.Width = 130;
-            // 
-            // DescCiudad
-            // 
-            this.DescCiudad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DescCiudad.DataPropertyName = "Descripcion";
-            this.DescCiudad.HeaderText = "Descripción";
-            this.DescCiudad.Name = "DescCiudad";
-            this.DescCiudad.ReadOnly = true;
-            // 
             // CiudadABM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -353,10 +353,10 @@ namespace TP.P.A.V.I
         private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCiudad;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdPais;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescCiudad;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

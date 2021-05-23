@@ -5,7 +5,6 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TP.P.A.V.I.Entities;
 
 namespace TP.P.A.V.I.DAL
 {
@@ -79,7 +78,7 @@ namespace TP.P.A.V.I.DAL
                 return rta;
             }
         }
-        public static bool DeleteInstalaciones(int Instalacion)
+        public static bool DeleteInstalaciones(string Instalacion)
         {
             bool rta = false;
             using (SqlConnection con = new SqlConnection(ConnectionString))
@@ -88,11 +87,11 @@ namespace TP.P.A.V.I.DAL
                 con.Open();
                 try
                 {
-                    using (SqlCommand cmd = new SqlCommand(@"DELETE FROM Instalaciones WHERE Id = @IdHab", con))
+                    using (SqlCommand cmd = new SqlCommand(@"DELETE FROM Instalaciones WHERE Nombre = @Nombre", con))
                     {
                         cmd.CommandType = CommandType.Text;
                         cmd.Parameters.Clear();
-                        cmd.Parameters.AddWithValue("@IdHab", Instalacion);
+                        cmd.Parameters.AddWithValue("@Nombre", Instalacion);
 
                         cmd.ExecuteNonQuery();
                         rta = true;
@@ -141,9 +140,9 @@ namespace TP.P.A.V.I.DAL
                 }
             }
         }
-        public static Instalaciones ObtenerInstalaciones(string ID)
+        public static Dictionary<string, string> ObtenerInstalaciones(string ID)
         {
-            Instalaciones ins = new Instalaciones();
+            Dictionary<string, string> rta = new Dictionary<string, string>();
 
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
@@ -159,9 +158,10 @@ namespace TP.P.A.V.I.DAL
                         {
                             if (dr != null && dr.Read())
                             {
-                                ins.id = int.Parse(dr["id"].ToString());
-                                ins.Nombre = dr["Nombre"].ToString();
-                                ins.Descripcion = dr["Descripcion"].ToString();
+                                rta["Id"] = dr["id"].ToString();
+                                rta["Nombre"] = dr["Nombre"].ToString();
+                                rta["Descripcion"] = dr["Descripcion"].ToString();
+                                return rta;
                             }
                         }
                     }
@@ -175,12 +175,12 @@ namespace TP.P.A.V.I.DAL
                     if (con.State == ConnectionState.Open)
                         con.Close();
                 }
-                return ins;
+                return rta;
             }
 
 
         }
-        public static bool ActualizarInstalaciones(string Instalacion, string descripcion, int id)
+        public static bool ActualizarInstalaciones(string Instalacion, string descripcion, string id)
         {
             bool rta = false;
             using (SqlConnection con = new SqlConnection(ConnectionString))
