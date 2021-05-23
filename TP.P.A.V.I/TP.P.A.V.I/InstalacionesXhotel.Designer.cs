@@ -136,6 +136,7 @@ namespace TP.P.A.V.I
             this.DgvInstalacionXHotel.Location = new System.Drawing.Point(35, 257);
             this.DgvInstalacionXHotel.Name = "DgvInstalacionXHotel";
             this.DgvInstalacionXHotel.ReadOnly = true;
+            this.DgvInstalacionXHotel.RowHeadersVisible = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateGray;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
