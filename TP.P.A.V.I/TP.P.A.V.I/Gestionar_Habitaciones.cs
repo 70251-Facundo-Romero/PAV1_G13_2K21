@@ -135,7 +135,6 @@ namespace TP.P.A.V.I
 
   
         private void cargarInpunt(Habitaciones habitaciones)
-
         {
             str_Id.Text = habitaciones.id.ToString();
             Str_Nombre_hab.Text = habitaciones.Nombre;

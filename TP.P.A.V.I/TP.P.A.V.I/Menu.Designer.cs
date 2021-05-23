@@ -58,7 +58,6 @@
             this.btnTarjetas = new System.Windows.Forms.Button();
             this.btnAlojXHuesped = new System.Windows.Forms.Button();
             this.btnInsXHuesped = new System.Windows.Forms.Button();
-            this.btnServXHuesped = new System.Windows.Forms.Button();
             this.btnGestionHuespedes = new System.Windows.Forms.Button();
             this.btnHuespedes = new System.Windows.Forms.Button();
             this.subMenuHoteles = new System.Windows.Forms.Panel();
@@ -206,7 +205,7 @@
             this.subMenuServIns.Controls.Add(this.btnInstalaciones);
             this.subMenuServIns.Controls.Add(this.btnServicios);
             this.subMenuServIns.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuServIns.Location = new System.Drawing.Point(0, 988);
+            this.subMenuServIns.Location = new System.Drawing.Point(0, 952);
             this.subMenuServIns.Name = "subMenuServIns";
             this.subMenuServIns.Size = new System.Drawing.Size(234, 74);
             this.subMenuServIns.TabIndex = 18;
@@ -259,7 +258,7 @@
             this.btnServIns.ForeColor = System.Drawing.Color.White;
             this.btnServIns.Image = global::TP.P.A.V.I.Properties.Resources.toalla;
             this.btnServIns.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnServIns.Location = new System.Drawing.Point(0, 948);
+            this.btnServIns.Location = new System.Drawing.Point(0, 912);
             this.btnServIns.Name = "btnServIns";
             this.btnServIns.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnServIns.Size = new System.Drawing.Size(234, 40);
@@ -276,7 +275,7 @@
             this.subMenuUbicaciones.Controls.Add(this.btnCiudades);
             this.subMenuUbicaciones.Controls.Add(this.btnPaises);
             this.subMenuUbicaciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuUbicaciones.Location = new System.Drawing.Point(0, 839);
+            this.subMenuUbicaciones.Location = new System.Drawing.Point(0, 803);
             this.subMenuUbicaciones.Name = "subMenuUbicaciones";
             this.subMenuUbicaciones.Size = new System.Drawing.Size(234, 109);
             this.subMenuUbicaciones.TabIndex = 16;
@@ -347,7 +346,7 @@
             this.btnUbicaciones.ForeColor = System.Drawing.Color.White;
             this.btnUbicaciones.Image = global::TP.P.A.V.I.Properties.Resources.marcador_de_posicion3;
             this.btnUbicaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUbicaciones.Location = new System.Drawing.Point(0, 799);
+            this.btnUbicaciones.Location = new System.Drawing.Point(0, 763);
             this.btnUbicaciones.Name = "btnUbicaciones";
             this.btnUbicaciones.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnUbicaciones.Size = new System.Drawing.Size(234, 40);
@@ -363,7 +362,7 @@
             this.subMenuFacturacion.Controls.Add(this.btnDetalleFactura);
             this.subMenuFacturacion.Controls.Add(this.btnGestFacturacion);
             this.subMenuFacturacion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuFacturacion.Location = new System.Drawing.Point(0, 730);
+            this.subMenuFacturacion.Location = new System.Drawing.Point(0, 694);
             this.subMenuFacturacion.Name = "subMenuFacturacion";
             this.subMenuFacturacion.Size = new System.Drawing.Size(234, 69);
             this.subMenuFacturacion.TabIndex = 14;
@@ -385,6 +384,7 @@
             this.btnDetalleFactura.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDetalleFactura.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDetalleFactura.UseVisualStyleBackColor = true;
+            this.btnDetalleFactura.Click += new System.EventHandler(this.btnDetalleFactura_Click);
             // 
             // btnGestFacturacion
             // 
@@ -402,6 +402,7 @@
             this.btnGestFacturacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGestFacturacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGestFacturacion.UseVisualStyleBackColor = true;
+            this.btnGestFacturacion.Click += new System.EventHandler(this.btnGestFacturacion_Click);
             // 
             // btnFacturacion
             // 
@@ -414,7 +415,7 @@
             this.btnFacturacion.ForeColor = System.Drawing.Color.White;
             this.btnFacturacion.Image = global::TP.P.A.V.I.Properties.Resources.factura;
             this.btnFacturacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFacturacion.Location = new System.Drawing.Point(0, 690);
+            this.btnFacturacion.Location = new System.Drawing.Point(0, 654);
             this.btnFacturacion.Name = "btnFacturacion";
             this.btnFacturacion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnFacturacion.Size = new System.Drawing.Size(234, 40);
@@ -430,7 +431,7 @@
             this.subMenuEmpleados.Controls.Add(this.btnPuestosDeTrabajo);
             this.subMenuEmpleados.Controls.Add(this.btnGestEmpleados);
             this.subMenuEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuEmpleados.Location = new System.Drawing.Point(0, 616);
+            this.subMenuEmpleados.Location = new System.Drawing.Point(0, 580);
             this.subMenuEmpleados.Name = "subMenuEmpleados";
             this.subMenuEmpleados.Size = new System.Drawing.Size(234, 74);
             this.subMenuEmpleados.TabIndex = 12;
@@ -483,7 +484,7 @@
             this.btnEmpleados.ForeColor = System.Drawing.Color.White;
             this.btnEmpleados.Image = global::TP.P.A.V.I.Properties.Resources.empleado;
             this.btnEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpleados.Location = new System.Drawing.Point(0, 576);
+            this.btnEmpleados.Location = new System.Drawing.Point(0, 540);
             this.btnEmpleados.Name = "btnEmpleados";
             this.btnEmpleados.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnEmpleados.Size = new System.Drawing.Size(234, 40);
@@ -499,12 +500,11 @@
             this.subMenuHuespedes.Controls.Add(this.btnTarjetas);
             this.subMenuHuespedes.Controls.Add(this.btnAlojXHuesped);
             this.subMenuHuespedes.Controls.Add(this.btnInsXHuesped);
-            this.subMenuHuespedes.Controls.Add(this.btnServXHuesped);
             this.subMenuHuespedes.Controls.Add(this.btnGestionHuespedes);
             this.subMenuHuespedes.Dock = System.Windows.Forms.DockStyle.Top;
             this.subMenuHuespedes.Location = new System.Drawing.Point(0, 398);
             this.subMenuHuespedes.Name = "subMenuHuespedes";
-            this.subMenuHuespedes.Size = new System.Drawing.Size(234, 178);
+            this.subMenuHuespedes.Size = new System.Drawing.Size(234, 142);
             this.subMenuHuespedes.TabIndex = 4;
             this.subMenuHuespedes.Visible = false;
             // 
@@ -515,7 +515,7 @@
             this.btnTarjetas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTarjetas.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTarjetas.ForeColor = System.Drawing.Color.White;
-            this.btnTarjetas.Location = new System.Drawing.Point(0, 140);
+            this.btnTarjetas.Location = new System.Drawing.Point(0, 105);
             this.btnTarjetas.Name = "btnTarjetas";
             this.btnTarjetas.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnTarjetas.Size = new System.Drawing.Size(234, 35);
@@ -533,7 +533,7 @@
             this.btnAlojXHuesped.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlojXHuesped.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlojXHuesped.ForeColor = System.Drawing.Color.White;
-            this.btnAlojXHuesped.Location = new System.Drawing.Point(0, 105);
+            this.btnAlojXHuesped.Location = new System.Drawing.Point(0, 70);
             this.btnAlojXHuesped.Name = "btnAlojXHuesped";
             this.btnAlojXHuesped.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnAlojXHuesped.Size = new System.Drawing.Size(234, 35);
@@ -551,7 +551,7 @@
             this.btnInsXHuesped.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsXHuesped.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsXHuesped.ForeColor = System.Drawing.Color.White;
-            this.btnInsXHuesped.Location = new System.Drawing.Point(0, 70);
+            this.btnInsXHuesped.Location = new System.Drawing.Point(0, 35);
             this.btnInsXHuesped.Name = "btnInsXHuesped";
             this.btnInsXHuesped.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnInsXHuesped.Size = new System.Drawing.Size(234, 35);
@@ -561,23 +561,6 @@
             this.btnInsXHuesped.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInsXHuesped.UseVisualStyleBackColor = true;
             this.btnInsXHuesped.Click += new System.EventHandler(this.btnInsXHuesped_Click);
-            // 
-            // btnServXHuesped
-            // 
-            this.btnServXHuesped.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnServXHuesped.FlatAppearance.BorderSize = 0;
-            this.btnServXHuesped.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnServXHuesped.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnServXHuesped.ForeColor = System.Drawing.Color.White;
-            this.btnServXHuesped.Location = new System.Drawing.Point(0, 35);
-            this.btnServXHuesped.Name = "btnServXHuesped";
-            this.btnServXHuesped.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnServXHuesped.Size = new System.Drawing.Size(234, 35);
-            this.btnServXHuesped.TabIndex = 1;
-            this.btnServXHuesped.Text = "Gestionar ServicioXHuesped";
-            this.btnServXHuesped.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnServXHuesped.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnServXHuesped.UseVisualStyleBackColor = true;
             // 
             // btnGestionHuespedes
             // 
@@ -835,7 +818,6 @@
         private System.Windows.Forms.Button btnGestionHoteles;
         private System.Windows.Forms.Panel subMenuHuespedes;
         private System.Windows.Forms.Button btnInsXHuesped;
-        private System.Windows.Forms.Button btnServXHuesped;
         private System.Windows.Forms.Button btnGestionHuespedes;
         private System.Windows.Forms.Button btnHuespedes;
         private System.Windows.Forms.Button btnEmpleados;
