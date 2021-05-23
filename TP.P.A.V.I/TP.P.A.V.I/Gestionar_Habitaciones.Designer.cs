@@ -30,7 +30,6 @@ namespace TP.P.A.V.I
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.GestionarHabitaciones = new System.Windows.Forms.GroupBox();
             this.str_Id = new System.Windows.Forms.TextBox();
             this.Clear = new System.Windows.Forms.Button();
@@ -41,15 +40,15 @@ namespace TP.P.A.V.I
             this.NombreHabitaciones = new System.Windows.Forms.Label();
             this.Optinons = new System.Windows.Forms.Label();
             this.Str_Nombre_hab = new System.Windows.Forms.TextBox();
-            this.Viewer = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Habitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Viewer = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreHabitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GestionarHabitaciones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Viewer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Viewer)).BeginInit();
             this.SuspendLayout();
             // 
             // GestionarHabitaciones
@@ -180,58 +179,6 @@ namespace TP.P.A.V.I
             this.Str_Nombre_hab.Size = new System.Drawing.Size(143, 27);
             this.Str_Nombre_hab.TabIndex = 1;
             // 
-            // Viewer
-            // 
-            this.Viewer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Viewer.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.Viewer.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Viewer.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(63)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Viewer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.Viewer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.Habitacion,
-            this.Descripcion});
-            this.Viewer.GridColor = System.Drawing.Color.White;
-            this.Viewer.Location = new System.Drawing.Point(12, 264);
-            this.Viewer.Name = "Viewer";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            this.Viewer.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.Viewer.Size = new System.Drawing.Size(709, 150);
-            this.Viewer.TabIndex = 0;
-            this.Viewer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Viewer_CellContentClick);
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "Id";
-            this.id.HeaderText = "Id _Habitacion";
-            this.id.Name = "id";
-            this.id.Width = 50;
-            // 
-            // Habitacion
-            // 
-            this.Habitacion.DataPropertyName = "Nombre";
-            this.Habitacion.HeaderText = "Nombre Habitacion";
-            this.Habitacion.Name = "Habitacion";
-            this.Habitacion.Width = 250;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Descripcion.DataPropertyName = "Descripcion ";
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            // 
             // label9
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -255,14 +202,63 @@ namespace TP.P.A.V.I
             this.pictureBox2.TabIndex = 61;
             this.pictureBox2.TabStop = false;
             // 
+            // Viewer
+            // 
+            this.Viewer.AllowUserToAddRows = false;
+            this.Viewer.AllowUserToDeleteRows = false;
+            this.Viewer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Viewer.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.Viewer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Viewer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.NombreHabitacion,
+            this.Descripcion});
+            this.Viewer.Location = new System.Drawing.Point(12, 266);
+            this.Viewer.Name = "Viewer";
+            this.Viewer.ReadOnly = true;
+            this.Viewer.RowHeadersVisible = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.Viewer.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.Viewer.Size = new System.Drawing.Size(709, 148);
+            this.Viewer.TabIndex = 63;
+            this.Viewer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Viewer_CellClick);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "Id";
+            this.id.HeaderText = "Id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 50;
+            // 
+            // NombreHabitacion
+            // 
+            this.NombreHabitacion.DataPropertyName = "Nombre";
+            this.NombreHabitacion.HeaderText = "Habitacion";
+            this.NombreHabitacion.Name = "NombreHabitacion";
+            this.NombreHabitacion.ReadOnly = true;
+            this.NombreHabitacion.Width = 200;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Descripcion.DataPropertyName = "Descripcion";
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            // 
             // Gestionar_Habitaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(733, 426);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.Viewer);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.GestionarHabitaciones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -272,8 +268,8 @@ namespace TP.P.A.V.I
             this.Load += new System.EventHandler(this.Gestionar_Habitaciones_Load);
             this.GestionarHabitaciones.ResumeLayout(false);
             this.GestionarHabitaciones.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Viewer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Viewer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,12 +286,12 @@ namespace TP.P.A.V.I
         private System.Windows.Forms.RichTextBox Str_Descripcion_Hab;
         private System.Windows.Forms.Label Descripcion_hab;
         private System.Windows.Forms.Button Clear;
-        private System.Windows.Forms.DataGridView Viewer;
         private System.Windows.Forms.TextBox str_Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Habitacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.DataGridView Viewer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreHabitacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
     }
 }
