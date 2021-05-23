@@ -45,13 +45,6 @@ namespace TP.P.A.V.I
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.grillaEmpleados = new System.Windows.Forms.DataGridView();
-            this.btnAgregarEmpleado = new System.Windows.Forms.Button();
-            this.btnActualizarEmpleado = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.txtNumeroDocumentos = new System.Windows.Forms.MaskedTextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.NumeroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,6 +52,13 @@ namespace TP.P.A.V.I
             this.FechaIngreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Hotel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Puesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAgregarEmpleado = new System.Windows.Forms.Button();
+            this.btnActualizarEmpleado = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.txtNumeroDocumentos = new System.Windows.Forms.MaskedTextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grillaEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -268,6 +268,7 @@ namespace TP.P.A.V.I
             this.grillaEmpleados.Margin = new System.Windows.Forms.Padding(2);
             this.grillaEmpleados.Name = "grillaEmpleados";
             this.grillaEmpleados.ReadOnly = true;
+            this.grillaEmpleados.RowHeadersVisible = false;
             this.grillaEmpleados.RowHeadersWidth = 51;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateGray;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -277,6 +278,68 @@ namespace TP.P.A.V.I
             this.grillaEmpleados.Size = new System.Drawing.Size(693, 116);
             this.grillaEmpleados.TabIndex = 32;
             this.grillaEmpleados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaEmpleados_CellClick);
+            // 
+            // NumeroDocumento
+            // 
+            this.NumeroDocumento.DataPropertyName = "NumeroDocumento";
+            this.NumeroDocumento.HeaderText = "Numero Documento";
+            this.NumeroDocumento.MinimumWidth = 6;
+            this.NumeroDocumento.Name = "NumeroDocumento";
+            this.NumeroDocumento.ReadOnly = true;
+            this.NumeroDocumento.Width = 150;
+            // 
+            // TipoDocumento
+            // 
+            this.TipoDocumento.DataPropertyName = "TipoDocumento";
+            this.TipoDocumento.HeaderText = "Tipo Doc";
+            this.TipoDocumento.MinimumWidth = 6;
+            this.TipoDocumento.Name = "TipoDocumento";
+            this.TipoDocumento.ReadOnly = true;
+            // 
+            // Apellido
+            // 
+            this.Apellido.DataPropertyName = "Apellido";
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.MinimumWidth = 6;
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            this.Apellido.Width = 200;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 125;
+            // 
+            // FechaIngreso
+            // 
+            this.FechaIngreso.DataPropertyName = "FechaIngreso";
+            this.FechaIngreso.HeaderText = "Fecha De Ingreso";
+            this.FechaIngreso.MinimumWidth = 6;
+            this.FechaIngreso.Name = "FechaIngreso";
+            this.FechaIngreso.ReadOnly = true;
+            this.FechaIngreso.Width = 200;
+            // 
+            // Hotel
+            // 
+            this.Hotel.DataPropertyName = "Id_Hotel";
+            this.Hotel.HeaderText = "Hotel";
+            this.Hotel.MinimumWidth = 6;
+            this.Hotel.Name = "Hotel";
+            this.Hotel.ReadOnly = true;
+            this.Hotel.Width = 125;
+            // 
+            // Puesto
+            // 
+            this.Puesto.DataPropertyName = "Id_Puesto";
+            this.Puesto.HeaderText = "Puesto";
+            this.Puesto.MinimumWidth = 6;
+            this.Puesto.Name = "Puesto";
+            this.Puesto.ReadOnly = true;
+            this.Puesto.Width = 125;
             // 
             // btnAgregarEmpleado
             // 
@@ -379,68 +442,6 @@ namespace TP.P.A.V.I
             this.label9.Size = new System.Drawing.Size(75, 16);
             this.label9.TabIndex = 39;
             this.label9.Text = "Hoteleria";
-            // 
-            // NumeroDocumento
-            // 
-            this.NumeroDocumento.DataPropertyName = "NumeroDocumento";
-            this.NumeroDocumento.HeaderText = "Numero Documento";
-            this.NumeroDocumento.MinimumWidth = 6;
-            this.NumeroDocumento.Name = "NumeroDocumento";
-            this.NumeroDocumento.ReadOnly = true;
-            this.NumeroDocumento.Width = 150;
-            // 
-            // TipoDocumento
-            // 
-            this.TipoDocumento.DataPropertyName = "TipoDocumento";
-            this.TipoDocumento.HeaderText = "Tipo Doc";
-            this.TipoDocumento.MinimumWidth = 6;
-            this.TipoDocumento.Name = "TipoDocumento";
-            this.TipoDocumento.ReadOnly = true;
-            // 
-            // Apellido
-            // 
-            this.Apellido.DataPropertyName = "Apellido";
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.MinimumWidth = 6;
-            this.Apellido.Name = "Apellido";
-            this.Apellido.ReadOnly = true;
-            this.Apellido.Width = 200;
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 125;
-            // 
-            // FechaIngreso
-            // 
-            this.FechaIngreso.DataPropertyName = "FechaIngreso";
-            this.FechaIngreso.HeaderText = "Fecha De Ingreso";
-            this.FechaIngreso.MinimumWidth = 6;
-            this.FechaIngreso.Name = "FechaIngreso";
-            this.FechaIngreso.ReadOnly = true;
-            this.FechaIngreso.Width = 200;
-            // 
-            // Hotel
-            // 
-            this.Hotel.DataPropertyName = "Id_Hotel";
-            this.Hotel.HeaderText = "Hotel";
-            this.Hotel.MinimumWidth = 6;
-            this.Hotel.Name = "Hotel";
-            this.Hotel.ReadOnly = true;
-            this.Hotel.Width = 125;
-            // 
-            // Puesto
-            // 
-            this.Puesto.DataPropertyName = "Id_Puesto";
-            this.Puesto.HeaderText = "Puesto";
-            this.Puesto.MinimumWidth = 6;
-            this.Puesto.Name = "Puesto";
-            this.Puesto.ReadOnly = true;
-            this.Puesto.Width = 125;
             // 
             // Empleados
             // 
