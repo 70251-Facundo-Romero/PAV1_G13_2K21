@@ -71,6 +71,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelFormulariosHijos = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.MenuLogin.SuspendLayout();
@@ -82,6 +84,8 @@
             this.subMenuHoteles.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelFormulariosHijos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -760,11 +764,36 @@
             // panelFormulariosHijos
             // 
             this.panelFormulariosHijos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.panelFormulariosHijos.Controls.Add(this.label1);
+            this.panelFormulariosHijos.Controls.Add(this.pictureBox2);
             this.panelFormulariosHijos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFormulariosHijos.Location = new System.Drawing.Point(251, 35);
             this.panelFormulariosHijos.Name = "panelFormulariosHijos";
             this.panelFormulariosHijos.Size = new System.Drawing.Size(749, 465);
             this.panelFormulariosHijos.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.SkyBlue;
+            this.label1.Location = new System.Drawing.Point(300, 262);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(161, 25);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Hoteleria App";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Image = global::TP.P.A.V.I.Properties.Resources.q;
+            this.pictureBox2.Location = new System.Drawing.Point(314, 138);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(129, 121);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
             // 
             // Menu
             // 
@@ -796,6 +825,9 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelFormulariosHijos.ResumeLayout(false);
+            this.panelFormulariosHijos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -844,5 +876,7 @@
         private System.Windows.Forms.Button btnCiudades;
         private System.Windows.Forms.Button btnPaises;
         private System.Windows.Forms.Button btnUbicaciones;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
