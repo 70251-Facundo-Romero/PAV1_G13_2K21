@@ -20,7 +20,7 @@ namespace TP.P.A.V.I.DAL
 
             try
             {
-                string consulta = "SELECT * FROM Ciudades";
+                string consulta = "SELECT C.Nombre, C.Id, C.Descripcion, P.Nombre as NombrePais FROM Ciudades C JOIN Paises P ON C.Id_pais = P.Id";
 
                 cmd.Parameters.Clear();
                 cmd.CommandType = CommandType.Text;

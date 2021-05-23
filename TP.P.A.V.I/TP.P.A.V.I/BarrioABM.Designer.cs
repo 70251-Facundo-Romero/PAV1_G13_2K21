@@ -31,10 +31,6 @@ namespace TP.P.A.V.I
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grillaBarrios = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCiudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdPais = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DescCiudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -49,6 +45,10 @@ namespace TP.P.A.V.I
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreCiudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ciudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescCiudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grillaBarrios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -75,7 +75,7 @@ namespace TP.P.A.V.I
             this.grillaBarrios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.NombreCiudad,
-            this.IdPais,
+            this.Ciudad,
             this.DescCiudad});
             this.grillaBarrios.GridColor = System.Drawing.Color.White;
             this.grillaBarrios.Location = new System.Drawing.Point(12, 258);
@@ -90,38 +90,6 @@ namespace TP.P.A.V.I
             this.grillaBarrios.Size = new System.Drawing.Size(709, 156);
             this.grillaBarrios.TabIndex = 2;
             this.grillaBarrios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaBarrios_CellClick);
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Width = 50;
-            // 
-            // NombreCiudad
-            // 
-            this.NombreCiudad.DataPropertyName = "Nombre";
-            this.NombreCiudad.HeaderText = "Barrio";
-            this.NombreCiudad.Name = "NombreCiudad";
-            this.NombreCiudad.ReadOnly = true;
-            this.NombreCiudad.Width = 200;
-            // 
-            // IdPais
-            // 
-            this.IdPais.DataPropertyName = "IdCiudad";
-            this.IdPais.HeaderText = "IdCiudad";
-            this.IdPais.Name = "IdPais";
-            this.IdPais.ReadOnly = true;
-            this.IdPais.Width = 80;
-            // 
-            // DescCiudad
-            // 
-            this.DescCiudad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DescCiudad.DataPropertyName = "Descripcion";
-            this.DescCiudad.HeaderText = "Descripción";
-            this.DescCiudad.Name = "DescCiudad";
-            this.DescCiudad.ReadOnly = true;
             // 
             // label1
             // 
@@ -305,6 +273,38 @@ namespace TP.P.A.V.I
             this.pictureBox3.TabIndex = 36;
             this.pictureBox3.TabStop = false;
             // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Width = 50;
+            // 
+            // NombreCiudad
+            // 
+            this.NombreCiudad.DataPropertyName = "Nombre";
+            this.NombreCiudad.HeaderText = "Barrio";
+            this.NombreCiudad.Name = "NombreCiudad";
+            this.NombreCiudad.ReadOnly = true;
+            this.NombreCiudad.Width = 170;
+            // 
+            // Ciudad
+            // 
+            this.Ciudad.DataPropertyName = "NombreCiudad";
+            this.Ciudad.HeaderText = "Ciudad";
+            this.Ciudad.Name = "Ciudad";
+            this.Ciudad.ReadOnly = true;
+            this.Ciudad.Width = 170;
+            // 
+            // DescCiudad
+            // 
+            this.DescCiudad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DescCiudad.DataPropertyName = "Descripcion";
+            this.DescCiudad.HeaderText = "Descripción";
+            this.DescCiudad.Name = "DescCiudad";
+            this.DescCiudad.ReadOnly = true;
+            // 
             // BarrioABM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -341,10 +341,6 @@ namespace TP.P.A.V.I
         #endregion
 
         private System.Windows.Forms.DataGridView grillaBarrios;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCiudad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdPais;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DescCiudad;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtNombre;
@@ -359,5 +355,9 @@ namespace TP.P.A.V.I
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCiudad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ciudad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DescCiudad;
     }
 }
