@@ -72,7 +72,7 @@ namespace TP.P.A.V.I
             this.GestionarInstalaciones.Size = new System.Drawing.Size(591, 232);
             this.GestionarInstalaciones.TabIndex = 2;
             this.GestionarInstalaciones.TabStop = false;
-            this.GestionarInstalaciones.Text = "Gestionar Habitaciones";
+            this.GestionarInstalaciones.Text = "Gestionar Instalaciones";
             // 
             // str_Id
             // 
@@ -182,6 +182,8 @@ namespace TP.P.A.V.I
             // 
             // Viewer
             // 
+            this.Viewer.AllowUserToAddRows = false;
+            this.Viewer.AllowUserToDeleteRows = false;
             this.Viewer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -203,13 +205,14 @@ namespace TP.P.A.V.I
             this.Viewer.GridColor = System.Drawing.Color.White;
             this.Viewer.Location = new System.Drawing.Point(12, 269);
             this.Viewer.Name = "Viewer";
+            this.Viewer.RowHeadersVisible = false;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkSlateGray;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             this.Viewer.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.Viewer.Size = new System.Drawing.Size(709, 145);
             this.Viewer.TabIndex = 3;
-            this.Viewer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Viewer_CellContentClick);
+            this.Viewer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Viewer_CellClick);
             // 
             // id
             // 
@@ -228,7 +231,7 @@ namespace TP.P.A.V.I
             // Descripcion
             // 
             this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Descripcion.DataPropertyName = "Descripcion ";
+            this.Descripcion.DataPropertyName = "Descripcion";
             this.Descripcion.HeaderText = "Descripción";
             this.Descripcion.Name = "Descripcion";
             // 
@@ -291,10 +294,10 @@ namespace TP.P.A.V.I
         private System.Windows.Forms.Label Optinons;
         private System.Windows.Forms.TextBox Str_Nombre_inst;
         private System.Windows.Forms.DataGridView Viewer;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Habitacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

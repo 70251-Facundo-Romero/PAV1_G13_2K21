@@ -249,5 +249,15 @@ namespace TP.P.A.V.I
             openChildForm(ventana);
             hideSubMenu();
         }
+
+        private void btnGestFacturacion_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Esta funcionalidad corresponde a la tercer entrega");
+        }
+
+        private void btnDetalleFactura_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Esta funcionalidad corresponde a la tercer entrega");
+        }
     }   
 }

@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TP.P.A.V.I.DAL;
 using TP.P.A.V.I.Entities;
 
@@ -11,7 +7,22 @@ namespace TP.P.A.V.I.BLL
 {
     class AlojamientoXHuespedBLL
     {
-        public static DataTable ObtenerListadoAlojamientoXHuesped()
+        public static bool ValiadarPasaporte(int NroPasaporte)
+        {
+            return AlojamientoXHuespedDAL.ValiadarPasaporte(NroPasaporte);
+        }
+
+        public static int BuscarIdHabitacionXHotel(int IdHab, int IdHot)
+        {
+            return AlojamientoXHuespedDAL.BuscarIdHabitacionXHotel(IdHab, IdHot);
+        }
+
+        public static AlojamientoXHuespedes BuscarAlojamiento(int IdAlojamiento)
+        {
+            return AlojamientoXHuespedDAL.BuscarAlojamiento(IdAlojamiento);
+        }
+
+            public static DataTable ObtenerListadoAlojamientoXHuesped()
         {
             try
             {
@@ -24,26 +35,18 @@ namespace TP.P.A.V.I.BLL
 
         }
 
-        public static bool AgregarAlojamientoXHuespedABD(AlojamientoXHuespedes al)
+        public static int BuscarIdHuesped(int NroPasaporte)
+        {
+            return AlojamientoXHuespedDAL.BuscarIdHuesped(NroPasaporte);
+        }
+
+            public static bool AgregarAlojamientoXHuespedABD(AlojamientoXHuespedes al)
         {
             try
             {
                 return AlojamientoXHuespedDAL.AgregarAlojamientoXHuespedABD(al);
             }
             catch (Exception ex)
-            {
-                throw;
-
-            }
-        }
-
-        public static AlojamientoXHuespedes ObtenerAlojamientoXHuesped(int id)
-        {
-            try
-            {
-                return AlojamientoXHuespedDAL.ObtenerAlojamientoPorHuesped(id);
-            }
-            catch (Exception)
             {
                 throw;
 

@@ -8,7 +8,7 @@ namespace TP.P.A.V.I.Entities
 {
     class Instalaciones
     {
-        public string id { get; set; }
+        public int id { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
 

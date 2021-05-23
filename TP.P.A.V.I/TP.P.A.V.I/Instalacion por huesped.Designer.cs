@@ -41,12 +41,6 @@ namespace TP.P.A.V.I
             this.btnModificarIXH = new System.Windows.Forms.Button();
             this.btnAgregarIXH = new System.Windows.Forms.Button();
             this.grillaInstalacion = new System.Windows.Forms.DataGridView();
-            this.Id_IXH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hotel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Habitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id_Instalacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaAloj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaUso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,6 +48,12 @@ namespace TP.P.A.V.I
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cmb_Instalacion = new System.Windows.Forms.ComboBox();
+            this.Id_IXH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hotel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Habitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Instalacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaAloj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaUso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grillaInstalacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -219,7 +219,7 @@ namespace TP.P.A.V.I
             this.Id_IXH,
             this.Hotel,
             this.Habitacion,
-            this.Id_Instalacion,
+            this.Instalacion,
             this.FechaAloj,
             this.FechaUso});
             this.grillaInstalacion.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -227,6 +227,7 @@ namespace TP.P.A.V.I
             this.grillaInstalacion.Margin = new System.Windows.Forms.Padding(2);
             this.grillaInstalacion.Name = "grillaInstalacion";
             this.grillaInstalacion.ReadOnly = true;
+            this.grillaInstalacion.RowHeadersVisible = false;
             this.grillaInstalacion.RowHeadersWidth = 51;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateGray;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -236,53 +237,6 @@ namespace TP.P.A.V.I
             this.grillaInstalacion.Size = new System.Drawing.Size(691, 126);
             this.grillaInstalacion.TabIndex = 80;
             this.grillaInstalacion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaInstalacion_CellClick);
-            // 
-            // Id_IXH
-            // 
-            this.Id_IXH.DataPropertyName = "Id_IXH";
-            this.Id_IXH.HeaderText = "Id";
-            this.Id_IXH.Name = "Id_IXH";
-            this.Id_IXH.ReadOnly = true;
-            this.Id_IXH.Width = 50;
-            // 
-            // Hotel
-            // 
-            this.Hotel.DataPropertyName = "Id_Hotel";
-            this.Hotel.HeaderText = "Hotel";
-            this.Hotel.Name = "Hotel";
-            this.Hotel.ReadOnly = true;
-            // 
-            // Habitacion
-            // 
-            this.Habitacion.DataPropertyName = "Id_Habitacion";
-            this.Habitacion.HeaderText = "Habitacion";
-            this.Habitacion.Name = "Habitacion";
-            this.Habitacion.ReadOnly = true;
-            this.Habitacion.Width = 60;
-            // 
-            // Id_Instalacion
-            // 
-            this.Id_Instalacion.DataPropertyName = "Id_Instalacion";
-            this.Id_Instalacion.HeaderText = "Id Instalación";
-            this.Id_Instalacion.Name = "Id_Instalacion";
-            this.Id_Instalacion.ReadOnly = true;
-            this.Id_Instalacion.Width = 80;
-            // 
-            // FechaAloj
-            // 
-            this.FechaAloj.DataPropertyName = "FechaAlojamiento";
-            this.FechaAloj.HeaderText = "Fecha Alojamiento";
-            this.FechaAloj.Name = "FechaAloj";
-            this.FechaAloj.ReadOnly = true;
-            this.FechaAloj.Width = 150;
-            // 
-            // FechaUso
-            // 
-            this.FechaUso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FechaUso.DataPropertyName = "FechaUso";
-            this.FechaUso.HeaderText = "Fecha y hora de uso";
-            this.FechaUso.Name = "FechaUso";
-            this.FechaUso.ReadOnly = true;
             // 
             // label7
             // 
@@ -370,6 +324,54 @@ namespace TP.P.A.V.I
             this.cmb_Instalacion.Size = new System.Drawing.Size(236, 25);
             this.cmb_Instalacion.TabIndex = 98;
             // 
+            // Id_IXH
+            // 
+            this.Id_IXH.DataPropertyName = "Id_IXH";
+            this.Id_IXH.HeaderText = "Id";
+            this.Id_IXH.Name = "Id_IXH";
+            this.Id_IXH.ReadOnly = true;
+            this.Id_IXH.Width = 40;
+            // 
+            // Hotel
+            // 
+            this.Hotel.DataPropertyName = "NombreHotel";
+            this.Hotel.HeaderText = "Hotel";
+            this.Hotel.Name = "Hotel";
+            this.Hotel.ReadOnly = true;
+            this.Hotel.Width = 110;
+            // 
+            // Habitacion
+            // 
+            this.Habitacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Habitacion.DataPropertyName = "NombreHabitacion";
+            this.Habitacion.HeaderText = "Habitacion";
+            this.Habitacion.Name = "Habitacion";
+            this.Habitacion.ReadOnly = true;
+            // 
+            // Instalacion
+            // 
+            this.Instalacion.DataPropertyName = "NombreInstalacion";
+            this.Instalacion.HeaderText = "Instalacion";
+            this.Instalacion.Name = "Instalacion";
+            this.Instalacion.ReadOnly = true;
+            this.Instalacion.Width = 110;
+            // 
+            // FechaAloj
+            // 
+            this.FechaAloj.DataPropertyName = "FechaAlojamiento";
+            this.FechaAloj.HeaderText = "Fecha Alojamiento";
+            this.FechaAloj.Name = "FechaAloj";
+            this.FechaAloj.ReadOnly = true;
+            this.FechaAloj.Width = 150;
+            // 
+            // FechaUso
+            // 
+            this.FechaUso.DataPropertyName = "FechaUso";
+            this.FechaUso.HeaderText = "Fecha y Hora de uso";
+            this.FechaUso.Name = "FechaUso";
+            this.FechaUso.ReadOnly = true;
+            this.FechaUso.Width = 150;
+            // 
             // Instalacion_por_huesped
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,7 +431,7 @@ namespace TP.P.A.V.I
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_IXH;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hotel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Habitacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Instalacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Instalacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaAloj;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaUso;
     }

@@ -28,7 +28,10 @@ namespace TP.P.A.V.I
         private Instalaciones ObtenerDatosInstalaciones()
         {
             Instalaciones instalaciones = new Instalaciones();
-            instalaciones.id = str_Id.Text;
+            if (!str_Id.Text.Equals(""))
+            {
+                instalaciones.id = int.Parse(str_Id.Text);
+            }
             instalaciones.Nombre = Str_Nombre_inst.Text;
             instalaciones.Descripcion = Str_Descripcion_Ints.Text;
             return instalaciones;
@@ -71,7 +74,7 @@ namespace TP.P.A.V.I
 
                     if (InstalacionesBLL.Validar_Instalacion(Instalacion.Nombre, Instalacion.Descripcion))
                     {
-                        if (InstalacionesBLL. Delete_Instalacion(Instalacion))
+                        if (InstalacionesBLL.Delete_Instalacion(Instalacion))
                         {
                             MessageBox.Show("Se elimino la Instalacion");
                             limpiarInpunts();
@@ -133,20 +136,6 @@ namespace TP.P.A.V.I
             Viewer.DataSource = InstalacionesBLL.CargarGrilla();
         }
 
-        private void Viewer_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int index = e.RowIndex;
-            DataGridViewRow pointer = Viewer.Rows[index];
-            string id = pointer.Cells["Id"].Value.ToString();
-            Instalaciones hab = ObtenerInstalacion(id);
-            limpiarInpunts();
-
-            Cb_Options_inst.Items.Add("Modificar");
-            cargarInpunt(hab);
-
-
-        }
-
 
         private void cargarInpunt(Instalaciones instalaciones)
 
@@ -166,5 +155,16 @@ namespace TP.P.A.V.I
 
         }
 
+        private void Viewer_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow pointer = Viewer.Rows[index];
+            string id = pointer.Cells["Id"].Value.ToString();
+            Instalaciones hab = ObtenerInstalacion(id);
+            limpiarInpunts();
+
+            Cb_Options_inst.Items.Add("Modificar");
+            cargarInpunt(hab);
+        }
     }
     }

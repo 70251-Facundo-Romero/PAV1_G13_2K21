@@ -14,8 +14,14 @@ namespace TP.P.A.V.I.Entities
 
         public int Id_Hotel { get; set; }
 
+        public int Id_HabXHot { get; set; }
+
         public int NroPasaporte { get; set; }
         public int Id_Pais { get; set; }
         public DateTime FechaSalida { get; set; }
+
+        public string NombrePais { get; set; }
+        public string NombreHotel { get; set; }
+        public string NombreHabitacion { get; set; }
     }
 }

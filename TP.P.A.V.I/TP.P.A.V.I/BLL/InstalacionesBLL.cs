@@ -30,7 +30,7 @@ namespace TP.P.A.V.I.BLL
         {
             try
             {
-                return InstalacionesDAL.DeleteInstalaciones(instalaciones.Nombre);
+                return InstalacionesDAL.DeleteInstalaciones(instalaciones.id);
             }
             catch (Exception)
             {
@@ -46,14 +46,7 @@ namespace TP.P.A.V.I.BLL
         }
         public static Instalaciones Obtenerinstalaciones(string ID)
         {
-            Dictionary<string, string> dic = InstalacionesDAL.ObtenerInstalaciones(ID);
-
-            Instalaciones hab = new Instalaciones();
-            hab.id = dic["Id"];
-            hab.Nombre = dic["Nombre"];
-            hab.Descripcion = dic["Descripcion"];
-
-            return hab;
+            return InstalacionesDAL.ObtenerInstalaciones(ID);
 
         }
         public static bool ActualizarInstalaciones(Instalaciones instalaciones)

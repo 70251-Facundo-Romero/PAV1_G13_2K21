@@ -15,33 +15,38 @@ namespace TP.P.A.V.I.DAL
 
         public static DataTable ObtenerListadoAlojamientoXHuesped()
         {
-            string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
-            SqlCommand cmd = new SqlCommand();
-            SqlConnection cn = new SqlConnection(cadenaConexion);
-
-            try
+            using (SqlConnection con = new SqlConnection(ConnectionString))
             {
-                string consulta = "SELECT * FROM AlojamientoXHuespedes";
-                
-                cmd.Parameters.Clear();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = consulta;
+                con.Open();
+                try
+                {
+                    using (SqlCommand cmd = new SqlCommand(@"SELECT AxH.IdAXH, Hu.NroPasaporte as NroPasaporte, P.Nombre as NombrePais, Hot.Nombre as NombreHotel, Hab.Nombre as NombreHabitacion, AxH.FechaAlojamiento, AxH.FechaSalida 
+                                        FROM AlojamientoXHotel AxH
+                                        JOIN HabitacionXHotel HxH ON AxH.IdHabXHotel = HxH.IdHabitacionXHotel
+                                        JOIN Hoteles Hot ON HxH.IdHotel = Hot.Id
+                                        JOIN Habitaciones Hab ON HxH.IdHabitacion = Hab.Id
+                                        JOIN Huespedes Hu ON AXH.IdHuesped = Hu.Id 
+                                        JOIN Paises P ON Hu.Id_Pais = P.Id", con))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        using (SqlDataAdapter dr = new SqlDataAdapter(cmd))
+                        {
+                            DataTable tabla = new DataTable();
+                            dr.Fill(tabla);
+                            return tabla;
 
-                cn.Open();
-                cmd.Connection = cn;
-                DataTable tabla = new DataTable();
-
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(tabla);
-                return tabla;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                cn.Close();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw;
+                }
+                finally
+                {
+                    if (con.State == ConnectionState.Open)
+                        con.Close();
+                }
             }
 
 
@@ -56,15 +61,22 @@ namespace TP.P.A.V.I.DAL
 
             try
             {
-                string consulta = "INSERT INTO AlojamientoXHuespedes(FechaAlojamiento,  Id_Habitacion, Id_Hotel,NroPasaporte,Id_Pais,FechaSalida) VALUES (@fechaAloj, @idHab,@idHotel,@nroPasaporte,@idPais,@fechaSalida)";
+                string consulta = "INSERT INTO [dbo].[AlojamientoXHotel]" +
+                    "           ([FechaAlojamiento]" +
+                    "           ,[IdHuesped]" +
+                    "           ,[FechaSalida]" +
+                    "           ,[IdHabXHotel])" +
+                    "     VALUES" +
+                    "           (@fechaAloj" +
+                    "           ,@IdHuesped" +
+                    "          ,@fechaSalida" +
+                    "           ,@IdHabXHot)";
 
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@fechaAloj", al.FechaAlojamiento);
-                cmd.Parameters.AddWithValue("@idHab", al.Id_Habitacion);
-                cmd.Parameters.AddWithValue("@idHotel", al.Id_Hotel);
-                cmd.Parameters.AddWithValue("@idPais", al.Id_Pais);
+                cmd.Parameters.AddWithValue("@IdHabXHot", al.Id_HabXHot);
                 cmd.Parameters.AddWithValue("@fechaSalida", al.FechaSalida);
-                cmd.Parameters.AddWithValue("@nroPasaporte", al.NroPasaporte);
+                cmd.Parameters.AddWithValue("@IdHuesped", al.NroPasaporte);
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = consulta;
                 cn.Open();
@@ -84,50 +96,154 @@ namespace TP.P.A.V.I.DAL
             return resultado;
         }
 
-        public static AlojamientoXHuespedes ObtenerAlojamientoPorHuesped(int id)
+
+        public static bool ValiadarPasaporte(int NroPasaporte)
         {
-            string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
-            AlojamientoXHuespedes al = new AlojamientoXHuespedes();
-            SqlCommand cmd = new SqlCommand();
-            SqlConnection cn = new SqlConnection(cadenaConexion);
+            bool resultado = false;
 
-            try
+            using (SqlConnection con = new SqlConnection(ConnectionString))
             {
-                string consulta = "SELECT * FROM AlojamientoXHuespedes WHERE Id_AXH LIKE @id";
 
-                cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id", id);
-
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = consulta;
-
-                cn.Open();
-                cmd.Connection = cn;
-                SqlDataReader dr = cmd.ExecuteReader();
-
-                if (dr != null && dr.Read())
+                con.Open();
+                try
                 {
-                    al.Id_AXH = int.Parse(dr["Id_AXH"].ToString());
-                    al.FechaAlojamiento = DateTime.Parse(dr["FechaAlojamiento"].ToString());
-                    al.Id_Habitacion = int.Parse(dr["Id_Habitacion"].ToString());
-                    al.Id_Hotel = int.Parse(dr["Id_Hotel"].ToString());
-                    al.NroPasaporte =int.Parse( dr["NroPasaporte"].ToString());
-                    al.Id_Pais = int.Parse(dr["Id_Pais"].ToString());
-                    al.FechaSalida = DateTime.Parse(dr["FechaSalida"].ToString());
-                    
+                    using (SqlCommand cmd = new SqlCommand(@"SELECT * FROM Huespedes WHERE NroPasaporte = @Pasaporte", con))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        cmd.Parameters.AddWithValue("@Pasaporte", NroPasaporte);
+                        using (SqlDataReader dr = cmd.ExecuteReader())
+                        {
+                            if (dr.Read())
+                            {
+                                resultado = true;
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw;
+                }
+                finally
+                {
+                    if (con.State == ConnectionState.Open)
+                        con.Close();
                 }
             }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                cn.Close();
-            }
-
-            return al;
+            return resultado;
         }
+
+        public static int BuscarIdHabitacionXHotel(int IdHab, int IdHot)
+        {
+            int num = 0;
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand(@"SELECT IdHabitacionXHotel FROM HabitacionXHotel WHERE IdHotel = @IdHot AND IdHabitacion = @IdHab", con);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@IdHot", IdHot);
+                    cmd.Parameters.AddWithValue("@IdHab", IdHab);
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        if (dr.Read())
+                        {
+                            
+                            num = int.Parse(dr["IdHabitacionXHotel"].ToString());
+                            
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    throw (ex);
+                }
+            }
+            return num;
+        }
+
+        public static int BuscarIdHuesped(int NroPasaporte)
+        {
+            int num = 0;
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand(@"SELECT Id FROM Huespedes WHERE NroPasaporte = @Pasaporte", con);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@Pasaporte", NroPasaporte);
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        if (dr.Read())
+                        {
+
+                            num = int.Parse(dr["Id"].ToString());
+
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    throw (ex);
+                }
+            }
+            return num;
+        }
+
+        public static AlojamientoXHuespedes BuscarAlojamiento(int IdAlojamiento)
+        {
+            AlojamientoXHuespedes a = new AlojamientoXHuespedes();
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand(@"SELECT AxH.IdAXH as IdAXH, Hu.NroPasaporte as NroPasaporte, P.Id as NombrePais, Hot.Id as NombreHotel, Hab.Id as NombreHabitacion, AxH.FechaAlojamiento as FechaAlojamiento, AxH.FechaSalida as FechaSalida 
+                                        FROM AlojamientoXHotel AxH
+                                        JOIN HabitacionXHotel HxH ON AxH.IdHabXHotel = HxH.IdHabitacionXHotel
+                                        JOIN Hoteles Hot ON HxH.IdHotel = Hot.Id
+                                        JOIN Habitaciones Hab ON HxH.IdHabitacion = Hab.Id
+                                        JOIN Huespedes Hu ON AXH.IdHuesped = Hu.Id 
+                                        JOIN Paises P ON Hu.Id_Pais = P.Id 
+                                        WHERE AXH.IdAXH = @Id", con);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@Id", IdAlojamiento);
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        if (dr.Read())
+                        {
+
+                            a.Id_AXH = int.Parse(dr["IdAXH"].ToString());
+                            a.NroPasaporte = int.Parse(dr["NroPasaporte"].ToString());
+                            a.Id_Pais = int.Parse(dr["NombrePais"].ToString());
+                            a.Id_Hotel = int.Parse(dr["NombreHotel"].ToString());
+                            a.Id_Habitacion = int.Parse(dr["NombreHabitacion"].ToString());
+                            a.FechaAlojamiento = DateTime.Parse(dr["FechaAlojamiento"].ToString());
+                            a.FechaSalida = DateTime.Parse(dr["FechaSalida"].ToString());
+
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    throw (ex);
+                }
+            }
+            return a;
+        }
+
+       
 
         public static bool ActualizarAlojamientoXHuespedABD(AlojamientoXHuespedes al)
         {
@@ -140,15 +256,18 @@ namespace TP.P.A.V.I.DAL
 
             try
             {
-                string consulta = "UPDATE AlojamientoXHuespedes SET FechaAlojamiento = @fechaAloj,Id_Habitacion = @idHab,Id_Hotel = @idHotel,NroPasaporte = @nroPasaporte,Id_Pais = @idPais,FechaSalida = @fechaSalida WHERE Id_AXH LIKE @id";
+                string consulta = "UPDATE [dbo].[AlojamientoXHotel]" +
+                    "   SET[FechaAlojamiento] = @fechaAloj" +
+                    "      ,[IdHuesped] = @nroPasaporte" +
+                    "      ,[FechaSalida] = @fechaSalida" +
+                    "      ,[IdHabXHotel] = @IdHabXHot" +
+                    "  WHERE IdAXH = @id ";
 
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@id", al.Id_AXH);
                 cmd.Parameters.AddWithValue("@fechaAloj", al.FechaAlojamiento);
-                cmd.Parameters.AddWithValue("@idHab", al.Id_Habitacion);
-                cmd.Parameters.AddWithValue("@idHotel", al.Id_Hotel);
+                cmd.Parameters.AddWithValue("@IdHabXHot", al.Id_HabXHot);
                 cmd.Parameters.AddWithValue("@nroPasaporte", al.NroPasaporte);
-                cmd.Parameters.AddWithValue("@idPais", al.Id_Pais);
                 cmd.Parameters.AddWithValue("@fechaSalida", al.FechaSalida);
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = consulta;
@@ -179,7 +298,7 @@ namespace TP.P.A.V.I.DAL
 
             try
             {
-                string consulta = "DELETE FROM AlojamientoXHuespedes WHERE Id_AXH LIKE @Id_AXH";
+                string consulta = "DELETE FROM AlojamientoXHotel WHERE IdAXH LIKE @Id_AXH";
 
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@Id_AXH", al.Id_AXH);
@@ -313,5 +432,5 @@ namespace TP.P.A.V.I.DAL
         }
     }
 }
-    
+
 

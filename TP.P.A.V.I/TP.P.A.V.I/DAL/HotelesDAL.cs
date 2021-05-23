@@ -22,7 +22,9 @@ namespace TP.P.A.V.I.DAL
 
             try
             {
-                string consulta = "SELECT * FROM Hoteles";
+                string consulta = @"SELECT H.*, B.Nombre as NombreBarrio
+                        FROM Hoteles H
+                        JOIN Barrios B ON H.Id_Barrio = B.Id";
 
                 cmd.Parameters.Clear();
                 cmd.CommandType = CommandType.Text;
