@@ -259,5 +259,12 @@ namespace TP.P.A.V.I
         {
             MessageBox.Show("Esta funcionalidad corresponde a otra entrega");
         }
+
+        private void btnGestionHuespedes_Click(object sender, EventArgs e)
+        {
+            Huespedes ventana = new Huespedes();
+            openChildForm(ventana);
+            hideSubMenu();
+        }
     }   
 }

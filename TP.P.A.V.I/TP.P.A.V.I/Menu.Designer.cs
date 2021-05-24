@@ -582,6 +582,7 @@
             this.btnGestionHuespedes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGestionHuespedes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGestionHuespedes.UseVisualStyleBackColor = true;
+            this.btnGestionHuespedes.Click += new System.EventHandler(this.btnGestionHuespedes_Click);
             // 
             // btnHuespedes
             // 
