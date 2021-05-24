@@ -262,7 +262,7 @@ namespace TP.P.A.V.I
 
         private void btnGestionHuespedes_Click(object sender, EventArgs e)
         {
-            Huespedes ventana = new Huespedes();
+            HuespedABM ventana = new HuespedABM();
             openChildForm(ventana);
             hideSubMenu();
         }

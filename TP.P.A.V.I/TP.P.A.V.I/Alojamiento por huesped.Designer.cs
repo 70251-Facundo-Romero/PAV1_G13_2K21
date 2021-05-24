@@ -36,13 +36,6 @@ namespace TP.P.A.V.I
             this.btnModificarAXH = new System.Windows.Forms.Button();
             this.btnAgregarAXH = new System.Windows.Forms.Button();
             this.grillaAlojamiento = new System.Windows.Forms.DataGridView();
-            this.Id_AXH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NroPasaporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pais = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hotel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Habitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaAloj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaSalida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -57,6 +50,13 @@ namespace TP.P.A.V.I
             this.cmb_Habitacion = new System.Windows.Forms.ComboBox();
             this.msk_numPasaporte = new System.Windows.Forms.MaskedTextBox();
             this.txt_Id = new System.Windows.Forms.TextBox();
+            this.Id_AXH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NroPasaporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pais = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hotel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Habitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaAloj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaSalida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grillaAlojamiento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -159,6 +159,7 @@ namespace TP.P.A.V.I
             this.grillaAlojamiento.Margin = new System.Windows.Forms.Padding(2);
             this.grillaAlojamiento.Name = "grillaAlojamiento";
             this.grillaAlojamiento.ReadOnly = true;
+            this.grillaAlojamiento.RowHeadersVisible = false;
             this.grillaAlojamiento.RowHeadersWidth = 51;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateGray;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -168,55 +169,6 @@ namespace TP.P.A.V.I
             this.grillaAlojamiento.Size = new System.Drawing.Size(645, 133);
             this.grillaAlojamiento.TabIndex = 53;
             this.grillaAlojamiento.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaAlojamiento_CellClick);
-            // 
-            // Id_AXH
-            // 
-            this.Id_AXH.DataPropertyName = "Id_AXH";
-            this.Id_AXH.HeaderText = "Id";
-            this.Id_AXH.Name = "Id_AXH";
-            this.Id_AXH.ReadOnly = true;
-            // 
-            // NroPasaporte
-            // 
-            this.NroPasaporte.DataPropertyName = "NroPasaporte";
-            this.NroPasaporte.HeaderText = "Nro de pasaporte";
-            this.NroPasaporte.Name = "NroPasaporte";
-            this.NroPasaporte.ReadOnly = true;
-            // 
-            // Pais
-            // 
-            this.Pais.DataPropertyName = "Id_Pais";
-            this.Pais.HeaderText = "Pais";
-            this.Pais.Name = "Pais";
-            this.Pais.ReadOnly = true;
-            // 
-            // Hotel
-            // 
-            this.Hotel.DataPropertyName = "Id_Hotel";
-            this.Hotel.HeaderText = "Hotel";
-            this.Hotel.Name = "Hotel";
-            this.Hotel.ReadOnly = true;
-            // 
-            // Habitacion
-            // 
-            this.Habitacion.DataPropertyName = "Id_Habitacion";
-            this.Habitacion.HeaderText = "Habitacion";
-            this.Habitacion.Name = "Habitacion";
-            this.Habitacion.ReadOnly = true;
-            // 
-            // FechaAloj
-            // 
-            this.FechaAloj.DataPropertyName = "FechaAlojamiento";
-            this.FechaAloj.HeaderText = "Fecha Alojamiento";
-            this.FechaAloj.Name = "FechaAloj";
-            this.FechaAloj.ReadOnly = true;
-            // 
-            // FechaSalida
-            // 
-            this.FechaSalida.DataPropertyName = "FechaSalida";
-            this.FechaSalida.HeaderText = "Fecha de salida";
-            this.FechaSalida.Name = "FechaSalida";
-            this.FechaSalida.ReadOnly = true;
             // 
             // label7
             // 
@@ -401,6 +353,55 @@ namespace TP.P.A.V.I
             this.txt_Id.TabIndex = 73;
             this.txt_Id.Visible = false;
             // 
+            // Id_AXH
+            // 
+            this.Id_AXH.DataPropertyName = "IdAXH";
+            this.Id_AXH.HeaderText = "Id";
+            this.Id_AXH.Name = "Id_AXH";
+            this.Id_AXH.ReadOnly = true;
+            // 
+            // NroPasaporte
+            // 
+            this.NroPasaporte.DataPropertyName = "NroPasaporte";
+            this.NroPasaporte.HeaderText = "Nro de pasaporte";
+            this.NroPasaporte.Name = "NroPasaporte";
+            this.NroPasaporte.ReadOnly = true;
+            // 
+            // Pais
+            // 
+            this.Pais.DataPropertyName = "NombrePais";
+            this.Pais.HeaderText = "Pais";
+            this.Pais.Name = "Pais";
+            this.Pais.ReadOnly = true;
+            // 
+            // Hotel
+            // 
+            this.Hotel.DataPropertyName = "NombreHotel";
+            this.Hotel.HeaderText = "Hotel";
+            this.Hotel.Name = "Hotel";
+            this.Hotel.ReadOnly = true;
+            // 
+            // Habitacion
+            // 
+            this.Habitacion.DataPropertyName = "NombreHabitacion";
+            this.Habitacion.HeaderText = "Habitacion";
+            this.Habitacion.Name = "Habitacion";
+            this.Habitacion.ReadOnly = true;
+            // 
+            // FechaAloj
+            // 
+            this.FechaAloj.DataPropertyName = "FechaAlojamiento";
+            this.FechaAloj.HeaderText = "Fecha Alojamiento";
+            this.FechaAloj.Name = "FechaAloj";
+            this.FechaAloj.ReadOnly = true;
+            // 
+            // FechaSalida
+            // 
+            this.FechaSalida.DataPropertyName = "FechaSalida";
+            this.FechaSalida.HeaderText = "Fecha de salida";
+            this.FechaSalida.Name = "FechaSalida";
+            this.FechaSalida.ReadOnly = true;
+            // 
             // AlojamientoXHuesped
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -460,6 +461,7 @@ namespace TP.P.A.V.I
         private System.Windows.Forms.ComboBox cmb_Pais;
         private System.Windows.Forms.ComboBox cmb_Habitacion;
         private System.Windows.Forms.MaskedTextBox msk_numPasaporte;
+        private System.Windows.Forms.TextBox txt_Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_AXH;
         private System.Windows.Forms.DataGridViewTextBoxColumn NroPasaporte;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pais;
@@ -467,6 +469,5 @@ namespace TP.P.A.V.I
         private System.Windows.Forms.DataGridViewTextBoxColumn Habitacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaAloj;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaSalida;
-        private System.Windows.Forms.TextBox txt_Id;
     }
 }

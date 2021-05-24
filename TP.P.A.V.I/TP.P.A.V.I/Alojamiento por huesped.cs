@@ -46,7 +46,7 @@ namespace TP.P.A.V.I
         private void CargarComboHabitaciones()
         {
             cmb_Habitacion.DataSource = AlojamientoXHuespedBLL.ObtenerListadoHabitaciones();
-            cmb_Habitacion.DisplayMember = "Id";
+            cmb_Habitacion.DisplayMember = "Nombre";
             cmb_Habitacion.ValueMember = "Id";
             cmb_Habitacion.SelectedIndex = -1;
         }
@@ -59,6 +59,7 @@ namespace TP.P.A.V.I
             msk_FechaAlojamiento.Text = "";
             msk_FechaSalida.Text = "";
             msk_numPasaporte.Text = "";
+            msk_numPasaporte.Enabled = true;
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -131,6 +132,7 @@ namespace TP.P.A.V.I
                 AlojamientoXHuespedes al = AlojamientoXHuespedBLL.ObtenerAlojamientoXHuesped(id);
                 LimpiarCampos();
                 CargarCampos(al);
+                msk_numPasaporte.Enabled = false;
             }
             catch (Exception)
             {
@@ -144,10 +146,19 @@ namespace TP.P.A.V.I
             if (cmb_Hotel.Text.Equals("") || cmb_Habitacion.Text.Equals("") || cmb_Pais.Text.Equals("") || msk_FechaSalida.Text.Equals("") || msk_FechaAlojamiento.Text.Equals("") || msk_numPasaporte.Text.Equals(""))
             {
                 MessageBox.Show("Ingrese los datos faltantes");
+                return;
+            }
+
+            if (!AlojamientoXHuespedBLL.ExistePasaporte(int.Parse(msk_numPasaporte.Text)))
+            {
+                MessageBox.Show("Ese numero de pasaporte no esta cargado");
+                return;
             }
             else
             {
                 AlojamientoXHuespedes al = new AlojamientoXHuespedes();
+                al.IdHuesped = AlojamientoXHuespedBLL.TraerPasaporte(int.Parse(msk_numPasaporte.Text));
+                al.IdHabXHotel = AlojamientoXHuespedBLL.TraerHabXHotel((int)cmb_Hotel.SelectedValue, (int)cmb_Habitacion.SelectedValue);
                 al.Id_Hotel = (int)cmb_Hotel.SelectedValue;
                 al.Id_Habitacion = (int)cmb_Habitacion.SelectedValue;
                 al.Id_Pais = (int)cmb_Pais.SelectedValue;
@@ -176,6 +187,11 @@ namespace TP.P.A.V.I
 
         private void btnEliminarAXH_Click(object sender, EventArgs e)
         {
+            if (cmb_Hotel.Text.Equals("") || cmb_Habitacion.Text.Equals("") || cmb_Pais.Text.Equals("") || msk_FechaSalida.Text.Equals("") || msk_FechaAlojamiento.Text.Equals("") || msk_numPasaporte.Text.Equals(""))
+            {
+                MessageBox.Show("Ingrese los datos faltantes");
+            }
+
             AlojamientoXHuespedes al = new AlojamientoXHuespedes();
             al.Id_AXH = int.Parse(txt_Id.Text);
             al.Id_Hotel = (int)cmb_Hotel.SelectedValue;
@@ -189,12 +205,14 @@ namespace TP.P.A.V.I
 
             if (resultado)
             {
-                MessageBox.Show("Alojamiento eliminado con exito!");
                 LimpiarCampos();
                 CargarGrilla();
                 CargarComboHoteles();
                 CargarComboPaises();
                 CargarComboHabitaciones();
+                msk_numPasaporte.Enabled = true;
+                MessageBox.Show("Alojamiento eliminado con exito!");
+
 
             }
             else
@@ -206,8 +224,21 @@ namespace TP.P.A.V.I
 
         private void btnModificarAXH_Click(object sender, EventArgs e)
         {
+            if (cmb_Hotel.Text.Equals("") || cmb_Habitacion.Text.Equals("") || cmb_Pais.Text.Equals("") || msk_FechaSalida.Text.Equals("") || msk_FechaAlojamiento.Text.Equals("") || msk_numPasaporte.Text.Equals(""))
+            {
+                MessageBox.Show("Ingrese los datos faltantes");
+            }
+
+            if (!AlojamientoXHuespedBLL.ExisteHabXHotel((int)cmb_Hotel.SelectedValue, (int)cmb_Habitacion.SelectedValue))
+            {
+                MessageBox.Show("Esta habitacion no existe en ese hotel");
+                return;
+            }
+
             AlojamientoXHuespedes al = new AlojamientoXHuespedes();
             al.Id_AXH = int.Parse(txt_Id.Text);
+            al.IdHuesped = AlojamientoXHuespedBLL.TraerPasaporte(int.Parse(msk_numPasaporte.Text));
+            al.IdHabXHotel = AlojamientoXHuespedBLL.TraerHabXHotel((int)cmb_Hotel.SelectedValue, (int)cmb_Habitacion.SelectedValue);
             al.Id_Hotel = (int)cmb_Hotel.SelectedValue;
             al.Id_Habitacion = (int)cmb_Habitacion.SelectedValue;
             al.Id_Pais = (int)cmb_Pais.SelectedValue;
@@ -219,12 +250,14 @@ namespace TP.P.A.V.I
 
             if (resultado)
             {
-                MessageBox.Show("Alojamiento eliminado con exito!");
                 LimpiarCampos();
                 CargarGrilla();
                 CargarComboHoteles();
                 CargarComboPaises();
                 CargarComboHabitaciones();
+                msk_numPasaporte.Enabled = true;
+                MessageBox.Show("Alojamiento modificado con exito!");
+
             }
             else
             {

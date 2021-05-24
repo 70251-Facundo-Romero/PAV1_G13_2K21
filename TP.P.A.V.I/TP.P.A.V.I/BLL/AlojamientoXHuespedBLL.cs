@@ -50,6 +50,26 @@ namespace TP.P.A.V.I.BLL
             }
         }
 
+        public static bool ExisteHabXHotel(int idHot, int idHab)
+        {
+            return AlojamientoXHuespedDAL.ExisteHabXHotel(idHot, idHab);
+        }
+
+        public static int TraerHabXHotel(int idHot, int idHab)
+        {
+            return AlojamientoXHuespedDAL.TraerHabXHotel(idHot, idHab);
+        }
+
+        public static int TraerPasaporte(int pasaporte)
+        {
+            return AlojamientoXHuespedDAL.TraerPasaporte(pasaporte);
+        }
+
+        public static bool ExistePasaporte(int pasaporte)
+        {
+            return AlojamientoXHuespedDAL.ExistePasaporte(pasaporte);
+        }
+
         public static bool ActualizarAlojamientoXHuespedABD(AlojamientoXHuespedes al)
         {
             try

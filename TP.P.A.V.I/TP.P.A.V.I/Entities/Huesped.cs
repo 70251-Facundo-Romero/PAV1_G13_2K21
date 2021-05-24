@@ -1,25 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TP.P.A.V.I.Entities
+﻿namespace TP.P.A.V.I.Entities
 {
-    class Huesped
+    public class Huesped
     {
+        public int NroPasaporte { get; set; }
+        public int Id_Pais { get; set; }
+        public string Apellido { get; set; }
+        public string Nombre { get; set; }
+        public int NroTarjetaDeCredito { get; set; }
+        public int Id_Tarjeta { get; set; }
         public int IdHuesped { get; set; }
-
-        public int IdPaisHuesped { get; set; }
-
-        public int IdTarjetaHuesped { get; set; }
-
-        public long NroTarjetaHuesped { get; set; }
-
-        public long NroPasaporteHuesped { get; set; }
-
-        public string NombreHuesped { get; set; }
-
-        public string ApellidoHuesped { get; set; }
     }
 }
