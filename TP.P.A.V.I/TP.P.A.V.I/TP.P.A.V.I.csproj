@@ -125,7 +125,7 @@
     <Compile Include="Entities\Habitaciones.cs" />
     <Compile Include="Entities\HabitacionXHotel.cs" />
     <Compile Include="Entities\Hotel.cs" />
-    <Compile Include="Entities\Huespedes.cs" />
+    <Compile Include="Entities\Huesped.cs" />
     <Compile Include="Entities\Instalaciones.cs" />
     <Compile Include="Entities\InstalacionXHotel.cs" />
     <Compile Include="Entities\InstalacionXHuespedes.cs" />

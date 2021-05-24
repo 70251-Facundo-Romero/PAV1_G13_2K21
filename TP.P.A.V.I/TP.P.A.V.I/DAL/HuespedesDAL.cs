@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TP.P.A.V.I.Entities;
 
 namespace TP.P.A.V.I.DAL
 {
@@ -45,6 +46,135 @@ namespace TP.P.A.V.I.DAL
             {
                 cn.Close();
             }
+        }
+
+        public static void AgregarHuesped(Huesped h)
+        {
+            string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
+            SqlCommand cmd = new SqlCommand();
+            SqlConnection con = new SqlConnection(cadenaConexion);
+
+            try
+            {
+                string consulta = @"INSERT INTO [dbo].[Huespedes]
+                    ([NroPasaporte]
+                    ,[Id_Pais]
+                    ,[Apellido]
+                    ,[Nombre]
+                    ,[NroTarjetaDeCredito]
+                    ,[Id_Tarjeta])
+            VALUES
+                    (@pasaporte
+                    ,@idPais
+                    ,@ape
+                    ,@nom
+                    ,@nroTarjeta
+                    ,@idTarjeta";
+
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@idPais", h.IdPaisHuesped);
+                cmd.Parameters.AddWithValue("@pasaporte", h.NroPasaporteHuesped);
+                cmd.Parameters.AddWithValue("@ape", h.ApellidoHuesped);
+                cmd.Parameters.AddWithValue("@nom", h.NombreHuesped);
+                cmd.Parameters.AddWithValue("@nroTarjeta", h.NroTarjetaHuesped);
+                cmd.Parameters.AddWithValue("@idTarjeta", h.IdTarjetaHuesped);
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                con.Open();
+                cmd.Connection = con;
+
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public static bool VerificarExistenciaPasaportePais(int idPais, int pasaporte)
+        {
+            bool resultado = false;
+            
+            string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
+            SqlCommand cmd = new SqlCommand();
+            SqlConnection con = new SqlConnection(cadenaConexion);
+
+            try
+            {
+                string consulta = @"SELECT * FROM Huespedes WHERE Id_Pais = @idPais AND NroPasaporte = @pasaporte";
+
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@idPais", idPais);
+                cmd.Parameters.AddWithValue("@pasaporte", pasaporte);
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                con.Open();
+                cmd.Connection = con;
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    resultado = true;
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return resultado;
+        }
+
+        public static Huesped ObtenerHuesped(int id)
+        {
+            string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
+            Huesped h = new Huesped();
+            SqlCommand cmd = new SqlCommand();
+            SqlConnection con = new SqlConnection(cadenaConexion);
+
+            try
+            {
+                string consulta = @"SELECT * FROM Huespedes WHERE Id = @id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                con.Open();
+                cmd.Connection = con;
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    h.IdHuesped = int.Parse(dr["Id"].ToString());
+                    h.NombreHuesped = dr["Nombre"].ToString();
+                    h.ApellidoHuesped = dr["Apellido"].ToString();
+                    h.IdPaisHuesped = int.Parse(dr["Id_Pais"].ToString());
+                    h.NroPasaporteHuesped = int.Parse(dr["NroPasaporte"].ToString());
+                    h.IdTarjetaHuesped = int.Parse(dr["Id_Tarjeta"].ToString());
+                    h.NroTarjetaHuesped = int.Parse(dr["NroTarjetaDeCredito"].ToString());
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return h;
         }
     }
 }
