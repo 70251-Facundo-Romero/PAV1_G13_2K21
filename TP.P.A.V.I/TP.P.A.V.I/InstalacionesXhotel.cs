@@ -60,6 +60,12 @@ namespace TP.P.A.V.I
             else
                 errorInstalacion.Clear();
 
+            if (InstalacionXHotelBLL.VerificarExisteCombinacion((int)CmbHotel.SelectedValue, (int)CmbInstalacion.SelectedValue))
+            {
+                MessageBox.Show("Esa instalacion ya se encuentra en ese hotel, elija otra combinacion.");
+                return;
+            }
+
             string message = "Desea guardar?";
             string title = "Guardar";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
@@ -166,6 +172,12 @@ namespace TP.P.A.V.I
             }
             else
                 errorInstalacion.Clear();
+
+            if (InstalacionXHotelBLL.VerificarExisteCombinacion((int)CmbHotel.SelectedValue, (int)CmbInstalacion.SelectedValue))
+            {
+                MessageBox.Show("Esa instalacion ya se encuentra en ese hotel, elija otra combinacion.");
+                return;
+            }
 
             string message = "Desea modificar?";
             string title = "Modificar";
