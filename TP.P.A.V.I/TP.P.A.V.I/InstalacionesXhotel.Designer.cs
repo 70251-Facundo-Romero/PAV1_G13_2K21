@@ -191,6 +191,7 @@ namespace TP.P.A.V.I
             this.CmbInstalacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CmbInstalacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.CmbInstalacion.ForeColor = System.Drawing.Color.White;
             this.CmbInstalacion.FormattingEnabled = true;
             this.CmbInstalacion.Location = new System.Drawing.Point(139, 140);
             this.CmbInstalacion.Name = "CmbInstalacion";
