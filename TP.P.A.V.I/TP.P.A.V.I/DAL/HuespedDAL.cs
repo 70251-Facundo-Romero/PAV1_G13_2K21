@@ -103,7 +103,7 @@ namespace TP.P.A.V.I.DAL
 
                 if (dr != null && dr.Read())
                 {
-                    h.NroPasaporte = int.Parse(dr["Id_TipoDocumento"].ToString());
+                    h.NroPasaporte = int.Parse(dr["NroPasaporte"].ToString());
                     h.Id_Pais = int.Parse(dr["Id_Pais"].ToString());
                     h.Apellido = dr["Apellido"].ToString();
                     h.Nombre = dr["Nombre"].ToString();

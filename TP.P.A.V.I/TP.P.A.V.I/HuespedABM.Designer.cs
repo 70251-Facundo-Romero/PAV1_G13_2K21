@@ -31,12 +31,6 @@ namespace TP.P.A.V.I
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grillaHuesped = new System.Windows.Forms.DataGridView();
-            this.NroPasaporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id_Pais = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NroTarjetaDeCredito = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id_Tarjeta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,6 +50,12 @@ namespace TP.P.A.V.I
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbTarjeta = new System.Windows.Forms.ComboBox();
+            this.NroPasaporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id_Pais = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NroTarjetaDeCredito = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id_Tarjeta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grillaHuesped)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -98,49 +98,6 @@ namespace TP.P.A.V.I
             this.grillaHuesped.Size = new System.Drawing.Size(701, 253);
             this.grillaHuesped.TabIndex = 0;
             this.grillaHuesped.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaHuesped_CellClick);
-            // 
-            // NroPasaporte
-            // 
-            this.NroPasaporte.Frozen = true;
-            this.NroPasaporte.HeaderText = "Pasaporte";
-            this.NroPasaporte.Name = "NroPasaporte";
-            this.NroPasaporte.ReadOnly = true;
-            this.NroPasaporte.Width = 200;
-            // 
-            // Id_Pais
-            // 
-            this.Id_Pais.Frozen = true;
-            this.Id_Pais.HeaderText = "Id Pais";
-            this.Id_Pais.Name = "Id_Pais";
-            this.Id_Pais.ReadOnly = true;
-            // 
-            // Apellido
-            // 
-            this.Apellido.Frozen = true;
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.Name = "Apellido";
-            this.Apellido.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.Frozen = true;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // NroTarjetaDeCredito
-            // 
-            this.NroTarjetaDeCredito.Frozen = true;
-            this.NroTarjetaDeCredito.HeaderText = "Nro Tarjeta";
-            this.NroTarjetaDeCredito.Name = "NroTarjetaDeCredito";
-            this.NroTarjetaDeCredito.ReadOnly = true;
-            // 
-            // Id_Tarjeta
-            // 
-            this.Id_Tarjeta.Frozen = true;
-            this.Id_Tarjeta.HeaderText = "Id Tarjeta";
-            this.Id_Tarjeta.Name = "Id_Tarjeta";
-            this.Id_Tarjeta.ReadOnly = true;
             // 
             // pictureBox1
             // 
@@ -371,6 +328,55 @@ namespace TP.P.A.V.I
             this.cmbTarjeta.Size = new System.Drawing.Size(323, 21);
             this.cmbTarjeta.TabIndex = 18;
             // 
+            // NroPasaporte
+            // 
+            this.NroPasaporte.DataPropertyName = "NroPasaporte";
+            this.NroPasaporte.Frozen = true;
+            this.NroPasaporte.HeaderText = "Pasaporte";
+            this.NroPasaporte.Name = "NroPasaporte";
+            this.NroPasaporte.ReadOnly = true;
+            this.NroPasaporte.Width = 200;
+            // 
+            // Id_Pais
+            // 
+            this.Id_Pais.DataPropertyName = "Id_Pais";
+            this.Id_Pais.Frozen = true;
+            this.Id_Pais.HeaderText = "Id Pais";
+            this.Id_Pais.Name = "Id_Pais";
+            this.Id_Pais.ReadOnly = true;
+            // 
+            // Apellido
+            // 
+            this.Apellido.DataPropertyName = "Apellido";
+            this.Apellido.Frozen = true;
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.Frozen = true;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // NroTarjetaDeCredito
+            // 
+            this.NroTarjetaDeCredito.DataPropertyName = "NroTarjetaDeCredito";
+            this.NroTarjetaDeCredito.Frozen = true;
+            this.NroTarjetaDeCredito.HeaderText = "Nro Tarjeta";
+            this.NroTarjetaDeCredito.Name = "NroTarjetaDeCredito";
+            this.NroTarjetaDeCredito.ReadOnly = true;
+            // 
+            // Id_Tarjeta
+            // 
+            this.Id_Tarjeta.DataPropertyName = "Id_Tarjeta";
+            this.Id_Tarjeta.Frozen = true;
+            this.Id_Tarjeta.HeaderText = "Id Tarjeta";
+            this.Id_Tarjeta.Name = "Id_Tarjeta";
+            this.Id_Tarjeta.ReadOnly = true;
+            // 
             // HuespedABM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -427,15 +433,15 @@ namespace TP.P.A.V.I
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cmbPais;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmbTarjeta;
         private System.Windows.Forms.DataGridViewTextBoxColumn NroPasaporte;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Pais;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn NroTarjetaDeCredito;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Tarjeta;
-        private System.Windows.Forms.ComboBox cmbPais;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cmbTarjeta;
     }
 }

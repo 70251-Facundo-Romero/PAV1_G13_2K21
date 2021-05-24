@@ -30,6 +30,7 @@ namespace TP.P.A.V.I
         {
             try
             {
+                //MessageBox.Show("probando grilla");
                 grillaHuesped.DataSource = HuespedBLL.GetListadoHuespedes();
             }
             catch (Exception e)
@@ -193,10 +194,11 @@ namespace TP.P.A.V.I
 
             int index = e.RowIndex;
             DataGridViewRow rowSelected = grillaHuesped.Rows[index];
-            int id = (int)rowSelected.Cells["NroPasaporte"].Value;
-            Huesped h = HuespedBLL.GetByPasaport(id);
+            int pasaport = (int)rowSelected.Cells["NroPasaporte"].Value;
+            Huesped h = HuespedBLL.GetByPasaport(pasaport);
             LimpiarCampos();
             CargarCampos(h);
+
         }
 
     }
