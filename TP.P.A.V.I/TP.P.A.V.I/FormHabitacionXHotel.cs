@@ -99,6 +99,12 @@ namespace TP.P.A.V.I
             else
                 errorHabitacion.Clear();
 
+            if (HabitacionXHotelBLL.VerificarExisteCombinacion((int)CmbHotel.SelectedValue, (int)CmbHabitacion.SelectedValue))
+            {
+                MessageBox.Show("Esta combinacion entre hotel y habitacion ya existe");
+                return;
+            }
+
             string message = "¿Desea guardar?";
             string title = "Guardar";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
@@ -193,6 +199,12 @@ namespace TP.P.A.V.I
             }
             else
                 errorHabitacion.Clear();
+
+            if (HabitacionXHotelBLL.VerificarExisteCombinacion((int)CmbHotel.SelectedValue, (int)CmbHabitacion.SelectedValue))
+            {
+                MessageBox.Show("Esta combinacion entre hotel y habitacion ya existe");
+                return;
+            }
 
             string message = "¿Desea modificar?";
             string title = "Modificar";
