@@ -40,6 +40,7 @@ namespace TP.P.A.V.I
         private void LimpiarCampos()
         {
             txtNombre.Text = "";
+            txtId.Text = "";
             txtApellido.Text = "";
             txtNumeroDocumentos.Text = "";
             textFechaIngreso.Text = "";
@@ -85,6 +86,7 @@ namespace TP.P.A.V.I
             }
             año = fecha.Date.Year.ToString();
             textFechaIngreso.Text = dia + mes + año;
+            txtId.Text = em.Id.ToString();
 
         }
         private void CargarComboPuestos()
@@ -120,12 +122,12 @@ namespace TP.P.A.V.I
                 btnActualizarEmpleado.Enabled = true;
                 btnEliminar.Enabled = true;
                 DataGridViewRow filaSeleccionada = grillaEmpleados.Rows[indice];
-                string id = (string)filaSeleccionada.Cells["NumeroDocumento"].Value;
+                int id = (int)filaSeleccionada.Cells["Id"].Value;
                 Empleado em = EmpleadosBLL.ObtenerEmpleado(id);
                 LimpiarCampos();
                 CargarCampos(em);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 MessageBox.Show("Seleccione la fila");
 
@@ -173,6 +175,7 @@ namespace TP.P.A.V.I
         private void btnActualizarEmpleado_Click(object sender, EventArgs e)
         {
             Empleado em = new Empleado();
+            em.Id = int.Parse(txtId.Text);
             em.TipoDocumento= (int)cmbTipoDocumento.SelectedValue;
             em.NumeroDocumento = txtNumeroDocumentos.Text;
             em.ApellidoEmpleado = txtApellido.Text;
@@ -202,6 +205,7 @@ namespace TP.P.A.V.I
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             Empleado em = new Empleado();
+            em.Id = int.Parse(txtId.Text);
             em.TipoDocumento = (int)cmbTipoDocumento.SelectedValue;
             em.NumeroDocumento = txtNumeroDocumentos.Text;
             em.ApellidoEmpleado = txtApellido.Text;

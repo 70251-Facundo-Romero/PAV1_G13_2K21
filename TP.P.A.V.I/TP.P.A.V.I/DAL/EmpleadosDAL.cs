@@ -21,7 +21,11 @@ namespace TP.P.A.V.I.DAL
 
             try
             {
-                string consulta = "SELECT * FROM Empleados";
+                string consulta = @"SELECT E.Id, E.NumeroDocumento, T.NombreTipoDocumento, E.Apellido, E.Nombre, E.FechaIngreso, H.Nombre as NombreHotel, P.Nombre as NombrePuesto
+                            FROM Empleados E
+                            JOIN Tipos_Documentos T ON E.TipoDocumento = T.Id_TipoDocumento
+                            JOIN Hoteles H ON E.Id_Hotel = H.Id
+                            JOIN Puestos_Trabajo P ON E.Id_Puesto = P.Id";
 
                 cmd.Parameters.Clear();
                 cmd.CommandType = CommandType.Text;
@@ -87,7 +91,7 @@ namespace TP.P.A.V.I.DAL
             return resultado;
         }
 
-        public static Empleado ObtenerEmpleado(string id)
+        public static Empleado ObtenerEmpleado(int id)
         {
             string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
             Empleado em = new Empleado();
@@ -96,7 +100,7 @@ namespace TP.P.A.V.I.DAL
 
             try
             {
-                string consulta = "SELECT * FROM Empleados WHERE NumeroDocumento LIKE @numDoc";
+                string consulta = "SELECT * FROM Empleados WHERE Id LIKE @numDoc";
 
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@numDoc", id);
@@ -117,9 +121,10 @@ namespace TP.P.A.V.I.DAL
                     em.FechaIngreso = DateTime.Parse(dr["FechaIngreso"].ToString());
                     em.IdHotel = int.Parse(dr["Id_Hotel"].ToString());
                     em.IdPuesto = int.Parse(dr["Id_Puesto"].ToString());
+                    em.Id = int.Parse(dr["Id"].ToString());
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 throw;
             }
@@ -140,7 +145,7 @@ namespace TP.P.A.V.I.DAL
 
             try
             {
-                string consulta = "UPDATE Empleados SET TipoDocumento = @tipoDoc,  Apellido=@apellido,Nombre=@nombre,FechaIngreso=@fechaIn,Id_Hotel=@idHotel,Id_Puesto=@idPuesto WHERE  NumeroDocumento LIKE @numDoc";
+                string consulta = "UPDATE Empleados SET TipoDocumento = @tipoDoc, NumeroDocumento = @numDoc,  Apellido=@apellido,Nombre=@nombre,FechaIngreso=@fechaIn,Id_Hotel=@idHotel,Id_Puesto=@idPuesto WHERE  Id = @id";
 
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@tipoDoc", em.TipoDocumento);
@@ -150,6 +155,7 @@ namespace TP.P.A.V.I.DAL
                 cmd.Parameters.AddWithValue("@fechaIn", em.FechaIngreso);
                 cmd.Parameters.AddWithValue("@idHotel", em.IdHotel);
                 cmd.Parameters.AddWithValue("@idPuesto", em.IdPuesto);
+                cmd.Parameters.AddWithValue("@id", em.Id);
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = consulta;
 
@@ -179,10 +185,10 @@ namespace TP.P.A.V.I.DAL
 
             try
             {
-                string consulta = "DELETE FROM Empleados WHERE NumeroDocumento LIKE @numDoc";
+                string consulta = "DELETE FROM Empleados WHERE Id LIKE @numDoc";
 
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@numDoc", em.NumeroDocumento);
+                cmd.Parameters.AddWithValue("@numDoc", em.Id);
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = consulta;
 

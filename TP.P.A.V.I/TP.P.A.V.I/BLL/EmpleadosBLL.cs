@@ -37,7 +37,7 @@ namespace TP.P.A.V.I.BLL
             }
         }
 
-        public static Empleado ObtenerEmpleado(string id)
+        public static Empleado ObtenerEmpleado(int id)
         {
             try
             {

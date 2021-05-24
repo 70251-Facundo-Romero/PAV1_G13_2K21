@@ -9,6 +9,7 @@ namespace TP.P.A.V.I.Entities
     class Empleado
     {
 
+        public int Id { get; set; }
         public int TipoDocumento { get; set; }
         public string NombreEmpleado { get; set; }
 
