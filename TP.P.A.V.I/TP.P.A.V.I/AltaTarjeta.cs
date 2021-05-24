@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TP.P.A.V.I.BLL;
+using TP.P.A.V.I.Entities;
 
 namespace TP.P.A.V.I
 {
@@ -16,66 +18,103 @@ namespace TP.P.A.V.I
         public AltaTarjeta()
         {
             InitializeComponent();
-            DAL.TarjetaDAL.ActualizarGrillaTarjeta(GrillaTarjeta);
-            BtnModificarTarjeta.Enabled = false;
-            btnEliminarTarjeta.Enabled = false;
+            CargarGrilla();
+            LimpiarCampos();
         }
 
-        private void panelFormulariosHijos_Paint(object sender, PaintEventArgs e)
+        private void LimpiarCampos()
         {
-
-        }
-
-        private void BtnLimpiarCampos_Click(object sender, EventArgs e)
-        {
-            txtNombre.Text = "";
+            txtDescripcion.Text = "";
             txtid.Text = "";
-            btnEliminarTarjeta.Enabled = false;
-            BtnModificarTarjeta.Enabled = false;
+            txtNombre.Text = "";
+        }
+
+        private void CargarGrilla()
+        {
+           GrillaTarjeta.DataSource = TarjetaBLL.ActualizarGrillaTarjeta();
+        }
+
+        private void CargarCampos(Tarjeta t)
+        {
+            txtNombre.Text = t.Nombre;
+            txtid.Text = t.Id_Tarjeta.ToString();
+            txtDescripcion.Text = t.Descripcion;
+        }
+
+        private void GrillaTarjeta_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int indice = e.RowIndex;
+            btnEliminarTarjeta.Enabled = true;
+            BtnModificarTarjeta.Enabled = true;
+            DataGridViewRow filaSeleccionada = GrillaTarjeta.Rows[indice];
+            int id = (int)filaSeleccionada.Cells["id"].Value;
+            Tarjeta t = TarjetaBLL.ObtenerTarjeta(id);
+            LimpiarCampos();
+            CargarCampos(t);
         }
 
         private void BtnAgregarTarjeta_Click(object sender, EventArgs e)
         {
-            string nombreTarjeta = txtNombre.Text;
-            DAL.TarjetaDAL.AgregarTarjeta(nombreTarjeta);
-            DAL.TarjetaDAL.ActualizarGrillaTarjeta(GrillaTarjeta);
-        }
-
-        private void BtnModificarTarjeta_Click(object sender, EventArgs e)
-        {
-            string nombretarjeta = txtNombre.Text;
-            int id = int.Parse(txtid.Text);
-            DAL.TarjetaDAL.ModificarTarjeta(nombretarjeta, id);
-            DAL.TarjetaDAL.ActualizarGrillaTarjeta(GrillaTarjeta);
-        }
-
-        private void GrillaTarjeta_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            BtnModificarTarjeta.Enabled = true;
-            btnEliminarTarjeta.Enabled = true;
-            int indice = e.RowIndex;
-            DataGridViewRow filaSeleccionada = GrillaTarjeta.Rows[indice];
-            int Id = int.Parse(filaSeleccionada.Cells["Id_Tarjeta"].Value.ToString());
-            (int, string) tupla = DAL.TarjetaDAL.ObtenerTarjeta(Id);
-            txtNombre.Text = "";
-            txtid.Text = "";
-            CargarCampo(tupla);
-
-            
-        }
-
-        private void CargarCampo((int, string)tupla)
-        {
-            txtid.Text = tupla.Item1.ToString();
-            txtNombre.Text = tupla.Item2;
+            if (txtDescripcion.Text.Equals("") || txtNombre.Text.Equals(""))
+            {
+                MessageBox.Show("Cargue todos los campos");
+                return;
+            }
+            string nom = txtNombre.Text;
+            string desc = txtDescripcion.Text;
+            try
+            {
+                TarjetaBLL.AgregarTarjeta(nom, desc);
+                LimpiarCampos();
+                CargarGrilla();
+                MessageBox.Show("Tarjeta agregada con exito.");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al agregar la tarjeta.");
+            }
         }
 
         private void btnEliminarTarjeta_Click(object sender, EventArgs e)
         {
-            string nombretarjeta = txtNombre.Text;
-            int id = int.Parse(txtid.Text);
-            DAL.TarjetaDAL.EliminarTarjeta(nombretarjeta, id);
-            DAL.TarjetaDAL.ActualizarGrillaTarjeta(GrillaTarjeta);
+            Tarjeta t = new Tarjeta();
+            t.Descripcion = txtDescripcion.Text;
+            t.Nombre = txtNombre.Text;
+            t.Id_Tarjeta = int.Parse(txtid.Text);
+            bool resultado = TarjetaBLL.BorrarTarjeta(t);
+
+            if (resultado)
+            {
+                LimpiarCampos();
+                CargarGrilla();
+                MessageBox.Show("Tarjeta eliminada con exito!");
+
+            }
+            else
+            {
+                MessageBox.Show("Hubo un error al eliminar la fila");
+            }
+        }
+
+        private void BtnModificarTarjeta_Click(object sender, EventArgs e)
+        {
+            Tarjeta t = new Tarjeta();
+            t.Descripcion = txtDescripcion.Text;
+            t.Nombre = txtNombre.Text;
+            t.Id_Tarjeta = int.Parse(txtid.Text);
+            bool resultado = TarjetaBLL.ModificarTarjeta(t);
+
+            if (resultado)
+            {
+                LimpiarCampos();
+                CargarGrilla();
+                MessageBox.Show("Tarjeta actualizada con exito!");
+
+            }
+            else
+            {
+                MessageBox.Show("Hubo un error al actualizar la fila");
+            }
         }
     }
     
