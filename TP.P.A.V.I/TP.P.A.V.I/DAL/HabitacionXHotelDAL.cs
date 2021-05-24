@@ -71,6 +71,40 @@ namespace TP.P.A.V.I.DAL
             return resultado;
         }
 
+        internal static bool VerificarExisteCombinacion2(int idHot, int idHab, string precio)
+        {
+            bool resultado = false;
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand(@"SELECT * 
+                                        FROM HabitacionXHotel 
+                                        WHERE IdHotel = @idHot AND IdHabitacion = @idHab AND Precio = @precio", con);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@idHot", idHot);
+                    cmd.Parameters.AddWithValue("@idHab", idHab);
+                    cmd.Parameters.AddWithValue("@precio", precio);
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        if (dr.Read())
+                        {
+                            resultado = true;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    throw;
+                }
+            }
+            return resultado;
+        }
+
         public static DataTable cargarGrilla(int Id)
         {
             using (SqlConnection con = new SqlConnection(ConnectionString))

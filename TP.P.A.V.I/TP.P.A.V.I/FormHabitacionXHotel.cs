@@ -200,9 +200,9 @@ namespace TP.P.A.V.I
             else
                 errorHabitacion.Clear();
 
-            if (HabitacionXHotelBLL.VerificarExisteCombinacion((int)CmbHotel.SelectedValue, (int)CmbHabitacion.SelectedValue))
+            if (HabitacionXHotelBLL.VerificarExisteCombinacion2((int)CmbHotel.SelectedValue, (int)CmbHabitacion.SelectedValue, TxtPrecio.Text))
             {
-                MessageBox.Show("Esta combinacion entre hotel y habitacion ya existe");
+                MessageBox.Show("Esta combinacion entre hotel, habitacion y precio ya existe");
                 return;
             }
 
@@ -221,7 +221,7 @@ namespace TP.P.A.V.I
                     HxH.Precio = TxtPrecio.Text;
                     HxH.Id = IdHxH;
                     HabitacionXHotelBLL.ModificarHabitacionXHotel(HxH);
-                    MessageBox.Show("S¡e modificó con éxito!");
+                    MessageBox.Show("¡Se modificó con éxito!");
                     DgvHabitacionXHotel.DataSource = CargarGrilla();
                     LimpiarCampos();
                     IdHxH = 0;

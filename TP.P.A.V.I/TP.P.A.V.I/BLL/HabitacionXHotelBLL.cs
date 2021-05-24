@@ -38,5 +38,10 @@ namespace TP.P.A.V.I.BLL
         {
             return HabitacionXHotelDAL.VerificarExisteCombinacion(IdHot, IdHab);
         }
+
+        internal static bool VerificarExisteCombinacion2(int IdHot, int IdHab, string precio)
+        {
+            return HabitacionXHotelDAL.VerificarExisteCombinacion2(IdHot, IdHab, precio);
+        }
     }
 }
