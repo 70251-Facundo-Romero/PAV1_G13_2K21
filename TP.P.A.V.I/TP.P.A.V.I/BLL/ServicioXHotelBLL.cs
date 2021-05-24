@@ -45,5 +45,15 @@ namespace TP.P.A.V.I.BLL
         {
             return ServicioXHotelDAL.BorrarServXHotel(s);
         }
+
+        internal static bool VerificarExisteCombinacion(int idHot, int idServ)
+        {
+            return ServicioXHotelDAL.VerificarExisteCombinacion(idHot, idServ);
+        }
+
+        internal static bool VerificarExisteCombinacion2(int idHot, int idServ, string precio)
+        {
+            return ServicioXHotelDAL.VerificarExisteCombinacion2(idHot, idServ, precio);
+        }
     }
 }

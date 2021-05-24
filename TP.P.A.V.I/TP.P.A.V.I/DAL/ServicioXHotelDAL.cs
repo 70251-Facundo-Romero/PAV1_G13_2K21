@@ -58,7 +58,7 @@ namespace TP.P.A.V.I.DAL
                 string consulta = @"DELETE FROM ServiciosXHoteles WHERE Id = @id";
 
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id", s.Id);
+                cmd.Parameters.AddWithValue("@id", s.IdServXHot);
                 cmd.Parameters.AddWithValue("@idHotel", s.Id_Hotel);
                 cmd.Parameters.AddWithValue("@idServicio", s.Id_Servicio);
                 cmd.Parameters.AddWithValue("@precio", s.PrecioServicio);
@@ -82,6 +82,73 @@ namespace TP.P.A.V.I.DAL
             return resultado;
         }
 
+        internal static bool VerificarExisteCombinacion2(int idHot, int idServ, string precio)
+        {
+            bool resultado = false;
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand(@"SELECT * 
+                                        FROM ServiciosXHoteles
+                                        WHERE Id_Hotel = @idHot AND Id_Servicio = @idServ AND PrecioServicio = @precio", con);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@idHot", idHot);
+                    cmd.Parameters.AddWithValue("@idServ", idServ);
+                    cmd.Parameters.AddWithValue("@precio", precio);
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        if (dr.Read())
+                        {
+                            resultado = true;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    throw;
+                }
+            }
+            return resultado;
+        }
+
+        internal static bool VerificarExisteCombinacion(int idHot, int idServ)
+        {
+            bool resultado = false;
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand(@"SELECT * 
+                                        FROM ServiciosXHoteles
+                                        WHERE Id_Hotel = @idHot AND Id_Servicio = @idServ", con);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@idHot", idHot);
+                    cmd.Parameters.AddWithValue("@idServ", idServ);
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        if (dr.Read())
+                        {
+                            resultado = true;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    throw;
+                }
+            }
+            return resultado;
+        }
+
         internal static bool ActualizarServXHotel(ServXHotel s)
         {
             string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
@@ -96,7 +163,7 @@ namespace TP.P.A.V.I.DAL
                             WHERE Id LIKE @id";
 
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id", s.Id);
+                cmd.Parameters.AddWithValue("@id", s.IdServXHot);
                 cmd.Parameters.AddWithValue("@idHotel", s.Id_Hotel);
                 cmd.Parameters.AddWithValue("@idServicio", s.Id_Servicio);
                 cmd.Parameters.AddWithValue("@precio", s.PrecioServicio);
@@ -178,7 +245,7 @@ namespace TP.P.A.V.I.DAL
 
                 if (dr != null && dr.Read())
                 {
-                    s.Id = int.Parse(dr["Id"].ToString());
+                    s.IdServXHot = int.Parse(dr["Id"].ToString());
                     s.Id_Hotel = int.Parse(dr["Id_Hotel"].ToString());
                     s.Id_Servicio = int.Parse(dr["Id_Servicio"].ToString());
                     s.PrecioServicio = dr["PrecioServicio"].ToString();

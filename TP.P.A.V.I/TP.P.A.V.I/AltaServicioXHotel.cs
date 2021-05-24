@@ -86,7 +86,7 @@ namespace TP.P.A.V.I
             cmbHotel.SelectedValue = s.Id_Hotel;
             cmbServicio.SelectedValue = s.Id_Servicio;
             txtPrecio.Text = s.PrecioServicio;
-            txtId.Text = s.Id.ToString();
+            txtId.Text = s.IdServXHot.ToString();
         }
 
         private void BtnAgregarSerXHot_Click(object sender, EventArgs e)
@@ -94,43 +94,67 @@ namespace TP.P.A.V.I
             if (txtPrecio.Text.Equals("") || cmbHotel.SelectedIndex == -1 || cmbServicio.SelectedIndex == -1)
             {
                 MessageBox.Show("Complete los campos");
+                return;
             }
-            else
+
+            if (ServicioXHotelBLL.VerificarExisteCombinacion((int)cmbHotel.SelectedValue, (int)cmbServicio.SelectedValue))
             {
-                ServXHotel s = new ServXHotel();
-                s.PrecioServicio = txtPrecio.Text;
-                s.Id_Hotel = (int)cmbHotel.SelectedValue;
-                s.Id_Servicio = (int)cmbServicio.SelectedValue;
-                try
+                MessageBox.Show("Esta combinacion entre servicio y hotel ya existe, escoge otra o actualice el que ya existe");
+                return;
+            }
+
+            ServXHotel s = new ServXHotel();
+            s.PrecioServicio = txtPrecio.Text;
+            s.Id_Hotel = (int)cmbHotel.SelectedValue;
+            s.Id_Servicio = (int)cmbServicio.SelectedValue;
+            try
+            {
+                bool resultado = ServicioXHotelBLL.AgregarServXHotel(s);
+
+                if (resultado)
                 {
-                    bool resultado = ServicioXHotelBLL.AgregarServXHotel(s);
+                    LimpiarCampos();
+                    CargarGrilla();
+                    CargarComboHotel();
+                    CargarComboServicio();
+                    MessageBox.Show("Fila agregada con exito!");
 
-                    if (resultado)
-                    {
-                        LimpiarCampos();
-                        CargarGrilla();
-                        CargarComboHotel();
-                        CargarComboServicio();
-                        MessageBox.Show("Fila agregada con exito!");
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Hubo un error al agregar la Fila");
-                    }
                 }
-                catch (Exception)
+                else
                 {
-                    MessageBox.Show("Hubo un error al agregar la ciudad");
+                    MessageBox.Show("Hubo un error al agregar la Fila");
                 }
             }
+            catch (Exception)
+            {
+                MessageBox.Show("Hubo un error al agregar la ciudad");
+            }
+
         }
 
         private void BtnModificarSerXHot_Click(object sender, EventArgs e)
         {
+            if (txtPrecio.Text.Equals("") || cmbHotel.SelectedIndex == -1 || cmbServicio.SelectedIndex == -1)
+            {
+                MessageBox.Show("Complete los campos");
+                return;
+            }
+
+            if (ServicioXHotelBLL.VerificarExisteCombinacion2((int)cmbHotel.SelectedValue, (int)cmbServicio.SelectedValue, txtPrecio.Text))
+            {
+                MessageBox.Show("Esta combinacion entre servicio, hotel y precio ya existe, escoge otra o actualice el que ya existe");
+                return;
+            }
+            
+            if (txtId.Text.Equals(""))
+            {
+                MessageBox.Show("Seleccione la fila en la grilla");
+                return;
+            }
+
             ServXHotel s = new ServXHotel();
             s.PrecioServicio = txtPrecio.Text;
-            s.Id = int.Parse(txtId.Text);
+            s.IdServXHot = int.Parse(txtId.Text);
             s.Id_Servicio = (int)cmbServicio.SelectedValue;
             s.Id_Hotel = (int)cmbHotel.SelectedValue;
             bool resultado = ServicioXHotelBLL.ActualizarServXHotel(s);
@@ -152,9 +176,15 @@ namespace TP.P.A.V.I
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
+            if (txtId.Text.Equals(""))
+            {
+                MessageBox.Show("Seleccione la fila en la grilla");
+                return;
+            }
+
             ServXHotel s = new ServXHotel();
             s.PrecioServicio = txtPrecio.Text;
-            s.Id = int.Parse(txtId.Text);
+            s.IdServXHot = int.Parse(txtId.Text);
             s.Id_Servicio = (int)cmbServicio.SelectedValue;
             s.Id_Hotel = (int)cmbHotel.SelectedValue;
             bool resultado = ServicioXHotelBLL.BorrarServXHotel(s);
