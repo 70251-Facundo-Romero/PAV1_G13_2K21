@@ -181,13 +181,6 @@ namespace TP.P.A.V.I
             hideSubMenu();
         }
 
-        private void btnInsXHuesped_Click(object sender, EventArgs e)
-        {
-            Instalacion_por_huesped ventana = new Instalacion_por_huesped();
-            openChildForm(ventana);
-            hideSubMenu();
-        }
-
         private void btnTarjetas_Click(object sender, EventArgs e)
         {
             AltaTarjeta ventana = new AltaTarjeta();
@@ -257,6 +250,13 @@ namespace TP.P.A.V.I
         private void btnGestionHuespedes_Click(object sender, EventArgs e)
         {
             HuespedABM ventana = new HuespedABM();
+            openChildForm(ventana);
+            hideSubMenu();
+        }
+
+        private void btnInsXHotel_Click(object sender, EventArgs e)
+        {
+            InstalacionesXhotel ventana = new InstalacionesXhotel();
             openChildForm(ventana);
             hideSubMenu();
         }
