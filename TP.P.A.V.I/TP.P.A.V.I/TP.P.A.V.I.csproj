@@ -81,7 +81,6 @@
     <Compile Include="BLL\HuespedBLL.cs" />
     <Compile Include="BLL\InstalacionesBLL.cs" />
     <Compile Include="BLL\InstalacionXHotelBLL.cs" />
-    <Compile Include="BLL\InstalacionXHuespedBLL.cs" />
     <Compile Include="BLL\PaisBLL.cs" />
     <Compile Include="BLL\PuestoDeTrabajoBLL.cs" />
     <Compile Include="BLL\ServiciosBLL.cs" />
@@ -105,7 +104,6 @@
     <Compile Include="DAL\HuespedDAL.cs" />
     <Compile Include="DAL\InstalacionesDAL.cs" />
     <Compile Include="DAL\InstalacionXHotelDAL.cs" />
-    <Compile Include="DAL\InstalacionXHuespedDAL.cs" />
     <Compile Include="DAL\PaisDAL.cs" />
     <Compile Include="DAL\PuestoDeTrabajoDAL.cs" />
     <Compile Include="DAL\ServiciosDAL.cs" />
@@ -128,7 +126,6 @@
     <Compile Include="Entities\Huesped.cs" />
     <Compile Include="Entities\Instalaciones.cs" />
     <Compile Include="Entities\InstalacionXHotel.cs" />
-    <Compile Include="Entities\InstalacionXHuespedes.cs" />
     <Compile Include="Entities\Pais.cs" />
     <Compile Include="Entities\PuestoTrabajo.cs" />
     <Compile Include="Entities\Servicio.cs" />
@@ -170,12 +167,6 @@
     </Compile>
     <Compile Include="HuespedABM.Designer.cs">
       <DependentUpon>HuespedABM.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Instalacion por huesped.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Instalacion por huesped.Designer.cs">
-      <DependentUpon>Instalacion por huesped.cs</DependentUpon>
     </Compile>
     <Compile Include="InstalacionesXhotel.cs">
       <SubType>Form</SubType>
@@ -245,9 +236,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HuespedABM.resx">
       <DependentUpon>HuespedABM.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Instalacion por huesped.resx">
-      <DependentUpon>Instalacion por huesped.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InstalacionesXhotel.resx">
       <DependentUpon>InstalacionesXhotel.cs</DependentUpon>

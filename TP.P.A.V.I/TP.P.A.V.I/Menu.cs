@@ -159,12 +159,6 @@ namespace TP.P.A.V.I
             hideSubMenu();
         }
 
-        private void btnGestionUbicaciones_Click(object sender, EventArgs e)
-        {
-            InstalacionesXhotel ventana = new InstalacionesXhotel();
-            openChildForm(ventana);
-            hideSubMenu();
-        }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
