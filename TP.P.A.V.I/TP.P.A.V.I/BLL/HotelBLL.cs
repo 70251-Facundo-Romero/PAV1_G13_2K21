@@ -64,14 +64,17 @@ namespace TP.P.A.V.I.BLL
 
         public static bool BorrarHotelABD(Hotel h)
         {
+            HotelesDAL.BeginTransaction();
             try
             {
                 return HotelesDAL.BorrarHotelABD(h);
             }
             catch (Exception)
             {
+                HotelesDAL.RollbackTransaction();
                 throw;
             }
+            HotelesDAL.CommitTransaction();
         }
         public static DataTable ObtenerListadoBarrios()
         {

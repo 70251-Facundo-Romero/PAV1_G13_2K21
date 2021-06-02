@@ -47,7 +47,6 @@
             this.btnPaises = new System.Windows.Forms.Button();
             this.btnUbicaciones = new System.Windows.Forms.Button();
             this.subMenuFacturacion = new System.Windows.Forms.Panel();
-            this.btnDetalleFactura = new System.Windows.Forms.Button();
             this.btnGestFacturacion = new System.Windows.Forms.Button();
             this.btnFacturacion = new System.Windows.Forms.Button();
             this.subMenuEmpleados = new System.Windows.Forms.Panel();
@@ -60,6 +59,7 @@
             this.btnGestionHuespedes = new System.Windows.Forms.Button();
             this.btnHuespedes = new System.Windows.Forms.Button();
             this.subMenuHoteles = new System.Windows.Forms.Panel();
+            this.btnInsXHotel = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnGestionHabitaciones = new System.Windows.Forms.Button();
@@ -71,7 +71,6 @@
             this.panelFormulariosHijos = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnInsXHotel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.MenuLogin.SuspendLayout();
@@ -208,7 +207,7 @@
             this.subMenuServIns.Controls.Add(this.btnInstalaciones);
             this.subMenuServIns.Controls.Add(this.btnServicios);
             this.subMenuServIns.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuServIns.Location = new System.Drawing.Point(0, 914);
+            this.subMenuServIns.Location = new System.Drawing.Point(0, 880);
             this.subMenuServIns.Name = "subMenuServIns";
             this.subMenuServIns.Size = new System.Drawing.Size(234, 74);
             this.subMenuServIns.TabIndex = 18;
@@ -261,7 +260,7 @@
             this.btnServIns.ForeColor = System.Drawing.Color.White;
             this.btnServIns.Image = global::TP.P.A.V.I.Properties.Resources.toalla;
             this.btnServIns.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnServIns.Location = new System.Drawing.Point(0, 874);
+            this.btnServIns.Location = new System.Drawing.Point(0, 840);
             this.btnServIns.Name = "btnServIns";
             this.btnServIns.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnServIns.Size = new System.Drawing.Size(234, 40);
@@ -278,7 +277,7 @@
             this.subMenuUbicaciones.Controls.Add(this.btnCiudades);
             this.subMenuUbicaciones.Controls.Add(this.btnPaises);
             this.subMenuUbicaciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuUbicaciones.Location = new System.Drawing.Point(0, 765);
+            this.subMenuUbicaciones.Location = new System.Drawing.Point(0, 731);
             this.subMenuUbicaciones.Name = "subMenuUbicaciones";
             this.subMenuUbicaciones.Size = new System.Drawing.Size(234, 109);
             this.subMenuUbicaciones.TabIndex = 16;
@@ -349,7 +348,7 @@
             this.btnUbicaciones.ForeColor = System.Drawing.Color.White;
             this.btnUbicaciones.Image = global::TP.P.A.V.I.Properties.Resources.marcador_de_posicion3;
             this.btnUbicaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUbicaciones.Location = new System.Drawing.Point(0, 725);
+            this.btnUbicaciones.Location = new System.Drawing.Point(0, 691);
             this.btnUbicaciones.Name = "btnUbicaciones";
             this.btnUbicaciones.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnUbicaciones.Size = new System.Drawing.Size(234, 40);
@@ -362,32 +361,13 @@
             // subMenuFacturacion
             // 
             this.subMenuFacturacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(35)))));
-            this.subMenuFacturacion.Controls.Add(this.btnDetalleFactura);
             this.subMenuFacturacion.Controls.Add(this.btnGestFacturacion);
             this.subMenuFacturacion.Dock = System.Windows.Forms.DockStyle.Top;
             this.subMenuFacturacion.Location = new System.Drawing.Point(0, 656);
             this.subMenuFacturacion.Name = "subMenuFacturacion";
-            this.subMenuFacturacion.Size = new System.Drawing.Size(234, 69);
+            this.subMenuFacturacion.Size = new System.Drawing.Size(234, 35);
             this.subMenuFacturacion.TabIndex = 14;
             this.subMenuFacturacion.Visible = false;
-            // 
-            // btnDetalleFactura
-            // 
-            this.btnDetalleFactura.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDetalleFactura.FlatAppearance.BorderSize = 0;
-            this.btnDetalleFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDetalleFactura.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetalleFactura.ForeColor = System.Drawing.Color.White;
-            this.btnDetalleFactura.Location = new System.Drawing.Point(0, 35);
-            this.btnDetalleFactura.Name = "btnDetalleFactura";
-            this.btnDetalleFactura.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnDetalleFactura.Size = new System.Drawing.Size(234, 35);
-            this.btnDetalleFactura.TabIndex = 1;
-            this.btnDetalleFactura.Text = "Gestionar Detalle Factura";
-            this.btnDetalleFactura.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDetalleFactura.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDetalleFactura.UseVisualStyleBackColor = true;
-            this.btnDetalleFactura.Click += new System.EventHandler(this.btnDetalleFactura_Click);
             // 
             // btnGestFacturacion
             // 
@@ -600,6 +580,24 @@
             this.subMenuHoteles.TabIndex = 2;
             this.subMenuHoteles.Visible = false;
             // 
+            // btnInsXHotel
+            // 
+            this.btnInsXHotel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInsXHotel.FlatAppearance.BorderSize = 0;
+            this.btnInsXHotel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsXHotel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsXHotel.ForeColor = System.Drawing.Color.White;
+            this.btnInsXHotel.Location = new System.Drawing.Point(0, 140);
+            this.btnInsXHotel.Name = "btnInsXHotel";
+            this.btnInsXHotel.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnInsXHotel.Size = new System.Drawing.Size(234, 35);
+            this.btnInsXHotel.TabIndex = 5;
+            this.btnInsXHotel.Text = "Gestionar InstalacionXHotel";
+            this.btnInsXHotel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInsXHotel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInsXHotel.UseVisualStyleBackColor = true;
+            this.btnInsXHotel.Click += new System.EventHandler(this.btnInsXHotel_Click);
+            // 
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -758,24 +756,6 @@
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
-            // btnInsXHotel
-            // 
-            this.btnInsXHotel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInsXHotel.FlatAppearance.BorderSize = 0;
-            this.btnInsXHotel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInsXHotel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsXHotel.ForeColor = System.Drawing.Color.White;
-            this.btnInsXHotel.Location = new System.Drawing.Point(0, 140);
-            this.btnInsXHotel.Name = "btnInsXHotel";
-            this.btnInsXHotel.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnInsXHotel.Size = new System.Drawing.Size(234, 35);
-            this.btnInsXHotel.TabIndex = 5;
-            this.btnInsXHotel.Text = "Gestionar InstalacionXHotel";
-            this.btnInsXHotel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInsXHotel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnInsXHotel.UseVisualStyleBackColor = true;
-            this.btnInsXHotel.Click += new System.EventHandler(this.btnInsXHotel_Click);
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -836,7 +816,6 @@
         private System.Windows.Forms.Button btnGestionHabitaciones;
         private System.Windows.Forms.Panel panelFormulariosHijos;
         private System.Windows.Forms.Panel subMenuFacturacion;
-        private System.Windows.Forms.Button btnDetalleFactura;
         private System.Windows.Forms.Button btnGestFacturacion;
         private System.Windows.Forms.Button btnFacturacion;
         private System.Windows.Forms.Panel subMenuEmpleados;

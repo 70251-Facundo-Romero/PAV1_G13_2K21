@@ -10,7 +10,7 @@ using TP.P.A.V.I.Entities;
 
 namespace TP.P.A.V.I.DAL
 {
-    class CiudadDAL
+    class CiudadDAL : EntidadDAL
     {
         public static DataTable ObtenerListadoCiudades()
         {

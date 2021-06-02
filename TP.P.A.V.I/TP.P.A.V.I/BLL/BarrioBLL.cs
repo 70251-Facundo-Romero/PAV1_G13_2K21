@@ -33,7 +33,17 @@ namespace TP.P.A.V.I.BLL
 
         public static bool BorrarBarrioABD(Barrio b)
         {
-            return BarrioDAL.BorrarBarrioABD(b);
+            BarrioDAL.BeginTransaction();
+            try
+            {
+                return BarrioDAL.BorrarBarrioABD(b);
+            }
+            catch (Exception)
+            {
+                BarrioDAL.RollbackTransaction();
+                throw;
+            }
+            BarrioDAL.CommitTransaction();
         }
     }
 }

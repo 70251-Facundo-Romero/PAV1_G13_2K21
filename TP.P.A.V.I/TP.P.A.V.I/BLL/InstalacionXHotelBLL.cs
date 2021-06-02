@@ -13,7 +13,18 @@ namespace TP.P.A.V.I.BLL
     {
         public static bool SaveInstalacionXHotel(InstalacionXHotel IxH)
         {
-            return InstalacionXHotelDAL.SaveInstalacionXHotel(IxH);
+            InstalacionXHotelDAL.BeginTransaction();
+            try
+            {
+                return InstalacionXHotelDAL.SaveInstalacionXHotel(IxH);
+            }
+            catch (Exception)
+            {
+                InstalacionXHotelDAL.RollbackTransaction();
+                throw;
+            }
+            InstalacionXHotelDAL.CommitTransaction();
+            
         }
         public static DataTable cargarGrilla(int Id)
         {
@@ -32,7 +43,17 @@ namespace TP.P.A.V.I.BLL
 
         public static bool ModificarInstalacionXHotel(InstalacionXHotel IxH)
         {
-            return InstalacionXHotelDAL.ModificarInstalacionXHotel(IxH);
+            InstalacionXHotelDAL.BeginTransaction();
+            try
+            {
+                return InstalacionXHotelDAL.ModificarInstalacionXHotel(IxH);
+            }
+            catch (Exception)
+            {
+                InstalacionXHotelDAL.RollbackTransaction();
+                throw;
+            }
+            InstalacionXHotelDAL.CommitTransaction();
         }
 
         internal static bool VerificarExisteCombinacion(int IdHot, int IdInst)

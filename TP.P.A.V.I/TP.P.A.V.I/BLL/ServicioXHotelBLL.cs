@@ -33,12 +33,32 @@ namespace TP.P.A.V.I.BLL
 
         internal static bool AgregarServXHotel(ServXHotel s)
         {
-            return ServicioXHotelDAL.AgregarServXHotel(s);
+            ServicioXHotelDAL.BeginTransaction();
+            try
+            {
+                return ServicioXHotelDAL.AgregarServXHotel(s);
+            }
+            catch (Exception)
+            {
+                ServicioXHotelDAL.RollbackTransaction();
+                throw;
+            }
+                ServicioXHotelDAL.CommitTransaction();
         }
 
         internal static bool ActualizarServXHotel(ServXHotel s)
         {
-            return ServicioXHotelDAL.ActualizarServXHotel(s);
+            ServicioXHotelDAL.BeginTransaction();
+            try
+            {
+                return ServicioXHotelDAL.ActualizarServXHotel(s);
+            }
+            catch (Exception)
+            {
+                ServicioXHotelDAL.RollbackTransaction();
+                throw;
+            }
+            ServicioXHotelDAL.CommitTransaction();
         }
 
         internal static bool BorrarServXHotel(ServXHotel s)

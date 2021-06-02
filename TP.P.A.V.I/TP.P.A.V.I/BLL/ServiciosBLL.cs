@@ -63,14 +63,17 @@ namespace TP.P.A.V.I.BLL
 
         public static bool EliminarServicioABD(Servicio ser)
         {
+            ServiciosDAL.BeginTransaction();
             try
             {
                 return ServiciosDAL.EliminarServicioABD(ser);
             }
             catch (Exception)
             {
+                ServiciosDAL.RollbackTransaction();
                 throw;
             }
+            ServiciosDAL.CommitTransaction();
         }
     }
 }

@@ -33,7 +33,17 @@ namespace TP.P.A.V.I.BLL
 
         public static bool BorrarPaisABD(Pais p)
         {
-            return PaisDAL.BorrarPaisABD(p);
+            PaisDAL.BeginTransaction();
+            try
+            {
+                return PaisDAL.BorrarPaisABD(p);
+            }
+            catch (Exception)
+            {
+                PaisDAL.RollbackTransaction();
+                throw;
+            }
+            PaisDAL.CommitTransaction();
         }
     }
 }

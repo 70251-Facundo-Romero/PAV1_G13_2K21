@@ -10,7 +10,7 @@ using TP.P.A.V.I.Entities;
 
 namespace TP.P.A.V.I.DAL
 {
-    class BarrioDAL
+    class BarrioDAL : EntidadDAL
     {
         public static DataTable ObtenerListadoBarrios()
         {

@@ -61,15 +61,17 @@ namespace TP.P.A.V.I.BLL
 
         public static bool DeleteHuesped(Huesped model)
         {
+            HuespedDAL.BeginTransaction();
             try
             {
                 return HuespedDAL.BorrarHuesped(model);
             }
             catch (Exception)
             {
-
+                HuespedDAL.RollbackTransaction();
                 throw;
             }
+            HuespedDAL.CommitTransaction();
         }
     }
 }

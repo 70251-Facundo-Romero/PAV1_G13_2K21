@@ -33,7 +33,17 @@ namespace TP.P.A.V.I.BLL
 
         public static bool BorrarCiudadABD(Ciudad c)
         {
-            return CiudadDAL.BorrarCiudadABD(c);
+            CiudadDAL.BeginTransaction();
+            try
+            {
+                return CiudadDAL.BorrarCiudadABD(c);
+            }
+            catch (Exception)
+            {
+                CiudadDAL.RollbackTransaction();
+                throw;
+            }
+            CiudadDAL.CommitTransaction();
         }
     }
 }

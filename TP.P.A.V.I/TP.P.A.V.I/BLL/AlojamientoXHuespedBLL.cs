@@ -26,15 +26,17 @@ namespace TP.P.A.V.I.BLL
 
         public static bool AgregarAlojamientoXHuespedABD(AlojamientoXHuespedes al)
         {
+            AlojamientoXHuespedDAL.BeginTransaction();
             try
             {
                 return AlojamientoXHuespedDAL.AgregarAlojamientoXHuespedABD(al);
             }
             catch (Exception ex)
             {
+                AlojamientoXHuespedDAL.RollbackTransaction();
                 throw;
-
             }
+            AlojamientoXHuespedDAL.CommitTransaction();
         }
 
         public static AlojamientoXHuespedes ObtenerAlojamientoXHuesped(int id)
@@ -72,14 +74,17 @@ namespace TP.P.A.V.I.BLL
 
         public static bool ActualizarAlojamientoXHuespedABD(AlojamientoXHuespedes al)
         {
+            AlojamientoXHuespedDAL.BeginTransaction();
             try
             {
                 return AlojamientoXHuespedDAL.ActualizarAlojamientoXHuespedABD(al);
             }
             catch (Exception)
             {
+                AlojamientoXHuespedDAL.RollbackTransaction();
                 throw;
             }
+            AlojamientoXHuespedDAL.CommitTransaction();
         }
 
         public static bool BorrarAlojamientoXHuespedABD(AlojamientoXHuespedes al)

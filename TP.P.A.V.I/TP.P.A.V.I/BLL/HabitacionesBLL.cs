@@ -15,6 +15,7 @@ namespace TP.P.A.V.I.BLL
         {
             return HabitacionesDAL.ValidarHabitaciones(habitacion, descripcion);
         }
+
         public static bool InsertHabitaciones(Habitaciones habitaciones)
         {
             try
@@ -27,19 +28,22 @@ namespace TP.P.A.V.I.BLL
                 ;
             }
         }
+
         public static bool Delete_Habitacion(Habitaciones habitaciones)
         {
+            HabitacionesDAL.BeginTransaction();
             try
             {
                 return HabitacionesDAL.DeleteHabitaciones(habitaciones.Nombre);
             }
             catch (Exception)
             {
-
+                HabitacionesDAL.RollbackTransaction();
                 return false;
             }
-
+            HabitacionesDAL.CommitTransaction();
         }
+
         public static System.Data.DataTable CargarGrilla()
         {
             return HabitacionesDAL.cargarGrilla();

@@ -61,14 +61,17 @@ namespace TP.P.A.V.I.BLL
 
         public static bool EliminarPuestoABD(PuestoTrabajo pdt)
         {
+            PuestoDeTrabajoDAL.BeginTransaction();
             try
             {
                 return PuestoDeTrabajoDAL.EliminarPuestoABD(pdt);
             }
             catch (Exception)
             {
+                PuestoDeTrabajoDAL.RollbackTransaction();
                 throw;
             }
+            PuestoDeTrabajoDAL.CommitTransaction();
         }
     }
 }

@@ -22,7 +22,18 @@ namespace TP.P.A.V.I.BLL
         }
         public static bool SaveHabitacionXHotel(HabitacionXHotel HxH)
         {
-            return HabitacionXHotelDAL.SaveHabitacionXHotel(HxH);
+            HabitacionXHotelDAL.BeginTransaction();
+            try
+            {
+                return HabitacionXHotelDAL.SaveHabitacionXHotel(HxH);
+            }
+            catch (Exception)
+            {
+                HabitacionXHotelDAL.RollbackTransaction();
+                throw;
+            }
+            HabitacionXHotelDAL.CommitTransaction();
+            
         }
         public static void EliminarHabitacionXHotel(int Id)
         {
@@ -31,7 +42,17 @@ namespace TP.P.A.V.I.BLL
 
         public static bool ModificarHabitacionXHotel(HabitacionXHotel HxH)
         {
-            return HabitacionXHotelDAL.ModificarHabitacionXHotel(HxH);
+            HabitacionXHotelDAL.BeginTransaction();
+            try
+            {
+                return HabitacionXHotelDAL.ModificarHabitacionXHotel(HxH);
+            }
+            catch (Exception)
+            {
+                HabitacionXHotelDAL.RollbackTransaction();
+                throw;
+            }
+            HabitacionXHotelDAL.CommitTransaction();
         }
 
         internal static bool VerificarExisteCombinacion(int IdHot, int IdHab)

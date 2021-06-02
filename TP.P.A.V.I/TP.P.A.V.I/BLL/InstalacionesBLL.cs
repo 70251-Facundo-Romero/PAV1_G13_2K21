@@ -28,17 +28,19 @@ namespace TP.P.A.V.I.BLL
         }
         public static bool Delete_Instalacion(Instalaciones instalaciones)
         {
+            InstalacionesDAL.BeginTransaction();
             try
             {
                 return InstalacionesDAL.DeleteInstalaciones(instalaciones.Nombre);
             }
             catch (Exception)
             {
-
+                InstalacionesDAL.RollbackTransaction();
                 return false;
             }
-
+            InstalacionesDAL.CommitTransaction();
         }
+
         public static System.Data.DataTable CargarGrilla()
         {
             return InstalacionesDAL.cargarGrilla();
