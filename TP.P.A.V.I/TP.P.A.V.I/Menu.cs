@@ -239,12 +239,9 @@ namespace TP.P.A.V.I
 
         private void btnGestFacturacion_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Esta funcionalidad corresponde a otra entrega");
-        }
-
-        private void btnDetalleFactura_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Esta funcionalidad corresponde a otra entrega");
+            FacturaForm ventana = new FacturaForm();
+            openChildForm(ventana);
+            hideSubMenu();
         }
 
         private void btnGestionHuespedes_Click(object sender, EventArgs e)
