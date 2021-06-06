@@ -75,6 +75,7 @@
     <Compile Include="BLL\BarrioBLL.cs" />
     <Compile Include="BLL\CiudadBLL.cs" />
     <Compile Include="BLL\EmpleadosBLL.cs" />
+    <Compile Include="BLL\FacturaBLL.cs" />
     <Compile Include="BLL\HabitacionesBLL.cs" />
     <Compile Include="BLL\HabitacionXHotelBLL.cs" />
     <Compile Include="BLL\HotelBLL.cs" />
@@ -98,6 +99,7 @@
     <Compile Include="DAL\CiudadDAL.cs" />
     <Compile Include="DAL\EmpleadosDAL.cs" />
     <Compile Include="DAL\EntidadDAL.cs" />
+    <Compile Include="DAL\FacturaDAL.cs" />
     <Compile Include="DAL\HabitacionesDAL.cs" />
     <Compile Include="DAL\HabitacionXHotelDAL.cs" />
     <Compile Include="DAL\HotelesDAL.cs" />
@@ -120,6 +122,7 @@
     <Compile Include="Entities\Barrio.cs" />
     <Compile Include="Entities\Ciudad.cs" />
     <Compile Include="Entities\Empleado.cs" />
+    <Compile Include="Entities\Factura.cs" />
     <Compile Include="Entities\Habitaciones.cs" />
     <Compile Include="Entities\HabitacionXHotel.cs" />
     <Compile Include="Entities\Hotel.cs" />
@@ -132,6 +135,12 @@
     <Compile Include="Entities\ServXHotel.cs" />
     <Compile Include="Entities\Tarjeta.cs" />
     <Compile Include="Entities\Usuario.cs" />
+    <Compile Include="FacturaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacturaForm.Designer.cs">
+      <DependentUpon>FacturaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Empleados.resx">
       <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacturaForm.resx">
+      <DependentUpon>FacturaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
