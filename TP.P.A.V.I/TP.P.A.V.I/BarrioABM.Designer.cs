@@ -31,6 +31,10 @@ namespace TP.P.A.V.I
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grillaBarrios = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreCiudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ciudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescCiudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -45,10 +49,7 @@ namespace TP.P.A.V.I
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCiudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ciudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DescCiudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grillaBarrios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -87,9 +88,41 @@ namespace TP.P.A.V.I
             this.grillaBarrios.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
             this.grillaBarrios.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
             this.grillaBarrios.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.grillaBarrios.Size = new System.Drawing.Size(709, 156);
+            this.grillaBarrios.Size = new System.Drawing.Size(709, 123);
             this.grillaBarrios.TabIndex = 2;
             this.grillaBarrios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaBarrios_CellClick);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Width = 50;
+            // 
+            // NombreCiudad
+            // 
+            this.NombreCiudad.DataPropertyName = "Nombre";
+            this.NombreCiudad.HeaderText = "Barrio";
+            this.NombreCiudad.Name = "NombreCiudad";
+            this.NombreCiudad.ReadOnly = true;
+            this.NombreCiudad.Width = 170;
+            // 
+            // Ciudad
+            // 
+            this.Ciudad.DataPropertyName = "NombreCiudad";
+            this.Ciudad.HeaderText = "Ciudad";
+            this.Ciudad.Name = "Ciudad";
+            this.Ciudad.ReadOnly = true;
+            this.Ciudad.Width = 170;
+            // 
+            // DescCiudad
+            // 
+            this.DescCiudad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DescCiudad.DataPropertyName = "Descripcion";
+            this.DescCiudad.HeaderText = "Descripción";
+            this.DescCiudad.Name = "DescCiudad";
+            this.DescCiudad.ReadOnly = true;
             // 
             // label1
             // 
@@ -273,37 +306,20 @@ namespace TP.P.A.V.I
             this.pictureBox3.TabIndex = 36;
             this.pictureBox3.TabStop = false;
             // 
-            // Id
+            // button1
             // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Width = 50;
-            // 
-            // NombreCiudad
-            // 
-            this.NombreCiudad.DataPropertyName = "Nombre";
-            this.NombreCiudad.HeaderText = "Barrio";
-            this.NombreCiudad.Name = "NombreCiudad";
-            this.NombreCiudad.ReadOnly = true;
-            this.NombreCiudad.Width = 170;
-            // 
-            // Ciudad
-            // 
-            this.Ciudad.DataPropertyName = "NombreCiudad";
-            this.Ciudad.HeaderText = "Ciudad";
-            this.Ciudad.Name = "Ciudad";
-            this.Ciudad.ReadOnly = true;
-            this.Ciudad.Width = 170;
-            // 
-            // DescCiudad
-            // 
-            this.DescCiudad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DescCiudad.DataPropertyName = "Descripcion";
-            this.DescCiudad.HeaderText = "Descripción";
-            this.DescCiudad.Name = "DescCiudad";
-            this.DescCiudad.ReadOnly = true;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(587, 388);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(134, 26);
+            this.button1.TabIndex = 38;
+            this.button1.Text = "Generar Reporte";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // BarrioABM
             // 
@@ -311,6 +327,7 @@ namespace TP.P.A.V.I
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(733, 426);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnBorrar);
@@ -359,5 +376,6 @@ namespace TP.P.A.V.I
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCiudad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ciudad;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescCiudad;
+        private System.Windows.Forms.Button button1;
     }
 }

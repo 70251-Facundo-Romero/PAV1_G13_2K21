@@ -233,6 +233,18 @@
     <Compile Include="ReportePaises.Designer.cs">
       <DependentUpon>ReportePaises.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportesBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportesBarrio.Designer.cs">
+      <DependentUpon>ReportesBarrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesCiudad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportesCiudad.Designer.cs">
+      <DependentUpon>ReportesCiudad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Servicios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -302,8 +314,16 @@
     <EmbeddedResource Include="PuestosDeTrabajoABM.resx">
       <DependentUpon>PuestosDeTrabajoABM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReporteBarrios.rdlc" />
+    <EmbeddedResource Include="ReporteCiudades.rdlc" />
     <EmbeddedResource Include="ReportePaises.resx">
       <DependentUpon>ReportePaises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesBarrio.resx">
+      <DependentUpon>ReportesBarrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesCiudad.resx">
+      <DependentUpon>ReportesCiudad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Servicios.resx">
       <DependentUpon>Servicios.cs</DependentUpon>

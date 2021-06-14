@@ -163,5 +163,11 @@ namespace TP.P.A.V.I
                 MessageBox.Show("Hubo un error al borrar el barrio");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ReportesBarrio ventana = new ReportesBarrio();
+            ventana.ShowDialog();
+        }
     }
 }

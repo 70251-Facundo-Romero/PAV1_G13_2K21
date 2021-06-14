@@ -165,5 +165,11 @@ namespace TP.P.A.V.I
             cmbPaises.SelectedValue = c.IdPaisCiudad;
             txtId.Text = c.IdCiudad.ToString();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ReportesCiudad ventana = new ReportesCiudad();
+            ventana.ShowDialog();
+        }
     }
 }
