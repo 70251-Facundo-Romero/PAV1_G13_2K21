@@ -89,6 +89,11 @@
     <Compile Include="BarrioABM.Designer.cs">
       <DependentUpon>BarrioABM.cs</DependentUpon>
     </Compile>
+    <Compile Include="BD3K7G13_2021DataSetParaReportes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD3K7G13_2021DataSetParaReportes.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BLL\AlojamientoXHuespedBLL.cs" />
     <Compile Include="BLL\BarrioBLL.cs" />
     <Compile Include="BLL\CiudadBLL.cs" />
@@ -303,6 +308,17 @@
     <EmbeddedResource Include="Servicios.resx">
       <DependentUpon>Servicios.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="BD3K7G13_2021DataSetParaReportes.xsc">
+      <DependentUpon>BD3K7G13_2021DataSetParaReportes.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K7G13_2021DataSetParaReportes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD3K7G13_2021DataSetParaReportes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD3K7G13_2021DataSetParaReportes.xss">
+      <DependentUpon>BD3K7G13_2021DataSetParaReportes.xsd</DependentUpon>
+    </None>
     <None Include="bin\Debug\TP.P.A.V.I.exe.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

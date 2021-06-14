@@ -148,3 +148,5 @@ C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\zh-CHS\Microso
 C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csproj.CopyComplete
 C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.ReportePaises.resources
+C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\RdlCompile.cache
+C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\RdlCompile.compiled

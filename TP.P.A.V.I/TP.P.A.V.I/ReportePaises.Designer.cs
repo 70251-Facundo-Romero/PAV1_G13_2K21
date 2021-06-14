@@ -29,14 +29,21 @@ namespace TP.P.A.V.I
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.BD3K7G13_2021DataSetParaReportes = new TP.P.A.V.I.BD3K7G13_2021DataSetParaReportes();
+            this.PaisesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.PaisesTableAdapter = new TP.P.A.V.I.BD3K7G13_2021DataSetParaReportesTableAdapters.PaisesTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BD3K7G13_2021DataSetParaReportes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PaisesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -90,12 +97,30 @@ namespace TP.P.A.V.I
             // 
             this.reportViewer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DatosPaises";
+            reportDataSource1.Value = this.PaisesBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "TP.P.A.V.I.ListadoPaises.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 415);
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
+            // 
+            // BD3K7G13_2021DataSetParaReportes
+            // 
+            this.BD3K7G13_2021DataSetParaReportes.DataSetName = "BD3K7G13_2021DataSetParaReportes";
+            this.BD3K7G13_2021DataSetParaReportes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // PaisesBindingSource
+            // 
+            this.PaisesBindingSource.DataMember = "Paises";
+            this.PaisesBindingSource.DataSource = this.BD3K7G13_2021DataSetParaReportes;
+            // 
+            // PaisesTableAdapter
+            // 
+            this.PaisesTableAdapter.ClearBeforeFill = true;
             // 
             // ReportePaises
             // 
@@ -112,6 +137,8 @@ namespace TP.P.A.V.I
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.BD3K7G13_2021DataSetParaReportes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PaisesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -123,5 +150,8 @@ namespace TP.P.A.V.I
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel2;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource PaisesBindingSource;
+        private BD3K7G13_2021DataSetParaReportes BD3K7G13_2021DataSetParaReportes;
+        private BD3K7G13_2021DataSetParaReportesTableAdapters.PaisesTableAdapter PaisesTableAdapter;
     }
 }

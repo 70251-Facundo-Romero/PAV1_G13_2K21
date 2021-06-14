@@ -16,7 +16,7 @@ namespace TP.P.A.V.I
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PaisABM());
+            Application.Run(new Login());
         }
     }
 }
