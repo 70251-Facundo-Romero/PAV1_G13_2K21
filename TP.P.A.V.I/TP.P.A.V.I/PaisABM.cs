@@ -145,5 +145,11 @@ namespace TP.P.A.V.I
                 MessageBox.Show("Hubo un error al borrar el pais");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ReportePaises ventana = new ReportePaises();
+            ventana.ShowDialog();
+        }
     }
 }
