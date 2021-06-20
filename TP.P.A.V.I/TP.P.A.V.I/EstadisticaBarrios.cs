@@ -13,17 +13,11 @@ using TP.P.A.V.I.BLL;
 
 namespace TP.P.A.V.I
 {
-    public partial class ReportesCiudad : Form
+    public partial class EstadisticaBarrios : Form
     {
-        public ReportesCiudad()
+        public EstadisticaBarrios()
         {
             InitializeComponent();
-        }
-
-        private void ReportesCiudad_Load(object sender, EventArgs e)
-        {
-            this.reportViewer1.RefreshReport();
-
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -35,7 +29,6 @@ namespace TP.P.A.V.I
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -45,13 +38,18 @@ namespace TP.P.A.V.I
         private void reportViewer1_Load(object sender, EventArgs e)
         {
             DataTable tabla = new DataTable();
-            tabla = CiudadBLL.ObtenerListadoCiudades();
+            tabla = BarrioBLL.ObtenerBarriosXCiudades();
 
-            ReportDataSource ds = new ReportDataSource("DatosEstadisticosBarrios", tabla);
+            ReportDataSource ds = new ReportDataSource("DatosCiudades", tabla);
 
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(ds);
             reportViewer1.LocalReport.Refresh();
+        }
+
+        private void EstadisticaBarrios_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

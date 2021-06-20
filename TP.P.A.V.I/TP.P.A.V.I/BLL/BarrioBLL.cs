@@ -45,5 +45,18 @@ namespace TP.P.A.V.I.BLL
             }
             BarrioDAL.CommitTransaction();
         }
+
+        internal static DataTable ObtenerBarriosXCiudades()
+        {
+            try
+            {
+                BarrioDAL.ObtenerBarriosXCiudades();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

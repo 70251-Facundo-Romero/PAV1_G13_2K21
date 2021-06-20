@@ -111,7 +111,7 @@ namespace TP.P.A.V.I
             this.grillaCiudades.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
             this.grillaCiudades.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
             this.grillaCiudades.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.grillaCiudades.Size = new System.Drawing.Size(709, 126);
+            this.grillaCiudades.Size = new System.Drawing.Size(709, 112);
             this.grillaCiudades.TabIndex = 1;
             this.grillaCiudades.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaCiudades_CellClick);
             // 

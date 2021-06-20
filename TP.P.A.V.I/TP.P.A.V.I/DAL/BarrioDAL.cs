@@ -46,6 +46,41 @@ namespace TP.P.A.V.I.DAL
             }
         }
 
+        public static DataTable ObtenerBarriosXCiudades()
+        {
+            string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
+            SqlCommand cmd = new SqlCommand();
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+
+            try
+            {
+                string consulta = @"SELECT C.Nombre, COUNT(B.id) AS 'CantidadBarrios' FROM Ciudades C
+                        JOIN Barrios B ON C.Id = B.IdCiudad
+                        GROUP BY C.Nombre";
+
+                cmd.Parameters.Clear();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+                return tabla;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
         public static Barrio ObtenerBarrio(int id)
         {
             string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;

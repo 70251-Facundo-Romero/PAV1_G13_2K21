@@ -117,6 +117,14 @@
     <Compile Include="CiudadABM.Designer.cs">
       <DependentUpon>CiudadABM.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConjuntosDeDatosEstadisticos\DatosEstadisticaBarrios.cs">
+      <DependentUpon>DatosEstadisticaBarrios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConjuntosDeDatosEstadisticos\DatosEstadisticaBarrios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosEstadisticaBarrios.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DAL\AlojamientoXHuespedDAL.cs" />
     <Compile Include="DAL\BarrioDAL.cs" />
     <Compile Include="DAL\CiudadDAL.cs" />
@@ -158,6 +166,12 @@
     <Compile Include="Entities\ServXHotel.cs" />
     <Compile Include="Entities\Tarjeta.cs" />
     <Compile Include="Entities\Usuario.cs" />
+    <Compile Include="EstadisticaBarrios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstadisticaBarrios.Designer.cs">
+      <DependentUpon>EstadisticaBarrios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FacturaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,6 +284,10 @@
     <EmbeddedResource Include="Empleados.resx">
       <DependentUpon>Empleados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EstadisticaBarrios.resx">
+      <DependentUpon>EstadisticaBarrios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstadisticaBarriosXCiudad.rdlc" />
     <EmbeddedResource Include="FacturaForm.resx">
       <DependentUpon>FacturaForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -340,6 +358,17 @@
       <DependentUpon>BD3K7G13_2021DataSetParaReportes.xsd</DependentUpon>
     </None>
     <None Include="bin\Debug\TP.P.A.V.I.exe.config" />
+    <None Include="ConjuntosDeDatosEstadisticos\DatosEstadisticaBarrios.xsc">
+      <DependentUpon>DatosEstadisticaBarrios.xsd</DependentUpon>
+    </None>
+    <None Include="ConjuntosDeDatosEstadisticos\DatosEstadisticaBarrios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosEstadisticaBarrios.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ConjuntosDeDatosEstadisticos\DatosEstadisticaBarrios.xss">
+      <DependentUpon>DatosEstadisticaBarrios.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -169,5 +169,11 @@ namespace TP.P.A.V.I
             ReportesBarrio ventana = new ReportesBarrio();
             ventana.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            EstadisticaBarrios ventana = new EstadisticaBarrios();
+            ventana.ShowDialog();
+        }
     }
 }
