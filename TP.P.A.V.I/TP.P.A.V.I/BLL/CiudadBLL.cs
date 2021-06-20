@@ -45,5 +45,18 @@ namespace TP.P.A.V.I.BLL
             }
             CiudadDAL.CommitTransaction();
         }
+
+        public static DataTable ObtenerCiudadesXPaises()
+        {
+            try
+            {
+                return CiudadDAL.ObtenerCiudadesXPaises();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

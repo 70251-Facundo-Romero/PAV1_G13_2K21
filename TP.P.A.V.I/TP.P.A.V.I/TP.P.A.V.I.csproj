@@ -172,6 +172,12 @@
     <Compile Include="EstadisticaBarrios.Designer.cs">
       <DependentUpon>EstadisticaBarrios.cs</DependentUpon>
     </Compile>
+    <Compile Include="EstadisticaCiudad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstadisticaCiudad.Designer.cs">
+      <DependentUpon>EstadisticaCiudad.cs</DependentUpon>
+    </Compile>
     <Compile Include="FacturaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -288,6 +294,10 @@
       <DependentUpon>EstadisticaBarrios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EstadisticaBarriosXCiudad.rdlc" />
+    <EmbeddedResource Include="EstadisticaCiudad.resx">
+      <DependentUpon>EstadisticaCiudad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstadisticaCiudades.rdlc" />
     <EmbeddedResource Include="FacturaForm.resx">
       <DependentUpon>FacturaForm.cs</DependentUpon>
     </EmbeddedResource>

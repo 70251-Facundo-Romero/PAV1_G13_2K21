@@ -50,7 +50,7 @@ namespace TP.P.A.V.I.BLL
         {
             try
             {
-                BarrioDAL.ObtenerBarriosXCiudades();
+                return BarrioDAL.ObtenerBarriosXCiudades();
             }
             catch (Exception)
             {

@@ -64,7 +64,6 @@ C:\Users\facun\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.
 C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\TP.P.A.V.I.exe.config
 C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\TP.P.A.V.I.exe
 C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\bin\Debug\TP.P.A.V.I.pdb
-C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csproj.AssemblyReference.cache
 C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.AlojamientoXHuesped.resources
 C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.AltaServicioXHotel.resources
 C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.AltaTarjeta.resources
@@ -153,3 +152,4 @@ C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\RdlCompile.com
 C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.ReportesCiudad.resources
 C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.ReportesBarrio.resources
 C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.EstadisticaBarrios.resources
+C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.EstadisticaCiudad.resources

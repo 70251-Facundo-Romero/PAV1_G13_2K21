@@ -13,44 +13,45 @@ using TP.P.A.V.I.BLL;
 
 namespace TP.P.A.V.I
 {
-    public partial class EstadisticaBarrios : Form
+    public partial class EstadisticaCiudad : Form
     {
-        public EstadisticaBarrios()
+        public EstadisticaCiudad()
         {
             InitializeComponent();
+        }
+
+        private void EstadisticaCiudad_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void reportViewer1_Load(object sender, EventArgs e)
+        private void reportViewer1_Load_1(object sender, EventArgs e)
         {
             DataTable tabla = new DataTable();
-            tabla = BarrioBLL.ObtenerBarriosXCiudades();
+            tabla = CiudadBLL.ObtenerCiudadesXPaises();
 
-            ReportDataSource ds = new ReportDataSource("DatosEstadisticosBarrios", tabla);
+            ReportDataSource ds = new ReportDataSource("DatosEstadisticosCiudades", tabla);
 
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(ds);
             reportViewer1.LocalReport.Refresh();
-        }
-
-        private void EstadisticaBarrios_Load(object sender, EventArgs e)
-        {
-
-            this.reportViewer1.RefreshReport();
         }
     }
 }

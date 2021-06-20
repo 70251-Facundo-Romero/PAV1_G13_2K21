@@ -54,9 +54,9 @@ namespace TP.P.A.V.I.DAL
 
             try
             {
-                string consulta = @"SELECT C.Nombre, COUNT(B.id) AS 'CantidadBarrios' FROM Ciudades C
-                        JOIN Barrios B ON C.Id = B.IdCiudad
-                        GROUP BY C.Nombre";
+                string consulta = @"SELECT C.Nombre, COUNT(B.id) AS CantidadBarrios FROM Ciudades C
+                            JOIN Barrios B ON C.Id = B.IdCiudad
+                            GROUP BY C.Nombre";
 
                 cmd.Parameters.Clear();
                 cmd.CommandType = CommandType.Text;

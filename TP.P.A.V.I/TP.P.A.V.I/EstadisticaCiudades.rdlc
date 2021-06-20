@@ -7,11 +7,11 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>5914b327-5686-4f0a-a990-fd9a51cdb8b9</rd:DataSourceID>
+      <rd:DataSourceID>ab742dc7-0788-477e-bad3-30db6a00eac8</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DatosEstadisticosBarrios">
+    <DataSet Name="DatosEstadisticosCiudades">
       <Query>
         <DataSourceName>DatosEstadisticaBarrios</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -21,15 +21,15 @@
           <DataField>Nombre</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="CantidadBarrios">
-          <DataField>CantidadBarrios</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="CantidadCiudades">
+          <DataField>CantidadCiudades</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DatosEstadisticaBarrios</rd:DataSetName>
         <rd:SchemaPath>C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\ConjuntosDeDatosEstadisticos\DatosEstadisticaBarrios.xsd</rd:SchemaPath>
-        <rd:TableName>EstadisticaBarrios</rd:TableName>
+        <rd:TableName>EstadisticaCiudades</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -61,17 +61,17 @@
             <ChartSeriesHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Label>Cantidad Barrios</Label>
+                  <Label>Cantidad Ciudades</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartSeriesHierarchy>
             <ChartData>
               <ChartSeriesCollection>
-                <ChartSeries Name="CantidadBarrios">
+                <ChartSeries Name="CantidadCiudades">
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Sum(Fields!CantidadBarrios.Value)</Y>
+                        <Y>=Count(Fields!CantidadCiudades.Value)</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
@@ -221,7 +221,7 @@
                   <ChartAxis Name="Primary">
                     <Style>
                       <Border>
-                        <Color>White</Color>
+                        <Color>Gainsboro</Color>
                         <Style>None</Style>
                       </Border>
                       <FontSize>8pt</FontSize>
@@ -337,9 +337,6 @@
             <ChartLegends>
               <ChartLegend Name="Default">
                 <Style>
-                  <Border>
-                    <Color>White</Color>
-                  </Border>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>8pt</FontSize>
                   <Color>White</Color>
@@ -359,7 +356,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Barrios Por Ciudad</Caption>
+                <Caption>Ciudades por País</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontFamily>century Gothic</FontFamily>
@@ -371,8 +368,7 @@
                 </Style>
               </ChartTitle>
             </ChartTitles>
-            <Palette>Pastel</Palette>
-            <PaletteHatchBehavior>None</PaletteHatchBehavior>
+            <Palette>Pacific</Palette>
             <ChartBorderSkin>
               <Style>
                 <BackgroundColor>Gray</BackgroundColor>
@@ -389,14 +385,14 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>DatosEstadisticosBarrios</DataSetName>
-            <Top>1.21708cm</Top>
-            <Left>4.54766cm</Left>
-            <Height>6.95474cm</Height>
-            <Width>11.96234cm</Width>
+            <DataSetName>DatosEstadisticosCiudades</DataSetName>
+            <Top>1.69016cm</Top>
+            <Left>4.81224cm</Left>
+            <Height>5.9525cm</Height>
+            <Width>11.69776cm</Width>
             <Style>
               <Border>
-                <Color>White</Color>
+                <Color>LightGrey</Color>
                 <Style>None</Style>
               </Border>
               <BackgroundColor>#314252</BackgroundColor>
@@ -404,7 +400,7 @@
             </Style>
           </Chart>
         </ReportItems>
-        <Height>3.21725in</Height>
+        <Height>3.00892in</Height>
         <Style />
       </Body>
       <Width>6.5in</Width>
@@ -427,5 +423,5 @@
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>af2db121-6baa-4c2a-9521-3a41f569232f</rd:ReportID>
+  <rd:ReportID>a8d9604b-8311-45cb-9d14-e4d746ebb23f</rd:ReportID>
 </Report>
