@@ -115,6 +115,39 @@ namespace TP.P.A.V.I.DAL
             }
         }
 
+        public static DataTable InstalacionXHotel()
+        {
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                con.Open();
+                try
+                {
+                    using (SqlCommand cmd = new SqlCommand(@"select IxH.IdInstalacionXHotel, H.Nombre as 'IdHotel', I.Nombre as 'IdInstalacion' from InstalacionXHotel IxH
+                                                            join Hoteles H on H.Id = IxH.IdHotel
+                                                            join Instalaciones I on I.Id = IxH.IdInstalacion", con))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        using (SqlDataAdapter dr = new SqlDataAdapter(cmd))
+                        {
+                            DataTable tabla = new DataTable();
+                            dr.Fill(tabla);
+                            return tabla;
+
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw;
+                }
+                finally
+                {
+                    if (con.State == ConnectionState.Open)
+                        con.Close();
+                }
+            }
+        }
+
         public static InstalacionXHotel SelectById(int Id)
         {
             InstalacionXHotel IxH = new InstalacionXHotel();

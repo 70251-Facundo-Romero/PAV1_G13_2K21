@@ -2,37 +2,45 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="DatosEstadisticaBarrios">
+    <DataSource Name="BD3K7G13_2021DataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>ab742dc7-0788-477e-bad3-30db6a00eac8</rd:DataSourceID>
+      <rd:DataSourceID>370d8c83-3ee3-48b4-ade8-c01e2ab546b8</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DatosEstadisticosCiudades">
+    <DataSet Name="EstadisticaHabxHotel">
       <Query>
-        <DataSourceName>DatosEstadisticaBarrios</DataSourceName>
+        <DataSourceName>BD3K7G13_2021DataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="Nombre">
-          <DataField>Nombre</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CantidadCiudades">
-          <DataField>CantidadCiudades</DataField>
+        <Field Name="IdHabitacionXHotel">
+          <DataField>IdHabitacionXHotel</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="IdHotel">
+          <DataField>IdHotel</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="IdHabitacion">
+          <DataField>IdHabitacion</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Precio">
+          <DataField>Precio</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DatosEstadisticaBarrios</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\ConjuntosDeDatosEstadisticos\DatosEstadisticaBarrios.xsd</rd:SchemaPath>
-        <rd:TableName>EstadisticaCiudades</rd:TableName>
-        <rd:TableAdapterFillMethod />
-        <rd:TableAdapterGetDataMethod />
-        <rd:TableAdapterName />
+        <rd:DataSetName>BD3K7G13_2021DataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\nata\Desktop\TP PAV 1\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\BD3K7G13_2021DataSet.xsd</rd:SchemaPath>
+        <rd:TableName>HabitacionXHotel</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>HabitacionXHotelTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -40,38 +48,69 @@
     <ReportSection>
       <Body>
         <ReportItems>
+          <Textbox Name="Textbox1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Estaiodstica Habitación por Hotel</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>0.65828cm</Top>
+            <Left>5.36787cm</Left>
+            <Height>0.6cm</Height>
+            <Width>5.27812cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line1">
+            <Top>1.32884cm</Top>
+            <Height>0cm</Height>
+            <Width>16.51cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
           <Chart Name="Chart1">
             <ChartCategoryHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Group Name="Chart1_CategoryGroup">
-                    <GroupExpressions>
-                      <GroupExpression>=Fields!Nombre.Value</GroupExpression>
-                    </GroupExpressions>
-                  </Group>
-                  <SortExpressions>
-                    <SortExpression>
-                      <Value>=Fields!Nombre.Value</Value>
-                    </SortExpression>
-                  </SortExpressions>
-                  <Label>=Fields!Nombre.Value</Label>
+                  <Group Name="ChartGroup" />
+                  <Label />
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
             <ChartSeriesHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Label>Cantidad Ciudades</Label>
+                  <Label>Id Habitacion</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartSeriesHierarchy>
             <ChartData>
               <ChartSeriesCollection>
-                <ChartSeries Name="CantidadCiudades">
+                <ChartSeries Name="IdHotel">
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Count(Fields!CantidadCiudades.Value)</Y>
+                        <Y>=Count(Fields!IdHabitacion.Value)</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
@@ -112,7 +151,7 @@
                         <Style>None</Style>
                       </Border>
                       <FontSize>8pt</FontSize>
-                      <Color>White</Color>
+                      <Color>#5c5c5c</Color>
                     </Style>
                     <ChartAxisTitle>
                       <Caption />
@@ -225,7 +264,7 @@
                         <Style>None</Style>
                       </Border>
                       <FontSize>8pt</FontSize>
-                      <Color>White</Color>
+                      <Color>#5c5c5c</Color>
                     </Style>
                     <ChartAxisTitle>
                       <Caption />
@@ -237,7 +276,7 @@
                     <ChartMajorGridLines>
                       <Style>
                         <Border>
-                          <Color>White</Color>
+                          <Color>Gainsboro</Color>
                         </Border>
                       </Style>
                     </ChartMajorGridLines>
@@ -339,7 +378,6 @@
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>8pt</FontSize>
-                  <Color>White</Color>
                 </Style>
                 <Position>TopLeft</Position>
                 <ChartLegendTitle>
@@ -356,16 +394,16 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Ciudades por País</Caption>
+                <Caption>Título del gráfico</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
-                  <FontFamily>century Gothic</FontFamily>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Normal</FontWeight>
                   <TextAlign>Left</TextAlign>
                   <VerticalAlign>Top</VerticalAlign>
-                  <Color>White</Color>
+                  <Color>#a6a6a6</Color>
                 </Style>
+                <Position>TopLeft</Position>
               </ChartTitle>
             </ChartTitles>
             <Palette>Pacific</Palette>
@@ -385,21 +423,23 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <Top>1.69016cm</Top>
-            <Left>4.81224cm</Left>
-            <Height>5.9525cm</Height>
-            <Width>11.69776cm</Width>
+            <DataSetName>EstadisticaHabxHotel</DataSetName>
+            <Top>1.95474cm</Top>
+            <Left>5.36787cm</Left>
+            <Height>5cm</Height>
+            <Width>7.5cm</Width>
+            <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Color>LightGrey</Color>
                 <Style>None</Style>
               </Border>
-              <BackgroundColor>#314252</BackgroundColor>
+              <BackgroundColor>White</BackgroundColor>
               <BackgroundGradientType>None</BackgroundGradientType>
             </Style>
           </Chart>
         </ReportItems>
-        <Height>3.00892in</Height>
+        <Height>2.73809in</Height>
         <Style />
       </Body>
       <Width>6.5in</Width>
@@ -422,5 +462,5 @@
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>a8d9604b-8311-45cb-9d14-e4d746ebb23f</rd:ReportID>
+  <rd:ReportID>1ed8f8ed-105a-4571-9e6f-01ea36e7e5a6</rd:ReportID>
 </Report>
