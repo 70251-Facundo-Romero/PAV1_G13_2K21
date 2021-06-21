@@ -53,7 +53,7 @@ namespace TP.P.A.V.I.DAL
 
             try
             {
-                string consulta = @"SELECT P.Nombre, COUNT(C.id) AS CantidadCiudades FROM Paises P
+                string consulta = @"SELECT P.Nombre, COUNT(*) AS CantidadCiudades FROM Paises P
 JOIN Ciudades C ON P.id = C.Id_pais
 GROUP BY P.Nombre";
 

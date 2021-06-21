@@ -47,7 +47,7 @@ namespace TP.P.A.V.I
             DataTable tabla = new DataTable();
             tabla = CiudadBLL.ObtenerListadoCiudades();
 
-            ReportDataSource ds = new ReportDataSource("DatosEstadisticosBarrios", tabla);
+            ReportDataSource ds = new ReportDataSource("DatosCiudades", tabla);
 
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(ds);

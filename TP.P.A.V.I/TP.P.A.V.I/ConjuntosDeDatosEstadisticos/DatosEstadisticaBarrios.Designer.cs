@@ -665,7 +665,7 @@ namespace TP.P.A.V.I.ConjuntosDeDatosEstadisticos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public EstadisticaCiudadesRow AddEstadisticaCiudadesRow(string Nombre, string CantidadCiudades) {
+            public EstadisticaCiudadesRow AddEstadisticaCiudadesRow(string Nombre, int CantidadCiudades) {
                 EstadisticaCiudadesRow rowEstadisticaCiudadesRow = ((EstadisticaCiudadesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Nombre,
@@ -701,7 +701,7 @@ namespace TP.P.A.V.I.ConjuntosDeDatosEstadisticos {
             private void InitClass() {
                 this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNombre);
-                this.columnCantidadCiudades = new global::System.Data.DataColumn("CantidadCiudades", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnCantidadCiudades = new global::System.Data.DataColumn("CantidadCiudades", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCantidadCiudades);
             }
             
@@ -933,10 +933,10 @@ namespace TP.P.A.V.I.ConjuntosDeDatosEstadisticos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string CantidadCiudades {
+            public int CantidadCiudades {
                 get {
                     try {
-                        return ((string)(this[this.tableEstadisticaCiudades.CantidadCiudadesColumn]));
+                        return ((int)(this[this.tableEstadisticaCiudades.CantidadCiudadesColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'CantidadCiudades\' de la tabla \'EstadisticaCiudades\' es DB" +
