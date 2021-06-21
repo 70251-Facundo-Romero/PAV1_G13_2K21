@@ -34,6 +34,11 @@ namespace TP.P.A.V.I
             ReportHuespedXpais.LocalReport.DataSources.Clear();
             ReportHuespedXpais.LocalReport.DataSources.Add(ds);
             ReportHuespedXpais.LocalReport.Refresh();
+
+            if (true)
+            {
+                int var = 1;
+            }
         }
     }
     
