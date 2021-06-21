@@ -23,7 +23,7 @@
         </Field>
         <Field Name="CantidadCiudades">
           <DataField>CantidadCiudades</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
@@ -385,7 +385,6 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>DatosEstadisticosCiudades</DataSetName>
             <Top>1.69016cm</Top>
             <Left>4.81224cm</Left>
             <Height>5.9525cm</Height>
