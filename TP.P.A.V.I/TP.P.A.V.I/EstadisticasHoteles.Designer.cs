@@ -1,7 +1,7 @@
 ﻿
 namespace TP.P.A.V.I
 {
-    partial class EstadisticaBarrios
+    partial class EstadisticasHoteles
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,24 @@ namespace TP.P.A.V.I
         /// </summary>
         private void InitializeComponent()
         {
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "TP.P.A.V.I.ReporteEstadisticasHotel.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 49);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(800, 401);
+            this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // panel1
             // 
@@ -46,8 +57,8 @@ namespace TP.P.A.V.I
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1067, 43);
-            this.panel1.TabIndex = 9;
+            this.panel1.Size = new System.Drawing.Size(800, 43);
+            this.panel1.TabIndex = 10;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // btnCerrar
@@ -57,7 +68,7 @@ namespace TP.P.A.V.I
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Image = global::TP.P.A.V.I.Properties.Resources.cerrar16px;
-            this.btnCerrar.Location = new System.Drawing.Point(1005, 0);
+            this.btnCerrar.Location = new System.Drawing.Point(738, 0);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(61, 43);
@@ -77,31 +88,18 @@ namespace TP.P.A.V.I
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
             // 
-            // reportViewer1
-            // 
-            this.reportViewer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "TP.P.A.V.I.EstadisticaBarriosXCiudad.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 43);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1067, 511);
-            this.reportViewer1.TabIndex = 10;
-            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
-            // 
-            // EstadisticaBarrios
+            // EstadisticasHoteles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.reportViewer1);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "EstadisticaBarrios";
+            this.Name = "EstadisticasHoteles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EstadisticaBarrios";
+            this.Text = "EstadisticasHoteles";
+            this.Load += new System.EventHandler(this.EstadisticasHoteles_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
@@ -110,9 +108,9 @@ namespace TP.P.A.V.I
 
         #endregion
 
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

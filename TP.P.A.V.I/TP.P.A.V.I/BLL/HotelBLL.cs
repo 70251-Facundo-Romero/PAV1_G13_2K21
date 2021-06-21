@@ -80,6 +80,20 @@ namespace TP.P.A.V.I.BLL
         {
             return HotelesDAL.ObtenerListadoBarrios();
         }
+        public static DataTable ObtenerHotelesXBarrios()
+        {
+            try
+            {
+
+                return HotelesDAL.ObtenerHotelesXBarrios();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
 
     }
     

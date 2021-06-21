@@ -2,18 +2,18 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="DatosEstadisticaBarrios">
+    <DataSource Name="EstadisticasEmpleados">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>5914b327-5686-4f0a-a990-fd9a51cdb8b9</rd:DataSourceID>
+      <rd:DataSourceID>f52bc0f8-83a9-426d-a2f5-eded3eab020e</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DatosEstadisticosBarrios">
+    <DataSet Name="EstadisticaEmpleados">
       <Query>
-        <DataSourceName>DatosEstadisticaBarrios</DataSourceName>
+        <DataSourceName>EstadisticasEmpleados</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -21,15 +21,15 @@
           <DataField>Nombre</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="CantidadBarrios">
-          <DataField>CantidadBarrios</DataField>
+        <Field Name="CantidadEmpleados">
+          <DataField>CantidadEmpleados</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DatosEstadisticaBarrios</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\ConjuntosDeDatosEstadisticos\DatosEstadisticaBarrios.xsd</rd:SchemaPath>
-        <rd:TableName>EstadisticaBarrios</rd:TableName>
+        <rd:DataSetName>EstadisticasEmpleados</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Lutyc\OneDrive\Escritorio\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\ConjuntosDeDatosEstadisticos\EstadisticasEmpleados.xsd</rd:SchemaPath>
+        <rd:TableName>EstadisticaEmpleados</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -44,29 +44,37 @@
             <ChartCategoryHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Group Name="ChartGroup" />
-                  <Label />
+                  <Group Name="Chart1_CategoryGroup">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!Nombre.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!Nombre.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=Fields!Nombre.Value</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
             <ChartSeriesHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Label>Cantidad Barrios</Label>
+                  <Label>Cantidad Empleados</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartSeriesHierarchy>
             <ChartData>
               <ChartSeriesCollection>
-                <ChartSeries Name="Nombre">
+                <ChartSeries Name="CantidadEmpleados">
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Sum(Fields!CantidadBarrios.Value)</Y>
+                        <Y>=Sum(Fields!CantidadEmpleados.Value)</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
-                        <UseValueAsLabel>true</UseValueAsLabel>
                       </ChartDataLabel>
                       <Style />
                       <ChartMarker>
@@ -347,15 +355,16 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Barrios Por Ciudad</Caption>
+                <Caption>Título del gráfico</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
-                  <FontFamily>century Gothic</FontFamily>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Normal</FontWeight>
                   <TextAlign>Left</TextAlign>
                   <VerticalAlign>Top</VerticalAlign>
+                  <Color>#a6a6a6</Color>
                 </Style>
+                <Position>TopLeft</Position>
               </ChartTitle>
             </ChartTitles>
             <Palette>Pacific</Palette>
@@ -375,10 +384,11 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>DatosEstadisticosBarrios</DataSetName>
-            <Left>4.54766cm</Left>
-            <Height>8.17183cm</Height>
-            <Width>11.96234cm</Width>
+            <DataSetName>EstadisticaEmpleados</DataSetName>
+            <Top>2.27753cm</Top>
+            <Left>4.2672cm</Left>
+            <Height>5cm</Height>
+            <Width>7.5cm</Width>
             <Style>
               <Border>
                 <Color>LightGrey</Color>
@@ -389,7 +399,7 @@
             </Style>
           </Chart>
         </ReportItems>
-        <Height>3.21726in</Height>
+        <Height>3.04017in</Height>
         <Style />
       </Body>
       <Width>6.5in</Width>
@@ -412,5 +422,5 @@
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>af2db121-6baa-4c2a-9521-3a41f569232f</rd:ReportID>
+  <rd:ReportID>e3c3bfd4-dcd6-47ca-8ac6-d388be105425</rd:ReportID>
 </Report>
