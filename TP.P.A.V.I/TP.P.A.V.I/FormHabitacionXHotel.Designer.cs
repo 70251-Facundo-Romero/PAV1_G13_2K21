@@ -52,6 +52,7 @@ namespace TP.P.A.V.I
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.BtnListado = new System.Windows.Forms.Button();
+            this.BtnEstadistica = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvHabitacionXHotel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorPrecio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorHotel)).BeginInit();
@@ -300,12 +301,28 @@ namespace TP.P.A.V.I
             this.BtnListado.UseVisualStyleBackColor = false;
             this.BtnListado.Click += new System.EventHandler(this.BtnListado_Click);
             // 
+            // BtnEstadistica
+            // 
+            this.BtnEstadistica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.BtnEstadistica.FlatAppearance.BorderSize = 0;
+            this.BtnEstadistica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEstadistica.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEstadistica.ForeColor = System.Drawing.Color.White;
+            this.BtnEstadistica.Location = new System.Drawing.Point(569, 201);
+            this.BtnEstadistica.Name = "BtnEstadistica";
+            this.BtnEstadistica.Size = new System.Drawing.Size(125, 26);
+            this.BtnEstadistica.TabIndex = 64;
+            this.BtnEstadistica.Text = "Reporte";
+            this.BtnEstadistica.UseVisualStyleBackColor = false;
+            this.BtnEstadistica.Click += new System.EventHandler(this.BtnEstadistica_Click);
+            // 
             // FormHabitacionXHotel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(733, 426);
+            this.Controls.Add(this.BtnEstadistica);
             this.Controls.Add(this.BtnListado);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox2);
@@ -357,5 +374,6 @@ namespace TP.P.A.V.I
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button BtnListado;
+        private System.Windows.Forms.Button BtnEstadistica;
     }
 }

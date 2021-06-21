@@ -12,17 +12,15 @@ using TP.P.A.V.I.BLL;
 
 namespace TP.P.A.V.I
 {
-    public partial class RepInstalacionXHotel : Form
+    public partial class ReporteInstalacionXhotel : Form
     {
-        public RepInstalacionXHotel()
+        public ReporteInstalacionXhotel()
         {
             InitializeComponent();
         }
 
-        private void RepInstalacionXHotel_Load(object sender, EventArgs e)
+        private void ReporteInstalacionXhotel_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'BD3K7G13_2021DataSetParaReportes.Ciudades' Puede moverla o quitarla según sea necesario.
-            //this.CiudadesTableAdapter.Fill(this.BD3K7G13_2021DataSetParaReportes.Ciudades);
 
             this.reportViewer1.RefreshReport();
         }
@@ -31,7 +29,7 @@ namespace TP.P.A.V.I
         {
             DataTable dt = InstalacionXHotelBLL.InstalacionXHotel();
 
-            ReportDataSource ds = new ReportDataSource("ListadoInstalacionXHotel", dt);
+            ReportDataSource ds = new ReportDataSource("estadisticaInstalacionXHotel", dt);
 
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(ds);

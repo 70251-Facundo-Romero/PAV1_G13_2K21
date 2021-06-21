@@ -48,6 +48,7 @@ namespace TP.P.A.V.I
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.BtnListadoInstalacionXHotel = new System.Windows.Forms.Button();
+            this.BtnReporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvInstalacionXHotel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorHotel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorInstalacion)).BeginInit();
@@ -259,12 +260,28 @@ namespace TP.P.A.V.I
             this.BtnListadoInstalacionXHotel.UseVisualStyleBackColor = false;
             this.BtnListadoInstalacionXHotel.Click += new System.EventHandler(this.BtnListadoInstalacionXHotel_Click);
             // 
+            // BtnReporte
+            // 
+            this.BtnReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.BtnReporte.FlatAppearance.BorderSize = 0;
+            this.BtnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnReporte.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnReporte.ForeColor = System.Drawing.Color.White;
+            this.BtnReporte.Location = new System.Drawing.Point(495, 225);
+            this.BtnReporte.Name = "BtnReporte";
+            this.BtnReporte.Size = new System.Drawing.Size(107, 26);
+            this.BtnReporte.TabIndex = 64;
+            this.BtnReporte.Text = "Reporte";
+            this.BtnReporte.UseVisualStyleBackColor = false;
+            this.BtnReporte.Click += new System.EventHandler(this.BtnReporte_Click);
+            // 
             // InstalacionesXhotel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(733, 426);
+            this.Controls.Add(this.BtnReporte);
             this.Controls.Add(this.BtnListadoInstalacionXHotel);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox2);
@@ -309,5 +326,6 @@ namespace TP.P.A.V.I
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button BtnListadoInstalacionXHotel;
+        private System.Windows.Forms.Button BtnReporte;
     }
 }

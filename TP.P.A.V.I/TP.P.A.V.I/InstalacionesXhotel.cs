@@ -216,5 +216,11 @@ namespace TP.P.A.V.I
             RepInstalacionXHotel ventana = new RepInstalacionXHotel();
             ventana.Show();
         }
+
+        private void BtnReporte_Click(object sender, EventArgs e)
+        {
+            ReporteInstalacionXhotel ventana = new ReporteInstalacionXhotel();
+            ventana.Show();
+        }
     }
 }

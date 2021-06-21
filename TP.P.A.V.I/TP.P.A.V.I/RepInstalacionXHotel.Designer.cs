@@ -29,9 +29,15 @@ namespace TP.P.A.V.I
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.BD3K7G13_2021DataSet = new TP.P.A.V.I.BD3K7G13_2021DataSet();
+            this.BD3K7G13_2021DataSetParaReportes = new TP.P.A.V.I.BD3K7G13_2021DataSetParaReportes();
+            this.CiudadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CiudadesTableAdapter = new TP.P.A.V.I.BD3K7G13_2021DataSetParaReportesTableAdapters.CiudadesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.BD3K7G13_2021DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BD3K7G13_2021DataSetParaReportes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CiudadesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
@@ -50,6 +56,20 @@ namespace TP.P.A.V.I
             this.BD3K7G13_2021DataSet.DataSetName = "BD3K7G13_2021DataSet";
             this.BD3K7G13_2021DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // BD3K7G13_2021DataSetParaReportes
+            // 
+            this.BD3K7G13_2021DataSetParaReportes.DataSetName = "BD3K7G13_2021DataSetParaReportes";
+            this.BD3K7G13_2021DataSetParaReportes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // CiudadesBindingSource
+            // 
+            this.CiudadesBindingSource.DataMember = "Ciudades";
+            this.CiudadesBindingSource.DataSource = this.BD3K7G13_2021DataSetParaReportes;
+            // 
+            // CiudadesTableAdapter
+            // 
+            this.CiudadesTableAdapter.ClearBeforeFill = true;
+            // 
             // RepInstalacionXHotel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -58,9 +78,11 @@ namespace TP.P.A.V.I
             this.Controls.Add(this.reportViewer1);
             this.Name = "RepInstalacionXHotel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Listado habitación por hotel";
+            this.Text = "Listado instalación por hotel";
             this.Load += new System.EventHandler(this.RepInstalacionXHotel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BD3K7G13_2021DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BD3K7G13_2021DataSetParaReportes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CiudadesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -69,5 +91,8 @@ namespace TP.P.A.V.I
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private BD3K7G13_2021DataSet BD3K7G13_2021DataSet;
+        private System.Windows.Forms.BindingSource CiudadesBindingSource;
+        private BD3K7G13_2021DataSetParaReportes BD3K7G13_2021DataSetParaReportes;
+        private BD3K7G13_2021DataSetParaReportesTableAdapters.CiudadesTableAdapter CiudadesTableAdapter;
     }
 }
