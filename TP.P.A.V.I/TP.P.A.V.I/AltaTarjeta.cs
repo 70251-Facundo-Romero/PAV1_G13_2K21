@@ -116,6 +116,17 @@ namespace TP.P.A.V.I
                 MessageBox.Show("Hubo un error al actualizar la fila");
             }
         }
+
+        private void btnReporteTarjeta_Click(object sender, EventArgs e)
+        {
+            ReporteTarjetas ventana = new ReporteTarjetas();
+            ventana.ShowDialog();
+        }
+
+        private void panelFormulariosHijos_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
     
 }

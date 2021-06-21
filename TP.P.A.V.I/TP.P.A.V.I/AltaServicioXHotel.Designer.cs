@@ -29,12 +29,11 @@ namespace TP.P.A.V.I
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelFormulariosHijos = new System.Windows.Forms.Panel();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.BtnEliminar = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cmbServicio = new System.Windows.Forms.ComboBox();
             this.cmbHotel = new System.Windows.Forms.ComboBox();
             this.txtPrecio = new System.Windows.Forms.MaskedTextBox();
@@ -52,14 +51,17 @@ namespace TP.P.A.V.I
             this.Servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.btnReportes = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelFormulariosHijos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelFormulariosHijos
             // 
             this.panelFormulariosHijos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.panelFormulariosHijos.Controls.Add(this.btnReportes);
             this.panelFormulariosHijos.Controls.Add(this.txtId);
             this.panelFormulariosHijos.Controls.Add(this.label9);
             this.panelFormulariosHijos.Controls.Add(this.BtnEliminar);
@@ -108,26 +110,15 @@ namespace TP.P.A.V.I
             this.BtnEliminar.FlatAppearance.BorderSize = 0;
             this.BtnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
             this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEliminar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.ForeColor = System.Drawing.Color.White;
-            this.BtnEliminar.Location = new System.Drawing.Point(553, 190);
+            this.BtnEliminar.Location = new System.Drawing.Point(475, 190);
             this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(102, 54);
+            this.BtnEliminar.Size = new System.Drawing.Size(72, 54);
             this.BtnEliminar.TabIndex = 15;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = false;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::TP.P.A.V.I.Properties.Resources.q;
-            this.pictureBox2.Location = new System.Drawing.Point(475, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(111, 106);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 61;
-            this.pictureBox2.TabStop = false;
             // 
             // cmbServicio
             // 
@@ -169,33 +160,33 @@ namespace TP.P.A.V.I
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(57, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 16);
+            this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 11;
             this.label2.Text = "ID Hotel";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(57, 78);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 16);
+            this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 10;
             this.label1.Text = "ID Servicio";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(57, 132);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 16);
+            this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 9;
             this.label3.Text = "Precio";
             // 
@@ -206,11 +197,11 @@ namespace TP.P.A.V.I
             this.BtnAgregarSerXHot.FlatAppearance.BorderSize = 0;
             this.BtnAgregarSerXHot.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
             this.BtnAgregarSerXHot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAgregarSerXHot.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregarSerXHot.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregarSerXHot.ForeColor = System.Drawing.Color.White;
-            this.BtnAgregarSerXHot.Location = new System.Drawing.Point(191, 190);
+            this.BtnAgregarSerXHot.Location = new System.Drawing.Point(181, 190);
             this.BtnAgregarSerXHot.Name = "BtnAgregarSerXHot";
-            this.BtnAgregarSerXHot.Size = new System.Drawing.Size(144, 54);
+            this.BtnAgregarSerXHot.Size = new System.Drawing.Size(104, 54);
             this.BtnAgregarSerXHot.TabIndex = 6;
             this.BtnAgregarSerXHot.Text = "Añadir Servicio a un Hotel";
             this.BtnAgregarSerXHot.UseVisualStyleBackColor = false;
@@ -223,11 +214,11 @@ namespace TP.P.A.V.I
             this.BtnModificarSerXHot.FlatAppearance.BorderSize = 0;
             this.BtnModificarSerXHot.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
             this.BtnModificarSerXHot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnModificarSerXHot.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnModificarSerXHot.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnModificarSerXHot.ForeColor = System.Drawing.Color.White;
-            this.BtnModificarSerXHot.Location = new System.Drawing.Point(355, 190);
+            this.BtnModificarSerXHot.Location = new System.Drawing.Point(311, 190);
             this.BtnModificarSerXHot.Name = "BtnModificarSerXHot";
-            this.BtnModificarSerXHot.Size = new System.Drawing.Size(175, 54);
+            this.BtnModificarSerXHot.Size = new System.Drawing.Size(150, 54);
             this.BtnModificarSerXHot.TabIndex = 5;
             this.BtnModificarSerXHot.Text = "Modificar Servicio, Hotel o precio";
             this.BtnModificarSerXHot.UseVisualStyleBackColor = false;
@@ -240,7 +231,7 @@ namespace TP.P.A.V.I
             this.BtnLimpiarCampos.FlatAppearance.BorderSize = 0;
             this.BtnLimpiarCampos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
             this.BtnLimpiarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnLimpiarCampos.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLimpiarCampos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLimpiarCampos.ForeColor = System.Drawing.Color.White;
             this.BtnLimpiarCampos.Location = new System.Drawing.Point(60, 190);
             this.BtnLimpiarCampos.Name = "BtnLimpiarCampos";
@@ -270,10 +261,10 @@ namespace TP.P.A.V.I
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Size = new System.Drawing.Size(611, 189);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -329,6 +320,34 @@ namespace TP.P.A.V.I
             this.Precio.Name = "Precio";
             this.Precio.ReadOnly = true;
             // 
+            // btnReportes
+            // 
+            this.btnReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnReportes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReportes.FlatAppearance.BorderSize = 0;
+            this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
+            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.ForeColor = System.Drawing.Color.White;
+            this.btnReportes.Location = new System.Drawing.Point(595, 190);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(72, 54);
+            this.btnReportes.TabIndex = 63;
+            this.btnReportes.Text = "Reportes";
+            this.btnReportes.UseVisualStyleBackColor = false;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = global::TP.P.A.V.I.Properties.Resources.q;
+            this.pictureBox2.Location = new System.Drawing.Point(475, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(111, 106);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 61;
+            this.pictureBox2.TabStop = false;
+            // 
             // AltaServicioXHotel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -340,8 +359,8 @@ namespace TP.P.A.V.I
             this.Text = "AltaServicioXHotel";
             this.panelFormulariosHijos.ResumeLayout(false);
             this.panelFormulariosHijos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -370,5 +389,6 @@ namespace TP.P.A.V.I
         private System.Windows.Forms.DataGridViewTextBoxColumn Servicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Button btnReportes;
     }
 }
