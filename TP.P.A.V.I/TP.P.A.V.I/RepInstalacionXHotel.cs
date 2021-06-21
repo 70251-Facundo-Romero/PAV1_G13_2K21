@@ -12,14 +12,14 @@ using TP.P.A.V.I.BLL;
 
 namespace TP.P.A.V.I
 {
-    public partial class ReporteListadoIntalacionXHotel : Form
+    public partial class RepInstalacionXHotel : Form
     {
-        public ReporteListadoIntalacionXHotel()
+        public RepInstalacionXHotel()
         {
             InitializeComponent();
         }
 
-        private void ReporteListadoIntalacionXHotel_Load(object sender, EventArgs e)
+        private void RepInstalacionXHotel_Load(object sender, EventArgs e)
         {
 
             this.reportViewer1.RefreshReport();

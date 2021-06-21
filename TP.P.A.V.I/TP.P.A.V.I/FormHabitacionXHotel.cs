@@ -241,7 +241,7 @@ namespace TP.P.A.V.I
 
         private void BtnListado_Click(object sender, EventArgs e)
         {
-            ReporteListadoIntalacionXHotel ventana = new ReporteListadoIntalacionXHotel();
+            ReporteListadoHabitacionXHotel ventana = new ReporteListadoHabitacionXHotel();
             ventana.Show();
         }
     }
