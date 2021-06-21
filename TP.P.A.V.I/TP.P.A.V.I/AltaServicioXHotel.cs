@@ -203,5 +203,11 @@ namespace TP.P.A.V.I
                 MessageBox.Show("Hubo un error al eliminar la fila");
             }
         }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            ReporteServicioXHotel ventana = new ReporteServicioXHotel();
+            ventana.ShowDialog();
+        }
     }
 }
