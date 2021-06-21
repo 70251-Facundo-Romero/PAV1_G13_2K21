@@ -115,6 +115,18 @@ namespace TP.P.A.V.I.BLL
                 throw;
             }
         }
+        public static DataTable ObtenerEmpleadosXHotel()
+        {
+            try
+            {
+                return EmpleadosDAL.ObtenerEmpleadosXHotel();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
 
     }
 

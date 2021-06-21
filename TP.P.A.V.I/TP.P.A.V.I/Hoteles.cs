@@ -177,6 +177,18 @@ namespace TP.P.A.V.I
             CargarGrilla();
          
         }
+
+        private void btnListaHoteles_Click(object sender, EventArgs e)
+        {
+            ListadoDeHoteles ventana = new ListadoDeHoteles();
+            ventana.ShowDialog();
+        }
+
+        private void btnEstadisticasHotel_Click(object sender, EventArgs e)
+        {
+            EstadisticasHoteles ventana = new EstadisticasHoteles();
+            ventana.ShowDialog();
+        }
     }
 }
 

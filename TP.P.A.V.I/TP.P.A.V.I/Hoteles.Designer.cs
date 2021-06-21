@@ -42,16 +42,18 @@ namespace TP.P.A.V.I
             this.txtCalleHotel = new System.Windows.Forms.TextBox();
             this.txtNumeroCalle = new System.Windows.Forms.TextBox();
             this.grillaHoteles = new System.Windows.Forms.DataGridView();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.cmbBarrio = new System.Windows.Forms.ComboBox();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdBarrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.cmbBarrio = new System.Windows.Forms.ComboBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.btnListaHoteles = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnEstadisticasHotel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grillaHoteles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -62,10 +64,9 @@ namespace TP.P.A.V.I
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(220, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(293, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 29);
+            this.label1.Size = new System.Drawing.Size(244, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Gestionar hoteles";
             // 
@@ -74,12 +75,12 @@ namespace TP.P.A.V.I
             this.btnAgregarHotel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnAgregarHotel.FlatAppearance.BorderSize = 0;
             this.btnAgregarHotel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarHotel.Font = new System.Drawing.Font("Century Gothic", 9.5F);
+            this.btnAgregarHotel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.btnAgregarHotel.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarHotel.Location = new System.Drawing.Point(17, 225);
-            this.btnAgregarHotel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregarHotel.Location = new System.Drawing.Point(34, 277);
+            this.btnAgregarHotel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregarHotel.Name = "btnAgregarHotel";
-            this.btnAgregarHotel.Size = new System.Drawing.Size(133, 29);
+            this.btnAgregarHotel.Size = new System.Drawing.Size(132, 36);
             this.btnAgregarHotel.TabIndex = 1;
             this.btnAgregarHotel.Text = "Agregar hotel";
             this.btnAgregarHotel.UseVisualStyleBackColor = false;
@@ -90,12 +91,12 @@ namespace TP.P.A.V.I
             this.btnActualizarHotel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnActualizarHotel.FlatAppearance.BorderSize = 0;
             this.btnActualizarHotel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizarHotel.Font = new System.Drawing.Font("Century Gothic", 9.5F);
+            this.btnActualizarHotel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.btnActualizarHotel.ForeColor = System.Drawing.Color.White;
-            this.btnActualizarHotel.Location = new System.Drawing.Point(154, 225);
-            this.btnActualizarHotel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnActualizarHotel.Location = new System.Drawing.Point(172, 278);
+            this.btnActualizarHotel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnActualizarHotel.Name = "btnActualizarHotel";
-            this.btnActualizarHotel.Size = new System.Drawing.Size(133, 29);
+            this.btnActualizarHotel.Size = new System.Drawing.Size(137, 36);
             this.btnActualizarHotel.TabIndex = 2;
             this.btnActualizarHotel.Text = "Actualizar Hotel";
             this.btnActualizarHotel.UseVisualStyleBackColor = false;
@@ -106,12 +107,12 @@ namespace TP.P.A.V.I
             this.btnEliminarHotel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnEliminarHotel.FlatAppearance.BorderSize = 0;
             this.btnEliminarHotel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarHotel.Font = new System.Drawing.Font("Century Gothic", 9.5F);
+            this.btnEliminarHotel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.btnEliminarHotel.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarHotel.Location = new System.Drawing.Point(291, 225);
-            this.btnEliminarHotel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminarHotel.Location = new System.Drawing.Point(315, 277);
+            this.btnEliminarHotel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminarHotel.Name = "btnEliminarHotel";
-            this.btnEliminarHotel.Size = new System.Drawing.Size(133, 29);
+            this.btnEliminarHotel.Size = new System.Drawing.Size(143, 36);
             this.btnEliminarHotel.TabIndex = 3;
             this.btnEliminarHotel.Text = "Dar de baja hotel";
             this.btnEliminarHotel.UseVisualStyleBackColor = false;
@@ -120,12 +121,11 @@ namespace TP.P.A.V.I
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(22, 63);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(29, 78);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 21);
+            this.label2.Size = new System.Drawing.Size(161, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "Nombre de hotel:";
             // 
@@ -134,47 +134,44 @@ namespace TP.P.A.V.I
             this.txtNombreHotel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombreHotel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.txtNombreHotel.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreHotel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreHotel.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.txtNombreHotel.Location = new System.Drawing.Point(172, 63);
-            this.txtNombreHotel.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombreHotel.Location = new System.Drawing.Point(229, 78);
+            this.txtNombreHotel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombreHotel.Name = "txtNombreHotel";
-            this.txtNombreHotel.Size = new System.Drawing.Size(282, 21);
+            this.txtNombreHotel.Size = new System.Drawing.Size(375, 23);
             this.txtNombreHotel.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(42, 105);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(56, 129);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 21);
+            this.label3.Size = new System.Drawing.Size(141, 25);
             this.label3.TabIndex = 6;
             this.label3.Text = "Calle del hotel:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(23, 145);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(31, 178);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(145, 21);
+            this.label4.Size = new System.Drawing.Size(164, 25);
             this.label4.TabIndex = 7;
             this.label4.Text = "Numero de Calle:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(111, 181);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(148, 223);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 21);
+            this.label5.Size = new System.Drawing.Size(69, 25);
             this.label5.TabIndex = 8;
             this.label5.Text = "Barrio:";
             // 
@@ -183,12 +180,12 @@ namespace TP.P.A.V.I
             this.txtCalleHotel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCalleHotel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.txtCalleHotel.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCalleHotel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCalleHotel.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.txtCalleHotel.Location = new System.Drawing.Point(172, 105);
-            this.txtCalleHotel.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCalleHotel.Location = new System.Drawing.Point(229, 129);
+            this.txtCalleHotel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCalleHotel.Name = "txtCalleHotel";
-            this.txtCalleHotel.Size = new System.Drawing.Size(282, 21);
+            this.txtCalleHotel.Size = new System.Drawing.Size(375, 23);
             this.txtCalleHotel.TabIndex = 9;
             // 
             // txtNumeroCalle
@@ -196,12 +193,12 @@ namespace TP.P.A.V.I
             this.txtNumeroCalle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNumeroCalle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.txtNumeroCalle.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumeroCalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumeroCalle.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.txtNumeroCalle.Location = new System.Drawing.Point(172, 145);
-            this.txtNumeroCalle.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNumeroCalle.Location = new System.Drawing.Point(229, 178);
+            this.txtNumeroCalle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNumeroCalle.Name = "txtNumeroCalle";
-            this.txtNumeroCalle.Size = new System.Drawing.Size(282, 21);
+            this.txtNumeroCalle.Size = new System.Drawing.Size(375, 23);
             this.txtNumeroCalle.TabIndex = 10;
             // 
             // grillaHoteles
@@ -219,86 +216,20 @@ namespace TP.P.A.V.I
             this.Calle,
             this.Numero,
             this.IdBarrio});
-            this.grillaHoteles.Location = new System.Drawing.Point(17, 258);
-            this.grillaHoteles.Margin = new System.Windows.Forms.Padding(2);
+            this.grillaHoteles.Location = new System.Drawing.Point(23, 318);
+            this.grillaHoteles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grillaHoteles.Name = "grillaHoteles";
             this.grillaHoteles.ReadOnly = true;
             this.grillaHoteles.RowHeadersVisible = false;
             this.grillaHoteles.RowHeadersWidth = 51;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             this.grillaHoteles.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grillaHoteles.RowTemplate.Height = 24;
-            this.grillaHoteles.Size = new System.Drawing.Size(712, 154);
+            this.grillaHoteles.Size = new System.Drawing.Size(949, 190);
             this.grillaHoteles.TabIndex = 12;
             this.grillaHoteles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaHoteles_CellClick);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::TP.P.A.V.I.Properties.Resources.q;
-            this.pictureBox2.Location = new System.Drawing.Point(528, 37);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(122, 105);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.SkyBlue;
-            this.label6.Location = new System.Drawing.Point(632, 133);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 16);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Hoteleria";
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnLimpiar.FlatAppearance.BorderSize = 0;
-            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.Font = new System.Drawing.Font("Century Gothic", 9.5F);
-            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(428, 225);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(133, 29);
-            this.btnLimpiar.TabIndex = 15;
-            this.btnLimpiar.Text = "Limpiar Campos";
-            this.btnLimpiar.UseVisualStyleBackColor = false;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
-            // 
-            // cmbBarrio
-            // 
-            this.cmbBarrio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbBarrio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.cmbBarrio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBarrio.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbBarrio.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.cmbBarrio.FormattingEnabled = true;
-            this.cmbBarrio.Location = new System.Drawing.Point(172, 181);
-            this.cmbBarrio.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbBarrio.Name = "cmbBarrio";
-            this.cmbBarrio.Size = new System.Drawing.Size(282, 24);
-            this.cmbBarrio.TabIndex = 24;
-            // 
-            // txtId
-            // 
-            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.txtId.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.txtId.Location = new System.Drawing.Point(36, 16);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2);
-            this.txtId.Name = "txtId";
-            this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(41, 20);
-            this.txtId.TabIndex = 25;
-            this.txtId.Visible = false;
             // 
             // Id
             // 
@@ -334,6 +265,7 @@ namespace TP.P.A.V.I
             this.Numero.MinimumWidth = 6;
             this.Numero.Name = "Numero";
             this.Numero.ReadOnly = true;
+            this.Numero.Width = 125;
             // 
             // IdBarrio
             // 
@@ -344,12 +276,114 @@ namespace TP.P.A.V.I
             this.IdBarrio.Name = "IdBarrio";
             this.IdBarrio.ReadOnly = true;
             // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.SkyBlue;
+            this.label6.Location = new System.Drawing.Point(843, 164);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(95, 21);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Hoteleria";
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiar.Location = new System.Drawing.Point(464, 278);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(135, 36);
+            this.btnLimpiar.TabIndex = 15;
+            this.btnLimpiar.Text = "Limpiar Campos";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // cmbBarrio
+            // 
+            this.cmbBarrio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbBarrio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.cmbBarrio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBarrio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBarrio.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.cmbBarrio.FormattingEnabled = true;
+            this.cmbBarrio.Location = new System.Drawing.Point(229, 223);
+            this.cmbBarrio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbBarrio.Name = "cmbBarrio";
+            this.cmbBarrio.Size = new System.Drawing.Size(375, 25);
+            this.cmbBarrio.TabIndex = 24;
+            // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.txtId.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txtId.Location = new System.Drawing.Point(48, 20);
+            this.txtId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(53, 22);
+            this.txtId.TabIndex = 25;
+            this.txtId.Visible = false;
+            // 
+            // btnListaHoteles
+            // 
+            this.btnListaHoteles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnListaHoteles.FlatAppearance.BorderSize = 0;
+            this.btnListaHoteles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListaHoteles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.btnListaHoteles.ForeColor = System.Drawing.Color.White;
+            this.btnListaHoteles.Location = new System.Drawing.Point(605, 277);
+            this.btnListaHoteles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnListaHoteles.Name = "btnListaHoteles";
+            this.btnListaHoteles.Size = new System.Drawing.Size(146, 36);
+            this.btnListaHoteles.TabIndex = 26;
+            this.btnListaHoteles.Text = "Lista de hoteles";
+            this.btnListaHoteles.UseVisualStyleBackColor = false;
+            this.btnListaHoteles.Click += new System.EventHandler(this.btnListaHoteles_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = global::TP.P.A.V.I.Properties.Resources.q;
+            this.pictureBox2.Location = new System.Drawing.Point(704, 46);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(163, 129);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnEstadisticasHotel
+            // 
+            this.btnEstadisticasHotel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnEstadisticasHotel.FlatAppearance.BorderSize = 0;
+            this.btnEstadisticasHotel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstadisticasHotel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.btnEstadisticasHotel.ForeColor = System.Drawing.Color.White;
+            this.btnEstadisticasHotel.Location = new System.Drawing.Point(757, 277);
+            this.btnEstadisticasHotel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEstadisticasHotel.Name = "btnEstadisticasHotel";
+            this.btnEstadisticasHotel.Size = new System.Drawing.Size(181, 36);
+            this.btnEstadisticasHotel.TabIndex = 27;
+            this.btnEstadisticasHotel.Text = "Hoteles por barrio";
+            this.btnEstadisticasHotel.UseVisualStyleBackColor = false;
+            this.btnEstadisticasHotel.Click += new System.EventHandler(this.btnEstadisticasHotel_Click);
+            // 
             // Hoteles
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(733, 426);
+            this.ClientSize = new System.Drawing.Size(977, 524);
+            this.Controls.Add(this.btnEstadisticasHotel);
+            this.Controls.Add(this.btnListaHoteles);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.cmbBarrio);
             this.Controls.Add(this.btnLimpiar);
@@ -368,7 +402,7 @@ namespace TP.P.A.V.I
             this.Controls.Add(this.btnAgregarHotel);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Hoteles";
             this.Text = "Hoteles";
             this.Load += new System.EventHandler(this.Hoteles_Load_1);
@@ -411,5 +445,7 @@ namespace TP.P.A.V.I
         private System.Windows.Forms.DataGridViewTextBoxColumn Calle;
         private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdBarrio;
+        private System.Windows.Forms.Button btnListaHoteles;
+        private System.Windows.Forms.Button btnEstadisticasHotel;
     }
 }

@@ -321,6 +321,40 @@ namespace TP.P.A.V.I.DAL
 
 
         }
+        public static DataTable ObtenerEmpleadosXHotel()
+        {
+            string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
+            SqlCommand cmd = new SqlCommand();
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+
+            try
+            {
+                string consulta = @"SELECT h.Nombre, COUNT(e.id) AS 'CantidadEmpleados' FROM Hoteles h
+                        JOIN Empleados e ON h.Id = e.Id_Hotel
+                        GROUP BY h.Nombre";
+
+                cmd.Parameters.Clear();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+                return tabla;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }
 
