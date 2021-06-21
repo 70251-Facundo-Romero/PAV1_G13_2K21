@@ -171,5 +171,11 @@ namespace TP.P.A.V.I
             ReportesCiudad ventana = new ReportesCiudad();
             ventana.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            EstadisticaCiudad ventana = new EstadisticaCiudad();
+            ventana.ShowDialog();
+        }
     }
 }

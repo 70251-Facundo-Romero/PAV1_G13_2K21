@@ -135,6 +135,8 @@ namespace TP.P.A.V.I
                 LimpiarCampos();
                 CargarGrilla();
                 CargarComboCiudades();
+                btnActualizar.Enabled = false;
+                btnBorrar.Enabled = false;
             }
             else
             {
@@ -157,6 +159,8 @@ namespace TP.P.A.V.I
                 LimpiarCampos();
                 CargarGrilla();
                 CargarComboCiudades();
+                btnActualizar.Enabled = false;
+                btnBorrar.Enabled = false;
             }
             else
             {

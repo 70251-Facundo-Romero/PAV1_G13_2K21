@@ -15,7 +15,10 @@ namespace TP.P.A.V.I.BLL
         {
             return BarrioDAL.ObtenerListadoBarrios();
         }
-
+        public static DataTable ObtenerHotelesxBarrios()
+        {
+            return BarrioDAL.ObtenerHotelesxBarrios();
+        }
         public static Barrio ObtenerBarrio(int id)
         {
             return BarrioDAL.ObtenerBarrio(id);
@@ -50,7 +53,7 @@ namespace TP.P.A.V.I.BLL
         {
             try
             {
-                BarrioDAL.ObtenerBarriosXCiudades();
+                return BarrioDAL.ObtenerBarriosXCiudades();
             }
             catch (Exception)
             {

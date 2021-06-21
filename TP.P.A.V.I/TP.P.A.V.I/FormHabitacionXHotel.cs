@@ -238,5 +238,17 @@ namespace TP.P.A.V.I
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
+
+        private void BtnListado_Click(object sender, EventArgs e)
+        {
+            ReporteListadoHabitacionXHotel ventana = new ReporteListadoHabitacionXHotel();
+            ventana.Show();
+        }
+
+        private void BtnEstadistica_Click(object sender, EventArgs e)
+        {
+            EstadisticaHabXhotel ventana = new EstadisticaHabXhotel();
+            ventana.Show();
+        }
     }
 }

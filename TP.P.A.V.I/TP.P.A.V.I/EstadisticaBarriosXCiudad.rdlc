@@ -44,8 +44,17 @@
             <ChartCategoryHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Group Name="ChartGroup" />
-                  <Label />
+                  <Group Name="Chart1_CategoryGroup">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!Nombre.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!Nombre.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=Fields!Nombre.Value</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
@@ -58,7 +67,7 @@
             </ChartSeriesHierarchy>
             <ChartData>
               <ChartSeriesCollection>
-                <ChartSeries Name="Nombre">
+                <ChartSeries Name="CantidadBarrios">
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
@@ -104,7 +113,7 @@
                         <Style>None</Style>
                       </Border>
                       <FontSize>8pt</FontSize>
-                      <Color>#5c5c5c</Color>
+                      <Color>White</Color>
                     </Style>
                     <ChartAxisTitle>
                       <Caption />
@@ -213,11 +222,11 @@
                   <ChartAxis Name="Primary">
                     <Style>
                       <Border>
-                        <Color>Gainsboro</Color>
+                        <Color>White</Color>
                         <Style>None</Style>
                       </Border>
                       <FontSize>8pt</FontSize>
-                      <Color>#5c5c5c</Color>
+                      <Color>White</Color>
                     </Style>
                     <ChartAxisTitle>
                       <Caption />
@@ -229,7 +238,7 @@
                     <ChartMajorGridLines>
                       <Style>
                         <Border>
-                          <Color>Gainsboro</Color>
+                          <Color>White</Color>
                         </Border>
                       </Style>
                     </ChartMajorGridLines>
@@ -329,8 +338,12 @@
             <ChartLegends>
               <ChartLegend Name="Default">
                 <Style>
+                  <Border>
+                    <Color>White</Color>
+                  </Border>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>8pt</FontSize>
+                  <Color>White</Color>
                 </Style>
                 <Position>TopLeft</Position>
                 <ChartLegendTitle>
@@ -355,10 +368,12 @@
                   <FontWeight>Normal</FontWeight>
                   <TextAlign>Left</TextAlign>
                   <VerticalAlign>Top</VerticalAlign>
+                  <Color>White</Color>
                 </Style>
               </ChartTitle>
             </ChartTitles>
-            <Palette>Pacific</Palette>
+            <Palette>Pastel</Palette>
+            <PaletteHatchBehavior>None</PaletteHatchBehavior>
             <ChartBorderSkin>
               <Style>
                 <BackgroundColor>Gray</BackgroundColor>
@@ -376,15 +391,16 @@
               </Style>
             </ChartNoDataMessage>
             <DataSetName>DatosEstadisticosBarrios</DataSetName>
+            <Top>1.21708cm</Top>
             <Left>4.54766cm</Left>
-            <Height>8.17183cm</Height>
+            <Height>6.95474cm</Height>
             <Width>11.96234cm</Width>
             <Style>
               <Border>
-                <Color>LightGrey</Color>
+                <Color>White</Color>
                 <Style>None</Style>
               </Border>
-              <BackgroundColor>White</BackgroundColor>
+              <BackgroundColor>#314252</BackgroundColor>
               <BackgroundGradientType>None</BackgroundGradientType>
             </Style>
           </Chart>

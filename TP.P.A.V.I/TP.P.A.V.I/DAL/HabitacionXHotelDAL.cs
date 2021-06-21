@@ -140,6 +140,39 @@ namespace TP.P.A.V.I.DAL
             }
         }
 
+        public static DataTable ListadoHabXhoteles()
+        {
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                con.Open();
+                try
+                {
+                    using (SqlCommand cmd = new SqlCommand(@"select HXH.IdHabitacionXHotel, H.Nombre as 'IdHotel' , Hab.Nombre as 'IdHabitacion', HXH.Precio from HabitacionXHotel HXH
+                                                            join Hoteles H on H.Id = HXH.IdHotel
+                                                            join Habitaciones Hab on Hab.Id = HXH.IdHabitacion", con))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        using (SqlDataAdapter dr = new SqlDataAdapter(cmd))
+                        {
+                            DataTable tabla = new DataTable();
+                            dr.Fill(tabla);
+                            return tabla;
+
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw;
+                }
+                finally
+                {
+                    if (con.State == ConnectionState.Open)
+                        con.Close();
+                }
+            }
+        }
+
         public static HabitacionXHotel SelectById(int Id)
         {
             HabitacionXHotel HxH = new HabitacionXHotel();

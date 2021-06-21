@@ -64,5 +64,10 @@ namespace TP.P.A.V.I.BLL
         {
             return HabitacionXHotelDAL.VerificarExisteCombinacion2(IdHot, IdHab, precio);
         }
-    }
+
+        public static DataTable ListadoHabXhoteles()
+        {
+            return HabitacionXHotelDAL.ListadoHabXhoteles();
+        }
+        }
 }

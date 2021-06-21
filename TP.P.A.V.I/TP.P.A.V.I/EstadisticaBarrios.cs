@@ -35,30 +35,22 @@ namespace TP.P.A.V.I
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-       //private void reportviewer1_load(object sender, eventargs e)
-      //private void reportViewer1_Load(object sender, EventArgs e)
-        //{
-
-        //}
-        //{
-        //    datatable tabla = new datatable();
-        //    tabla = barriobll.obtenerbarriosxciudades();
-
-        //    reportdatasource ds = new reportdatasource("datosciudades", tabla);
-
-        //    reportviewer1.localreport.datasources.clear();
-        //    reportviewer1.localreport.datasources.add(ds);
-        //    reportviewer1.localreport.refresh();
-    //}
-
-     private void EstadisticaBarrios_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void reportViewer1_Load(object sender, EventArgs e)
         {
+            DataTable tabla = new DataTable();
+            tabla = BarrioBLL.ObtenerBarriosXCiudades();
 
+            ReportDataSource ds = new ReportDataSource("DatosEstadisticosBarrios", tabla);
+
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.DataSources.Add(ds);
+            reportViewer1.LocalReport.Refresh();
+        }
+
+        private void EstadisticaBarrios_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
         }
     }
 }
