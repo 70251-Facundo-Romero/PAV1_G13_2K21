@@ -31,7 +31,7 @@ namespace TP.P.A.V.I
         {
             DataTable dt = HabitacionXHotelBLL.ListadoHabXhoteles();
 
-            ReportDataSource ds = new ReportDataSource("ListadoInstalacionXHotel", dt);
+            ReportDataSource ds = new ReportDataSource("ListadoHabitacionXhotel", dt);
 
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(ds);

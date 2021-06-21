@@ -213,7 +213,7 @@ namespace TP.P.A.V.I
 
         private void BtnListadoInstalacionXHotel_Click(object sender, EventArgs e)
         {
-            ReporteListadoIntalacionXHotel ventana = new ReporteListadoIntalacionXHotel();
+            RepInstalacionXHotel ventana = new RepInstalacionXHotel();
             ventana.Show();
         }
     }
