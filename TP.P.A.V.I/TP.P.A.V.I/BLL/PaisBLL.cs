@@ -15,6 +15,11 @@ namespace TP.P.A.V.I.BLL
         {
             return PaisDAL.ObtenerListadoPaises();
         }
+       
+        public static DataTable ObtenerHuespedesxPais()
+        {
+            return PaisDAL.ObtenerHuespedesxPais();
+        }
 
         public static bool AgregarPaisABD(Pais p)
         {

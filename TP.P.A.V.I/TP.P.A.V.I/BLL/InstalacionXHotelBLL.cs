@@ -24,7 +24,7 @@ namespace TP.P.A.V.I.BLL
                 throw;
             }
             InstalacionXHotelDAL.CommitTransaction();
-            
+
         }
         public static DataTable cargarGrilla(int Id)
         {
@@ -60,5 +60,21 @@ namespace TP.P.A.V.I.BLL
         {
             return InstalacionXHotelDAL.VerfificarExixteCombinacion(IdHot, IdInst);
         }
-    }
+
+        public static DataTable InstalacionXHotel()
+        {
+            return InstalacionXHotelDAL.InstalacionXHotel();
+        }
+
+        public static int test()
+        {
+            int var = 0;
+            if (true)
+            {
+                var = 1;
+            }
+            return var;
+        }
+
+        }
 }

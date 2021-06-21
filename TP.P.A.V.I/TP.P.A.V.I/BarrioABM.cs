@@ -135,6 +135,8 @@ namespace TP.P.A.V.I
                 LimpiarCampos();
                 CargarGrilla();
                 CargarComboCiudades();
+                btnActualizar.Enabled = false;
+                btnBorrar.Enabled = false;
             }
             else
             {
@@ -157,6 +159,8 @@ namespace TP.P.A.V.I
                 LimpiarCampos();
                 CargarGrilla();
                 CargarComboCiudades();
+                btnActualizar.Enabled = false;
+                btnBorrar.Enabled = false;
             }
             else
             {
@@ -167,6 +171,12 @@ namespace TP.P.A.V.I
         private void button1_Click(object sender, EventArgs e)
         {
             ReportesBarrio ventana = new ReportesBarrio();
+            ventana.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            EstadisticaBarrios ventana = new EstadisticaBarrios();
             ventana.ShowDialog();
         }
     }
