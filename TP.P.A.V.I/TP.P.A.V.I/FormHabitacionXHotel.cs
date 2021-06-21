@@ -238,5 +238,11 @@ namespace TP.P.A.V.I
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
+
+        private void BtnListado_Click(object sender, EventArgs e)
+        {
+            ReporteListadoIntalacionXHotel ventana = new ReporteListadoIntalacionXHotel();
+            ventana.Show();
+        }
     }
 }

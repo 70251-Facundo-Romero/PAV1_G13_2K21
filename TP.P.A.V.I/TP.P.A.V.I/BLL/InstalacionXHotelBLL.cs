@@ -60,5 +60,11 @@ namespace TP.P.A.V.I.BLL
         {
             return InstalacionXHotelDAL.VerfificarExixteCombinacion(IdHot, IdInst);
         }
-    }
+
+        public static DataTable InstalacionXHotel()
+        {
+            return InstalacionXHotelDAL.InstalacionXHotel();
+        }
+
+        }
 }

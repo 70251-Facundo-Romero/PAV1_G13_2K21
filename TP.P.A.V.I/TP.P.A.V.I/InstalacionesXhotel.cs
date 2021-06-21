@@ -210,5 +210,11 @@ namespace TP.P.A.V.I
         {
             CmbInstalacion.SelectedIndex = -1;
         }
+
+        private void BtnListadoInstalacionXHotel_Click(object sender, EventArgs e)
+        {
+            ReporteListadoIntalacionXHotel ventana = new ReporteListadoIntalacionXHotel();
+            ventana.Show();
+        }
     }
 }

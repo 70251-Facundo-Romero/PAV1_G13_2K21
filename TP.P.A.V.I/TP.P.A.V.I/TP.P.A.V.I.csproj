@@ -89,6 +89,11 @@
     <Compile Include="BarrioABM.Designer.cs">
       <DependentUpon>BarrioABM.cs</DependentUpon>
     </Compile>
+    <Compile Include="BD3K7G13_2021DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD3K7G13_2021DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BD3K7G13_2021DataSetParaReportes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -247,6 +252,18 @@
     <Compile Include="PuestosDeTrabajoABM.Designer.cs">
       <DependentUpon>PuestosDeTrabajoABM.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteListadoHabitacionXHotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteListadoHabitacionXHotel.Designer.cs">
+      <DependentUpon>ReporteListadoHabitacionXHotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteListadoIntalacionXHotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteListadoIntalacionXHotel.Designer.cs">
+      <DependentUpon>ReporteListadoIntalacionXHotel.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportePaises.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -342,8 +359,15 @@
     <EmbeddedResource Include="PuestosDeTrabajoABM.resx">
       <DependentUpon>PuestosDeTrabajoABM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InstalacionXHotel.rdlc" />
     <EmbeddedResource Include="ReporteBarrios.rdlc" />
     <EmbeddedResource Include="ReporteCiudades.rdlc" />
+    <EmbeddedResource Include="ReporteListadoHabitacionXHotel.resx">
+      <DependentUpon>ReporteListadoHabitacionXHotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteListadoIntalacionXHotel.resx">
+      <DependentUpon>ReporteListadoIntalacionXHotel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportePaises.resx">
       <DependentUpon>ReportePaises.cs</DependentUpon>
     </EmbeddedResource>
@@ -353,9 +377,21 @@
     <EmbeddedResource Include="ReportesCiudad.resx">
       <DependentUpon>ReportesCiudad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportListadoHabitacionPorHotel.rdlc" />
     <EmbeddedResource Include="Servicios.resx">
       <DependentUpon>Servicios.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="BD3K7G13_2021DataSet.xsc">
+      <DependentUpon>BD3K7G13_2021DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K7G13_2021DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD3K7G13_2021DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD3K7G13_2021DataSet.xss">
+      <DependentUpon>BD3K7G13_2021DataSet.xsd</DependentUpon>
+    </None>
     <None Include="BD3K7G13_2021DataSetParaReportes.xsc">
       <DependentUpon>BD3K7G13_2021DataSetParaReportes.xsd</DependentUpon>
     </None>
