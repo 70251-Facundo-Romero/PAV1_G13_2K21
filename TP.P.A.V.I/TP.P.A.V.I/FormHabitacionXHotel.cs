@@ -244,5 +244,11 @@ namespace TP.P.A.V.I
             ReporteListadoHabitacionXHotel ventana = new ReporteListadoHabitacionXHotel();
             ventana.Show();
         }
+
+        private void BtnEstadistica_Click(object sender, EventArgs e)
+        {
+            EstadisticaHabXhotel ventana = new EstadisticaHabXhotel();
+            ventana.Show();
+        }
     }
 }

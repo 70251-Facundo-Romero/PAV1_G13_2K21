@@ -183,6 +183,12 @@
     <Compile Include="EstadisticaCiudad.Designer.cs">
       <DependentUpon>EstadisticaCiudad.cs</DependentUpon>
     </Compile>
+    <Compile Include="EstadisticaHabXhotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstadisticaHabXhotel.Designer.cs">
+      <DependentUpon>EstadisticaHabXhotel.cs</DependentUpon>
+    </Compile>
     <Compile Include="FacturaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -258,6 +264,12 @@
     <Compile Include="RepInstalacionXHotel.Designer.cs">
       <DependentUpon>RepInstalacionXHotel.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteInstalacionXhotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteInstalacionXhotel.Designer.cs">
+      <DependentUpon>ReporteInstalacionXhotel.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReporteListadoHabitacionXHotel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -315,6 +327,10 @@
       <DependentUpon>EstadisticaCiudad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EstadisticaCiudades.rdlc" />
+    <EmbeddedResource Include="EstadisticaHabXhotel.resx">
+      <DependentUpon>EstadisticaHabXhotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstaidisticaHabXHotel.rdlc" />
     <EmbeddedResource Include="FacturaForm.resx">
       <DependentUpon>FacturaForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -365,6 +381,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteBarrios.rdlc" />
     <EmbeddedResource Include="ReporteCiudades.rdlc" />
+    <EmbeddedResource Include="ReporteInstalacionXhotel.resx">
+      <DependentUpon>ReporteInstalacionXhotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteInstalacionXHotelEstadistica.rdlc" />
     <EmbeddedResource Include="ReporteListadoHabitacionXHotel.resx">
       <DependentUpon>ReporteListadoHabitacionXHotel.cs</DependentUpon>
     </EmbeddedResource>
