@@ -154,6 +154,11 @@ namespace TP.P.A.V.I
             this.Close();
         }
 
-
+        private void btnListado_Click(object sender, EventArgs e)
+        {
+            ReporteServicios ventana = new ReporteServicios();
+            ventana.ShowDialog();
+            
+        }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace TP.P.A.V.I
 {
-    partial class ReportesBarrio
+    partial class EstadisticaPdt
     {
         /// <summary>
         /// Required designer variable.
@@ -29,30 +29,23 @@ namespace TP.P.A.V.I
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.BarriosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.BD3K7G13_2021DataSetParaReportes = new TP.P.A.V.I.BD3K7G13_2021DataSetParaReportes();
+            this.estadPdt = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.BarriosTableAdapter = new TP.P.A.V.I.BD3K7G13_2021DataSetParaReportesTableAdapters.BarriosTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.BarriosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BD3K7G13_2021DataSetParaReportes)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
-            // BarriosBindingSource
+            // estadPdt
             // 
-            this.BarriosBindingSource.DataMember = "Barrios";
-            this.BarriosBindingSource.DataSource = this.BD3K7G13_2021DataSetParaReportes;
-            // 
-            // BD3K7G13_2021DataSetParaReportes
-            // 
-            this.BD3K7G13_2021DataSetParaReportes.DataSetName = "BD3K7G13_2021DataSetParaReportes";
-            this.BD3K7G13_2021DataSetParaReportes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.estadPdt.LocalReport.ReportEmbeddedResource = "TP.P.A.V.I.EstadisticasPdt.rdlc";
+            this.estadPdt.Location = new System.Drawing.Point(-1, 36);
+            this.estadPdt.Name = "estadPdt";
+            this.estadPdt.ServerReport.BearerToken = null;
+            this.estadPdt.Size = new System.Drawing.Size(612, 463);
+            this.estadPdt.TabIndex = 0;
+            this.estadPdt.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // panel1
             // 
@@ -62,9 +55,8 @@ namespace TP.P.A.V.I
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 35);
-            this.panel1.TabIndex = 9;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.Size = new System.Drawing.Size(608, 35);
+            this.panel1.TabIndex = 8;
             // 
             // btnCerrar
             // 
@@ -73,7 +65,7 @@ namespace TP.P.A.V.I
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Image = global::TP.P.A.V.I.Properties.Resources.cerrar16px;
-            this.btnCerrar.Location = new System.Drawing.Point(754, 0);
+            this.btnCerrar.Location = new System.Drawing.Point(562, 0);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(46, 35);
             this.btnCerrar.TabIndex = 8;
@@ -91,39 +83,18 @@ namespace TP.P.A.V.I
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
             // 
-            // reportViewer1
-            // 
-            this.reportViewer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DatosBarrios";
-            reportDataSource1.Value = this.BarriosBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.Location = new System.Drawing.Point(0, 35);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Remote;
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 415);
-            this.reportViewer1.TabIndex = 10;
-            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
-            // 
-            // BarriosTableAdapter
-            // 
-            this.BarriosTableAdapter.ClearBeforeFill = true;
-            // 
-            // ReportesBarrio
+            // EstadisticaPdt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.reportViewer1);
+            this.ClientSize = new System.Drawing.Size(608, 499);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.estadPdt);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ReportesBarrio";
+            this.Name = "EstadisticaPdt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ReportesBarrio";
-            this.Load += new System.EventHandler(this.ReportesBarrio_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.BarriosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BD3K7G13_2021DataSetParaReportes)).EndInit();
+            this.Text = "EstadisticaPdt";
+            this.Load += new System.EventHandler(this.EstadisticaPdt_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
@@ -132,12 +103,9 @@ namespace TP.P.A.V.I
 
         #endregion
 
+        private Microsoft.Reporting.WinForms.ReportViewer estadPdt;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource BarriosBindingSource;
-        private BD3K7G13_2021DataSetParaReportes BD3K7G13_2021DataSetParaReportes;
-        private BD3K7G13_2021DataSetParaReportesTableAdapters.BarriosTableAdapter BarriosTableAdapter;
     }
 }
