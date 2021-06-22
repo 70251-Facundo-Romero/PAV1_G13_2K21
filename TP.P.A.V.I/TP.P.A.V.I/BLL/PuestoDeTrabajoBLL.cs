@@ -11,6 +11,15 @@ namespace TP.P.A.V.I.BLL
 { //pasa mano
     class PuestoDeTrabajoBLL
     {
+        public static DataTable ObtenerEstadisticaPdt()
+        {
+            return PuestoDeTrabajoDAL.ObtenerEstadisticasPdt();
+        }
+
+        public static DataTable ObtenerListadoPdt()
+        {
+            return PuestoDeTrabajoDAL.ObtenerListaPdT();
+        }
         public static DataTable ObtenerListaPuesto()
         {
             try

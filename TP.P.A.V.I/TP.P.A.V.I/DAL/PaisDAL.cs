@@ -12,6 +12,38 @@ namespace TP.P.A.V.I.DAL
 {
     class PaisDAL : EntidadDAL
     {
+        public static DataTable ObtenerEstadisticasPais()
+        {
+            string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
+            SqlCommand cmd = new SqlCommand();
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+
+            try
+            {
+                string consulta = "Select pai.Nombre,COUNT(pai.Id) as CantidadHuespedes FROM Paises pai join Huespedes h on pai.Id = h.Id_Pais Group By pai.Nombre";
+
+                cmd.Parameters.Clear();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+                return tabla;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
         public static DataTable ObtenerListadoPaises()
         {
             string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;

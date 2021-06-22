@@ -160,6 +160,21 @@ namespace TP.P.A.V.I
             }
         }
 
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ReportePuestosDeTrabajo ventana = new ReportePuestosDeTrabajo();
+            ventana.ShowDialog();
+        }
+
+        private void btnEstadistica_Click(object sender, EventArgs e)
+        {
+            EstadisticaPdt ventana = new EstadisticaPdt();
+            ventana.ShowDialog();
+        }
     }
 }

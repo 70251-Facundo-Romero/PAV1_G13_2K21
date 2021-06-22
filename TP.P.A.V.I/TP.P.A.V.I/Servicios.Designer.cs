@@ -32,7 +32,6 @@ namespace TP.P.A.V.I
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Servicios));
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNomServ = new System.Windows.Forms.TextBox();
             this.lblNombrePuesto = new System.Windows.Forms.Label();
@@ -44,22 +43,13 @@ namespace TP.P.A.V.I
             this.btnActualizarServ = new System.Windows.Forms.Button();
             this.btnEliminarServ = new System.Windows.Forms.Button();
             this.btnLimpiarCampos = new System.Windows.Forms.Button();
+            this.btnListado = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.grillaServicios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::TP.P.A.V.I.Properties.Resources.q;
-            this.pictureBox2.Location = new System.Drawing.Point(614, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(59, 71);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 18;
-            this.pictureBox2.TabStop = false;
             // 
             // label4
             // 
@@ -150,10 +140,10 @@ namespace TP.P.A.V.I
             // 
             this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.txtId.ForeColor = System.Drawing.Color.White;
-            this.txtId.Location = new System.Drawing.Point(81, 99);
+            this.txtId.Location = new System.Drawing.Point(25, 51);
             this.txtId.Multiline = true;
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(36, 32);
+            this.txtId.Size = new System.Drawing.Size(30, 32);
             this.txtId.TabIndex = 24;
             this.txtId.Visible = false;
             // 
@@ -221,6 +211,22 @@ namespace TP.P.A.V.I
             this.btnLimpiarCampos.UseVisualStyleBackColor = false;
             this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click_1);
             // 
+            // btnListado
+            // 
+            this.btnListado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnListado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnListado.FlatAppearance.BorderSize = 0;
+            this.btnListado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListado.ForeColor = System.Drawing.Color.White;
+            this.btnListado.Location = new System.Drawing.Point(472, 297);
+            this.btnListado.Name = "btnListado";
+            this.btnListado.Size = new System.Drawing.Size(188, 30);
+            this.btnListado.TabIndex = 33;
+            this.btnListado.Text = "Listado de  Servicio";
+            this.btnListado.UseVisualStyleBackColor = false;
+            this.btnListado.Click += new System.EventHandler(this.btnListado_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -231,12 +237,24 @@ namespace TP.P.A.V.I
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = global::TP.P.A.V.I.Properties.Resources.q;
+            this.pictureBox2.Location = new System.Drawing.Point(614, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(59, 71);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 18;
+            this.pictureBox2.TabStop = false;
+            // 
             // Servicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(733, 426);
+            this.Controls.Add(this.btnListado);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnLimpiarCampos);
             this.Controls.Add(this.btnEliminarServ);
@@ -252,9 +270,9 @@ namespace TP.P.A.V.I
             this.Name = "Servicios";
             this.Text = "Servicios";
             this.Load += new System.EventHandler(this.Servicios_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grillaServicios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,5 +293,6 @@ namespace TP.P.A.V.I
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.Button btnListado;
     }
 }

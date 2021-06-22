@@ -1,7 +1,7 @@
 ﻿
 namespace TP.P.A.V.I
 {
-    partial class ReportesBarrio
+    partial class ReporteServicios
     {
         /// <summary>
         /// Required designer variable.
@@ -31,40 +31,56 @@ namespace TP.P.A.V.I
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.BarriosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panelServicios = new System.Windows.Forms.Panel();
+            this.reporteServ = new Microsoft.Reporting.WinForms.ReportViewer();
             this.BD3K7G13_2021DataSetParaReportes = new TP.P.A.V.I.BD3K7G13_2021DataSetParaReportes();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.ServiciosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ServiciosTableAdapter = new TP.P.A.V.I.BD3K7G13_2021DataSetParaReportesTableAdapters.ServiciosTableAdapter();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.BarriosTableAdapter = new TP.P.A.V.I.BD3K7G13_2021DataSetParaReportesTableAdapters.BarriosTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.BarriosBindingSource)).BeginInit();
+            this.panelServicios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BD3K7G13_2021DataSetParaReportes)).BeginInit();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ServiciosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
-            // BarriosBindingSource
+            // panelServicios
             // 
-            this.BarriosBindingSource.DataMember = "Barrios";
-            this.BarriosBindingSource.DataSource = this.BD3K7G13_2021DataSetParaReportes;
+            this.panelServicios.BackColor = System.Drawing.Color.SkyBlue;
+            this.panelServicios.Controls.Add(this.btnCerrar);
+            this.panelServicios.Controls.Add(this.pictureBox4);
+            this.panelServicios.Location = new System.Drawing.Point(0, 1);
+            this.panelServicios.Name = "panelServicios";
+            this.panelServicios.Size = new System.Drawing.Size(802, 36);
+            this.panelServicios.TabIndex = 0;
+            // 
+            // reporteServ
+            // 
+            this.reporteServ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            reportDataSource1.Name = "ListadoServicios";
+            reportDataSource1.Value = this.ServiciosBindingSource;
+            this.reporteServ.LocalReport.DataSources.Add(reportDataSource1);
+            this.reporteServ.LocalReport.ReportEmbeddedResource = "TP.P.A.V.I.ReporteServicios.rdlc";
+            this.reporteServ.Location = new System.Drawing.Point(0, 34);
+            this.reporteServ.Name = "reporteServ";
+            this.reporteServ.ServerReport.BearerToken = null;
+            this.reporteServ.Size = new System.Drawing.Size(802, 417);
+            this.reporteServ.TabIndex = 1;
+            this.reporteServ.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // BD3K7G13_2021DataSetParaReportes
             // 
             this.BD3K7G13_2021DataSetParaReportes.DataSetName = "BD3K7G13_2021DataSetParaReportes";
             this.BD3K7G13_2021DataSetParaReportes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // panel1
+            // ServiciosBindingSource
             // 
-            this.panel1.BackColor = System.Drawing.Color.SkyBlue;
-            this.panel1.Controls.Add(this.btnCerrar);
-            this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 35);
-            this.panel1.TabIndex = 9;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.ServiciosBindingSource.DataMember = "Servicios";
+            this.ServiciosBindingSource.DataSource = this.BD3K7G13_2021DataSetParaReportes;
+            // 
+            // ServiciosTableAdapter
+            // 
+            this.ServiciosTableAdapter.ClearBeforeFill = true;
             // 
             // btnCerrar
             // 
@@ -73,10 +89,10 @@ namespace TP.P.A.V.I
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Image = global::TP.P.A.V.I.Properties.Resources.cerrar16px;
-            this.btnCerrar.Location = new System.Drawing.Point(754, 0);
+            this.btnCerrar.Location = new System.Drawing.Point(742, 3);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(46, 35);
-            this.btnCerrar.TabIndex = 8;
+            this.btnCerrar.TabIndex = 9;
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
@@ -84,47 +100,28 @@ namespace TP.P.A.V.I
             // 
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureBox4.Image = global::TP.P.A.V.I.Properties.Resources.Qblanca;
-            this.pictureBox4.Location = new System.Drawing.Point(7, 5);
+            this.pictureBox4.Location = new System.Drawing.Point(34, 0);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox4.Size = new System.Drawing.Size(33, 33);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabIndex = 5;
             this.pictureBox4.TabStop = false;
             // 
-            // reportViewer1
-            // 
-            this.reportViewer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DatosBarrios";
-            reportDataSource1.Value = this.BarriosBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.Location = new System.Drawing.Point(0, 35);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Remote;
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 415);
-            this.reportViewer1.TabIndex = 10;
-            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
-            // 
-            // BarriosTableAdapter
-            // 
-            this.BarriosTableAdapter.ClearBeforeFill = true;
-            // 
-            // ReportesBarrio
+            // ReporteServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.reportViewer1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.reporteServ);
+            this.Controls.Add(this.panelServicios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ReportesBarrio";
+            this.Name = "ReporteServicios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ReportesBarrio";
-            this.Load += new System.EventHandler(this.ReportesBarrio_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.BarriosBindingSource)).EndInit();
+            this.Text = "ReporteServicios";
+            this.Load += new System.EventHandler(this.ReporteServicios_Load);
+            this.panelServicios.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BD3K7G13_2021DataSetParaReportes)).EndInit();
-            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ServiciosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
@@ -132,12 +129,12 @@ namespace TP.P.A.V.I
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Panel panelServicios;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource BarriosBindingSource;
+        private System.Windows.Forms.Button btnCerrar;
+        private Microsoft.Reporting.WinForms.ReportViewer reporteServ;
+        private System.Windows.Forms.BindingSource ServiciosBindingSource;
         private BD3K7G13_2021DataSetParaReportes BD3K7G13_2021DataSetParaReportes;
-        private BD3K7G13_2021DataSetParaReportesTableAdapters.BarriosTableAdapter BarriosTableAdapter;
+        private BD3K7G13_2021DataSetParaReportesTableAdapters.ServiciosTableAdapter ServiciosTableAdapter;
     }
 }

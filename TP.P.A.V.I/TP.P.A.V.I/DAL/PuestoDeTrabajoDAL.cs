@@ -12,6 +12,39 @@ namespace TP.P.A.V.I.DAL
 {
     class PuestoDeTrabajoDAL : EntidadDAL
     {
+        public static DataTable ObtenerEstadisticasPdt()
+        {
+            string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
+            SqlCommand cmd = new SqlCommand();
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+
+            try
+            {
+                string consulta = "Select p.Nombre,COUNT(e.Id) as CantidadEmpleados FROM Puestos_Trabajo p join Empleados e on p.Id = e.Id_Puesto Group By p.Nombre";
+
+                cmd.Parameters.Clear();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+                return tabla;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
         public static DataTable ObtenerListaPdT()
         {
             string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;

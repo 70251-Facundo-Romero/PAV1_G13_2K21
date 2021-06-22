@@ -204,6 +204,11 @@ namespace TP.P.A.V.I
 
         }
 
+        private void btnHxPais_Click(object sender, EventArgs e)
+        {
+            EstadisticaHxPais ventana = new EstadisticaHxPais();
+            ventana.ShowDialog();
+        }
     }
     }
 

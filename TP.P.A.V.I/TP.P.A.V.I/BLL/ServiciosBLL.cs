@@ -10,7 +10,13 @@ using TP.P.A.V.I.Entities;
 namespace TP.P.A.V.I.BLL
 {
     class ServiciosBLL
+
     {
+        public static DataTable ObtenerListadoServicios()
+        {
+            return ServiciosDAL.ObtenerListadoServicios();
+        }
+
         public static DataTable ObtenerListaServicios()
         {
             try

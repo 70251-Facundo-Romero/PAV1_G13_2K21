@@ -11,6 +11,11 @@ namespace TP.P.A.V.I.BLL
 {
     class PaisBLL
     {
+        public static DataTable ObtenerEstadisticaPais()
+        {
+            return PaisDAL.ObtenerEstadisticasPais();
+        }
+
         public static DataTable ObtenerListadoPaises()
         {
             return PaisDAL.ObtenerListadoPaises();
