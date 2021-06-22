@@ -77,6 +77,39 @@ namespace TP.P.A.V.I.DAL
             }
         }
 
+        public static DataTable ObtenerHuespedesxPais()
+        {
+            string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
+            SqlCommand cmd = new SqlCommand();
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+
+            try
+            {
+                string consulta = "SELECT  P.Nombre as 'Pais',COUNT(*) as 'Cantidad_Huespedes' FROM Paises P INNER JOIN Huespedes Hu ON P.Id = Hu.Id_Pais GROUP BY P.Nombre ORDER BY 'Cantidad_Huespedes' DESC";
+
+                cmd.Parameters.Clear();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+                return tabla;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
         public static bool AgregarPaisABD(Pais p)
         {
             string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DatosHuespedxPais" targetNamespace="http://tempuri.org/DatosHuespedxPais.xsd" xmlns:mstns="http://tempuri.org/DatosHuespedxPais.xsd" xmlns="http://tempuri.org/DatosHuespedxPais.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DatosHuespedxPais" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DatosHuespedxPais" msprop:Generator_UserDSName="DatosHuespedxPais">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="HuespedxPais" msprop:Generator_TableClassName="HuespedxPaisDataTable" msprop:Generator_TableVarName="tableHuespedxPais" msprop:Generator_TablePropName="HuespedxPais" msprop:Generator_RowDeletingName="HuespedxPaisRowDeleting" msprop:Generator_RowChangingName="HuespedxPaisRowChanging" msprop:Generator_RowEvHandlerName="HuespedxPaisRowChangeEventHandler" msprop:Generator_RowDeletedName="HuespedxPaisRowDeleted" msprop:Generator_UserTableName="HuespedxPais" msprop:Generator_RowChangedName="HuespedxPaisRowChanged" msprop:Generator_RowEvArgName="HuespedxPaisRowChangeEvent" msprop:Generator_RowClassName="HuespedxPaisRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Pais" msprop:Generator_ColumnVarNameInTable="columnPais" msprop:Generator_ColumnPropNameInRow="Pais" msprop:Generator_ColumnPropNameInTable="PaisColumn" msprop:Generator_UserColumnName="Pais" type="xs:string" minOccurs="0" />
+              <xs:element name="Cantidad_Huespedes" msprop:Generator_ColumnVarNameInTable="columnCantidad_Huespedes" msprop:Generator_ColumnPropNameInRow="Cantidad_Huespedes" msprop:Generator_ColumnPropNameInTable="Cantidad_HuespedesColumn" msprop:Generator_UserColumnName="Cantidad_Huespedes" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

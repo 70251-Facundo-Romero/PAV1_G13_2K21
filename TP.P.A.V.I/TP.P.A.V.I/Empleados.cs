@@ -236,6 +236,18 @@ namespace TP.P.A.V.I
         {
             LimpiarCampos();
         }
+
+        private void btnListadoEmpleados_Click(object sender, EventArgs e)
+        {
+            ListadoEmpleados ventana = new ListadoEmpleados();
+            ventana.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            EstadisticaEmpleados ventana = new EstadisticaEmpleados();
+            ventana.ShowDialog();
+        }
     }
 
 

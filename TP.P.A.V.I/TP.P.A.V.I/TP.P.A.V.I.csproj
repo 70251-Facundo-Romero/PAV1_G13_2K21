@@ -89,6 +89,11 @@
     <Compile Include="BarrioABM.Designer.cs">
       <DependentUpon>BarrioABM.cs</DependentUpon>
     </Compile>
+    <Compile Include="BD3K7G13_2021DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD3K7G13_2021DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BD3K7G13_2021DataSetParaReportes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -116,6 +121,14 @@
     </Compile>
     <Compile Include="CiudadABM.Designer.cs">
       <DependentUpon>CiudadABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConjuntosDeDatosEstadisticos\DatosEstadisticaBarrios.cs">
+      <DependentUpon>DatosEstadisticaBarrios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConjuntosDeDatosEstadisticos\DatosEstadisticaBarrios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosEstadisticaBarrios.xsd</DependentUpon>
     </Compile>
     <Compile Include="DAL\AlojamientoXHuespedDAL.cs" />
     <Compile Include="DAL\BarrioDAL.cs" />
@@ -158,30 +171,23 @@
     <Compile Include="Entities\ServXHotel.cs" />
     <Compile Include="Entities\Tarjeta.cs" />
     <Compile Include="Entities\Usuario.cs" />
-    <Compile Include="EstadisticaHxPais.cs">
+    <Compile Include="EstadisticaBarrios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EstadisticaHxPais.Designer.cs">
-      <DependentUpon>EstadisticaHxPais.cs</DependentUpon>
+    <Compile Include="EstadisticaBarrios.Designer.cs">
+      <DependentUpon>EstadisticaBarrios.cs</DependentUpon>
     </Compile>
-    <Compile Include="EstadisticaPdt.cs">
+    <Compile Include="EstadisticaCiudad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EstadisticaPdt.Designer.cs">
-      <DependentUpon>EstadisticaPdt.cs</DependentUpon>
+    <Compile Include="EstadisticaCiudad.Designer.cs">
+      <DependentUpon>EstadisticaCiudad.cs</DependentUpon>
     </Compile>
-    <Compile Include="EstadisticaPuestoDeTrabajo.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EstadisticaPuestoDeTrabajo.xsd</DependentUpon>
+    <Compile Include="EstadisticaHabXhotel.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EstadisticasHxPais.cs">
-      <DependentUpon>EstadisticasHxPais.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="EstadisticasHxPais.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EstadisticasHxPais.xsd</DependentUpon>
+    <Compile Include="EstadisticaHabXhotel.Designer.cs">
+      <DependentUpon>EstadisticaHabXhotel.cs</DependentUpon>
     </Compile>
     <Compile Include="FacturaForm.cs">
       <SubType>Form</SubType>
@@ -252,17 +258,29 @@
     <Compile Include="PuestosDeTrabajoABM.Designer.cs">
       <DependentUpon>PuestosDeTrabajoABM.cs</DependentUpon>
     </Compile>
+    <Compile Include="RepInstalacionXHotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepInstalacionXHotel.Designer.cs">
+      <DependentUpon>RepInstalacionXHotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteInstalacionXhotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteInstalacionXhotel.Designer.cs">
+      <DependentUpon>ReporteInstalacionXhotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteListadoHabitacionXHotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteListadoHabitacionXHotel.Designer.cs">
+      <DependentUpon>ReporteListadoHabitacionXHotel.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportePaises.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ReportePaises.Designer.cs">
       <DependentUpon>ReportePaises.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ReportePuestosDeTrabajo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReportePuestosDeTrabajo.Designer.cs">
-      <DependentUpon>ReportePuestosDeTrabajo.cs</DependentUpon>
     </Compile>
     <Compile Include="ReportesBarrio.cs">
       <SubType>Form</SubType>
@@ -275,12 +293,6 @@
     </Compile>
     <Compile Include="ReportesCiudad.Designer.cs">
       <DependentUpon>ReportesCiudad.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ReporteServicios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReporteServicios.Designer.cs">
-      <DependentUpon>ReporteServicios.cs</DependentUpon>
     </Compile>
     <Compile Include="Servicios.cs">
       <SubType>Form</SubType>
@@ -307,13 +319,18 @@
     <EmbeddedResource Include="Empleados.resx">
       <DependentUpon>Empleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EstadisticaHxPais.resx">
-      <DependentUpon>EstadisticaHxPais.cs</DependentUpon>
+    <EmbeddedResource Include="EstadisticaBarrios.resx">
+      <DependentUpon>EstadisticaBarrios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EstadisticaPdt.resx">
-      <DependentUpon>EstadisticaPdt.cs</DependentUpon>
+    <EmbeddedResource Include="EstadisticaBarriosXCiudad.rdlc" />
+    <EmbeddedResource Include="EstadisticaCiudad.resx">
+      <DependentUpon>EstadisticaCiudad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EstadisticasPdt.rdlc" />
+    <EmbeddedResource Include="EstadisticaCiudades.rdlc" />
+    <EmbeddedResource Include="EstadisticaHabXhotel.resx">
+      <DependentUpon>EstadisticaHabXhotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstaidisticaHabXHotel.rdlc" />
     <EmbeddedResource Include="FacturaForm.resx">
       <DependentUpon>FacturaForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -358,14 +375,19 @@
     <EmbeddedResource Include="PuestosDeTrabajoABM.resx">
       <DependentUpon>PuestosDeTrabajoABM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EstadisticaHxPais.rdlc" />
-    <EmbeddedResource Include="ReportePuestoDeTrabajo.rdlc" />
-    <EmbeddedResource Include="ReportePuestosDeTrabajo.resx">
-      <DependentUpon>ReportePuestosDeTrabajo.cs</DependentUpon>
+    <EmbeddedResource Include="InstalacionXHotel.rdlc" />
+    <EmbeddedResource Include="RepInstalacionXHotel.resx">
+      <DependentUpon>RepInstalacionXHotel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReporteServicios.rdlc" />
     <EmbeddedResource Include="ReporteBarrios.rdlc" />
     <EmbeddedResource Include="ReporteCiudades.rdlc" />
+    <EmbeddedResource Include="ReporteInstalacionXhotel.resx">
+      <DependentUpon>ReporteInstalacionXhotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteInstalacionXHotelEstadistica.rdlc" />
+    <EmbeddedResource Include="ReporteListadoHabitacionXHotel.resx">
+      <DependentUpon>ReporteListadoHabitacionXHotel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportePaises.resx">
       <DependentUpon>ReportePaises.cs</DependentUpon>
     </EmbeddedResource>
@@ -375,12 +397,21 @@
     <EmbeddedResource Include="ReportesCiudad.resx">
       <DependentUpon>ReportesCiudad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReporteServicios.resx">
-      <DependentUpon>ReporteServicios.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="ReportListadoHabitacionPorHotel.rdlc" />
     <EmbeddedResource Include="Servicios.resx">
       <DependentUpon>Servicios.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="BD3K7G13_2021DataSet.xsc">
+      <DependentUpon>BD3K7G13_2021DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K7G13_2021DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD3K7G13_2021DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD3K7G13_2021DataSet.xss">
+      <DependentUpon>BD3K7G13_2021DataSet.xsd</DependentUpon>
+    </None>
     <None Include="BD3K7G13_2021DataSetParaReportes.xsc">
       <DependentUpon>BD3K7G13_2021DataSetParaReportes.xsd</DependentUpon>
     </None>
@@ -393,27 +424,16 @@
       <DependentUpon>BD3K7G13_2021DataSetParaReportes.xsd</DependentUpon>
     </None>
     <None Include="bin\Debug\TP.P.A.V.I.exe.config" />
-    <None Include="EstadisticaPuestoDeTrabajo.xsc">
-      <DependentUpon>EstadisticaPuestoDeTrabajo.xsd</DependentUpon>
+    <None Include="ConjuntosDeDatosEstadisticos\DatosEstadisticaBarrios.xsc">
+      <DependentUpon>DatosEstadisticaBarrios.xsd</DependentUpon>
     </None>
-    <None Include="EstadisticaPuestoDeTrabajo.xsd">
+    <None Include="ConjuntosDeDatosEstadisticos\DatosEstadisticaBarrios.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>EstadisticaPuestoDeTrabajo.Designer.cs</LastGenOutput>
+      <LastGenOutput>DatosEstadisticaBarrios.Designer.cs</LastGenOutput>
     </None>
-    <None Include="EstadisticaPuestoDeTrabajo.xss">
-      <DependentUpon>EstadisticaPuestoDeTrabajo.xsd</DependentUpon>
-    </None>
-    <None Include="EstadisticasHxPais.xsc">
-      <DependentUpon>EstadisticasHxPais.xsd</DependentUpon>
-    </None>
-    <None Include="EstadisticasHxPais.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>EstadisticasHxPais.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="EstadisticasHxPais.xss">
-      <DependentUpon>EstadisticasHxPais.xsd</DependentUpon>
+    <None Include="ConjuntosDeDatosEstadisticos\DatosEstadisticaBarrios.xss">
+      <DependentUpon>DatosEstadisticaBarrios.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
