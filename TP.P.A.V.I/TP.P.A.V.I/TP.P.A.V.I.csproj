@@ -521,6 +521,50 @@
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.AlojamientoXHuesped.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.AltaServicioXHotel.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.AltaTarjeta.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.BarrioABM.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.CiudadABM.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.Empleados.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.EstadisticaBarrios.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.EstadisticaCiudad.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.EstadisticaEmpleados.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.EstadisticaHabXhotel.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.EstadisticaHuespedxPaiscs.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.EstadisticaHxPais.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.EstadisticaPdt.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.EstadisticasHoteles.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.Est_HotelxBarrio.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.FacturaForm.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.FormHabitacionXHotel.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.Gestionar_Habitaciones.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.Gestionar_Instalaciones.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.Hoteles.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.HuespedABM.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.InstalacionesXhotel.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.Instalacion_por_huesped.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.ListadoDeHoteles.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.ListadoEmpleados.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.Login.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.Menu.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.PaisABM.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.PuestosDeTrabajoABM.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.RepInstalacionXHotel.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.ReporteHabitaciones.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.ReporteInstalacionXhotel.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.ReporteListadoHabitacionXHotel.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.ReporteListadoIntalacionXHotel.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.ReportePaises.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.ReportePuestosDeTrabajo.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.ReportesBarrio.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.ReportesCiudad.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.ReporteServicios.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.ReporteServicioXHotel.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.ReporteTarjetas.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.ReportInstalaciones.resources" />
+    <EmbeddedResource Include="obj\Debug\TP.P.A.V.I.Servicios.resources" />
     <EmbeddedResource Include="PaisABM.resx">
       <DependentUpon>PaisABM.cs</DependentUpon>
     </EmbeddedResource>
@@ -708,6 +752,15 @@
     <None Include="Est_HotelesxBarrios.xss">
       <DependentUpon>Est_HotelesxBarrios.xsd</DependentUpon>
     </None>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\RdlCompile.cache" />
+    <None Include="obj\Debug\RdlCompile.compiled" />
+    <None Include="obj\Debug\TP.P.A.V.I.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\TP.P.A.V.I.csproj.CopyComplete" />
+    <None Include="obj\Debug\TP.P.A.V.I.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\TP.P.A.V.I.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\TP.P.A.V.I.csprojAssemblyReference.cache" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -812,6 +865,27 @@
   <ItemGroup>
     <Content Include="bin\Debug\TP.P.A.V.I.exe" />
     <Content Include="bin\Debug\TP.P.A.V.I.pdb" />
+    <Content Include="obj\Debug\TempPE\BD3K7G13_2021DataSet.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\BD3K7G13_2021DataSet1.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\BD3K7G13_2021DataSet2.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\BD3K7G13_2021DataSet3.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\BD3K7G13_2021DataSet4.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\BD3K7G13_2021DataSetParaReportes.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\ConjuntosDeDatosEstadisticos.DatosEstadisticaBarrios.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\ConjuntosDeDatosEstadisticos.DatosEstadisticasHoteles1.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\ConjuntosDeDatosEstadisticos.EstadisticasEmpleados1.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\DatosHuespedxPais.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\EstadisticaPuestoDeTrabajo.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\EstadisticaPuestoDeTrabajo1.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\EstadisticaS.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\EstadisticasHxPais.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\EstadisticasHxPais1.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Est_HotelesxBarrios.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Est_HuespedesxPais.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="obj\Debug\TP.P.A.V.I.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\TP.P.A.V.I.exe" />
+    <Content Include="obj\Debug\TP.P.A.V.I.pdb" />
     <Content Include="Resources\q.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
