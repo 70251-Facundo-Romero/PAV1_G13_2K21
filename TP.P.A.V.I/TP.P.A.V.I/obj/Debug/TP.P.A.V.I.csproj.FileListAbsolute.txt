@@ -171,3 +171,4 @@ C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.Est
 C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.EstadisticaPdt.resources
 C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.ReportePuestosDeTrabajo.resources
 C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.ReporteServicios.resources
+C:\Users\Hp\Desktop\PAV1_G13_2K21\TP.P.A.V.I\TP.P.A.V.I\obj\Debug\TP.P.A.V.I.csproj.AssemblyReference.cache

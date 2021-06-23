@@ -89,7 +89,7 @@ namespace TP.P.A.V.I
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             this.grillaPuestosTrabajo.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.grillaPuestosTrabajo.Size = new System.Drawing.Size(625, 163);
+            this.grillaPuestosTrabajo.Size = new System.Drawing.Size(625, 129);
             this.grillaPuestosTrabajo.TabIndex = 0;
             this.grillaPuestosTrabajo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaPuestosTrabajo_CellClick);
             // 
@@ -307,6 +307,7 @@ namespace TP.P.A.V.I
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -322,6 +323,7 @@ namespace TP.P.A.V.I
             // 
             // btnEstadistica
             // 
+            this.btnEstadistica.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEstadistica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnEstadistica.FlatAppearance.BorderSize = 0;
             this.btnEstadistica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
