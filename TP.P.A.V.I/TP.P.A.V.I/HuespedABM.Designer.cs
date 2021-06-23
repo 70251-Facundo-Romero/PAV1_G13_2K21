@@ -29,7 +29,7 @@ namespace TP.P.A.V.I
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grillaHuesped = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NroPasaporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,6 +59,8 @@ namespace TP.P.A.V.I
             this.btnHxPais = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnReporteAXH = new System.Windows.Forms.Button();
+            this.btnEstadisticaAXH = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grillaHuesped)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,14 +74,14 @@ namespace TP.P.A.V.I
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grillaHuesped.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grillaHuesped.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grillaHuesped.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grillaHuesped.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grillaHuesped.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -422,12 +424,38 @@ namespace TP.P.A.V.I
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // btnReporteAXH
+            // 
+            this.btnReporteAXH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnReporteAXH.ForeColor = System.Drawing.Color.White;
+            this.btnReporteAXH.Location = new System.Drawing.Point(548, 322);
+            this.btnReporteAXH.Name = "btnReporteAXH";
+            this.btnReporteAXH.Size = new System.Drawing.Size(115, 26);
+            this.btnReporteAXH.TabIndex = 22;
+            this.btnReporteAXH.Text = "Gestionar reporte";
+            this.btnReporteAXH.UseVisualStyleBackColor = false;
+            this.btnReporteAXH.Click += new System.EventHandler(this.btnReporteAXH_Click);
+            // 
+            // btnEstadisticaAXH
+            // 
+            this.btnEstadisticaAXH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnEstadisticaAXH.ForeColor = System.Drawing.Color.White;
+            this.btnEstadisticaAXH.Location = new System.Drawing.Point(548, 293);
+            this.btnEstadisticaAXH.Name = "btnEstadisticaAXH";
+            this.btnEstadisticaAXH.Size = new System.Drawing.Size(115, 23);
+            this.btnEstadisticaAXH.TabIndex = 23;
+            this.btnEstadisticaAXH.Text = "Gestionar estadistica";
+            this.btnEstadisticaAXH.UseVisualStyleBackColor = false;
+            this.btnEstadisticaAXH.Click += new System.EventHandler(this.btnEstadisticaAXH_Click);
+            // 
             // HuespedABM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(749, 465);
+            this.Controls.Add(this.btnEstadisticaAXH);
+            this.Controls.Add(this.btnReporteAXH);
             this.Controls.Add(this.btnHxPais);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label7);
@@ -493,5 +521,7 @@ namespace TP.P.A.V.I
         private System.Windows.Forms.DataGridViewTextBoxColumn NroTarjetaDeCredito;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Tarjeta;
         private System.Windows.Forms.Button btnHxPais;
+        private System.Windows.Forms.Button btnReporteAXH;
+        private System.Windows.Forms.Button btnEstadisticaAXH;
     }
 }

@@ -209,6 +209,18 @@ namespace TP.P.A.V.I
             EstadisticaHxPais ventana = new EstadisticaHxPais();
             ventana.ShowDialog();
         }
+
+        private void btnEstadisticaAXH_Click(object sender, EventArgs e)
+        {
+            EstadisticaAXH ventana = new EstadisticaAXH();
+            ventana.ShowDialog();
+        }
+
+        private void btnReporteAXH_Click(object sender, EventArgs e)
+        {
+            ReporteAXH ventana = new ReporteAXH();
+            ventana.ShowDialog();
+        }
     }
     }
 

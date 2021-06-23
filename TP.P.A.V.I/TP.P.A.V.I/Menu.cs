@@ -147,14 +147,9 @@ namespace TP.P.A.V.I
 
         private void btnGestionHoteles_Click(object sender, EventArgs e)
         {
-            //Hoteles ventana = new Hoteles();
-            //openChildForm(ventana);
-            //hideSubMenu();
-
-            EstadisticaAXH ventana = new EstadisticaAXH();
+            Hoteles ventana = new Hoteles();
             openChildForm(ventana);
             hideSubMenu();
-
         }
 
         private void btnGestionHabitaciones_Click(object sender, EventArgs e)
