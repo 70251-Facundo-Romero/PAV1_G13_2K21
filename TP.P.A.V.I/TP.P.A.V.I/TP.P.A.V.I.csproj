@@ -99,6 +99,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BD3K7G13_2021DataSetParaReportes.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BD3K7G13_2021_AXH.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD3K7G13_2021_AXH.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BLL\AlojamientoXHuespedBLL.cs" />
     <Compile Include="BLL\BarrioBLL.cs" />
     <Compile Include="BLL\CiudadBLL.cs" />
@@ -121,6 +126,11 @@
     </Compile>
     <Compile Include="CiudadABM.Designer.cs">
       <DependentUpon>CiudadABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConjuntosDeDatosEstadisticos\DatosAlojamientoXHuesped.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosAlojamientoXHuesped.xsd</DependentUpon>
     </Compile>
     <Compile Include="ConjuntosDeDatosEstadisticos\DatosEstadisticaBarrios.cs">
       <DependentUpon>DatosEstadisticaBarrios.xsd</DependentUpon>
@@ -184,6 +194,12 @@
     <Compile Include="Entities\ServXHotel.cs" />
     <Compile Include="Entities\Tarjeta.cs" />
     <Compile Include="Entities\Usuario.cs" />
+    <Compile Include="EstadisticaAXH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstadisticaAXH.Designer.cs">
+      <DependentUpon>EstadisticaAXH.cs</DependentUpon>
+    </Compile>
     <Compile Include="EstadisticaBarrios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -333,6 +349,12 @@
     <Compile Include="RepInstalacionXHotel.Designer.cs">
       <DependentUpon>RepInstalacionXHotel.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteAXH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteAXH.Designer.cs">
+      <DependentUpon>ReporteAXH.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReporteHabitaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -423,6 +445,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Empleados.resx">
       <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstadisticaAXH.rdlc" />
+    <EmbeddedResource Include="EstadisticaAXH.resx">
+      <DependentUpon>EstadisticaAXH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EstadisticaBarrios.resx">
       <DependentUpon>EstadisticaBarrios.cs</DependentUpon>
@@ -516,6 +542,10 @@
       <DependentUpon>RepInstalacionXHotel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report HuespedxPais.rdlc" />
+    <EmbeddedResource Include="ReporteAXH.rdlc" />
+    <EmbeddedResource Include="ReporteAXH.resx">
+      <DependentUpon>ReporteAXH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReporteBarrios.rdlc" />
     <EmbeddedResource Include="ReporteCiudades.rdlc" />
     <EmbeddedResource Include="ReporteEstadisticasHotel.rdlc" />
@@ -586,7 +616,29 @@
     <None Include="BD3K7G13_2021DataSetParaReportes.xss">
       <DependentUpon>BD3K7G13_2021DataSetParaReportes.xsd</DependentUpon>
     </None>
+    <None Include="BD3K7G13_2021_AXH.xsc">
+      <DependentUpon>BD3K7G13_2021_AXH.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K7G13_2021_AXH.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD3K7G13_2021_AXH.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD3K7G13_2021_AXH.xss">
+      <DependentUpon>BD3K7G13_2021_AXH.xsd</DependentUpon>
+    </None>
     <None Include="bin\Debug\TP.P.A.V.I.exe.config" />
+    <None Include="ConjuntosDeDatosEstadisticos\DatosAlojamientoXHuesped.xsc">
+      <DependentUpon>DatosAlojamientoXHuesped.xsd</DependentUpon>
+    </None>
+    <None Include="ConjuntosDeDatosEstadisticos\DatosAlojamientoXHuesped.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosAlojamientoXHuesped.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ConjuntosDeDatosEstadisticos\DatosAlojamientoXHuesped.xss">
+      <DependentUpon>DatosAlojamientoXHuesped.xsd</DependentUpon>
+    </None>
     <None Include="ConjuntosDeDatosEstadisticos\DatosEstadisticaBarrios.xsc">
       <DependentUpon>DatosEstadisticaBarrios.xsd</DependentUpon>
     </None>

@@ -23,6 +23,31 @@ namespace TP.P.A.V.I.BLL
             }
 
         }
+        public static DataTable ObtenerEstadisticaAXH()
+        {
+            try
+            {
+                return AlojamientoXHuespedDAL.ObtenerEstadisticaAXH();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
+
+        public static DataTable ObtenerAXH()
+        {
+            try
+            {
+                return AlojamientoXHuespedDAL.ObtenerAXH();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
 
         public static bool AgregarAlojamientoXHuespedABD(AlojamientoXHuespedes al)
         {
